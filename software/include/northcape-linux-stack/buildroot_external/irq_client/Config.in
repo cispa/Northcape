@@ -1,0 +1,5 @@
+config BR2_PACKAGE_IRQ_CLIENT
+    bool "IRQ client tool support"
+    depends on BR2_PACKAGE_PULP_TIMER
+    help
+        Driver for userspace IRQ client.

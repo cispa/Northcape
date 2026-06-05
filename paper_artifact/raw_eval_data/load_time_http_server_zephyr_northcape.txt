@@ -1,0 +1,117 @@
+.I: Configuring IRQs 651 and 779!
+I: Enabling IRQ!
+I: No IRQs defined!
+I: Enable MDIO Bus assuming ethernet clock frequency 50000000 divider 40!
+I: MDIO ready!
+I: PHY (1) ID 1CC915
+
+I: RX Checksum offloading requested
+I: TX Checksum offloading requested
+I: Link state changed to: down (speed 0)
+I: Interface initialized!
+*** Booting Zephyr OS build v3.7.0-rc1-4629-ga3bc871e5a9e ***
+I: Initializing network
+I: IPv4 address: 192.0.2.1
+======================
+Boot time: 9913745 cycles (Genesys: 0.198275 ns, Arty: 0.396550 ns)!
+======================
+Single-threaded dumb HTTP server waits for a connection on port 8080...
+I: PHY (1) Link speed 1000 Mb, full duplex
+
+I: Link state changed to: up (speed 20)
+I: Configuring IRQs 651 and 779!
+I: Enabling IRQ!
+I: No IRQs defined!
+I: Enable MDIO Bus assuming ethernet clock frequency 50000000 divider 40!
+I: MDIO ready!
+I: PHY (1) ID 1CC915
+
+I: RX Checksum offloading requested
+I: TX Checksum offloading requested
+I: Link state changed to: down (speed 0)
+I: Interface initialized!
+*** Booting Zephyr OS build v3.7.0-rc1-4629-ga3bc871e5a9e ***
+I: Initializing network
+I: IPv4 address: 192.0.2.1
+======================
+Boot time: 10362915 cycles (Genesys: 0.207258 s, Arty: 0.414517 s)!
+======================
+Single-threaded dumb HTTP server waits for a connection on port 8080...
+I: Configuring IRQs 651 and 779!
+I: Enabling IRQ!
+I: No IRQs defined!
+I: Enable MDIO Bus assuming ethernet clock frequency 50000000 divider 40!
+I: MDIO ready!
+I: PHY (1) ID 1CC915
+
+I: RX Checksum offloading requested
+I: TX Checksum offloading requested
+I: Link state changed to: down (speed 0)
+I: Interface initialized!
+*** Booting Zephyr OS build v3.7.0-rc1-4629-ga3bc871e5a9e ***
+I: Initializing network
+I: IPv4 address: 192.0.2.1
+======================
+Boot time: 9393965 cycles (Genesys: 0.187879 s, Arty: 0.375759 s)!
+======================
+Single-threaded dumb HTTP server waits for a connection on port 8080...
+I: Configuring IRQs 651 and 779!
+I: Enabling IRQ!
+I: No IRQs defined!
+I: Enable MDIO Bus assuming ethernet clock frequency 50000000 divider 40!
+I: MDIO ready!
+I: PHY (1) ID 1CC915
+
+I: RX Checksum offloading requested
+I: TX Checksum offloading requested
+I: Link state changed to: down (speed 0)
+I: Interface initialized!
+*** Booting Zephyr OS build v3.7.0-rc1-4629-ga3bc871e5a9e ***
+I: Initializing network
+I: IPv4 address: 192.0.2.1
+======================
+Boot time: 7919855 cycles (Genesys: 0.158397 s, Arty: 0.316794 s)!
+======================
+Single-threaded dumb HTTP server waits for a connection on port 8080...
+I: Configuring IRQs 651 and 779!
+I: Enabling IRQ!
+I: No IRQs defined!
+I: Enable MDIO Bus assuming ethernet clock frequency 50000000 divider 40!
+I: MDIO ready!
+I: PHY (1) ID 1CC915
+
+I: RX Checksum offloading requested
+I: TX Checksum offloading requested
+I: Link state changed to: down (speed 0)
+I: Interface initialized!
+*** Booting Zephyr OS build v3.7.0-rc1-4629-ga3bc871e5a9e ***
+I: Initializing network
+I: IPv4 address: 192.0.2.1
+======================
+Boot time: 7792174 cycles (Genesys: 0.155843 s, Arty: 0.311687 s)!
+======================
+Single-threaded dumb HTTP server waits for a connection on port 8080...
+I: PHY (1) Link speed 1000 Mb, full duplex
+
+I: Link state changed to: up (speed 20)
+I: Configuring IRQs 651 and 779!
+I: Enabling IRQ!
+I: No IRQs defined!
+I: Enable MDIO Bus assuming ethernet clock frequency 50000000 divider 40!
+I: MDIO ready!
+I: PHY (1) ID 1CC915
+
+I: RX Checksum offloading requested
+I: TX Checksum offloading requested
+I: Link state changed to: down (speed 0)
+I: Interface initialized!
+*** Booting Zephyr OS build v3.7.0-rc1-4629-ga3bc871e5a9e ***
+I: Initializing network
+I: IPv4 address: 192.0.2.1
+======================
+Boot time: 10695224 cycles (Genesys: 0.213904 s, Arty: 0.427809 s)!
+======================
+Single-threaded dumb HTTP server waits for a connection on port 8080...
+I: PHY (1) Link speed 1000 Mb, full duplex
+
+I: Link state changed to: up (speed 20)

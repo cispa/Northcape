@@ -1,0 +1,20 @@
+mainmenu "Timer IRQ benchmark"
+
+choice TIMER_BENCHMARK_TYPE
+    prompt "Type of timer benchmark"
+    default TIMER_IRQ_SAMPLE_BENCHMARK_LATENCY
+
+config TIMER_IRQ_SAMPLE_BENCHMARK_LATENCY
+    bool "Do a latency benchmark"
+
+config TIMER_IRQ_SAMPLE_BENCHMARK_RATE
+    bool "Do a rate benchmark"
+
+endchoice
+
+config TIMER_NMI
+    bool "Use non-standard NMI for timer"
+    depends on SKADI_LOADER
+
+
+source "Kconfig.zephyr"

@@ -1,0 +1,13 @@
+diff --git a/arch/riscv/include/asm/io.h b/arch/riscv/include/asm/io.h
+index acf5a96449..3b96a6568e 100644
+--- a/arch/riscv/include/asm/io.h
++++ b/arch/riscv/include/asm/io.h
+@@ -457,6 +457,8 @@ out:
+ #endif	/* __mem_isa */
+ #endif	/* __KERNEL__ */
+ 
++#define ioremap_nocache(offset, size) offset
++
+ #include <asm-generic/io.h>
+ 
+ #endif	/* __ASM_RISCV_IO_H */

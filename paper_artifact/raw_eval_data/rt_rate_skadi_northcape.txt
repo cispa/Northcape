@@ -1,0 +1,1076 @@
+I: Memory information:
+DRAM base: 80000000
+DRAM size: 40000000
+Reserved base: 90000000
+Reserved size: 2ffc0000
+I: Starting initialization of subsystems!
+I: Loading subsystem libc
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem libc 0xd112c0405d000000 0x856a0040005a0000 0xa24dc04000570000 0xc0ef404054000000
+I: Generating set-task-id capabilities for exported functions for subsystem libc with task id 1!
+I: Calling initialization functions for extension libc!
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+I: Subsystem libc loaded
+I: Subsystem libc section TEXT size 110608
+I: Subsystem libc section DATA size 888
+I: Subsystem libc section RODATA size 9448
+I: Subsystem libc section BSS size 283936
+I: Subsystem libc section EXPORT size 1944
+I: Subsystem libc section SYMTAB size 73584
+I: Subsystem libc section STRTAB size 23470
+I: Subsystem libc section SHSTRTAB size 650
+I: Subsystem libc section PREINIT size 8
+I: Subsystem libc section INIT size 144
+I: Subsystem libc section FINI size 0
+I: Loading subsystem allocator
+I: Resolved special symbol __skadi_allocator_arena for subsystem allocator to 0x5e3f404000014f00!
+I: Resolved special symbol __skadi_allocator_arena_start for subsystem allocator to 0x7b34804000014e00!
+I: Resolved special symbol __skadi_allocator_arena_size_bytes for subsystem allocator to 0x50f8004000014d00!
+I: Found special symbol for mtime reg!
+I: Returning capability 0x4e6f40400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem allocator 0xc21e404047000000 0xb580004001630000 0x96ee404001600000 0xdb7ec0415d000000
+I: Generating set-task-id capabilities for exported functions for subsystem allocator with task id 2!
+I: Calling initialization functions for extension allocator!
+I: Subsystem allocator loaded
+I: Subsystem allocator section TEXT size 70672
+I: Subsystem allocator section DATA size 936
+I: Subsystem allocator section RODATA size 6180
+I: Subsystem allocator section BSS size 290240
+I: Subsystem allocator section EXPORT size 504
+I: Subsystem allocator section SYMTAB size 69312
+I: Subsystem allocator section STRTAB size 17354
+I: Subsystem allocator section SHSTRTAB size 538
+I: Subsystem allocator section PREINIT size 24
+I: Subsystem allocator section INIT size 72
+I: Subsystem allocator section FINI size 0
+I: Loading subsystem loader_proxy
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem loader_proxy 0x8f68004002300000 0x97238040022d0000 0xbaf24040022a0000 0xfb0e404227000000
+I: Generating set-task-id capabilities for exported functions for subsystem loader_proxy with task id 3!
+I: Calling initialization functions for extension loader_proxy!
+I: Subsystem loader_proxy loaded
+I: Subsystem loader_proxy section TEXT size 56824
+I: Subsystem loader_proxy section DATA size 792
+I: Subsystem loader_proxy section RODATA size 5028
+I: Subsystem loader_proxy section BSS size 290240
+I: Subsystem loader_proxy section EXPORT size 360
+I: Subsystem loader_proxy section SYMTAB size 57912
+I: Subsystem loader_proxy section STRTAB size 17297
+I: Subsystem loader_proxy section SHSTRTAB size 458
+I: Subsystem loader_proxy section PREINIT size 16
+I: Subsystem loader_proxy section INIT size 56
+I: Subsystem loader_proxy section FINI size 0
+I: Loading subsystem nuuk
+I: Found special symbol for mtime reg!
+I: Returning capability 0x4e6f40400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem nuuk 0xae15c04002870000 0xa4f1404002840000 0xa873804002810000 0xc6a18042fe000000
+I: Generating set-task-id capabilities for exported functions for subsystem nuuk with task id 0!
+I: Calling initialization functions for extension nuuk!
+I: Subsystem nuuk loaded
+I: Subsystem nuuk section TEXT size 55344
+I: Subsystem nuuk section DATA size 704
+I: Subsystem nuuk section RODATA size 4908
+I: Subsystem nuuk section BSS size 290240
+I: Subsystem nuuk section EXPORT size 216
+I: Subsystem nuuk section SYMTAB size 61440
+I: Subsystem nuuk section STRTAB size 15263
+I: Subsystem nuuk section SHSTRTAB size 538
+I: Subsystem nuuk section PREINIT size 16
+I: Subsystem nuuk section INIT size 40
+I: Subsystem nuuk section FINI size 0
+I: Loading subsystem sys_clock
+I: Found special MMIO symbol __skadi_mmio_0_33554432_262144 - resolved register index 0 MMIO base 2000000 MMIO size 40000 to capability 0xe5ddc0434e000000
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem sys_clock 0xe94f804365000000 0x9eb4004003620000 0x99b68040035f0000 0xed7540435c000000
+I: Generating set-task-id capabilities for exported functions for subsystem sys_clock with task id 5!
+I: Calling initialization functions for extension sys_clock!
+I: Subsystem sys_clock loaded
+I: Subsystem sys_clock section TEXT size 77104
+I: Subsystem sys_clock section DATA size 904
+I: Subsystem sys_clock section RODATA size 5724
+I: Subsystem sys_clock section BSS size 290272
+I: Subsystem sys_clock section EXPORT size 576
+I: Subsystem sys_clock section SYMTAB size 66480
+I: Subsystem sys_clock section STRTAB size 20722
+I: Subsystem sys_clock section SHSTRTAB size 458
+I: Subsystem sys_clock section PREINIT size 16
+I: Subsystem sys_clock section INIT size 80
+I: Subsystem sys_clock section FINI size 0
+I: Loading subsystem scheduler
+W: Region 1 ELF file range (0xa3cd0 +6824) overlaps with 9 (0xa5378 +968)
+I: Found special symbol for mtime reg!
+I: Returning capability 0x4e6f40400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem scheduler 0xc9f880442e000000 0xada18040042b0000 0xb79cc04004280000 0xd636c04425000000
+I: Generating set-task-id capabilities for exported functions for subsystem scheduler with task id 6!
+I: Calling initialization functions for extension scheduler!
+I: Subsystem scheduler loaded
+I: Subsystem scheduler section TEXT size 632712
+I: Subsystem scheduler section DATA size 6824
+I: Subsystem scheduler section RODATA size 34120
+I: Subsystem scheduler section BSS size 309656
+I: Subsystem scheduler section EXPORT size 8520
+I: Subsystem scheduler section SYMTAB size 322920
+I: Subsystem scheduler section STRTAB size 131511
+I: Subsystem scheduler section SHSTRTAB size 576
+I: Subsystem scheduler section PREINIT size 16
+I: Subsystem scheduler section INIT size 968
+I: Subsystem scheduler section FINI size 0
+I: Loading subsystem isr
+W: Region 1 ELF file range (0x12228 +3776) overlaps with 9 (0x12510 +56)
+I: Found special symbol for mtime reg!
+I: Returning capability 0x4e6f40400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem isr 0xab47004006bd0000 0xb1eb804006ba0000 0xa14e404006b70000 0xe6818046b4000000
+I: Generating set-task-id capabilities for exported functions for subsystem isr with task id 7!
+W: Could not find function pointer _skadi_isr_wrapper_callee_trampoline_function_pointer for symbol _skadi_isr_wrapper_callee_trampoline
+I: Calling initialization functions for extension isr!
+I: Subsystem isr loaded
+I: Subsystem isr section TEXT size 65004
+I: Subsystem isr section DATA size 3776
+I: Subsystem isr section RODATA size 5172
+I: Subsystem isr section BSS size 290264
+I: Subsystem isr section EXPORT size 336
+I: Subsystem isr section SYMTAB size 64056
+I: Subsystem isr section STRTAB size 17096
+I: Subsystem isr section SHSTRTAB size 599
+I: Subsystem isr section PREINIT size 16
+I: Subsystem isr section INIT size 56
+I: Subsystem isr section FINI size 0
+W: ISR token is 0x909a404006ee0000
+I: Loading subsystem busy_waiter
+I: Found special symbol for mtime reg!
+I: Returning capability 0x4e6f40400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem busy_waiter 0x8935004007100000 0x80940040070d0000 0xa6e1c040070a0000 0xfc1c804707000000
+I: Generating set-task-id capabilities for exported functions for subsystem busy_waiter with task id 8!
+I: Calling initialization functions for extension busy_waiter!
+I: Subsystem busy_waiter loaded
+I: Subsystem busy_waiter section TEXT size 50000
+I: Subsystem busy_waiter section DATA size 704
+I: Subsystem busy_waiter section RODATA size 4548
+I: Subsystem busy_waiter section BSS size 290248
+I: Subsystem busy_waiter section EXPORT size 216
+I: Subsystem busy_waiter section SYMTAB size 59640
+I: Subsystem busy_waiter section STRTAB size 14714
+I: Subsystem busy_waiter section SHSTRTAB size 538
+I: Subsystem busy_waiter section PREINIT size 16
+I: Subsystem busy_waiter section INIT size 40
+I: Subsystem busy_waiter section FINI size 0
+I: Loading subsystem exception
+I: Found special symbol for mtime reg!
+I: Returning capability 0x4e6f40400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem exception 0x995c804007f00000 0xa9b2004007ed0000 0x9d6f404007ea0000 0xe0668047e7000000
+I: Generating set-task-id capabilities for exported functions for subsystem exception with task id 9!
+W: Could not find function pointer _skadi_exception_wrapper_callee_trampoline_function_pointer for symbol _skadi_exception_wrapper_callee_trampoline
+I: Calling initialization functions for extension exception!
+I: Subsystem exception loaded
+I: Subsystem exception section TEXT size 51524
+I: Subsystem exception section DATA size 664
+I: Subsystem exception section RODATA size 5396
+I: Subsystem exception section BSS size 290512
+I: Subsystem exception section EXPORT size 192
+I: Subsystem exception section SYMTAB size 62904
+I: Subsystem exception section STRTAB size 14343
+I: Subsystem exception section SHSTRTAB size 686
+I: Subsystem exception section PREINIT size 16
+I: Subsystem exception section INIT size 40
+I: Subsystem exception section FINI size 0
+W: Exception token is 0x8af3804008290000
+I: External interrupts for ISR table registered - make ISR table read only!
+I: Loading subsystem plic
+W: Region 1 ELF file range (0x14718 +1466) overlaps with 9 (0x14aa0 +80)
+I: Found special symbol for mtime reg!
+I: Returning capability 0x4e6f40400001a600 for mtime reg at 0x200bff8!
+I: Found special MMIO symbol __skadi_mmio_0_201326592_67108864 - resolved register index 0 MMIO base c000000 MMIO size 4000000 to capability 0x35a341ba00000000
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem plic 0xdef640484b000000 0xa68c804008480000 0x8d0a404008450000 0xe4af004842000000
+I: Generating set-task-id capabilities for exported functions for subsystem plic with task id 10!
+I: Calling initialization functions for extension plic!
+I: Subsystem plic loaded
+I: Subsystem plic section TEXT size 73544
+I: Subsystem plic section DATA size 1466
+I: Subsystem plic section RODATA size 5492
+I: Subsystem plic section BSS size 290256
+I: Subsystem plic section EXPORT size 600
+I: Subsystem plic section SYMTAB size 67464
+I: Subsystem plic section STRTAB size 20134
+I: Subsystem plic section SHSTRTAB size 582
+I: Subsystem plic section PREINIT size 16
+I: Subsystem plic section INIT size 80
+I: Subsystem plic section FINI size 0
+I: Loading subsystem uart
+W: Region 1 ELF file range (0x254d8 +1642) overlaps with 9 (0x25a88 +184)
+I: Found special symbol for mtime reg!
+I: Returning capability 0x4e6f40400001a600 for mtime reg at 0x200bff8!
+I: Found special MMIO symbol __skadi_mmio_0_268435456_65536 - resolved register index 0 MMIO base 10000000 MMIO size 10000 to capability 0xfd31404953000000
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem uart 0xc4e0004910000000 0x9c2b4040090d0000 0x8be5c040090a0000 0xfb63c04907000000
+I: Generating set-task-id capabilities for exported functions for subsystem uart with task id 11!
+I: Calling initialization functions for extension uart!
+I: Subsystem uart loaded
+I: Subsystem uart section TEXT size 138896
+I: Subsystem uart section DATA size 1642
+I: Subsystem uart section RODATA size 8260
+I: Subsystem uart section BSS size 290240
+I: Subsystem uart section EXPORT size 1536
+I: Subsystem uart section SYMTAB size 89640
+I: Subsystem uart section STRTAB size 34697
+I: Subsystem uart section SHSTRTAB size 555
+I: Subsystem uart section PREINIT size 16
+I: Subsystem uart section INIT size 184
+I: Subsystem uart section FINI size 0
+I: Loading subsystem pulp_apb_timer
+W: Region 1 ELF file range (0x18070 +1122) overlaps with 9 (0x18470 +96)
+I: Found special MMIO symbol __skadi_mmio_0_402653184_4096 - resolved register index 0 MMIO base 18000000 MMIO size 1000 to capability 0x99a840400a0a0000
+I: Found special symbol for mtime reg!
+I: Returning capability 0x4e6f40400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem pulp_apb_timer 0xdd31c04a21000000 0x855200400a1e0000 0xba6b40400a1b0000 0xdac1004a18000000
+I: Generating set-task-id capabilities for exported functions for subsystem pulp_apb_timer with task id 12!
+I: Calling initialization functions for extension pulp_apb_timer!
+I: Subsystem pulp_apb_timer loaded
+I: Subsystem pulp_apb_timer section TEXT size 87440
+I: Subsystem pulp_apb_timer section DATA size 1122
+I: Subsystem pulp_apb_timer section RODATA size 6132
+I: Subsystem pulp_apb_timer section BSS size 290296
+I: Subsystem pulp_apb_timer section EXPORT size 744
+I: Subsystem pulp_apb_timer section SYMTAB size 71352
+I: Subsystem pulp_apb_timer section STRTAB size 24106
+I: Subsystem pulp_apb_timer section SHSTRTAB size 555
+I: Subsystem pulp_apb_timer section PREINIT size 16
+I: Subsystem pulp_apb_timer section INIT size 96
+I: Subsystem pulp_apb_timer section FINI size 0
+I: Loading subsystem xilinx_axi_dma
+W: Region 1 ELF file range (0x19c58 +1186) overlaps with 9 (0x1a088 +112)
+I: Found special symbol for mtime reg!
+I: Returning capability 0x4e6f40400001a600 for mtime reg at 0x200bff8!
+I: Found special MMIO symbol __skadi_mmio_0_1105199104_65536 - resolved register index 0 MMIO base 41e00000 MMIO size 10000 to capability 0xc31f404b21000000
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem xilinx_axi_dma 0xf3dd804adf000000 0xb6f000400adc0000 0x92e380400ad90000 0xcffd004ad6000000
+I: Generating set-task-id capabilities for exported functions for subsystem xilinx_axi_dma with task id 13!
+I: Calling initialization functions for extension xilinx_axi_dma!
+I: Subsystem xilinx_axi_dma loaded
+I: Subsystem xilinx_axi_dma section TEXT size 92848
+I: Subsystem xilinx_axi_dma section DATA size 1186
+I: Subsystem xilinx_axi_dma section RODATA size 7796
+I: Subsystem xilinx_axi_dma section BSS size 290608
+I: Subsystem xilinx_axi_dma section EXPORT size 816
+I: Subsystem xilinx_axi_dma section SYMTAB size 81696
+I: Subsystem xilinx_axi_dma section STRTAB size 26139
+I: Subsystem xilinx_axi_dma section SHSTRTAB size 555
+I: Subsystem xilinx_axi_dma section PREINIT size 16
+I: Subsystem xilinx_axi_dma section INIT size 112
+I: Subsystem xilinx_axi_dma section FINI size 0
+I: Loading subsystem uart_console
+I: Found special symbol for mtime reg!
+I: Returning capability 0x4e6f40400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem uart_console 0xa09400400b960000 0xb75040400b930000 0xbdfd40400b900000 0xe96d404b8d000000
+I: Generating set-task-id capabilities for exported functions for subsystem uart_console with task id 14!
+I: Calling initialization functions for extension uart_console!
+I: Subsystem uart_console loaded
+I: Subsystem uart_console section TEXT size 61688
+I: Subsystem uart_console section DATA size 744
+I: Subsystem uart_console section RODATA size 4732
+I: Subsystem uart_console section BSS size 290296
+I: Subsystem uart_console section EXPORT size 288
+I: Subsystem uart_console section SYMTAB size 69024
+I: Subsystem uart_console section STRTAB size 22054
+I: Subsystem uart_console section SHSTRTAB size 538
+I: Subsystem uart_console section PREINIT size 16
+I: Subsystem uart_console section INIT size 48
+I: Subsystem uart_console section FINI size 0
+I: Loading subsystem irq_client
+I: Found special symbol for mtime reg!
+I: Returning capability 0x4e6f40400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem irq_client 0x975800400c700000 0xa99200400c6d0000 0x9751c0400c6a0000 0xd8a9404c67000000
+I: Generating set-task-id capabilities for exported functions for subsystem irq_client with task id 15!
+I: Calling initialization functions for extension irq_client!
+I: Subsystem irq_client loaded
+I: Subsystem irq_client section TEXT size 65392
+I: Subsystem irq_client section DATA size 752
+I: Subsystem irq_client section RODATA size 5724
+I: Subsystem irq_client section BSS size 299320
+I: Subsystem irq_client section EXPORT size 288
+I: Subsystem irq_client section SYMTAB size 68328
+I: Subsystem irq_client section STRTAB size 19055
+I: Subsystem irq_client section SHSTRTAB size 538
+I: Subsystem irq_client section PREINIT size 16
+I: Subsystem irq_client section INIT size 48
+I: Subsystem irq_client section FINI size 0
+I: Loading subsystem main
+I: Found special symbol for mtime reg!
+I: Returning capability 0x4e6f40400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem main 0x950580400cca0000 0x9d6040400cc70000 0x89be40400cc40000 0xeb5d404cc1000000
+I: Generating set-task-id capabilities for exported functions for subsystem main with task id 16!
+I: Calling initialization functions for extension main!
+I: Subsystem main loaded
+I: Subsystem main section TEXT size 50368
+I: Subsystem main section DATA size 704
+I: Subsystem main section RODATA size 4492
+I: Subsystem main section BSS size 290240
+I: Subsystem main section EXPORT size 216
+I: Subsystem main section SYMTAB size 59880
+I: Subsystem main section STRTAB size 14973
+I: Subsystem main section SHSTRTAB size 538
+I: Subsystem main section PREINIT size 16
+I: Subsystem main section INIT size 40
+I: Subsystem main section FINI size 0
+I: Finished initialization of subsystems!
+I: Total subsystem sizes:
+Text size: 1739968
+Data size: 23808
+ROData size: 123152
+BSS size: 4666864
+I: Calling skadi subsystem initialization function for level 1 subsystem plic
+[Earlycon]I: Registering interrupt handler!
+[Earlycon]I: Registered IRQ handler!
+[Earlycon]I: Registered interrupt handler - enabling interrupt!
+I: Calling skadi subsystem initialization function for level 1 subsystem uart_console
+I: Calling skadi subsystem initialization function for level 1 subsystem uart
+[Earlycon]I: Registering UART interrupt handler 0xac398040098e0000!
+[Earlycon]I: Registered UART interrupt handler!
+I: Calling skadi subsystem initialization function for level 1 subsystem scheduler
+I: Calling skadi subsystem initialization function for level 1 subsystem scheduler
+I: Calling skadi subsystem initialization function for level 1 subsystem scheduler
+I: Calling skadi subsystem initialization function for level 1 subsystem xilinx_axi_dma
+I: Runlevel 1 complete!
+I: Calling skadi subsystem initialization function for level 2 subsystem sys_clock
+I: Runlevel 2 complete!
+I: Calling __skadi_switch_to_main_thread at 0xb589004005810000!
+I: Calling skadi subsystem initialization function for level 3 subsystem main
+I: Calling skadi subsystem initialization function for level 3 subsystem irq_client
+I: Calling skadi subsystem initialization function for level 3 subsystem uart_console
+I: Calling skadi subsystem initialization function for level 3 subsystem xilinx_axi_dma
+I: Calling skadi subsystem initialization function for level 3 subsystem pulp_apb_timer
+I: Calling skadi subsystem initialization function for level 3 subsystem uart
+I: Calling skadi subsystem initialization function for level 3 subsystem plic
+I: Calling skadi subsystem initialization function for level 3 subsystem exception
+I: Calling skadi subsystem initialization function for level 3 subsystem busy_waiter
+I: Calling skadi subsystem initialization function for level 3 subsystem isr
+I: Calling skadi subsystem initialization function for level 3 subsystem scheduler
+I: Calling skadi subsystem initialization function for level 3 subsystem scheduler
+I: Calling skadi subsystem initialization function for level 3 subsystem sys_clock
+I: Calling skadi subsystem initialization function for level 3 subsystem nuuk
+I: Calling skadi subsystem initialization function for level 3 subsystem loader_proxy
+I: Calling skadi subsystem initialization function for level 3 subsystem pulp_apb_timer
+I: Configuring IRQs 651 and 779!
+I: Registering overflow interrupt handler 0x8f5f00400abf0000!
+I: Registered overflow interrupt handler!
+I: Registering compare interrupt handler 0x944940400a400000!
+I: Registered compare interrupt handler!
+I: Calling skadi subsystem initialization function for level 3 subsystem scheduler
+I: Runlevel 3 complete!
+*** Booting Skadi OS build v3.7.0-rc1-4624-g35283b085a9c ***
+I: Calling skadi subsystem initialization function for level 4 subsystem main
+I: Calling skadi subsystem initialization function for level 4 subsystem irq_client
+I: Calling skadi subsystem initialization function for level 4 subsystem uart_console
+I: Calling skadi subsystem initialization function for level 4 subsystem xilinx_axi_dma
+I: Calling skadi subsystem initialization function for level 4 subsystem pulp_apb_timer
+I: Calling skadi subsystem initialization function for level 4 subsystem uart
+I: Calling skadi subsystem initialization function for level 4 subsystem plic
+I: Calling skadi subsystem initialization function for level 4 subsystem exception
+I: Calling skadi subsystem initialization function for level 4 subsystem busy_waiter
+I: Calling skadi subsystem initialization function for level 4 subsystem isr
+I: Calling skadi subsystem initialization function for level 4 subsystem scheduler
+I: Calling skadi subsystem initialization function for level 4 subsystem sys_clock
+I: Calling skadi subsystem initialization function for level 4 subsystem nuuk
+I: Calling skadi subsystem initialization function for level 4 subsystem loader_proxy
+I: Init complete - loader is inaccessible!
+I: Calling skadi subsystem initialization function for level 4 subsystem loader_proxy
+I: Calling skadi subsystem initialization function for level 4 subsystem allocator
+I: Runlevel 4 complete!
+I: Releasing remaining initial allocator heap!
+I: Allocator added chunk from 900244d0 with length 2864
+I: Allocator added chunk from 902118e0 with length 1824
+I: Allocator added chunk from 90040118 with length 3816
+I: Allocator added chunk from 901f1138 with length 3784
+I: Allocator added chunk from 900302d0 with length 3376
+I: Allocator added chunk from 90240140 with length 3776
+I: Allocator added chunk from 90004330 with length 3280
+I: Allocator added chunk from 901e2170 with length 3728
+I: Allocator added chunk from 901f2110 with length 3824
+I: Allocator added chunk from 900f02c8 with length 3384
+I: Allocator added chunk from 90168130 with length 3792
+I: Allocator added chunk from 90005a28 with length 1496
+I: Allocator added chunk from 903200b8 with length 3912
+I: Allocator added chunk from 900c01e8 with length 3608
+I: Allocator added chunk from 9016b080 with length 3968
+I: Allocator added chunk from 9046fdf0 with length 528
+I: Allocator added chunk from 900082e0 with length 3360
+I: Allocator added chunk from 90648790 with length 920
+I: Allocator added chunk from 905cf5b8 with length 2632
+I: Allocator added chunk from 90042118 with length 3816
+I: Allocator added chunk from 900df030 with length 4048
+I: Allocator added chunk from 900de350 with length 3248
+I: Allocator added chunk from 90540020 with length 4064
+I: Allocator added chunk from 90ae0038 with length 4040
+I: Allocator added chunk from 90813980 with length 1664
+I: Allocator added chunk from 90a80220 with length 3552
+I: Allocator added chunk from 905502c0 with length 3392
+I: Allocator added chunk from 90af11c8 with length 3640
+I: Allocator added chunk from 90866dc8 with length 568
+I: Allocator added chunk from 90398030 with length 4048
+I: Allocator added chunk from 902b2030 with length 4048
+I: Allocator added chunk from 902a2030 with length 4048
+I: Allocator added chunk from 90255030 with length 4048
+I: Allocator added chunk from 90363030 with length 4048
+I: Allocator added chunk from 903e8030 with length 4048
+I: Allocator added chunk from 902b9030 with length 4048
+I: Allocator added chunk from 900b7030 with length 4048
+I: Allocator added chunk from 900a20d8 with length 3880
+I: Allocator added chunk from 90283030 with length 4048
+I: Allocator added chunk from 90319030 with length 4048
+I: Allocator added chunk from 9029e898 with length 1896
+I: Allocator added chunk from 902410a8 with length 3928
+I: Allocator added chunk from 900e10d8 with length 3880
+I: Allocator added chunk from 900e0368 with length 3224
+I: Allocator added chunk from 900d00d0 with length 3888
+I: Allocator added chunk from 90396568 with length 2712
+I: Allocator added chunk from 902b0190 with length 3696
+I: Allocator added chunk from 902a02c8 with length 3384
+I: Allocator added chunk from 90253c48 with length 952
+I: Allocator added chunk from 903613e8 with length 3096
+I: Allocator added chunk from 903e6e78 with length 392
+I: Allocator added chunk from 902b70e0 with length 3872
+I: Allocator added chunk from 900b50d8 with length 3880
+I: Allocator added chunk from 902810c8 with length 3896
+I: Allocator added chunk from 90009190 with length 3696
+I: Allocator added chunk from 903170c8 with length 3896
+I: Allocator added chunk from 900c10c8 with length 3896
+I: Allocator added chunk from 9000a3c8 with length 3128
+I: Allocator added chunk from 9000b1a8 with length 3672
+I: Allocator added chunk from 9000c1a0 with length 3680
+I: Allocator added chunk from 9000d1b8 with length 3656
+I: Allocator added chunk from 9000e1b0 with length 3664
+I: Allocator added chunk from 9000f1a0 with length 3680
+I: Allocator added chunk from 90010190 with length 3696
+I: Allocator added chunk from 900111c8 with length 3640
+I: Allocator added chunk from 900002b0 with length 3408
+I: Allocator added chunk from 900012f8 with length 3336
+I: Allocator added chunk from 90002478 with length 2952
+I: Allocator added chunk from 9005fe00 with length 512
+I: Allocator added chunk from 9015fe20 with length 480
+I: Allocator added chunk from 90060430 with length 3024
+I: Allocator added chunk from 900a1118 with length 3816
+I: Allocator added chunk from 900031e8 with length 3608
+I: Allocator added chunk from 9007c2c8 with length 3384
+I: Allocator added chunk from 900ffec0 with length 320
+I: Allocator added chunk from 900f1118 with length 3816
+I: Allocator added chunk from 900826c8 with length 2360
+I: Allocator added chunk from 901e4108 with length 3832
+I: Allocator added chunk from 9016a120 with length 3808
+I: Allocator added chunk from 90173120 with length 3808
+I: Allocator added chunk from 90085100 with length 3840
+I: Allocator added chunk from 901c8110 with length 3824
+I: Allocator added chunk from 90006168 with length 3736
+I: Allocator added chunk from 90007150 with length 3760
+I: Allocator added chunk from 901670d0 with length 1000
+I: Allocator added chunk from 90166220 with length 3552
+I: Allocator added chunk from 900e2370 with length 3216
+I: Allocator added chunk from 90648bc8 with length 1080
+I: Allocator added chunk from 901f3140 with length 3776
+I: Allocator added chunk from 9016c0d0 with length 3888
+I: Allocator added chunk from 900870d0 with length 3888
+I: Allocator added chunk from 901ca0b0 with length 3920
+I: Allocator added chunk from 900e2058 with length 632
+I: Allocator added chunk from 900e40a8 with length 3928
+I: Allocator added chunk from 904d0080 with length 3968
+I: Allocator added chunk from 90207120 with length 3808
+I: Allocator added chunk from 9015a0a0 with length 3936
+I: Allocator added chunk from 901040a8 with length 3928
+I: Allocator added chunk from 90028090 with length 3952
+I: Allocator added chunk from 902150a0 with length 3936
+I: Allocator added chunk from 900340b8 with length 3912
+I: Allocator added chunk from 90232098 with length 3944
+I: Allocator added chunk from 902710b8 with length 3912
+I: Allocator added chunk from 903710b0 with length 3920
+I: Allocator added chunk from 904720b8 with length 3912
+I: Allocator added chunk from 900510a8 with length 3928
+I: Allocator added chunk from 9029f088 with length 3960
+I: Allocator added chunk from 90391070 with length 3984
+I: Allocator added chunk from 903861a8 with length 3672
+I: Allocator added chunk from 90c200b8 with length 3912
+I: Allocator added chunk from 90d30468 with length 64408
+I: Allocator added chunk from 90ba17f8 with length 59400
+I: Allocator added chunk from 90a06df8 with length 37384
+I: Allocator added chunk from 90430468 with length 2968
+I: Allocator added chunk from 90095030 with length 45008
+I: Allocator added chunk from 90094030 with length 4048
+I: Allocator added chunk from 90442030 with length 57296
+I: Allocator added chunk from 90441030 with length 4048
+I: Allocator added chunk from 90422030 with length 57296
+I: Allocator added chunk from 90421030 with length 4048
+I: Allocator added chunk from 903f2030 with length 57296
+I: Allocator added chunk from 903f1030 with length 4048
+I: Allocator added chunk from 90a4a030 with length 24528
+I: Allocator added chunk from 90a49030 with length 4048
+I: Allocator added chunk from 9046a030 with length 23904
+I: Allocator added chunk from 90469030 with length 4048
+I: Allocator added chunk from 90451030 with length 61392
+I: Allocator added chunk from 90450298 with length 3432
+I: Allocator added chunk from 90aa1030 with length 61392
+I: Allocator added chunk from 90aa02b0 with length 3408
+I: Allocator added chunk from 90a91030 with length 61392
+I: Allocator added chunk from 90a900d8 with length 3880
+I: Allocator added chunk from 90a5f030 with length 4048
+I: Allocator added chunk from 90a5e948 with length 1720
+I: Allocator added chunk from 90b01030 with length 61392
+I: Allocator added chunk from 90b00020 with length 4064
+I: Allocator added chunk from 90871030 with length 61392
+I: Allocator added chunk from 90870028 with length 4056
+I: Allocator added chunk from 907d4030 with length 49104
+I: Allocator added chunk from 907d3808 with length 2040
+I: Allocator added chunk from 905b1030 with length 61392
+I: Allocator added chunk from 905b0298 with length 3432
+I: Allocator added chunk from 90b12030 with length 57296
+I: Allocator added chunk from 90b11518 with length 2792
+I: Allocator added chunk from 908c7030 with length 36816
+I: Allocator added chunk from 908c6ed0 with length 304
+I: Allocator added chunk from 904c6e50 with length 432
+I: Allocator added chunk from 906e5030 with length 45008
+I: Allocator added chunk from 906e4030 with length 4048
+I: Allocator added chunk from 9073d030 with length 12240
+I: Allocator added chunk from 9073c030 with length 4048
+I: Allocator added chunk from 90052368 with length 3224
+I: Allocator added chunk from 901590a0 with length 3936
+I: Allocator added chunk from 900430f0 with length 3856
+I: Allocator added chunk from 900a30d8 with length 3880
+I: Allocator added chunk from 901031f0 with length 3600
+I: Allocator added chunk from 90027100 with length 3840
+I: Allocator added chunk from 902140d0 with length 3888
+I: Allocator added chunk from 900330d8 with length 3880
+I: Allocator added chunk from 90231100 with length 3840
+I: Allocator added chunk from 90270268 with length 3480
+I: Allocator added chunk from 9026f0e0 with length 3872
+I: Allocator added chunk from 903700d0 with length 3888
+I: Allocator added chunk from 904716f8 with length 2312
+I: Allocator added chunk from 90205110 with length 3824
+I: Allocator added chunk from 903902f0 with length 3344
+I: Allocator added chunk from 903851b0 with length 3664
+I: Allocator added chunk from 90157128 with length 3800
+I: Allocator added chunk from 90101120 with length 3808
+I: Allocator added chunk from 90025100 with length 3840
+I: Allocator added chunk from 901f5088 with length 3960
+I: Allocator added chunk from 902120e0 with length 3872
+I: Allocator added chunk from 90031228 with length 3544
+I: Allocator added chunk from 900d10b8 with length 3912
+I: Allocator added chunk from 903970e8 with length 3864
+I: Allocator skipped chunk from 90230fe0 with length 32
+I: Allocator added chunk from 902b10d8 with length 3880
+I: Allocator added chunk from 902a10e0 with length 3872
+I: Allocator added chunk from 902540e0 with length 3872
+I: Allocator added chunk from 903620e0 with length 3872
+I: Allocator added chunk from 903e70f0 with length 3856
+I: Allocator added chunk from 902b80e8 with length 3864
+I: Allocator added chunk from 900b60d8 with length 3880
+I: Allocator added chunk from 90352538 with length 2760
+I: Allocator added chunk from 90a63030 with length 53200
+I: Allocator added chunk from 901e7030 with length 36816
+I: Allocator added chunk from 90333da8 with length 600
+I: Allocator added chunk from 90282090 with length 3952
+I: Allocator added chunk from 903181d8 with length 3624
+I: Allocator added chunk from 90bb0020 with length 65504
+I: Allocator added chunk from 90a10060 with length 65440
+I: Allocator added chunk from 90960020 with length 4064
+I: Allocator added chunk from 90d516b8 with length 59720
+I: Allocator added chunk from 90e516c0 with length 59712
+I: Allocator added chunk from 90bc0230 with length 64976
+I: Allocator added chunk from 90a43f20 with length 19472
+I: Allocator added chunk from 90a26620 with length 39392
+I: Allocator added chunk from 90977ab0 with length 34128
+I: Allocator added chunk from 90c904a8 with length 64344
+I: Allocator added chunk from 901e6110 with length 3824
+I: Allocator added chunk from 9016f030 with length 4048
+I: Allocator added chunk from 9016e030 with length 4048
+I: Allocator added chunk from 9008a030 with length 24528
+I: Allocator added chunk from 90089030 with length 4048
+I: Allocator added chunk from 901cd030 with length 12240
+I: Allocator added chunk from 901cc030 with length 4048
+I: Allocator added chunk from 900e7030 with length 36816
+I: Allocator added chunk from 900e6030 with length 4048
+I: Allocator added chunk from 90177030 with length 19816
+I: Allocator added chunk from 90176030 with length 4048
+I: Allocator added chunk from 901f8030 with length 32720
+I: Allocator added chunk from 901f7030 with length 4048
+I: Allocator added chunk from 90792030 with length 57296
+I: Allocator added chunk from 90791030 with length 4048
+I: Allocator added chunk from 90ab2030 with length 57296
+I: Allocator added chunk from 90ab1030 with length 4048
+I: Allocator added chunk from 907a6030 with length 40912
+I: Allocator added chunk from 907a5030 with length 4048
+I: Allocator added chunk from 904e2030 with length 57296
+I: Allocator added chunk from 904e1030 with length 4048
+I: Allocator added chunk from 90ac2030 with length 57296
+I: Allocator added chunk from 90ac1030 with length 4048
+I: Allocator added chunk from 907b3030 with length 53200
+I: Allocator added chunk from 907b2030 with length 4048
+I: Allocator added chunk from 90538030 with length 32720
+I: Allocator added chunk from 90537030 with length 4048
+I: Allocator added chunk from 90ad1030 with length 61392
+I: Allocator added chunk from 90ad0150 with length 3760
+I: Allocator added chunk from 907e1030 with length 61392
+I: Allocator added chunk from 907e00c0 with length 3904
+I: Allocator added chunk from 9056f030 with length 4048
+I: Allocator added chunk from 9056e8f8 with length 1800
+I: Allocator added chunk from 900930b8 with length 3912
+I: Allocator added chunk from 90b21030 with length 61392
+I: Allocator added chunk from 90b20020 with length 4064
+I: Allocator added chunk from 908d1030 with length 61392
+I: Allocator added chunk from 908d0028 with length 4056
+I: Allocator added chunk from 90420558 with length 2728
+I: Allocator added chunk from 903f00b8 with length 3912
+I: Allocator added chunk from 901c5680 with length 2432
+I: Allocator added chunk from 90a48bd0 with length 1072
+I: Allocator added chunk from 904685f0 with length 2576
+I: Allocator added chunk from 900411c8 with length 3640
+I: Allocator added chunk from 90090a40 with length 1472
+I: Allocator added chunk from 901f01f8 with length 3592
+I: Allocator added chunk from 90167630 with length 2512
+I: Allocator added chunk from 9007d1c0 with length 3648
+I: Allocator added chunk from 90171198 with length 3688
+I: Allocator added chunk from 90002158 with length 392
+I: Allocator added chunk from 90083178 with length 3720
+I: Allocator added chunk from 901c62b0 with length 3408
+I: Allocator added chunk from 90012150 with length 3760
+I: Allocator added chunk from 900920f8 with length 3848
+I: Allocator added chunk from 90050268 with length 3480
+I: Allocator added chunk from 900911b8 with length 3656
+I: Allocator added chunk from 901e3278 with length 3464
+I: Allocator added chunk from 907cfa68 with length 1432
+I: Allocator added chunk from 90a51b60 with length 1184
+I: Allocator added chunk from 9007e1f8 with length 3592
+I: Allocator added chunk from 906e3828 with length 2008
+I: Allocator added chunk from 9073ba38 with length 1480
+I: Allocator added chunk from 90a621f0 with length 3600
+I: Allocator added chunk from 9078f068 with length 3992
+I: Allocator added chunk from 9078ee20 with length 480
+I: Allocator added chunk from 9017be48 with length 440
+I: Allocator added chunk from 9016d0d8 with length 3880
+I: Allocator added chunk from 900880d8 with length 3880
+I: Allocator added chunk from 901cb0e0 with length 3872
+I: Allocator added chunk from 900e50a0 with length 3936
+I: Allocator added chunk from 90175080 with length 3968
+I: Allocator added chunk from 901f61e8 with length 3608
+I: Allocator added chunk from 90790460 with length 2976
+I: Allocator added chunk from 900c20a0 with length 3936
+I: Allocator added chunk from 90b305c0 with length 64064
+I: Allocator added chunk from 9017c030 with length 16336
+I: Allocator added chunk from 90440080 with length 3968
+I: Allocator added chunk from 90ab0258 with length 3496
+I: Allocator added chunk from 907a4410 with length 3056
+I: Allocator added chunk from 90be0220 with length 64992
+I: Allocator added chunk from 90bd0330 with length 64720
+I: Allocator added chunk from 90980020 with length 65504
+I: Allocator added chunk from 90c402e8 with length 3352
+I: Allocator added chunk from 90ea6f30 with length 37072
+I: Allocator added chunk from 90ca0070 with length 65424
+I: Allocator added chunk from 909a0120 with length 65248
+I: Allocator added chunk from 90995628 with length 43480
+I: Allocator added chunk from 90c500f8 with length 65288
+I: Allocator added chunk from 90da02e8 with length 64792
+I: Allocator added chunk from 90eb1280 with length 60800
+I: Allocator added chunk from 904e0e70 with length 400
+I: Allocator added chunk from 907f1030 with length 61392
+I: Allocator added chunk from 907f0248 with length 3512
+I: Allocator added chunk from 90575030 with length 45008
+I: Allocator added chunk from 90574ea8 with length 344
+I: Allocator added chunk from 90622030 with length 57296
+I: Allocator added chunk from 90621f48 with length 184
+I: Allocator added chunk from 908e2030 with length 57296
+I: Allocator added chunk from 908e1578 with length 2696
+I: Allocator added chunk from 90107030 with length 36816
+I: Allocator added chunk from 90106030 with length 4048
+I: Allocator added chunk from 9002b030 with length 20432
+I: Allocator added chunk from 9002a030 with length 4048
+I: Allocator added chunk from 90218030 with length 32720
+I: Allocator added chunk from 90217030 with length 4048
+I: Allocator added chunk from 90037030 with length 36816
+I: Allocator added chunk from 90036030 with length 4048
+I: Allocator added chunk from 90235030 with length 45008
+I: Allocator added chunk from 90234030 with length 4048
+I: Allocator added chunk from 90274030 with length 49104
+I: Allocator added chunk from 90273030 with length 4048
+I: Allocator added chunk from 90374030 with length 49104
+I: Allocator added chunk from 90373030 with length 4048
+I: Allocator added chunk from 90475030 with length 45008
+I: Allocator added chunk from 90474030 with length 4048
+I: Allocator added chunk from 90394030 with length 9360
+I: Allocator added chunk from 90393030 with length 4048
+I: Allocator added chunk from 90389030 with length 28624
+I: Allocator added chunk from 90388030 with length 4048
+I: Allocator added chunk from 90355030 with length 45008
+I: Allocator added chunk from 90354030 with length 4048
+I: Allocator added chunk from 90336030 with length 40912
+I: Allocator added chunk from 90335030 with length 4048
+I: Allocator added chunk from 90ac0ee0 with length 288
+I: Allocator added chunk from 90433030 with length 53200
+I: Allocator added chunk from 90432030 with length 4048
+I: Allocator added chunk from 904c9030 with length 28624
+I: Allocator added chunk from 904c8030 with length 4048
+I: Allocator added chunk from 907b1558 with length 2728
+I: Allocator added chunk from 90536e10 with length 496
+I: Allocator added chunk from 90084200 with length 3584
+I: Allocator added chunk from 90170498 with length 2920
+I: Allocator added chunk from 900a0168 with length 3736
+I: Allocator added chunk from 901c7128 with length 3800
+I: Allocator added chunk from 90165db0 with length 592
+I: Allocator added chunk from 902cf920 with length 1760
+I: Allocator added chunk from 902c1498 with length 2920
+I: Allocator added chunk from 90204528 with length 2776
+I: Allocator added chunk from 902b6168 with length 3736
+I: Allocator added chunk from 90169148 with length 3768
+I: Allocator added chunk from 9007f120 with length 3808
+I: Allocator added chunk from 90172150 with length 3760
+I: Allocator added chunk from 90054030 with length 48216
+I: Allocator added chunk from 90800258 with length 64936
+I: Allocator added chunk from 900b4400 with length 3072
+I: Allocator added chunk from 90280600 with length 2560
+I: Allocator added chunk from 90cf6df8 with length 37384
+I: Allocator added chunk from 90c84a70 with length 46480
+I: Allocator added chunk from 90c70da0 with length 62048
+I: Allocator added chunk from 90d61e78 with length 392
+I: Allocator added chunk from 90ec0030 with length 65488
+I: Allocator added chunk from 90ed02f0 with length 64784
+I: Allocator added chunk from 90d00220 with length 64992
+I: Allocator added chunk from 90d90ae8 with length 62744
+I: Allocator added chunk from 90d71f70 with length 57488
+I: Allocator added chunk from 90df1660 with length 59808
+I: Allocator added chunk from 90f29138 with length 28360
+I: Allocator added chunk from 90316f30 with length 208
+I: Allocator added chunk from 90046030 with length 40912
+I: Allocator added chunk from 90045030 with length 4048
+I: Allocator added chunk from 900a6030 with length 40912
+I: Allocator added chunk from 900a5030 with length 4048
+I: Allocator added chunk from 90244030 with length 49104
+I: Allocator added chunk from 90243030 with length 4048
+I: Allocator added chunk from 90209030 with length 28624
+I: Allocator added chunk from 90208050 with length 4016
+I: Allocator added chunk from 9015c030 with length 15456
+I: Allocator added chunk from 9015b030 with length 4048
+I: Allocator added chunk from 905a1030 with length 61392
+I: Allocator added chunk from 905a0230 with length 3536
+I: Allocator added chunk from 90591030 with length 61392
+I: Allocator added chunk from 90590788 with length 2168
+I: Allocator added chunk from 90631030 with length 61392
+I: Allocator added chunk from 90630020 with length 4064
+I: Allocator added chunk from 908f1030 with length 61392
+I: Allocator added chunk from 908f0050 with length 4016
+I: Allocator added chunk from 90901030 with length 61392
+I: Allocator added chunk from 90900670 with length 2448
+I: Allocator added chunk from 90601030 with length 61392
+I: Allocator added chunk from 90600600 with length 2560
+I: Allocator added chunk from 905f2030 with length 57296
+I: Allocator added chunk from 905f1e90 with length 368
+I: Allocator added chunk from 90bf3030 with length 53200
+I: Allocator added chunk from 90bf2048 with length 4024
+I: Allocator added chunk from 90957030 with length 36816
+I: Allocator added chunk from 90956dc0 with length 576
+I: Allocator added chunk from 90c16030 with length 40912
+I: Allocator added chunk from 90c15e28 with length 472
+I: Allocator added chunk from 90542030 with length 57296
+I: Allocator added chunk from 90541030 with length 4048
+I: Allocator added chunk from 90216050 with length 4016
+I: Allocator added chunk from 90ae2030 with length 57296
+I: Allocator added chunk from 90ae1030 with length 4048
+I: Allocator added chunk from 90815030 with length 45008
+I: Allocator added chunk from 90814030 with length 4048
+I: Allocator added chunk from 90035150 with length 3760
+I: Allocator added chunk from 90233070 with length 3984
+I: Allocator added chunk from 90272060 with length 4000
+I: Allocator added chunk from 90372060 with length 4000
+I: Allocator added chunk from 90473068 with length 3992
+I: Allocator added chunk from 90392058 with length 4008
+I: Allocator added chunk from 90387058 with length 4008
+I: Allocator added chunk from 90353080 with length 3968
+I: Allocator added chunk from 90334070 with length 3984
+I: Allocator added chunk from 90431070 with length 3984
+I: Allocator added chunk from 904c7080 with length 3968
+I: Allocator added chunk from 90053070 with length 3984
+I: Allocator added chunk from 90044068 with length 3992
+I: Allocator added chunk from 90105030 with length 4048
+I: Allocator added chunk from 90a81030 with length 61392
+I: Allocator added chunk from 90029030 with length 4048
+I: Allocator added chunk from 901e50c0 with length 3904
+I: Allocator added chunk from 900a4178 with length 3720
+I: Allocator added chunk from 90db0020 with length 65504
+I: Allocator added chunk from 9055e4c0 with length 6976
+I: Allocator added chunk from 90551030 with length 4048
+I: Allocator added chunk from 90f30030 with length 65488
+I: Allocator added chunk from 90f70038 with length 65480
+I: Allocator added chunk from 90fd6dc0 with length 25334336
+I: Allocator added chunk from 90f81190 with length 61040
+I: Allocator added chunk from 90dd00d8 with length 130856
+I: Allocator added chunk from 90dc0220 with length 64992
+I: Allocator added chunk from 90f5e9e8 with length 71248
+I: Allocator added chunk from 90f402c0 with length 64832
+I: Allocator added chunk from 90d20020 with length 160
+I: Allocator added chunk from 90d10120 with length 65248
+I: Allocator added chunk from 90e50028 with length 5784
+I: Allocator added chunk from 90e43a80 with length 50560
+I: Allocator added chunk from 90086158 with length 3752
+I: Allocator added chunk from 90af3030 with length 53200
+I: Allocator added chunk from 90af2030 with length 4048
+I: Allocator added chunk from 90868030 with length 32720
+I: Allocator added chunk from 90867030 with length 4048
+I: Allocator added chunk from 9039a030 with length 24528
+I: Allocator added chunk from 90399030 with length 4048
+I: Allocator added chunk from 902b4030 with length 8272
+I: Allocator added chunk from 902b3030 with length 4048
+I: Allocator added chunk from 902a4030 with length 49104
+I: Allocator added chunk from 902a3030 with length 4048
+I: Allocator added chunk from 90257030 with length 36816
+I: Allocator added chunk from 90256030 with length 4048
+I: Allocator added chunk from 90365030 with length 45008
+I: Allocator added chunk from 90364030 with length 4048
+I: Allocator added chunk from 903ea030 with length 24528
+I: Allocator added chunk from 903e9030 with length 4048
+I: Allocator added chunk from 902bb030 with length 20432
+I: Allocator added chunk from 902ba030 with length 4048
+I: Allocator added chunk from 900b9030 with length 28624
+I: Allocator added chunk from 900b8030 with length 4048
+I: Allocator added chunk from 90285030 with length 45008
+I: Allocator added chunk from 90284030 with length 4048
+I: Allocator added chunk from 9031b030 with length 20432
+I: Allocator added chunk from 9031a030 with length 4048
+I: Allocator added chunk from 900c4030 with length 49104
+I: Allocator added chunk from 900c3030 with length 4048
+I: Allocator added chunk from 90a71030 with length 61392
+I: Allocator added chunk from 90a70088 with length 3960
+I: Allocator added chunk from 90b87030 with length 36816
+I: Allocator added chunk from 90b86dd0 with length 560
+I: Allocator added chunk from 90d21030 with length 61392
+I: Allocator added chunk from 90d200c0 with length 3904
+I: Allocator added chunk from 901c90e8 with length 3864
+I: Allocator added chunk from 90b91030 with length 61392
+I: Allocator added chunk from 90b90230 with length 3536
+I: Allocator added chunk from 909b6030 with length 40912
+I: Allocator added chunk from 909b5e30 with length 464
+I: Allocator added chunk from 900e31b0 with length 3664
+I: Allocator added chunk from 901f40e0 with length 3872
+I: Allocator added chunk from 902060e8 with length 3864
+I: Allocator added chunk from 90158100 with length 3840
+I: Allocator added chunk from 90102110 with length 3824
+I: Allocator added chunk from 90026108 with length 3832
+I: Allocator added chunk from 90213120 with length 3808
+I: Allocator added chunk from 90032110 with length 3824
+I: Allocator added chunk from 90156f68 with length 152
+I: Allocator added chunk from 901004c8 with length 2872
+I: Allocator added chunk from 90242098 with length 3944
+I: Allocator added chunk from 90c36590 with length 39536
+I: Allocator added chunk from 90174308 with length 3320
+I: Allocator added chunk from 90e00020 with length 262112
+I: Final runlevel complete - launching Nuuk!
+I: Nuuk destroying root capability!
+I: Revoking loader's memory!
+I: Allocator added chunk from 80000000 with length 268435456
+I: Dropping ALL permissions from root capability!
+I: Final jump from nuuk!
+I: Runlevels complete!
+I: Static threads init complete!
+I: Calling main()
+I: Allocator has 1065020064 of 1073479680 free bytes (accordingly: 8459616 used bytes) in 480 blocks!
+I: Calling main 0xb26b804maskable
+I: Making IRQ mask 800 unmaskeable!
+
+I: Reading back IRQ mask 800!
+I: Scheduling timer interrupts!
+W: Deadline missed for 100 cycles (called at 7721 with deadline 100) - increasing by 100!
+W: Deadline missed for 200 cycles (called at 414551 with deadline 404315) - increasing by 100!
+W: Deadline missed for 300 cycles (called at 838227 with deadline 830435) - increasing by 100!
+W: Deadline missed for 400 cycles (called at 1260632 with deadline 1253419) - increasing by 100!
+W: Deadline missed for 500 cycles (called at 1691757 with deadline 1684521) - increasing by 100!
+W: Deadline missed for 600 cycles (called at 2122191 with deadline 2115370) - increasing by 100!
+W: Deadline missed for 700 cycles (called at 2553046 with deadline 2546205) - increasing by 100!
+W: Deadline missed for 800 cycles (called at 2983730 with deadline 2976998) - increasing by 100!
+W: Deadline missed for 900 cycles (called at 3414453 with deadline 3407876) - increasing by 100!
+W: Deadline missed for 1000 cycles (called at 3845215 with deadline 3838692) - increasing by 100!
+W: Deadline missed for 1100 cycles (called at 4280216 with deadline 4273812) - increasing by 100!
+W: Deadline missed for 1200 cycles (called at 4715011 with deadline 4708787) - increasing by 100!
+W: Deadline missed for 1300 cycles (called at 5150468 with deadline 5144060) - increasing by 100!
+W: Deadline missed for 1400 cycles (called at 5585645 with deadline 5579521) - increasing by 100!
+W: Deadline missed for 1500 cycles (called at 6021025 with deadline 6014714) - increasing by 100!
+W: Deadline missed for 1600 cycles (called at 6455758 with deadline 6450261) - increasing by 100!
+W: Deadline missed for 1700 cycles (called at 6890574 with deadline 6884930) - increasing by 100!
+W: Deadline missed for 1800 cycles (called at 7325610 with deadline 7320040) - increasing by 100!
+W: Deadline missed for 1900 cycles (called at 7760529 with deadline 7755236) - increasing by 100!
+W: Deadline missed for 2000 cycles (called at 8195372 with deadline 8189910) - increasing by 100!
+W: Deadline missed for 2100 cycles (called at 8630066 with deadline 8624962) - increasing by 100!
+W: Deadline missed for 2200 cycles (called at 9065576 with deadline 9060149) - increasing by 100!
+W: Deadline missed for 2300 cycles (called at 9500552 with deadline 9495628) - increasing by 100!
+W: Deadline missed for 2400 cycles (called at 9935630 with deadline 9930348) - increasing by 100!
+W: Deadline missed for 2500 cycles (called at 10370652 with deadline 10365374) - increasing by 100!
+W: Deadline missed for 2600 cycles (called at 10814177 with deadline 10809287) - increasing by 100!
+W: Deadline missed for 2700 cycles (called at 11257850 with deadline 11253072) - increasing by 100!
+W: Deadline missed for 2800 cycles (called at 11701305 with deadline 11696771) - increasing by 100!
+W: Deadline missed for 2900 cycles (called at 12144562 with deadline 12140129) - increasing by 100!
+W: Deadline missed for 3000 cycles (called at 12588432 with deadline 12583806) - increasing by 100!
+W: Deadline missed for 3100 cycles (called at 13031963 with deadline 13027595) - increasing by 100!
+W: Deadline missed for 3200 cycles (called at 13475631 with deadline 13471346) - increasing by 100!
+W: Deadline missed for 3300 cycles (called at 13919544 with deadline 13915122) - increasing by 100!
+W: Deadline missed for 3400 cycles (called at 14362986 with deadline 14358960) - increasing by 100!
+W: Deadline missed for 3500 cycles (called at 14806608 with deadline 14802692) - increasing by 100!
+W: Deadline missed for 3600 cycles (called at 15250085 with deadline 15246360) - increasing by 100!
+W: Deadline missed for 3700 cycles (called at 15700767 with deadline 15693469) - increasing by 100!
+W: Deadline missed for 3800 cycles (called at 16152130 with deadline 16144755) - increasing by 100!
+W: Deadline missed for 3900 cycles (called at 16603710 with deadline 16596360) - increasing by 100!
+W: Deadline missed for 4000 cycles (called at 17055147 with deadline 17047962) - increasing by 100!
+W: Deadline missed for 4100 cycles (called at 17506570 with deadline 17499638) - increasing by 100!
+W: Deadline missed for 4200 cycles (called at 17957776 with deadline 17951345) - increasing by 100!
+W: Deadline missed for 4300 cycles (called at 18409242 with deadline 18402868) - increasing by 100!
+W: Deadline missed for 4400 cycles (called at 18860666 with deadline 18854098) - increasing by 100!
+W: Deadline missed for 4500 cycles (called at 19311835 with deadline 19305753) - increasing by 100!
+W: Deadline missed for 4600 cycles (called at 19764033 with deadline 19757355) - increasing by 100!
+W: Deadline missed for 4700 cycles (called at 20216242 with deadline 20210005) - increasing by 100!
+W: Deadline missed for 4800 cycles (called at 20668785 with deadline 20662125) - increasing by 100!
+W: Deadline missed for 4900 cycles (called at 21120980 with deadline 21115022) - increasing by 100!
+W: Deadline missed for 5000 cycles (called at 21573353 with deadline 21567487) - increasing by 100!
+W: Deadline missed for 5100 cycles (called at 22025994 with deadline 22020026) - increasing by 100!
+W: Deadline missed for 5200 cycles (called at 22478717 with deadline 22472909) - increasing by 100!
+W: Deadline missed for 5300 cycles (called at 22931654 with deadline 22925780) - increasing by 100!
+W: Deadline missed for 5400 cycles (called at 23384673 with deadline 23379255) - increasing by 100!
+W: Deadline missed for 5500 cycles (called at 23837755 with deadline 23832214) - increasing by 100!
+W: Deadline missed for 5600 cycles (called at 24291062 with deadline 24285400) - increasing by 100!
+W: Deadline missed for 5700 cycles (called at 24751307 with deadline 24744614) - increasing by 100!
+W: Deadline missed for 5800 cycles (called at 25212014 with deadline 25205416) - increasing by 100!
+W: Deadline missed for 5900 cycles (called at 25673001 with deadline 25666350) - increasing by 100!
+W: Deadline missed for 6000 cycles (called at 26134235 with deadline 26127466) - increasing by 100!
+W: Deadline missed for 6100 cycles (called at 26596553 with deadline 26589117) - increasing by 100!
+W: Deadline missed for 6200 cycles (called at 27064573 with deadline 27057940) - increasing by 100!
+W: Deadline missed for 6300 cycles (called at 27533480 with deadline 27526601) - increasing by 100!
+W: Deadline missed for 6400 cycles (called at 28002522 with deadline 27995709) - increasing by 100!
+W: Deadline missed for 6500 cycles (called at 28472077 with deadline 28465275) - increasing by 100!
+W: Deadline missed for 6600 cycles (called at 28961918 with deadline 28955102) - increasing by 100!
+W: Deadline missed for 6700 cycles (called at 29532878 with deadline 29526025) - increasing by 100!
+I: Test success!
+
+======================
+Raw IRQ delays for rate 136000 (6800 cycles):
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+152420/15/33/34/0/0/0/0/6
+70500/8907/3876/240/5/21/0/0/7354
+100040/24/38/5/0/0/0/0/7
+110320/19/28/2/0/0/0/0/7
+110040/16/22/2/0/0/0/0/7
+112880/16/22/2/0/0/0/0/7
+114460/16/22/2/0/0/0/0/7
+114860/16/22/2/0/0/0/0/7
+114320/17/22/2/0/0/0/0/7
+109700/16/22/2/0/0/0/0/7
+105080/17/22/2/0/0/0/0/7
+100500/16/22/1/0/0/0/0/7
+98600/16/22/1/0/0/0/0/7
+96400/14/22/1/0/0/0/0/7
+92280/15/22/1/0/0/0/0/7
+87720/15/22/1/0/0/0/0/7
+80400/15/22/1/0/0/0/0/7
+76400/16/22/2/0/0/0/0/7
+75100/18/22/2/0/0/0/0/7
+74820/18/22/2/0/0/0/0/7
+70700/16/22/1/0/0/0/0/7
+68920/17/22/2/0/0/0/0/7
+66460/15/22/1/0/0/0/0/7
+64960/16/22/1/0/0/0/0/7
+64460/16/22/2/0/0/0/0/7
+63480/16/22/2/0/0/0/0/7
+61520/17/22/2/0/0/0/0/7
+59760/17/22/2/0/0/0/0/7
+55260/15/22/2/0/0/0/0/7
+53880/16/22/2/0/0/0/0/7
+51840/17/22/1/0/0/0/0/7
+48120/16/22/1/0/0/0/0/7
+46320/17/22/2/0/0/0/0/7
+48540/16/22/2/0/0/0/0/7
+44440/17/22/2/0/0/0/0/7
+45980/17/24/2/0/0/0/0/8
+44080/16/23/2/0/0/0/0/7
+44580/16/22/2/0/0/0/0/7
+45720/16/22/2/0/0/0/0/7
+46900/16/22/2/0/0/0/0/7
+48040/16/22/2/0/0/0/0/7
+45900/16/22/2/0/0/0/0/7
+43720/15/22/1/0/0/0/0/7
+43520/15/22/3/0/0/0/0/7
+45260/16/24/2/0/0/0/0/7
+44800/15/23/1/0/0/0/0/7
+44920/15/24/2/0/0/0/0/7
+44720/16/23/2/0/0/0/0/7
+45000/16/22/2/0/0/0/0/7
+45620/18/22/2/0/0/0/0/7
+46080/18/22/1/0/0/0/0/7
+46220/18/22/2/0/0/0/0/7
+46220/20/22/2/0/0/0/0/7
+45780/19/22/2/0/0/0/0/7
+44400/18/22/2/0/0/0/0/7
+43740/18/22/1/0/0/0/0/7
+45880/17/24/2/0/0/0/0/7
+54120/18/23/2/0/0/0/0/7
+59860/19/22/2/0/0/0/0/7
+62260/18/22/2/0/0/0/0/7
+65240/18/22/2/0/0/0/0/7
+65200/18/22/2/0/0/0/0/7
+62700/17/22/2/0/0/0/0/7
+61260/18/22/2/0/0/0/0/7
+61460/19/22/2/0/0/0/0/7
+61060/18/22/2/0/0/0/0/7
+60880/18/22/2/0/0/0/0/7
+55600/18/22/2/0/0/0/0/7
+52240/17/22/2/0/0/0/0/7
+52680/18/22/2/0/0/0/0/7
+52740/18/22/2/0/0/0/0/7
+54320/19/22/1/0/0/0/0/7
+54340/19/22/2/0/0/0/0/7
+54320/18/22/2/0/0/0/0/7
+53880/19/22/2/0/0/0/0/7
+54040/18/22/2/0/0/0/0/7
+53580/18/22/2/0/0/0/0/7
+52200/18/22/2/0/0/0/0/7
+52480/18/22/2/0/0/0/0/7
+53120/18/22/2/0/0/0/0/7
+55360/18/22/2/0/0/0/0/7
+55120/18/22/2/0/0/0/0/7
+54300/16/22/2/0/0/0/0/7
+52760/18/22/2/0/0/0/0/7
+52180/18/22/2/0/0/0/0/7
+51120/17/22/2/0/0/0/0/7
+48940/18/22/2/0/0/0/0/7
+49620/18/22/2/0/0/0/0/7
+47400/18/22/2/0/0/0/0/7
+45420/18/22/2/0/0/0/0/7
+46540/18/22/2/0/0/0/0/7
+45000/18/22/2/0/0/0/0/7
+43200/18/34/1/0/0/0/0/7
+45040/17/32/2/0/0/0/0/7
+44120/21/28/2/0/0/0/0/7
+45960/20/24/2/0/0/0/0/7
+45520/19/22/2/0/0/0/0/7
+44480/19/25/2/0/0/0/0/7
+41300/18/24/2/0/0/0/0/8
+46280/18/29/2/0/0/0/0/7
+IRQ delays for rate 136000 (6800 cycles) (Samples) discarded/min/max/avg/stddev ns: 0/41300/114860/58826.315789/18714.180441
+IRQ delays for rate 136000 (6800 cycles) (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/14/21/17.178947/1.329653
+IRQ delays for rate 136000 (6800 cycles) (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/22/34/22.568421/1.878704
+IRQ delays for rate 136000 (6800 cycles) (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/1/3/1.831579/0.401383
+IRQ delays for rate 136000 (6800 cycles) (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+IRQ delays for rate 136000 (6800 cycles) (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+IRQ delays for rate 136000 (6800 cycles) (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+IRQ delays for rate 136000 (6800 cycles) (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+IRQ delays for rate 136000 (6800 cycles) (Number of subsystem calls) discarded/min/max/avg/stddev ns: 0/7/8/7.021053/0.143560
+======================
+Finishing test with status 0-TEST SUCCESS!
+System poweroff!

@@ -1,0 +1,16 @@
+# zephyr has made a weird design choice, where the MDIO driver is a separate device from the ethernet
+/soc/axi-ethernet-subsystem/mdio
+/soc/axi-ethernet-subsystem@40c00000/mdio/phy@1
+/soc/axi-ethernet-subsystem@40c00000
+/soc/memory@80000000
+# reserved memory for Skadi Allocator
+/soc/memory@8fffffc0
+/soc/memory@90000000
+# does not exist in the actual hardware and is not enabled in zephyr
+/soc/lowrisc-eth@30000000
+# gets entangled in the ariane_peripherals module
+/soc/timer@18000000
+/soc/pulp_riscv_dbg@0
+/northcape-ops@42000000
+/northcape-ops@42000040
+

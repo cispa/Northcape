@@ -1,0 +1,8 @@
+{
+  "DESIGN_NAME": "northcape_mmu_wrapper_verilog",
+  "VERILOG_FILES": ["dir::northcape_mmu_flattened.v"],
+  "CLOCK_PERIOD": 50,
+  "DIE_AREA": "0 0 4096 4096",
+  "FP_SIZING": "absolute",
+  "CLOCK_PORT": "CLK_0"
+}

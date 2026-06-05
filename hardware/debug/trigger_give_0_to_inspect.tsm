@@ -1,0 +1,31 @@
+##################################################
+#
+# For info on creating trigger state machines:
+#   1) In the main Vivado menu bar, select
+#      Window > Language Templates
+#   2) In the Templates window, select
+#      Debug > Trigger State Machine
+#   3) Refer to the entry 'Info' for an overview
+#      of the trigger state machine language.
+#
+# More information can be found in this document:
+#
+#   Vivado Design Suite User Guide: Programming
+#   and Debugging (UG908)
+#
+##################################################
+state idle:
+if(axi0_awvalid == 1'b1 && axi0_awaddr == 64'h0000000042000000 && axi0_wdata == 64'h0000000000000000) then
+    goto wait_opcode;
+else
+    goto idle;
+endif
+
+state wait_opcode:
+if(axi1_awvalid == 1'b1 && axi1_awaddr == 64'h0000000042000018 && axi1_wdata == 64'h0000000700000007) then
+    trigger;
+elseif(axi1_awvalid == 1'b1 && axi1_awaddr == 64'h0000000042000018) then
+    goto idle;
+else
+    goto wait_opcode;
+endif

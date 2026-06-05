@@ -1,0 +1,8 @@
+board:
+  name: mpfs_icicle
+  vendor: microchip
+  socs:
+  - name: polarfire
+    variants:
+    - name: smp
+      cpucluster: u54

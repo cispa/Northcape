@@ -1,0 +1,23 @@
+config SOC_SERIES_CV64A6
+	bool
+	select SOC_FAMILY_ARIANE_CV64A6
+	help
+	  Ariane cva64 cores without skadi support
+
+config SOC_CV64A6_IMAC
+	bool
+	select SOC_SERIES_CV64A6
+	help
+	  Microchip MPFS system implementation
+config SOC_CV64A6
+	bool
+	select SOC_SERIES_CV64A6
+	help
+	  Microchip MPFS system implementation
+
+config SOC_SERIES
+	default "cv64a6" if SOC_SERIES_CV64A6
+
+config SOC
+	default "cv64a6" if SOC_CV64A6
+	default "cv64a6" if SOC_CV64A6_IMAC

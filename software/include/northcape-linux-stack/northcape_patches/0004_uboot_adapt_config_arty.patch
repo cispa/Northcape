@@ -1,0 +1,23 @@
+diff --git a/configs/openhwgroup_cv64a6_arty_a7_100_defconfig b/configs/openhwgroup_cv64a6_arty_a7_100_defconfig
+index f5ae7eabda..6cb3fde99c 100644
+--- a/configs/openhwgroup_cv64a6_arty_a7_100_defconfig
++++ b/configs/openhwgroup_cv64a6_arty_a7_100_defconfig
+@@ -6,7 +6,7 @@ CONFIG_RISCV_SMODE=y
+ CONFIG_OF_BOARD_SETUP=y
+ CONFIG_BOOTDELAY=5
+ CONFIG_USE_BOOTCOMMAND=y
+-CONFIG_BOOTCOMMAND="mmc info; mmc read 8A000000 100000 5000; setenv fdt_high 0xffffffffffffffff; bootm 8A000000 - $(fdtcontroladdr)"
++CONFIG_BOOTCOMMAND="mmc info; fatload mmc 0:2 8a000000 uImage; setenv fdt_high xffffffffffffffff; bootm 8a000000 - $(fdtcontroladdr)"
+ CONFIG_DISPLAY_CPUINFO=y
+ CONFIG_SPL_SPI_FLASH_MTD=y
+ CONFIG_CMD_GPT=y
+@@ -40,4 +40,8 @@ CONFIG_LOWRISC_DIGILENT_100MHZ=y
+ CONFIG_SYS_NS16550=y
+ CONFIG_SPI=y
+ CONFIG_XILINX_SPI=y
+-CONFIG_BAUDRATE=57600
++CONFIG_BAUDRATE=115200
++CONFIG_XILINX_EMACLITE=y
++CONFIG_FS_FAT=y
++CONFIG_FS_FAT_WRITE=y
++CONFIG_CMD_FAT=y

@@ -1,0 +1,11 @@
+diff --git a/.github/Dockerfile b/.github/Dockerfile
+index 84f612d..35b195c 100644
+--- a/.github/Dockerfile
++++ b/.github/Dockerfile
+@@ -49,4 +49,6 @@ RUN date +"Build Timestamp: %Y-%m-%d_%H-%M-%S" > /build/version/magic.version
+ RUN git rev-parse HEAD >> /build/version/magic.version
+ RUN tar -czf /build.tar.gz /build
+ 
++RUN update-alternatives --set python3 /usr/bin/python3.11
++
+ WORKDIR /magic_root

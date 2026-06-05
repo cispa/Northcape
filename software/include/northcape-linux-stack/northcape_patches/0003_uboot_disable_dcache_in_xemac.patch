@@ -1,0 +1,69 @@
+diff --git a/drivers/net/xilinx_axi_emac.c b/drivers/net/xilinx_axi_emac.c
+index 2ce6271afe..0045c1e031 100644
+--- a/drivers/net/xilinx_axi_emac.c
++++ b/drivers/net/xilinx_axi_emac.c
+@@ -75,6 +75,10 @@ DECLARE_GLOBAL_DATA_PTR;
+ 
+ #define DMAALIGN	128
+ 
++// hack for working around CV64A6' lack of cache coherency
++#define CV64A6_DISABLE_DCACHE __asm__ volatile("csrwi 0x7C1, 0x00")
++#define CV64A6_ENABLE_DCACHE  __asm__ volatile("csrwi 0x7C1, 0x01")
++
+ static u8 rxframe[PKTSIZE_ALIGN] __attribute((aligned(DMAALIGN)));
+ 
+ /* Reflect dma offsets */
+@@ -491,6 +495,8 @@ static int axiemac_start(struct udevice *dev)
+ 	/* Start DMA RX channel. Now it's ready to receive data.*/
+ 	axienet_dma_write(&rx_bd, &priv->dmarx->current);
+ 
++	CV64A6_DISABLE_DCACHE;
++
+ 	/* Setup the BD. */
+ 	memset(&rx_bd, 0, sizeof(rx_bd));
+ 	rx_bd.next_desc = lower_32_bits((unsigned long)&rx_bd);
+@@ -507,6 +513,8 @@ static int axiemac_start(struct udevice *dev)
+ 	 * then cache can contain uninitialized data */
+ 	flush_cache((phys_addr_t)&rxframe, sizeof(rxframe));
+ 
++	CV64A6_ENABLE_DCACHE;
++
+ 	/* Start the hardware */
+ 	temp = readl(&priv->dmarx->control);
+ 	temp |= XAXIDMA_CR_RUNSTOP_MASK;
+@@ -537,6 +545,8 @@ static int axiemac_send(struct udevice *dev, void *ptr, int len)
+ 
+ 	if (len > PKTSIZE_ALIGN)
+ 		len = PKTSIZE_ALIGN;
++	
++	CV64A6_DISABLE_DCACHE;
+ 
+ 	/* Flush packet to main memory to be trasfered by DMA */
+ 	flush_cache((phys_addr_t)ptr, len);
+@@ -557,6 +567,8 @@ static int axiemac_send(struct udevice *dev, void *ptr, int len)
+ 	/* Flush the last BD so DMA core could see the updates */
+ 	flush_cache((phys_addr_t)&tx_bd, sizeof(tx_bd));
+ 
++	CV64A6_ENABLE_DCACHE;
++
+ 	if (readl(&priv->dmatx->status) & XAXIDMA_HALTED_MASK) {
+ 		u32 temp;
+ 		axienet_dma_write(&tx_bd, &priv->dmatx->current);
+@@ -638,6 +650,8 @@ static int axiemac_recv(struct udevice *dev, int flags, uchar **packetp)
+ static int axiemac_free_pkt(struct udevice *dev, uchar *packet, int length)
+ {
+ 	struct axidma_priv *priv = dev_get_priv(dev);
++	
++	CV64A6_DISABLE_DCACHE;
+ 
+ #ifdef DEBUG
+ 	/* It is useful to clear buffer to be sure that it is consistent */
+@@ -661,6 +675,8 @@ static int axiemac_free_pkt(struct udevice *dev, uchar *packet, int length)
+ 	 * then cache will contain previous packet */
+ 	flush_cache((phys_addr_t)&rxframe, sizeof(rxframe));
+ 
++	CV64A6_ENABLE_DCACHE;
++
+ 	/* Rx BD is ready - start again */
+ 	axienet_dma_write(&rx_bd, &priv->dmarx->tail);
+ 

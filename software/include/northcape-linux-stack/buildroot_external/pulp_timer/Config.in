@@ -1,0 +1,5 @@
+config BR2_PACKAGE_PULP_TIMER
+    bool "PULP timer device support"
+    depends on BR2_LINUX_KERNEL
+    help
+        Driver for PULP timer.

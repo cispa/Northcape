@@ -1,0 +1,2297 @@
+I: Memory information:
+DRAM base: 80000000
+DRAM size: 40000000
+Reserved base: 90000000
+Reserved size: 2ffc0000
+I: Starting initialization of subsystems!
+I: Loading subsystem libc
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem libc 0xfce380405d000000 0xba460040005a0000 0x8c2b804000570000 0xda3e004054000000
+I: Generating set-task-id capabilities for exported functions for subsystem libc with task id 1!
+I: Calling initialization functions for extension libc!
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+I: Subsystem libc loaded
+I: Subsystem libc section TEXT size 110608
+I: Subsystem libc section DATA size 888
+I: Subsystem libc section RODATA size 9448
+I: Subsystem libc section BSS size 283936
+I: Subsystem libc section EXPORT size 1944
+I: Subsystem libc section SYMTAB size 73584
+I: Subsystem libc section STRTAB size 23470
+I: Subsystem libc section SHSTRTAB size 650
+I: Subsystem libc section PREINIT size 8
+I: Subsystem libc section INIT size 144
+I: Subsystem libc section FINI size 0
+I: Loading subsystem allocator
+I: Resolved special symbol __skadi_allocator_arena for subsystem allocator to 0x472c004000014f00!
+I: Resolved special symbol __skadi_allocator_arena_start for subsystem allocator to 0x7a6d404000014e00!
+I: Resolved special symbol __skadi_allocator_arena_size_bytes for subsystem allocator to 0x61a7804000014d00!
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem allocator 0xe1e7404047000000 0xbabec04001630000 0x9c77404001600000 0xf9ec00415d000000
+I: Generating set-task-id capabilities for exported functions for subsystem allocator with task id 2!
+I: Calling initialization functions for extension allocator!
+I: Subsystem allocator loaded
+I: Subsystem allocator section TEXT size 70672
+I: Subsystem allocator section DATA size 936
+I: Subsystem allocator section RODATA size 6180
+I: Subsystem allocator section BSS size 290240
+I: Subsystem allocator section EXPORT size 504
+I: Subsystem allocator section SYMTAB size 69312
+I: Subsystem allocator section STRTAB size 17354
+I: Subsystem allocator section SHSTRTAB size 538
+I: Subsystem allocator section PREINIT size 24
+I: Subsystem allocator section INIT size 72
+I: Subsystem allocator section FINI size 0
+I: Loading subsystem loader_proxy
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem loader_proxy 0x871bc04002300000 0x9cbb8040022d0000 0x83980040022a0000 0xc96a404227000000
+I: Generating set-task-id capabilities for exported functions for subsystem loader_proxy with task id 3!
+I: Calling initialization functions for extension loader_proxy!
+I: Subsystem loader_proxy loaded
+I: Subsystem loader_proxy section TEXT size 56824
+I: Subsystem loader_proxy section DATA size 792
+I: Subsystem loader_proxy section RODATA size 5028
+I: Subsystem loader_proxy section BSS size 290240
+I: Subsystem loader_proxy section EXPORT size 360
+I: Subsystem loader_proxy section SYMTAB size 57912
+I: Subsystem loader_proxy section STRTAB size 17297
+I: Subsystem loader_proxy section SHSTRTAB size 458
+I: Subsystem loader_proxy section PREINIT size 16
+I: Subsystem loader_proxy section INIT size 56
+I: Subsystem loader_proxy section FINI size 0
+I: Loading subsystem sys_clock
+I: Found special MMIO symbol __skadi_mmio_0_33554432_262144 - resolved register index 0 MMIO base 2000000 MMIO size 40000 to capability 0xd70ac042ef000000
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem sys_clock 0xee06804287000000 0x8052404002840000 0x9383004002810000 0xf2a74042fe000000
+I: Generating set-task-id capabilities for exported functions for subsystem sys_clock with task id 4!
+I: Calling initialization functions for extension sys_clock!
+I: Subsystem sys_clock loaded
+I: Subsystem sys_clock section TEXT size 77104
+I: Subsystem sys_clock section DATA size 904
+I: Subsystem sys_clock section RODATA size 5724
+I: Subsystem sys_clock section BSS size 290272
+I: Subsystem sys_clock section EXPORT size 576
+I: Subsystem sys_clock section SYMTAB size 66480
+I: Subsystem sys_clock section STRTAB size 20722
+I: Subsystem sys_clock section SHSTRTAB size 458
+I: Subsystem sys_clock section PREINIT size 16
+I: Subsystem sys_clock section INIT size 80
+I: Subsystem sys_clock section FINI size 0
+I: Loading subsystem scheduler
+W: Region 1 ELF file range (0xc6a68 +8288) overlaps with 9 (0xc85f8 +1176)
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem scheduler 0xda8300434e000000 0x89d88040034b0000 0xa56b804003480000 0xf0ea404345000000
+I: Generating set-task-id capabilities for exported functions for subsystem scheduler with task id 5!
+I: Calling initialization functions for extension scheduler!
+I: Subsystem scheduler loaded
+I: Subsystem scheduler section TEXT size 768512
+I: Subsystem scheduler section DATA size 8288
+I: Subsystem scheduler section RODATA size 41064
+I: Subsystem scheduler section BSS size 311056
+I: Subsystem scheduler section EXPORT size 10392
+I: Subsystem scheduler section SYMTAB size 390864
+I: Subsystem scheduler section STRTAB size 157666
+I: Subsystem scheduler section SHSTRTAB size 581
+I: Subsystem scheduler section PREINIT size 16
+I: Subsystem scheduler section INIT size 1176
+I: Subsystem scheduler section FINI size 0
+I: Loading subsystem nuuk
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem nuuk 0xb2dc804006730000 0x9fc3c04006700000 0xb9574040066d0000 0xd87c00466a000000
+I: Generating set-task-id capabilities for exported functions for subsystem nuuk with task id 0!
+I: Calling initialization functions for extension nuuk!
+I: Subsystem nuuk loaded
+I: Subsystem nuuk section TEXT size 61928
+I: Subsystem nuuk section DATA size 744
+I: Subsystem nuuk section RODATA size 5156
+I: Subsystem nuuk section BSS size 290240
+I: Subsystem nuuk section EXPORT size 288
+I: Subsystem nuuk section SYMTAB size 64536
+I: Subsystem nuuk section STRTAB size 17881
+I: Subsystem nuuk section SHSTRTAB size 538
+I: Subsystem nuuk section PREINIT size 16
+I: Subsystem nuuk section INIT size 48
+I: Subsystem nuuk section FINI size 0
+I: Loading subsystem mbedtls
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem mbedtls 0xe96f4046cf000000 0x9188004006cc0000 0x90f9404006c90000 0xd5b58046c6000000
+I: Generating set-task-id capabilities for exported functions for subsystem mbedtls with task id 7!
+I: Calling initialization functions for extension mbedtls!
+I: Subsystem mbedtls loaded
+I: Subsystem mbedtls section TEXT size 361488
+I: Subsystem mbedtls section DATA size 2220
+I: Subsystem mbedtls section RODATA size 20812
+I: Subsystem mbedtls section BSS size 329114
+I: Subsystem mbedtls section EXPORT size 2904
+I: Subsystem mbedtls section SYMTAB size 306624
+I: Subsystem mbedtls section STRTAB size 78070
+I: Subsystem mbedtls section SHSTRTAB size 538
+I: Subsystem mbedtls section PREINIT size 16
+I: Subsystem mbedtls section INIT size 344
+I: Subsystem mbedtls section FINI size 0
+I: Loading subsystem isr
+W: Region 1 ELF file range (0x14340 +3824) overlaps with 9 (0x14650 +64)
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem isr 0xc7df804811000000 0xa76e4040080e0000 0xb45bc040080b0000 0xcfafc04808000000
+I: Generating set-task-id capabilities for exported functions for subsystem isr with task id 8!
+W: Could not find function pointer _skadi_isr_wrapper_callee_trampoline_function_pointer for symbol _skadi_isr_wrapper_callee_trampoline
+I: Calling initialization functions for extension isr!
+I: Subsystem isr loaded
+I: Subsystem isr section TEXT size 73228
+I: Subsystem isr section DATA size 3824
+I: Subsystem isr section RODATA size 5420
+I: Subsystem isr section BSS size 290264
+I: Subsystem isr section EXPORT size 408
+I: Subsystem isr section SYMTAB size 67248
+I: Subsystem isr section STRTAB size 19830
+I: Subsystem isr section SHSTRTAB size 599
+I: Subsystem isr section PREINIT size 16
+I: Subsystem isr section INIT size 64
+I: Subsystem isr section FINI size 0
+W: ISR token is 0xba46404008bf0000
+I: Loading subsystem mdio_xilinx_axienet
+W: Region 1 ELF file range (0x15838 +994) overlaps with 9 (0x15bc0 +88)
+I: Found special MMIO symbol __skadi_mmio_0_1086324736_262144 - resolved register index 0 MMIO base 40c00000 MMIO size 40000 to capability 0xf03a4048c9000000
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem mdio_xilinx_axienet 0xc1964048e0000000 0x8dccc04008dd0000 0xba30004008da0000 0xd31d8048d7000000
+I: Generating set-task-id capabilities for exported functions for subsystem mdio_xilinx_axienet with task id 9!
+I: Calling initialization functions for extension mdio_xilinx_axienet!
+[Earlycon]I: Preparing API!
+[Earlycon]I: API initialized!
+I: Subsystem mdio_xilinx_axienet loaded
+I: Subsystem mdio_xilinx_axienet section TEXT size 77680
+I: Subsystem mdio_xilinx_axienet section DATA size 994
+I: Subsystem mdio_xilinx_axienet section RODATA size 5740
+I: Subsystem mdio_xilinx_axienet section BSS size 290352
+I: Subsystem mdio_xilinx_axienet section EXPORT size 600
+I: Subsystem mdio_xilinx_axienet section SYMTAB size 73080
+I: Subsystem mdio_xilinx_axienet section STRTAB size 23069
+I: Subsystem mdio_xilinx_axienet section SHSTRTAB size 555
+I: Subsystem mdio_xilinx_axienet section PREINIT size 16
+I: Subsystem mdio_xilinx_axienet section INIT size 88
+I: Subsystem mdio_xilinx_axienet section FINI size 0
+I: Loading subsystem fd
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem fd 0xf3124049a4000000 0x8f87404009a10000 0xaafbc040099e0000 0xcf7880499b000000
+I: Generating set-task-id capabilities for exported functions for subsystem fd with task id 10!
+I: Calling initialization functions for extension fd!
+I: Subsystem fd loaded
+I: Subsystem fd section TEXT size 184304
+I: Subsystem fd section DATA size 2624
+I: Subsystem fd section RODATA size 10020
+I: Subsystem fd section BSS size 290356
+I: Subsystem fd section EXPORT size 2016
+I: Subsystem fd section SYMTAB size 114768
+I: Subsystem fd section STRTAB size 49755
+I: Subsystem fd section SHSTRTAB size 538
+I: Subsystem fd section PREINIT size 16
+I: Subsystem fd section INIT size 256
+I: Subsystem fd section FINI size 0
+I: Loading subsystem exception
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem exception 0x8d2d00400acf0000 0xaa8c40400acc0000 0xbeeb00400ac90000 0xcd4f004ac6000000
+I: Generating set-task-id capabilities for exported functions for subsystem exception with task id 11!
+W: Could not find function pointer _skadi_exception_wrapper_callee_trampoline_function_pointer for symbol _skadi_exception_wrapper_callee_trampoline
+I: Calling initialization functions for extension exception!
+I: Subsystem exception loaded
+I: Subsystem exception section TEXT size 58076
+I: Subsystem exception section DATA size 704
+I: Subsystem exception section RODATA size 5572
+I: Subsystem exception section BSS size 290512
+I: Subsystem exception section EXPORT size 264
+I: Subsystem exception section SYMTAB size 65904
+I: Subsystem exception section STRTAB size 16857
+I: Subsystem exception section SHSTRTAB size 686
+I: Subsystem exception section PREINIT size 16
+I: Subsystem exception section INIT size 48
+I: Subsystem exception section FINI size 0
+W: Exception token is 0x857780400b050000
+I: External interrupts for ISR table registered - make ISR table read only!
+I: Loading subsystem fs
+W: Region 1 ELF file range (0x23420 +1584) overlaps with 9 (0x23970 +176)
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem fs 0xcdc4c04ba4000000 0xafd640400ba10000 0xa54f80400b9e0000 0xfa75c04b9b000000
+I: Generating set-task-id capabilities for exported functions for subsystem fs with task id 12!
+I: Calling initialization functions for extension fs!
+I: Subsystem fs loaded
+I: Subsystem fs section TEXT size 131224
+I: Subsystem fs section DATA size 1584
+I: Subsystem fs section RODATA size 9092
+I: Subsystem fs section BSS size 290272
+I: Subsystem fs section EXPORT size 1368
+I: Subsystem fs section SYMTAB size 97344
+I: Subsystem fs section STRTAB size 32892
+I: Subsystem fs section SHSTRTAB size 567
+I: Subsystem fs section PREINIT size 16
+I: Subsystem fs section INIT size 176
+I: Subsystem fs section FINI size 0
+I: Loading subsystem plic
+W: Region 1 ELF file range (0x161e0 +1514) overlaps with 9 (0x16590 +88)
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Found special MMIO symbol __skadi_mmio_0_201326592_67108864 - resolved register index 0 MMIO base c000000 MMIO size 4000000 to capability 0x136381ba00000000
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem plic 0xe635c04cba000000 0x860c80400cb70000 0x9a0cc0400cb40000 0xe5d5004cb1000000
+I: Generating set-task-id capabilities for exported functions for subsystem plic with task id 13!
+I: Calling initialization functions for extension plic!
+I: Subsystem plic loaded
+I: Subsystem plic section TEXT size 80152
+I: Subsystem plic section DATA size 1514
+I: Subsystem plic section RODATA size 5668
+I: Subsystem plic section BSS size 290256
+I: Subsystem plic section EXPORT size 672
+I: Subsystem plic section SYMTAB size 70848
+I: Subsystem plic section STRTAB size 23089
+I: Subsystem plic section SHSTRTAB size 582
+I: Subsystem plic section PREINIT size 16
+I: Subsystem plic section INIT size 88
+I: Subsystem plic section FINI size 0
+I: Loading subsystem net
+W: Region 1 ELF file range (0xa1a50 +36886) overlaps with 2 (0xa1978 +32104)
+W: Region 1 ELF file range (0xa1a50 +36886) overlaps with 8 (0xaaa18 +16)
+W: Region 1 ELF file range (0xa1a50 +36886) overlaps with 9 (0xaa768 +688)
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem net 0xd4dd804d7a000000 0x848d80400d770000 0x832680400d740000 0xc724004d71000000
+I: Generating set-task-id capabilities for exported functions for subsystem net with task id 14!
+I: Calling initialization functions for extension net!
+I: Subsystem net loaded
+I: Subsystem net section TEXT size 657784
+I: Subsystem net section DATA size 36886
+I: Subsystem net section RODATA size 32104
+I: Subsystem net section BSS size 577560
+I: Subsystem net section EXPORT size 5760
+I: Subsystem net section SYMTAB size 539976
+I: Subsystem net section STRTAB size 184895
+I: Subsystem net section SHSTRTAB size 671
+I: Subsystem net section PREINIT size 16
+I: Subsystem net section INIT size 688
+I: Subsystem net section FINI size 0
+I: Loading subsystem uart
+W: Region 1 ELF file range (0x26fd0 +1690) overlaps with 9 (0x275a8 +192)
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Found special MMIO symbol __skadi_mmio_0_268435456_65536 - resolved register index 0 MMIO base 10000000 MMIO size 10000 to capability 0xdedf804f56000000
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem uart 0xf2b5004f14000000 0x926bc0400f110000 0xb06280400f0e0000 0xff86c04f0b000000
+I: Generating set-task-id capabilities for exported functions for subsystem uart with task id 15!
+I: Calling initialization functions for extension uart!
+I: Subsystem uart loaded
+I: Subsystem uart section TEXT size 145552
+I: Subsystem uart section DATA size 1690
+I: Subsystem uart section RODATA size 8436
+I: Subsystem uart section BSS size 290240
+I: Subsystem uart section EXPORT size 1608
+I: Subsystem uart section SYMTAB size 93744
+I: Subsystem uart section STRTAB size 38487
+I: Subsystem uart section SHSTRTAB size 555
+I: Subsystem uart section PREINIT size 16
+I: Subsystem uart section INIT size 192
+I: Subsystem uart section FINI size 0
+I: Loading subsystem pulp_apb_timer
+W: Region 1 ELF file range (0x19b68 +1170) overlaps with 9 (0x19f90 +104)
+I: Found special MMIO symbol __skadi_mmio_0_402653184_4096 - resolved register index 0 MMIO base 18000000 MMIO size 1000 to capability 0xa620004010080000
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem pulp_apb_timer 0xc71500501f000000 0xa27ec040101c0000 0x82b8004010190000 0xccfd805016000000
+I: Generating set-task-id capabilities for exported functions for subsystem pulp_apb_timer with task id 16!
+I: Calling initialization functions for extension pulp_apb_timer!
+I: Subsystem pulp_apb_timer loaded
+I: Subsystem pulp_apb_timer section TEXT size 94096
+I: Subsystem pulp_apb_timer section DATA size 1170
+I: Subsystem pulp_apb_timer section RODATA size 6308
+I: Subsystem pulp_apb_timer section BSS size 290296
+I: Subsystem pulp_apb_timer section EXPORT size 816
+I: Subsystem pulp_apb_timer section SYMTAB size 74928
+I: Subsystem pulp_apb_timer section STRTAB size 27348
+I: Subsystem pulp_apb_timer section SHSTRTAB size 555
+I: Subsystem pulp_apb_timer section PREINIT size 16
+I: Subsystem pulp_apb_timer section INIT size 104
+I: Subsystem pulp_apb_timer section FINI size 0
+I: Loading subsystem xilinx_axi_dma
+W: Region 1 ELF file range (0x1b750 +1234) overlaps with 9 (0x1bba8 +120)
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Found special MMIO symbol __skadi_mmio_0_1105199104_65536 - resolved register index 0 MMIO base 41e00000 MMIO size 10000 to capability 0xdfc740511a000000
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem xilinx_axi_dma 0xc8998050d8000000 0x8dca404010d50000 0xa2c9004010d20000 0xea330050cf000000
+I: Generating set-task-id capabilities for exported functions for subsystem xilinx_axi_dma with task id 17!
+I: Calling initialization functions for extension xilinx_axi_dma!
+I: Subsystem xilinx_axi_dma loaded
+I: Subsystem xilinx_axi_dma section TEXT size 99504
+I: Subsystem xilinx_axi_dma section DATA size 1234
+I: Subsystem xilinx_axi_dma section RODATA size 7972
+I: Subsystem xilinx_axi_dma section BSS size 290608
+I: Subsystem xilinx_axi_dma section EXPORT size 888
+I: Subsystem xilinx_axi_dma section SYMTAB size 85320
+I: Subsystem xilinx_axi_dma section STRTAB size 29401
+I: Subsystem xilinx_axi_dma section SHSTRTAB size 555
+I: Subsystem xilinx_axi_dma section PREINIT size 16
+I: Subsystem xilinx_axi_dma section INIT size 120
+I: Subsystem xilinx_axi_dma section FINI size 0
+I: Loading subsystem posix
+W: Region 1 ELF file range (0x45a60 +2288) overlaps with 8 (0x462e8 +16)
+W: Region 1 ELF file range (0x45a60 +2288) overlaps with 9 (0x461d8 +272)
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem posix 0xd73240518a000000 0x8bf2c04011870000 0xb7ca804011840000 0xcf94805181000000
+I: Generating set-task-id capabilities for exported functions for subsystem posix with task id 18!
+I: Calling initialization functions for extension posix!
+I: Subsystem posix loaded
+I: Subsystem posix section TEXT size 269432
+I: Subsystem posix section DATA size 2288
+I: Subsystem posix section RODATA size 9808
+I: Subsystem posix section BSS size 301840
+I: Subsystem posix section EXPORT size 1944
+I: Subsystem posix section SYMTAB size 240192
+I: Subsystem posix section STRTAB size 95120
+I: Subsystem posix section SHSTRTAB size 605
+I: Subsystem posix section PREINIT size 16
+I: Subsystem posix section INIT size 272
+I: Subsystem posix section FINI size 0
+I: Loading subsystem mqtt
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem mqtt 0xea54c052e1000000 0xad71c04012de0000 0x87fc404012db0000 0xe6cbc052d8000000
+I: Generating set-task-id capabilities for exported functions for subsystem mqtt with task id 19!
+I: Calling initialization functions for extension mqtt!
+I: Subsystem mqtt loaded
+I: Subsystem mqtt section TEXT size 129664
+I: Subsystem mqtt section DATA size 1184
+I: Subsystem mqtt section RODATA size 7532
+I: Subsystem mqtt section BSS size 290240
+I: Subsystem mqtt section EXPORT size 1080
+I: Subsystem mqtt section SYMTAB size 110400
+I: Subsystem mqtt section STRTAB size 36232
+I: Subsystem mqtt section SHSTRTAB size 538
+I: Subsystem mqtt section PREINIT size 16
+I: Subsystem mqtt section INIT size 136
+I: Subsystem mqtt section FINI size 0
+I: Loading subsystem phy_mii
+W: Region 1 ELF file range (0x18c38 +1090) overlaps with 9 (0x19010 +104)
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem phy_mii 0xeae900538a000000 0x96f7c04013870000 0x8de3004013840000 0xd4bc005381000000
+I: Generating set-task-id capabilities for exported functions for subsystem phy_mii with task id 20!
+I: Calling initialization functions for extension phy_mii!
+[Earlycon]I: Preparing API!
+[Earlycon]I: API initialized!
+I: Subsystem phy_mii loaded
+I: Subsystem phy_mii section TEXT size 90672
+I: Subsystem phy_mii section DATA size 1090
+I: Subsystem phy_mii section RODATA size 5916
+I: Subsystem phy_mii section BSS size 290344
+I: Subsystem phy_mii section EXPORT size 744
+I: Subsystem phy_mii section SYMTAB size 79776
+I: Subsystem phy_mii section STRTAB size 26963
+I: Subsystem phy_mii section SHSTRTAB size 555
+I: Subsystem phy_mii section PREINIT size 16
+I: Subsystem phy_mii section INIT size 104
+I: Subsystem phy_mii section FINI size 0
+I: Loading subsystem uart_console
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem uart_console 0xf01dc05444000000 0xbbd6004014410000 0xb166c04014be0000 0xf1680054bb000000
+I: Generating set-task-id capabilities for exported functions for subsystem uart_console with task id 21!
+I: Calling initialization functions for extension uart_console!
+I: Subsystem uart_console loaded
+I: Subsystem uart_console section TEXT size 68584
+I: Subsystem uart_console section DATA size 784
+I: Subsystem uart_console section RODATA size 4980
+I: Subsystem uart_console section BSS size 290296
+I: Subsystem uart_console section EXPORT size 360
+I: Subsystem uart_console section SYMTAB size 72696
+I: Subsystem uart_console section STRTAB size 25360
+I: Subsystem uart_console section SHSTRTAB size 538
+I: Subsystem uart_console section PREINIT size 16
+I: Subsystem uart_console section INIT size 56
+I: Subsystem uart_console section FINI size 0
+I: Loading subsystem main
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem main 0xf7bec05519000000 0x884a804015160000 0x8b3f004015130000 0xcaa0405510000000
+I: Generating set-task-id capabilities for exported functions for subsystem main with task id 22!
+I: Calling initialization functions for extension main!
+I: Subsystem main loaded
+I: Subsystem main section TEXT size 85688
+I: Subsystem main section DATA size 808
+I: Subsystem main section RODATA size 7092
+I: Subsystem main section BSS size 299912
+I: Subsystem main section EXPORT size 360
+I: Subsystem main section SYMTAB size 84072
+I: Subsystem main section STRTAB size 27122
+I: Subsystem main section SHSTRTAB size 538
+I: Subsystem main section PREINIT size 16
+I: Subsystem main section INIT size 56
+I: Subsystem main section FINI size 0
+I: Loading subsystem xilinx_axienet
+W: Region 1 ELF file range (0x1ed08 +1498) overlaps with 9 (0x1f268 +120)
+I: Found special MMIO symbol __skadi_mmio_0_1086324736_262144 - resolved register index 0 MMIO base 40c00000 MMIO size 40000 to capability 0xd0e68055d7000000
+I: Found special symbol for mtime reg!
+I: Returning capability 0x67f500400001a600 for mtime reg at 0x200bff8!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem xilinx_axienet 0xcbb24055ef000000 0x852dc04015ec0000 0xb7be404015e90000 0xc4b64055e6000000
+I: Generating set-task-id capabilities for exported functions for subsystem xilinx_axienet with task id 23!
+I: Calling initialization functions for extension xilinx_axienet!
+I: Subsystem xilinx_axienet loaded
+I: Subsystem xilinx_axienet section TEXT size 113336
+I: Subsystem xilinx_axienet section DATA size 1498
+I: Subsystem xilinx_axienet section RODATA size 7820
+I: Subsystem xilinx_axienet section BSS size 293392
+I: Subsystem xilinx_axienet section EXPORT size 960
+I: Subsystem xilinx_axienet section SYMTAB size 91464
+I: Subsystem xilinx_axienet section STRTAB size 35596
+I: Subsystem xilinx_axienet section SHSTRTAB size 555
+I: Subsystem xilinx_axienet section PREINIT size 16
+I: Subsystem xilinx_axienet section INIT size 120
+I: Subsystem xilinx_axienet section FINI size 0
+I: Finished initialization of subsystems!
+I: Total subsystem sizes:
+Text size: 3866112
+Data size: 74648
+ROData size: 232892
+BSS size: 7041838
+I: Calling skadi subsystem initialization function for level 1 subsystem posix
+I: Calling skadi subsystem initialization function for level 1 subsystem posix
+I: Calling skadi subsystem initialization function for level 1 subsystem posix
+I: Calling skadi subsystem initialization function for level 1 subsystem plic
+[Earlycon]I: Registering interrupt handler!
+[Earlycon]I: Registered IRQ handler!
+[Earlycon]I: Registered interrupt handler - enabling interrupt!
+I: Calling skadi subsystem initialization function for level 1 subsystem uart_console
+I: Calling skadi subsystem initialization function for level 1 subsystem uart[Earlycon]I: Registering UART interrupt handler 0x8b5900400f8e0000!
+[Earlycon]I: Registered UART interrupt handler!
+I: Calling skadi subsystem initialization function for level 1 subsystem scheduler
+I: Calling skadi subsystem initialization function for level 1 subsystem scheduler
+I: Calling skadi subsystem initialization function for level 1 subsystem scheduler
+I: Calling skadi subsystem initialization function for level 1 subsystem xilinx_axi_dma
+I: Calling skadi subsystem initialization function for level 1 subsystem xilinx_axienet
+I: Runlevel 1 complete!
+I: Calling skadi subsystem initialization function for level 2 subsystem sys_clock
+I: Runlevel 2 complete!
+I: Calling __skadi_switch_to_main_thread at 0x9a81804005510000!
+I: Calling skadi subsystem initialization function for level 3 subsystem xilinx_axienet
+I: Calling skadi subsystem initialization function for level 3 subsystem main
+I: Calling skadi subsystem initialization function for level 3 subsystem uart_console
+I: Calling skadi subsystem initialization function for level 3 subsystem phy_mii
+I: Calling skadi subsystem initialization function for level 3 subsystem mqtt
+I: Calling skadi subsystem initialization function for level 3 subsystem posix
+I: Calling skadi subsystem initialization function for level 3 subsystem posix
+I: Calling skadi subsystem initialization function for level 3 subsystem xilinx_axi_dma
+I: Calling skadi subsystem initialization function for level 3 subsystem pulp_apb_timer
+I: Calling skadi subsystem initialization function for level 3 subsystem uart
+I: Calling skadi subsystem initialization function for level 3 subsystem net
+I: Calling skadi subsystem initialization function for level 3 subsystem net
+I: Calling skadi subsystem initialization function for level 3 subsystem plic
+I: Calling skadi subsystem initialization function for level 3 subsystem fs
+I: Calling skadi subsystem initialization function for level 3 subsystem exception
+I: Calling skadi subsystem initialization function for level 3 subsystem fd
+I: Calling skadi subsystem initialization function for level 3 subsystem mdio_xilinx_axi
+I: Calling skadi subsystem initialization function for level 3 subsystem isr
+I: Calling skadi subsystem initialization function for level 3 subsystem mbedtls
+I: Calling skadi subsystem initialization function for level 3 subsystem nuuk
+I: Calling skadi subsystem initialization function for level 3 subsystem scheduler
+I: Calling skadi subsystem initialization function for level 3 subsystem scheduler
+I: Calling skadi subsystem initialization function for level 3 subsystem sys_clock
+I: Calling skadi subsystem initialization function for level 3 subsystem loader_proxy
+I: Calling skadi subsystem initialization function for level 3 subsystem pulp_apb_timer
+I: Configuring IRQs 651 and 779!
+I: Registering overflow interrupt handler 0x918a004010ba0000!
+I: Registered overflow interrupt handler!
+I: Registering compare interrupt handler 0x8ab6804010bb0000!
+I: Registered compare interrupt handler!
+I: Calling skadi subsystem initialization function for level 3 subsystem mbedtls
+I: Calling skadi subsystem initialization function for level 3 subsystem scheduler
+I: Calling skadi subsystem initialization function for level 3 subsystem net
+I: Enabling IRQ!
+I: No IRQs defined!
+I: Calling skadi subsystem initialization function for level 3 subsystem mdio_xilinx_axi
+I: Calling skadi subsystem initialization function for level 3 subsystem phy_mii
+I: Calling skadi subsystem initialization function for level 3 subsystem net
+I: Enable MDIO Bus assuming ethernet clock frequency 50000000 divider 10!
+I: MDIO ready!
+I: PHY (1) ID 1CC915
+
+I: Calling skadi subsystem initialization function for level 3 subsystem net
+I: Current link state: down (speed 0)
+I: Link state changed to: down (speed 0)
+I: RX Checksum offloading requested!
+I: TX Checksum offloading requested!
+I: Registering interrupt handler!
+I: Registered interrupt handler - enabling interrupt!
+I: Calling skadi subsystem initialization function for level 3 subsystem net
+I: 1 initialized!
+I: Runlevel 3 complete!
+*** Booting Skadi OS build v3.7.0-rc1-4624-g35283b085a9c ***
+I: Calling skadi subsystem initialization function for level 4 subsystem net
+I: Calling skadi subsystem initialization function for level 4 subsystem net
+I: Initializing network
+I: IPv4 address: 192.0.2.1
+I: Calling skadi subsystem initialization function for level 4 subsystem xilinx_axienet
+I: Calling skadi subsystem initialization function for level 4 subsystem main
+I: Calling skadi subsystem initialization function for level 4 subsystem uart_console
+I: Calling skadi subsystem initialization function for level 4 subsystem phy_mii
+I: Calling skadi subsystem initialization function for level 4 subsystem mqtt
+I: Calling skadi subsystem initialization function for level 4 subsystem posix
+I: Calling skadi subsystem initialization function for level 4 subsystem xilinx_axi_dma
+I: Calling skadi subsystem initialization function for level 4 subsystem pulp_apb_timer
+I: Calling skadi subsystem initialization function for level 4 subsystem uart
+I: Calling skadi subsystem initialization function for level 4 subsystem net
+I: Calling skadi subsystem initialization function for level 4 subsystem plic
+I: Calling skadi subsystem initialization function for level 4 subsystem fs
+I: Calling skadi subsystem initialization function for level 4 subsystem exception
+I: Calling skadi subsystem initialization function for level 4 subsystem fd
+I: Calling skadi subsystem initialization function for level 4 subsystem mdio_xilinx_axi
+I: Calling skadi subsystem initialization function for level 4 subsystem isr
+I: Calling skadi subsystem initialization function for level 4 subsystem mbedtls
+I: Calling skadi subsystem initialization function for level 4 subsystem nuuk
+I: Calling skadi subsystem initialization function for level 4 subsystem scheduler
+I: Calling skadi subsystem initialization function for level 4 subsystem sys_clock
+I: Calling skadi subsystem initialization function for level 4 subsystem loader_proxy
+I: Init complete - loader is inaccessible!
+I: Calling skadi subsystem initialization function for level 4 subsystem loader_proxy
+I: Calling skadi subsystem initialization function for level 4 subsystem allocator
+I: Runlevel 4 complete!
+I: Releasing remaining initial allocator heap!
+I: Allocator added chunk from 903f6f30 with length 208
+I: Allocator added chunk from 90033198 with length 3688
+I: Allocator added chunk from 90231198 with length 3688
+I: Allocator added chunk from 902b7d28 with length 728
+I: Allocator added chunk from 902c21a8 with length 3672
+I: Allocator added chunk from 900e04b0 with length 2896
+I: Allocator added chunk from 900d0150 with length 3760
+I: Allocator added chunk from 902a02c8 with length 3384
+I: Allocator added chunk from 900b5108 with length 3832
+I: Allocator added chunk from 900606c8 with length 2360
+I: Allocator added chunk from 90850088 with length 3960
+I: Allocator added chunk from 90317220 with length 3552
+I: Allocator added chunk from 90ab2068 with length 3992
+I: Allocator added chunk from 90467060 with length 4000
+I: Allocator added chunk from 90711078 with length 3976
+I: Allocator added chunk from 90357068 with length 3992
+I: Allocator added chunk from 90322068 with length 3992
+I: Allocator added chunk from 909cb078 with length 3976
+I: Allocator added chunk from 90687068 with length 3992
+I: Allocator added chunk from 909d4068 with length 3992
+I: Allocator added chunk from 9069c070 with length 3984
+I: Allocator added chunk from 902b9080 with length 3968
+I: Allocator added chunk from 90a2d068 with length 3992
+I: Allocator added chunk from 900c3988 with length 1656
+I: Allocator added chunk from 901e6130 with length 3792
+I: Allocator added chunk from 902c4030 with length 4048
+I: Allocator added chunk from 914c0020 with length 4064
+I: Allocator added chunk from 90f10230 with length 64976
+I: Allocator added chunk from 909572e0 with length 36128
+I: Allocator added chunk from 914d94b0 with length 27472
+I: Allocator added chunk from 90390370 with length 3216
+I: Allocator added chunk from 90b5e030 with length 8144
+I: Allocator added chunk from 90b5d030 with length 4048
+I: Allocator added chunk from 90592030 with length 57296
+I: Allocator added chunk from 90591030 with length 4048
+I: Allocator added chunk from 90d12030 with length 57296
+I: Allocator added chunk from 90d11030 with length 4048
+I: Allocator added chunk from 91043030 with length 53200
+I: Allocator added chunk from 91042030 with length 4048
+I: Allocator added chunk from 90819030 with length 28624
+I: Allocator added chunk from 908184b8 with length 2888
+I: Allocator added chunk from 90d61030 with length 61392
+I: Allocator added chunk from 90d60818 with length 2024
+I: Allocator added chunk from 90b61030 with length 61392
+I: Allocator added chunk from 90b602d8 with length 3368
+I: Allocator added chunk from 905a5030 with length 45008
+I: Allocator added chunk from 905a4208 with length 3576
+I: Allocator added chunk from 906d2030 with length 57296
+I: Allocator added chunk from 906d1060 with length 4000
+I: Allocator added chunk from 91012030 with length 57296
+I: Allocator added chunk from 91011068 with length 3992
+I: Allocator added chunk from 90752030 with length 57296
+I: Allocator added chunk from 90751058 with length 4008
+I: Allocator added chunk from 90cac030 with length 16336
+I: Allocator added chunk from 90cab058 with length 4008
+I: Allocator added chunk from 91026030 with length 40912
+I: Allocator added chunk from 91025070 with length 3984
+I: Allocator added chunk from 90ae3030 with length 53200
+I: Allocator added chunk from 90ae2060 with length 4000
+I: Allocator added chunk from 90532030 with length 57296
+I: Allocator added chunk from 90531068 with length 3992
+I: Allocator added chunk from 90763030 with length 53200
+I: Allocator added chunk from 90762068 with length 3992
+I: Allocator added chunk from 90b5c070 with length 3984
+I: Allocator added chunk from 90056030 with length 40024
+I: Allocator added chunk from 90055058 with length 4008
+I: Allocator added chunk from 90047030 with length 36816
+I: Allocator added chunk from 90046058 with length 4008
+I: Allocator added chunk from 90093410 with length 3056
+I: Allocator added chunk from 90d10120 with length 3808
+I: Allocator added chunk from 910416b8 with length 2376
+I: Allocator added chunk from 90a905c8 with length 2616
+I: Allocator added chunk from 906f02c0 with length 3392
+I: Allocator added chunk from 90aa46a8 with length 2392
+I: Allocator added chunk from 904102a8 with length 3416
+I: Allocator added chunk from 90700390 with length 3184
+I: Allocator added chunk from 90ab14f8 with length 2824
+I: Allocator added chunk from 90466e88 with length 376
+I: Allocator added chunk from 907101d0 with length 3632
+I: Allocator added chunk from 90356988 with length 1656
+I: Allocator added chunk from 903210e0 with length 3872
+I: Allocator added chunk from 909ca0d8 with length 3880
+I: Allocator added chunk from 906860d0 with length 3888
+I: Allocator added chunk from 909d30e0 with length 3872
+I: Allocator added chunk from 9069b0c0 with length 3904
+I: Allocator added chunk from 902b8118 with length 3816
+I: Allocator added chunk from 900a11d0 with length 3632
+I: Allocator added chunk from 90a2c090 with length 3952
+I: Allocator added chunk from 902c3110 with length 3824
+I: Allocator added chunk from 90003a60 with length 1440
+I: Allocator added chunk from 9007c350 with length 3248
+I: Allocator added chunk from 900fff80 with length 128
+I: Allocator added chunk from 900f11b8 with length 3656
+I: Allocator added chunk from 90082740 with length 2240
+I: Allocator added chunk from 901e41c0 with length 3648
+I: Allocator added chunk from 9016a1b0 with length 3664
+I: Allocator added chunk from 90173190 with length 3696
+I: Allocator added chunk from 900851a0 with length 3680
+I: Allocator added chunk from 901c81b0 with length 3664
+I: Allocator added chunk from 90167198 with length 800
+I: Allocator added chunk from 901661b8 with length 3656
+I: Allocator added chunk from 900e21c8 with length 3640
+I: Allocator added chunk from 901f31a8 with length 3672
+I: Allocator added chunk from 902051c8 with length 3640
+I: Allocator added chunk from 901571c0 with length 3648
+I: Allocator added chunk from 90101188 with length 3704
+I: Allocator added chunk from 906a3178 with length 3720
+I: Allocator added chunk from 900a6068 with length 40856
+I: Allocator added chunk from 90391030 with length 60760
+I: Allocator added chunk from 90590020 with length 4064
+I: Allocator added chunk from 90025170 with length 3728
+I: Allocator added chunk from 902122d0 with length 3376
+I: Allocator added chunk from 915204d8 with length 64296
+I: Allocator added chunk from 90f34d48 with length 45752
+I: Allocator added chunk from 90960020 with length 4064
+I: Allocator added chunk from 914e0078 with length 65416
+I: Allocator added chunk from 918718a8 with length 59224
+I: Allocator added chunk from 912a6f30 with length 37072
+I: Allocator added chunk from 91580378 with length 64648
+I: Allocator added chunk from 91530260 with length 64928
+I: Allocator added chunk from 90f57390 with length 35952
+I: Allocator added chunk from 90092230 with length 3536
+I: Allocator added chunk from 900d5030 with length 45008
+I: Allocator added chunk from 900d4058 with length 4008
+I: Allocator added chunk from 903a6030 with length 40912
+I: Allocator added chunk from 903a5070 with length 3984
+I: Allocator added chunk from 902a5030 with length 45008
+I: Allocator added chunk from 902a4060 with length 4000
+I: Allocator added chunk from 90275030 with length 45008
+I: Allocator added chunk from 90274068 with length 3992
+I: Allocator added chunk from 9025a030 with length 24528
+I: Allocator added chunk from 90259060 with length 4000
+I: Allocator added chunk from 90377030 with length 36816
+I: Allocator added chunk from 90376070 with length 3984
+I: Allocator added chunk from 903f9030 with length 28624
+I: Allocator added chunk from 903f8070 with length 3984
+I: Allocator added chunk from 90d31030 with length 61392
+I: Allocator added chunk from 90d30268 with length 3480
+I: Allocator added chunk from 90d21030 with length 61392
+I: Allocator added chunk from 90d202e8 with length 3352
+I: Allocator added chunk from 90d81030 with length 61392
+I: Allocator added chunk from 90d801b0 with length 3664
+I: Allocator added chunk from 905c1030 with length 34424
+I: Allocator added chunk from 905c0658 with length 2472
+I: Allocator added chunk from 905b1030 with length 61392
+I: Allocator added chunk from 905b0070 with length 3984
+I: Allocator added chunk from 910c3030 with length 53200
+I: Allocator added chunk from 910c2758 with length 2216
+I: Allocator added chunk from 91147030 with length 36816
+I: Allocator added chunk from 91146ef8 with length 264
+I: Allocator added chunk from 90821030 with length 61392
+I: Allocator added chunk from 90820148 with length 3768
+I: Allocator added chunk from 90d99030 with length 28624
+I: Allocator added chunk from 90d980b0 with length 3920
+I: Allocator added chunk from 901c56f0 with length 2320
+I: Allocator added chunk from 90b92030 with length 57296
+I: Allocator added chunk from 90b910c8 with length 3896
+I: Allocator added chunk from 910d3030 with length 53200
+I: Allocator added chunk from 910d23c0 with length 3136
+I: Allocator added chunk from 90050ab8 with length 1352
+I: Allocator added chunk from 900411d0 with length 3632
+I: Allocator added chunk from 90090ad0 with length 1328
+I: Allocator added chunk from 901f02b8 with length 3400
+I: Allocator added chunk from 90167710 with length 2288
+I: Allocator added chunk from 9007d268 with length 3480
+I: Allocator added chunk from 90171240 with length 3520
+I: Allocator added chunk from 900021f8 with length 232
+I: Allocator added chunk from 900831e8 with length 3608
+I: Allocator added chunk from 901c6350 with length 3248
+I: Allocator added chunk from 900121f8 with length 3592
+I: Allocator added chunk from 90091250 with length 3504
+I: Allocator added chunk from 901e3208 with length 3576
+I: Allocator added chunk from 90169210 with length 3568
+I: Allocator added chunk from 9007f1c8 with length 3640
+I: Allocator added chunk from 9007e248 with length 3512
+I: Allocator added chunk from 90172250 with length 3504
+I: Allocator added chunk from 900841f8 with length 3592
+I: Allocator added chunk from 90170558 with length 2728
+I: Allocator added chunk from 900a0230 with length 3536
+I: Allocator added chunk from 901c71c8 with length 3640
+I: Allocator added chunk from 90165e40 with length 448
+I: Allocator added chunk from 9039ff38 with length 200
+I: Allocator added chunk from 902045c0 with length 2624
+I: Allocator added chunk from 902c1500 with length 2816
+I: Allocator added chunk from 900b4538 with length 2760
+I: Allocator added chunk from 90280480 with length 2944
+I: Allocator added chunk from 90316f20 with length 224
+I: Allocator added chunk from 900c0310 with length 3312
+I: Allocator added chunk from 901e51a8 with length 3672
+I: Allocator added chunk from 9016b190 with length 3696
+I: Allocator added chunk from 901741b0 with length 3664
+I: Allocator added chunk from 90086198 with length 3688
+I: Allocator added chunk from 901c9178 with length 3720
+I: Allocator added chunk from 900e31c8 with length 3640
+I: Allocator added chunk from 901f41a0 with length 3680
+I: Allocator added chunk from 90206180 with length 3712
+I: Allocator added chunk from 901581d8 with length 3624
+I: Allocator added chunk from 901021b0 with length 3664
+I: Allocator added chunk from 90026190 with length 3696
+I: Allocator added chunk from 902131d0 with length 3632
+I: Allocator added chunk from 90032190 with length 3696
+I: Allocator added chunk from 90100558 with length 2728
+I: Allocator added chunk from 900245d0 with length 2608
+I: Allocator added chunk from 902119d8 with length 1576
+I: Allocator added chunk from 900401e0 with length 3616
+I: Allocator added chunk from 901f1238 with length 3528
+I: Allocator added chunk from 90030398 with length 3176
+I: Allocator added chunk from 902401f8 with length 3592
+I: Allocator added chunk from 90004420 with length 3040
+I: Allocator added chunk from 901e2248 with length 3512
+I: Allocator added chunk from 90168248 with length 3512
+I: Allocator added chunk from 900059d8 with length 1576
+I: Allocator added chunk from 90006270 with length 3472
+I: Allocator added chunk from 90007250 with length 3504
+I: Allocator added chunk from 90008270 with length 3472
+I: Allocator added chunk from 90009260 with length 3488
+I: Allocator added chunk from 9000a288 with length 3448
+I: Allocator added chunk from 9000b288 with length 3448
+I: Allocator added chunk from 9000c2a0 with length 3424
+I: Allocator added chunk from 9000d288 with length 3448
+I: Allocator added chunk from 9000e270 with length 3472
+I: Allocator added chunk from 90281138 with length 3784
+I: Allocator added chunk from 9000f228 with length 3544
+I: Allocator added chunk from 900103a0 with length 3168
+I: Allocator added chunk from 906ef340 with length 3264
+I: Allocator added chunk from 906e02a8 with length 3416
+I: Allocator added chunk from 900003f0 with length 3088
+I: Allocator added chunk from 906d0080 with length 3968
+I: Allocator added chunk from 910101b0 with length 3664
+I: Allocator added chunk from 90750bd0 with length 1072
+I: Allocator added chunk from 90caae18 with length 488
+I: Allocator added chunk from 91024de0 with length 544
+I: Allocator added chunk from 90ae1e90 with length 368
+I: Allocator added chunk from 90530f50 with length 176
+I: Allocator added chunk from 90761580 with length 2688
+I: Allocator added chunk from 900540a8 with length 3928
+I: Allocator added chunk from 90045088 with length 3960
+I: Allocator added chunk from 900a5088 with length 3960
+I: Allocator added chunk from 902440b0 with length 3920
+I: Allocator added chunk from 900d3098 with length 3944
+I: Allocator added chunk from 903a40a0 with length 3936
+I: Allocator added chunk from 90031168 with length 3736
+I: Allocator added chunk from 90472058 with length 57256
+I: Allocator added chunk from 90245058 with length 44968
+I: Allocator added chunk from 902a3070 with length 3984
+I: Allocator added chunk from 902731a8 with length 3672
+I: Allocator added chunk from 909a2c78 with length 54152
+I: Allocator added chunk from 91508d88 with length 29304
+I: Allocator added chunk from 914f08f0 with length 63248
+I: Allocator added chunk from 91882650 with length 2480
+I: Allocator added chunk from 915504a0 with length 64352
+I: Allocator added chunk from 91540020 with length 65504
+I: Allocator added chunk from 90f60110 with length 65264
+I: Allocator added chunk from 918d1f28 with length 57560
+I: Allocator added chunk from 912b0798 with length 63592
+I: Allocator added chunk from 915caa40 with length 21952
+I: Allocator added chunk from 909c0088 with length 38440
+I: Allocator added chunk from 909b0220 with length 64992
+I: Allocator added chunk from 9005fe48 with length 408
+I: Allocator added chunk from 906b3030 with length 53200
+I: Allocator added chunk from 906b2068 with length 3992
+I: Allocator added chunk from 90ffa030 with length 24528
+I: Allocator added chunk from 90ff9058 with length 4008
+I: Allocator added chunk from 90483030 with length 53200
+I: Allocator added chunk from 90482060 with length 4000
+I: Allocator added chunk from 90746030 with length 40912
+I: Allocator added chunk from 90745070 with length 3984
+I: Allocator added chunk from 90c52030 with length 57296
+I: Allocator added chunk from 90c51058 with length 4008
+I: Allocator added chunk from 9009e030 with length 8144
+I: Allocator added chunk from 9009d068 with length 3992
+I: Allocator added chunk from 90b02030 with length 57296
+I: Allocator added chunk from 90b01070 with length 3984
+I: Allocator added chunk from 90542030 with length 57296
+I: Allocator added chunk from 90541058 with length 4008
+I: Allocator added chunk from 91032030 with length 57296
+I: Allocator added chunk from 91031060 with length 4000
+I: Allocator added chunk from 90772030 with length 57296
+I: Allocator added chunk from 90771070 with length 3984
+I: Allocator added chunk from 90b12030 with length 57296
+I: Allocator added chunk from 90b11058 with length 4008
+I: Allocator added chunk from 90557030 with length 36816
+I: Allocator added chunk from 90556060 with length 4000
+I: Allocator added chunk from 904f5030 with length 45008
+I: Allocator added chunk from 904f4060 with length 4000
+I: Allocator added chunk from 90d42030 with length 57296
+I: Allocator added chunk from 90d41050 with length 4016
+I: Allocator added chunk from 91008030 with length 32720
+I: Allocator added chunk from 91007050 with length 4016
+I: Allocator added chunk from 900ba030 with length 24528
+I: Allocator added chunk from 900b9060 with length 4000
+I: Allocator added chunk from 90375080 with length 3968
+I: Allocator added chunk from 90285030 with length 45008
+I: Allocator added chunk from 90284068 with length 3992
+I: Allocator added chunk from 90702030 with length 57296
+I: Allocator added chunk from 90701030 with length 4048
+I: Allocator added chunk from 900f0828 with length 2008
+I: Allocator added chunk from 900014a8 with length 2904
+I: Allocator added chunk from 90400118 with length 3816
+I: Allocator added chunk from 90320160 with length 3744
+I: Allocator added chunk from 909c97f0 with length 2064
+I: Allocator added chunk from 90685b48 with length 1208
+I: Allocator added chunk from 909d21b0 with length 3664
+I: Allocator added chunk from 9069a180 with length 3712
+I: Allocator added chunk from 90acfcb8 with length 840
+I: Allocator added chunk from 9009b440 with length 3008
+I: Allocator added chunk from 900530e8 with length 3864
+I: Allocator added chunk from 900440c8 with length 3896
+I: Allocator added chunk from 90011260 with length 3488
+I: Allocator added chunk from 901f21a8 with length 3672
+I: Allocator added chunk from 900a4090 with length 3952
+I: Allocator added chunk from 902431e8 with length 3608
+I: Allocator added chunk from 90b70098 with length 3944
+I: Allocator added chunk from 903a3120 with length 3808
+I: Allocator added chunk from 904710a8 with length 3928
+I: Allocator added chunk from 907210a8 with length 3928
+I: Allocator added chunk from 906b10a0 with length 3936
+I: Allocator added chunk from 90ff80a8 with length 3928
+I: Allocator added chunk from 904810a0 with length 3936
+I: Allocator added chunk from 907440a0 with length 3936
+I: Allocator added chunk from 90c50488 with length 2936
+I: Allocator added chunk from 9009c0a8 with length 3928
+I: Allocator added chunk from 90b00718 with length 2280
+I: Allocator added chunk from 90540098 with length 3944
+I: Allocator added chunk from 91030200 with length 3584
+I: Allocator added chunk from 907700a0 with length 3936
+I: Allocator added chunk from 90b10290 with length 3440
+I: Allocator added chunk from 90555a88 with length 1400
+I: Allocator added chunk from 904f3fc0 with length 64
+I: Allocator added chunk from 90d40440 with length 3008
+I: Allocator added chunk from 902a20b0 with length 3920
+I: Allocator added chunk from 91006098 with length 3944
+I: Allocator added chunk from 900b8088 with length 3960
+I: Allocator added chunk from 90272608 with length 2552
+I: Allocator added chunk from 902570c8 with length 3896
+I: Allocator added chunk from 903740c0 with length 3904
+I: Allocator added chunk from 903f7158 with length 3752
+I: Allocator added chunk from 90380130 with length 3792
+I: Allocator added chunk from 904700b0 with length 3920
+I: Allocator added chunk from 907200e0 with length 3872
+I: Allocator added chunk from 906b0130 with length 3792
+I: Allocator added chunk from 90ff7290 with length 3440
+I: Allocator added chunk from 90258060 with length 4000
+I: Allocator added chunk from 911a7d68 with length 33432
+I: Allocator added chunk from 90722060 with length 57248
+I: Allocator added chunk from 90480290 with length 3440
+I: Allocator added chunk from 90743298 with length 3432
+I: Allocator added chunk from 918a2a80 with length 54656
+I: Allocator added chunk from 91926dc0 with length 37440
+I: Allocator added chunk from 915d0020 with length 4064
+I: Allocator added chunk from 91a09b10 with length 25840
+I: Allocator added chunk from 91a80438 with length 64456
+I: Allocator added chunk from 912daf40 with length 20672
+I: Allocator added chunk from 91936958 with length 38568
+I: Allocator added chunk from 918c0020 with length 65504
+I: Allocator added chunk from 918b0230 with length 64976
+I: Allocator added chunk from 915e7230 with length 36304
+I: Allocator added chunk from 900431c0 with length 3648
+I: Allocator added chunk from 90bf1030 with length 28624
+I: Allocator added chunk from 90bf06a0 with length 2400
+I: Allocator added chunk from 90be1030 with length 61392
+I: Allocator added chunk from 90be02b0 with length 3408
+I: Allocator added chunk from 91812030 with length 57296
+I: Allocator added chunk from 91811680 with length 2432
+I: Allocator added chunk from 90ea4030 with length 49104
+I: Allocator added chunk from 90ea3d48 with length 696
+I: Allocator added chunk from 911d7030 with length 36816
+I: Allocator added chunk from 911d6e30 with length 464
+I: Allocator added chunk from 911b1030 with length 61392
+I: Allocator added chunk from 911b0230 with length 3536
+I: Allocator added chunk from 9091a030 with length 24528
+I: Allocator added chunk from 90919658 with length 2472
+I: Allocator added chunk from 91215030 with length 45008
+I: Allocator added chunk from 91214890 with length 1904
+I: Allocator added chunk from 900c7030 with length 36816
+I: Allocator added chunk from 900c6030 with length 4048
+I: Allocator added chunk from 901ea030 with length 24528
+I: Allocator added chunk from 901e9030 with length 4048
+I: Allocator added chunk from 90179030 with length 28624
+I: Allocator added chunk from 90178030 with length 4048
+I: Allocator added chunk from 9008b030 with length 20432
+I: Allocator added chunk from 9008a030 with length 4048
+I: Allocator added chunk from 901ce030 with length 8144
+I: Allocator added chunk from 901cd030 with length 4048
+I: Allocator added chunk from 900e8030 with length 32720
+I: Allocator added chunk from 900e7030 with length 4048
+I: Allocator added chunk from 901f9030 with length 28624
+I: Allocator added chunk from 901f8030 with length 4048
+I: Allocator added chunk from 9020b030 with length 20432
+I: Allocator added chunk from 9020a030 with length 4048
+I: Allocator added chunk from 900a3138 with length 3784
+I: Allocator added chunk from 9015d030 with length 11360
+I: Allocator added chunk from 9015c030 with length 4048
+I: Allocator added chunk from 90383030 with length 53200
+I: Allocator added chunk from 90382030 with length 4048
+I: Allocator added chunk from 90242430 with length 3024
+I: Allocator added chunk from 900d1168 with length 3736
+I: Allocator added chunk from 903a2160 with length 3744
+I: Allocator added chunk from 902a1148 with length 3768
+I: Allocator added chunk from 90271168 with length 3736
+I: Allocator added chunk from 905c97f8 with length 2056
+I: Allocator added chunk from 90256178 with length 3720
+I: Allocator added chunk from 90373160 with length 3744
+I: Allocator added chunk from 90a8f938 with length 1736
+I: Allocator added chunk from 90500048 with length 4024
+I: Allocator added chunk from 90051158 with length 3752
+I: Allocator added chunk from 900422a8 with length 3416
+I: Allocator added chunk from 911f0048 with length 4024
+I: Allocator added chunk from 9015ff80 with length 128
+I: Allocator added chunk from 900c5090 with length 3952
+I: Allocator added chunk from 901e8090 with length 3952
+I: Allocator added chunk from 9016f058 with length 4008
+I: Allocator added chunk from 9016e090 with length 3952
+I: Allocator added chunk from 90177080 with length 3968
+I: Allocator added chunk from 90089098 with length 3944
+I: Allocator added chunk from 901cc0a8 with length 3928
+I: Allocator added chunk from 900e60a0 with length 3936
+I: Allocator added chunk from 901f70a8 with length 3928
+I: Allocator added chunk from 902090b0 with length 3920
+I: Allocator added chunk from 9015b068 with length 3992
+I: Allocator added chunk from 90381068 with length 3992
+I: Allocator added chunk from 90ba1080 with length 61312
+I: Allocator added chunk from 90ba0060 with length 4000
+I: Allocator added chunk from 910f6070 with length 40848
+I: Allocator added chunk from 910f5a88 with length 1400
+I: Allocator added chunk from 910e1070 with length 61328
+I: Allocator added chunk from 910e00e8 with length 3864
+I: Allocator added chunk from 90052280 with length 3456
+I: Allocator added chunk from 90831030 with length 61392
+I: Allocator added chunk from 90900020 with length 65504
+I: Allocator added chunk from 90830558 with length 2728
+I: Allocator added chunk from 90db8178 with length 32392
+I: Allocator added chunk from 90fc1720 with length 59616
+I: Allocator added chunk from 919537a0 with length 51296
+I: Allocator added chunk from 915f0068 with length 3992
+I: Allocator added chunk from 90f71d70 with length 58000
+I: Allocator added chunk from 91ad6e28 with length 37336
+I: Allocator added chunk from 912e02e8 with length 64792
+I: Allocator added chunk from 90ff1bf8 with length 22024
+I: Allocator added chunk from 90fd0220 with length 64992
+I: Allocator added chunk from 91966310 with length 40176
+I: Allocator added chunk from 91601be8 with length 58392
+I: Allocator added chunk from 9029f1f8 with length 3592
+I: Allocator added chunk from 91067030 with length 36816
+I: Allocator added chunk from 91066030 with length 4048
+I: Allocator added chunk from 911e1030 with length 61392
+I: Allocator added chunk from 911e0620 with length 2528
+I: Allocator added chunk from 90842030 with length 57296
+I: Allocator added chunk from 90841650 with length 2480
+I: Allocator added chunk from 90218030 with length 32720
+I: Allocator added chunk from 90217060 with length 4000
+I: Allocator added chunk from 90037030 with length 36816
+I: Allocator added chunk from 90036070 with length 3984
+I: Allocator added chunk from 90234030 with length 49104
+I: Allocator added chunk from 90233060 with length 4000
+I: Allocator added chunk from 902b2030 with length 20592
+I: Allocator added chunk from 902b1068 with length 3992
+I: Allocator added chunk from 906c2030 with length 57296
+I: Allocator added chunk from 906c1070 with length 3984
+I: Allocator added chunk from 90b22030 with length 57296
+I: Allocator added chunk from 90b21060 with length 4000
+I: Allocator added chunk from 90573030 with length 53200
+I: Allocator added chunk from 90572068 with length 3992
+I: Allocator added chunk from 90cf8030 with length 32720
+I: Allocator added chunk from 90cf7060 with length 4000
+I: Allocator added chunk from 907c8030 with length 32720
+I: Allocator added chunk from 907c7060 with length 4000
+I: Allocator added chunk from 90d52030 with length 57296
+I: Allocator added chunk from 90d51070 with length 3984
+I: Allocator added chunk from 90b32030 with length 57296
+I: Allocator added chunk from 90b31060 with length 4000
+I: Allocator added chunk from 9058e030 with length 8144
+I: Allocator added chunk from 9058d068 with length 3992
+I: Allocator added chunk from 90d02030 with length 57296
+I: Allocator added chunk from 90d01070 with length 3984
+I: Allocator added chunk from 90bb0268 with length 3480
+I: Allocator added chunk from 90096030 with length 21120
+I: Allocator added chunk from 90095060 with length 4000
+I: Allocator added chunk from 90a93030 with length 53200
+I: Allocator added chunk from 90a92058 with length 4008
+I: Allocator added chunk from 91065a80 with length 1408
+I: Allocator added chunk from 906a2fa0 with length 96
+I: Allocator added chunk from 90241180 with length 3712
+I: Allocator added chunk from 900e12a8 with length 3416
+I: Allocator added chunk from 904e0638 with length 2504
+I: Allocator added chunk from 903a1820 with length 2016
+I: Allocator added chunk from 910051e8 with length 3608
+I: Allocator added chunk from 900b70d8 with length 3880
+I: Allocator added chunk from 902830c8 with length 3896
+I: Allocator added chunk from 903190f0 with length 3856
+I: Allocator added chunk from 900c40e8 with length 3864
+I: Allocator added chunk from 901e70d8 with length 3880
+I: Allocator added chunk from 9016d0f8 with length 3848
+I: Allocator added chunk from 901760e8 with length 3864
+I: Allocator added chunk from 900880e0 with length 3872
+I: Allocator added chunk from 901cb0f8 with length 3848
+I: Allocator added chunk from 90db7c40 with length 960
+I: Allocator added chunk from 906f2060 with length 57248
+I: Allocator added chunk from 90bb1030 with length 61392
+I: Allocator added chunk from 900e50a8 with length 3928
+I: Allocator added chunk from 901f61e8 with length 3608
+I: Allocator added chunk from 90f80310 with length 64752
+I: Allocator added chunk from 91a769f8 with length 38408
+I: Allocator added chunk from 91a61378 with length 60552
+I: Allocator added chunk from 91970020 with length 4064
+I: Allocator added chunk from 91a10448 with length 64440
+I: Allocator added chunk from 912f0168 with length 65176
+I: Allocator added chunk from 91610038 with length 65480
+I: Allocator added chunk from 90fb4868 with length 47000
+I: Allocator added chunk from 90f90220 with length 64992
+I: Allocator added chunk from 91985eb8 with length 41288
+I: Allocator added chunk from 91a20328 with length 64728
+I: Allocator added chunk from 902080e0 with length 3872
+I: Allocator added chunk from 90106030 with length 40912
+I: Allocator added chunk from 90105030 with length 4048
+I: Allocator added chunk from 9031b030 with length 20432
+I: Allocator added chunk from 9031a058 with length 4008
+I: Allocator added chunk from 90921030 with length 61392
+I: Allocator added chunk from 90920020 with length 4064
+I: Allocator added chunk from 91221030 with length 61392
+I: Allocator added chunk from 912200c0 with length 3904
+I: Allocator added chunk from 91867030 with length 36816
+I: Allocator added chunk from 91866dc0 with length 576
+I: Allocator added chunk from 90eb1030 with length 61392
+I: Allocator added chunk from 90eb0648 with length 2488
+I: Allocator added chunk from 90931030 with length 61392
+I: Allocator added chunk from 90930230 with length 3536
+I: Allocator added chunk from 91237030 with length 36816
+I: Allocator added chunk from 91236ad8 with length 1320
+I: Allocator added chunk from 914b5030 with length 45008
+I: Allocator added chunk from 914b4f90 with length 112
+I: Allocator added chunk from 91561030 with length 61392
+I: Allocator added chunk from 91560498 with length 2920
+I: Allocator added chunk from 9002b030 with length 20432
+I: Allocator added chunk from 9002a030 with length 4048
+I: Allocator added chunk from 90e08030 with length 32720
+I: Allocator added chunk from 90e07030 with length 4048
+I: Allocator added chunk from 910bf030 with length 4048
+I: Allocator added chunk from 910be030 with length 4048
+I: Allocator added chunk from 91083030 with length 53200
+I: Allocator added chunk from 91082030 with length 4048
+I: Allocator added chunk from 90bc2030 with length 57296
+I: Allocator added chunk from 90bc1030 with length 4048
+I: Allocator added chunk from 91198030 with length 32720
+I: Allocator added chunk from 91197030 with length 4048
+I: Allocator added chunk from 9015a1c8 with length 3640
+I: Allocator added chunk from 91802030 with length 57296
+I: Allocator added chunk from 91801030 with length 4048
+I: Allocator added chunk from 90e12030 with length 57296
+I: Allocator added chunk from 90e11030 with length 4048
+I: Allocator added chunk from 91051770 with length 2192
+I: Allocator added chunk from 90104120 with length 3808
+I: Allocator added chunk from 90216080 with length 3968
+I: Allocator added chunk from 90035080 with length 3968
+I: Allocator added chunk from 902320e8 with length 3864
+I: Allocator added chunk from 902b0358 with length 3240
+I: Allocator added chunk from 906c0910 with length 1776
+I: Allocator added chunk from 90b202e0 with length 3360
+I: Allocator added chunk from 90571de0 with length 544
+I: Allocator added chunk from 9052f0a8 with length 3928
+I: Allocator added chunk from 9052e078 with length 3976
+I: Allocator added chunk from 90cf6e58 with length 424
+I: Allocator added chunk from 907c6ea0 with length 352
+I: Allocator added chunk from 90d500d8 with length 3880
+I: Allocator added chunk from 90b302a0 with length 3424
+I: Allocator added chunk from 9058c2c8 with length 3384
+I: Allocator added chunk from 900d2070 with length 3984
+I: Allocator added chunk from 908f2030 with length 57296
+I: Allocator added chunk from 90aa6070 with length 40848
+I: Allocator added chunk from 90d00a78 with length 1416
+I: Allocator added chunk from 900941b0 with length 3664
+I: Allocator added chunk from 91349388 with length 27768
+I: Allocator added chunk from 91990020 with length 65504
+I: Allocator added chunk from 91a30038 with length 4040
+I: Allocator added chunk from 91b26df8 with length 37384
+I: Allocator added chunk from 91631e90 with length 1895600
+I: Allocator added chunk from 91620168 with length 65176
+I: Allocator added chunk from 91c27a10 with length 12420592
+I: Allocator added chunk from 913603c0 with length 719936
+I: Allocator added chunk from 91350230 with length 64976
+I: Allocator added chunk from 91b56548 with length 170680
+I: Allocator added chunk from 91b305e0 with length 64032
+I: Allocator added chunk from 919b0020 with length 65504
+I: Allocator added chunk from 919a8b10 with length 29936
+I: Allocator added chunk from 91a50078 with length 65416
+I: Allocator added chunk from 91a4cab8 with length 13640
+I: Allocator added chunk from 906f10e0 with length 3872
+I: Allocator added chunk from 90ab5030 with length 45008
+I: Allocator added chunk from 90ab4030 with length 4048
+I: Allocator added chunk from 9046a030 with length 24528
+I: Allocator added chunk from 90469030 with length 4048
+I: Allocator added chunk from 90714030 with length 49104
+I: Allocator added chunk from 90713030 with length 4048
+I: Allocator added chunk from 9035a030 with length 24528
+I: Allocator added chunk from 90359030 with length 4048
+I: Allocator added chunk from 90325030 with length 45008
+I: Allocator added chunk from 90324030 with length 4048
+I: Allocator added chunk from 909ce030 with length 8144
+I: Allocator added chunk from 909cd030 with length 4048
+I: Allocator added chunk from 9068a030 with length 24528
+I: Allocator added chunk from 90689030 with length 4048
+I: Allocator added chunk from 909d7030 with length 36816
+I: Allocator added chunk from 909d6030 with length 4048
+I: Allocator added chunk from 9069e030 with length 8144
+I: Allocator added chunk from 9069d080 with length 3968
+I: Allocator added chunk from 902bb030 with length 20432
+I: Allocator added chunk from 902ba070 with length 3984
+I: Allocator added chunk from 90a2f030 with length 4048
+I: Allocator added chunk from 90a2e070 with length 3984
+I: Allocator added chunk from 902c6030 with length 40912
+I: Allocator added chunk from 902c5030 with length 4048
+I: Allocator added chunk from 90412030 with length 57296
+I: Allocator added chunk from 90411030 with length 4048
+I: Allocator added chunk from 906a5030 with length 45008
+I: Allocator added chunk from 906a4178 with length 3720
+I: Allocator added chunk from 90f07030 with length 36816
+I: Allocator added chunk from 90f06df8 with length 520
+I: Allocator added chunk from 90941030 with length 61392
+I: Allocator added chunk from 90940330 with length 3280
+I: Allocator added chunk from 90aa5088 with length 3960
+I: Allocator added chunk from 91513030 with length 53200
+I: Allocator added chunk from 915120f8 with length 3848
+I: Allocator added chunk from 91253030 with length 53200
+I: Allocator added chunk from 912524b0 with length 2896
+I: Allocator added chunk from 902156c0 with length 2368
+I: Allocator added chunk from 900340d0 with length 3888
+I: Allocator added chunk from 90002830 with length 2000
+I: Allocator added chunk from 902704c0 with length 2880
+I: Allocator added chunk from 90255390 with length 3184
+I: Allocator added chunk from 90372f18 with length 232
+I: Allocator added chunk from 900b6170 with length 3728
+I: Allocator added chunk from 900a21b0 with length 3664
+I: Allocator added chunk from 9029e378 with length 3208
+I: Allocator added chunk from 90282140 with length 3776
+I: Allocator added chunk from 90318288 with length 3448
+I: Allocator added chunk from 9149d050 with length 4016
+I: Allocator added chunk from 9016c200 with length 3584
+I: Allocator added chunk from 90029058 with length 4008
+I: Allocator added chunk from 90e06e10 with length 496
+I: Allocator added chunk from 910bd278 with length 3464
+I: Allocator added chunk from 910814f0 with length 2832
+I: Allocator added chunk from 90bc02e0 with length 3360
+I: Allocator added chunk from 91196e18 with length 488
+I: Allocator added chunk from 91800b70 with length 1168
+I: Allocator added chunk from 90e102e8 with length 3352
+I: Allocator added chunk from 908f19b0 with length 1616
+I: Allocator added chunk from 90bd9050 with length 4016
+I: Allocator added chunk from 90ab3070 with length 3984
+I: Allocator added chunk from 90468068 with length 3992
+I: Allocator added chunk from 90712060 with length 4000
+I: Allocator added chunk from 90358070 with length 3984
+I: Allocator added chunk from 90323068 with length 3992
+I: Allocator added chunk from 909cc060 with length 4000
+I: Allocator added chunk from 90175190 with length 3696
+I: Allocator added chunk from 90688068 with length 3992
+I: Allocator added chunk from 909d5060 with length 4000
+I: Allocator added chunk from 900874b0 with length 2896
+I: Allocator added chunk from 901ca1b0 with length 3664
+I: Allocator added chunk from 900e41b0 with length 3664
+I: Allocator added chunk from 901f51c0 with length 3648
+I: Allocator added chunk from 902071c8 with length 3640
+I: Allocator added chunk from 901591b0 with length 3664
+I: Allocator added chunk from 901031c0 with length 3648
+I: Allocator added chunk from 900271d8 with length 3624
+I: Allocator added chunk from 902141c0 with length 3648
+I: Allocator added chunk from 90a91058 with length 4008
+I: Allocator added chunk from 91570068 with length 65432
+I: Allocator added chunk from 90bda030 with length 24528
+I: Allocator added chunk from 90028090 with length 3952
+I: Allocator added chunk from 91b81bb8 with length 386120
+I: Final runlevel complete - launching Nuuk!
+I: Nuuk destroying root capability!
+I: Revoking loader's memory!
+I: Allocator added chunk from 80000000 with length 268435456
+I: Dropping ALL permissions from root capability!
+I: Final jump from nuuk!
+I: Runlevels complete!
+I: Static threads init complete!
+I: Calling main()
+I: Allocator has 1057984016 of 1073479680 free bytes (accordingly: 15495664 used bytes) in 681 blocks!
+I: Calling main 0xbe1bc040154c0000
+I: tls_init: 0 <OK>
+I: PHY (1) Link speed 1000 Mb, full duplex
+
+I: Link state changed to: up (speed 20)
+I: attempting to connect: 
+I: Connect completed
+I: MQTT client connected!
+I: try_to_connect: 0 <OK>
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 41728
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 54444
+I: Iteration 1 duration 2065835280 ns (start: 4473829884 end: 4525475766)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 54444
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 25610
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 60864
+I: PUBCOMP packet id: 60864
+I: Iteration 2 duration 2050318240 ns (start: 4525643006 end: 4576900962)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 49496
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 240
+I: Iteration 3 duration 2064098280 ns (start: 4577065471 end: 4628667928)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 240
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 4294
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 16680
+I: PUBCOMP packet id: 16680
+I: Iteration 4 duration 2050476160 ns (start: 4628835263 end: 4680097167)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 41028
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 21832
+I: Iteration 5 duration 2064412120 ns (start: 4680261431 end: 4731871734)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 21832
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 16098
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 25720
+I: PUBCOMP packet id: 25720
+I: Iteration 6 duration 2050544080 ns (start: 4732038788 end: 4783302390)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 17660
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 45910
+I: Iteration 7 duration 2064904480 ns (start: 4783466712 end: 4835089324)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 45910
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 54876
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 62086
+I: PUBCOMP packet id: 62086
+I: Iteration 8 duration 2052593840 ns (start: 4835256767 end: 4886571613)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 51046
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 65500
+I: Iteration 9 duration 2061330480 ns (start: 4886737524 end: 4938270786)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 65500
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 22632
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 51366
+I: PUBCOMP packet id: 51366
+I: Iteration 10 duration 2052233880 ns (start: 4938438059 end: 4989743906)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 26626
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 17136
+I: Iteration 11 duration 2062292600 ns (start: 4989911853 end: 5041469168)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 17136
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 9576
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 1982
+I: PUBCOMP packet id: 1982
+I: Iteration 12 duration 2052011280 ns (start: 5041638519 end: 5092938801)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 36934
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 45862
+I: Iteration 13 duration 2062356920 ns (start: 5093106681 end: 5144665604)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 45862
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 55888
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 56852
+I: PUBCOMP packet id: 56852
+I: Iteration 14 duration 2052182120 ns (start: 5144834823 end: 5196139376)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 53684
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 19190
+I: Iteration 15 duration 2062128280 ns (start: 5196307379 end: 5247860586)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 19190
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 54480
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 17564
+I: PUBCOMP packet id: 17564
+I: Iteration 16 duration 2052365080 ns (start: 5248029946 end: 5299339073)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 24796
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 6108
+I: Iteration 17 duration 2062178600 ns (start: 5299507043 end: 5351061508)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 6108
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 17714
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 24810
+I: PUBCOMP packet id: 24810
+I: Iteration 18 duration 2053126960 ns (start: 5351230862 end: 5402559036)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 29480
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 6998
+I: Iteration 19 duration 2061185480 ns (start: 5402726882 end: 5454256519)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 6998
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 19608
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 40990
+I: PUBCOMP packet id: 40990
+I: Iteration 20 duration 2050435600 ns (start: 5454425948 end: 5505686838)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 50178
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 21754
+I: Iteration 21 duration 2064116680 ns (start: 5505853442 end: 5557456359)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 21754
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 65258
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 59980
+I: PUBCOMP packet id: 59980
+I: Iteration 22 duration 2050463960 ns (start: 5557625550 end: 5608887149)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 6484
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 16046
+I: Iteration 23 duration 2064151520 ns (start: 5609053676 end: 5660657464)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 16046
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 61358
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 28756
+I: PUBCOMP packet id: 28756
+I: Iteration 24 duration 2053085880 ns (start: 5660826694 end: 5712153841)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 58496
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 24970
+I: Iteration 25 duration 2061413480 ns (start: 5712321659 end: 5763856996)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 24970
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 58278
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 55482
+I: PUBCOMP packet id: 55482
+I: Iteration 26 duration 2052211680 ns (start: 5764026295 end: 5815331587)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 33976
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 24250
+I: Iteration 27 duration 2062255360 ns (start: 5815499447 end: 5867055831)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 24250
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 29392
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 49380
+I: PUBCOMP packet id: 49380
+I: Iteration 28 duration 2050131840 ns (start: 5867225288 end: 5918478584)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 624
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 58384
+I: Iteration 29 duration 2064226080 ns (start: 5918644934 end: 5970250586)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 58384
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 64532
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 420
+I: PUBCOMP packet id: 420
+I: Iteration 30 duration 2051773200 ns (start: 5970419906 end: 6021714236)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 3370
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 54778
+I: Iteration 31 duration 2062674600 ns (start: 6021882236 end: 6073449101)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 54778
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 17340
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 17288
+I: PUBCOMP packet id: 17288
+I: Iteration 32 duration 2051058080 ns (start: 6073618416 end: 6124894868)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 38366
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 48586
+I: Iteration 33 duration 2063435080 ns (start: 6125061304 end: 6176647181)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 48586
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 51980
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 13832
+I: PUBCOMP packet id: 13832
+I: Iteration 34 duration 2050400400 ns (start: 6176816553 end: 6228076563)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 16412
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 60912
+I: Iteration 35 duration 2064326520 ns (start: 6228243169 end: 6279851332)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 60912
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 32090
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 10686
+I: PUBCOMP packet id: 10686
+I: Iteration 36 duration 2050122640 ns (start: 6280020711 end: 6331273777)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 6918
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 35496
+I: Iteration 37 duration 2064243080 ns (start: 6331440159 end: 6383046236)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 35496
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 29300
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 13186
+I: PUBCOMP packet id: 13186
+I: Iteration 38 duration 2050331800 ns (start: 6383215762 end: 6434474057)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 18350
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 5648
+I: Iteration 39 duration 2064046920 ns (start: 6434640656 end: 6486241829)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 5648
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 19100
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 51412
+I: PUBCOMP packet id: 51412
+I: Iteration 40 duration 2051258560 ns (start: 6486411094 end: 6537692558)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 34668
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 25496
+I: Iteration 41 duration 2063420360 ns (start: 6537860491 end: 6589446000)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 25496
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 19366
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 54858
+I: PUBCOMP packet id: 54858
+I: Iteration 42 duration 2052040160 ns (start: 6589615496 end: 6640916500)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 61608
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 36224
+I: Iteration 43 duration 2062207280 ns (start: 6641084523 end: 6692639705)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 36224
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 36670
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 27968
+I: PUBCOMP packet id: 27968
+I: Iteration 44 duration 2052289560 ns (start: 6692809084 end: 6744116323)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 10984
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 20670
+I: Iteration 45 duration 2062138520 ns (start: 6744284354 end: 6795837817)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 20670
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 29012
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 42194
+I: PUBCOMP packet id: 42194
+I: Iteration 46 duration 2052280120 ns (start: 6796007134 end: 6847314137)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 3538
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 36252
+I: Iteration 47 duration 2062162360 ns (start: 6847482025 end: 6899036084)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 36252
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 44080
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 20478
+I: PUBCOMP packet id: 20478
+I: Iteration 48 duration 2052243480 ns (start: 6899205462 end: 6950511549)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 54270
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 24824
+I: Iteration 49 duration 2062275120 ns (start: 6950679536 end: 7002236414)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 24824
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 61248
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 39070
+I: PUBCOMP packet id: 39070
+I: Iteration 50 duration 2053131680 ns (start: 7002405744 end: 7053734036)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 28006
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 33944
+I: Iteration 51 duration 2061563880 ns (start: 7053902217 end: 7105441314)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 33944
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 26542
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 12782
+I: PUBCOMP packet id: 12782
+I: Iteration 52 duration 2051945560 ns (start: 7105610523 end: 7156909162)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 29504
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 12442
+I: Iteration 53 duration 2062196520 ns (start: 7157077196 end: 7208632109)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 12442
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 6250
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 60068
+I: PUBCOMP packet id: 60068
+I: Iteration 54 duration 2050276080 ns (start: 7208801305 end: 7260058207)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 59352
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 22790
+I: Iteration 55 duration 2064380600 ns (start: 7260224426 end: 7311833941)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 22790
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 17648
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 47804
+I: PUBCOMP packet id: 47804
+I: Iteration 56 duration 2052928440 ns (start: 7312003310 end: 7363326521)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 34548
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 34588
+I: Iteration 57 duration 2061374680 ns (start: 7363494341 end: 7415028708)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 34588
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 64272
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 26180
+I: PUBCOMP packet id: 26180
+I: Iteration 58 duration 2050220720 ns (start: 7415197906 end: 7466453424)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 34076
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 57774
+I: Iteration 59 duration 2064397480 ns (start: 7466619702 end: 7518229639)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 57774
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 26928
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 7364
+I: PUBCOMP packet id: 7364
+I: Iteration 60 duration 2052890120 ns (start: 7518399124 end: 7569721377)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 38730
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 31574
+I: Iteration 61 duration 2061547760 ns (start: 7569889255 end: 7621427949)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 31574
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 63012
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 57284
+I: PUBCOMP packet id: 57284
+I: Iteration 62 duration 2050210120 ns (start: 7621597362 end: 7672852615)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 48040
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 17752
+I: Iteration 63 duration 2064231240 ns (start: 7673019078 end: 7724624859)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 17752
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 55762
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 32790
+I: PUBCOMP packet id: 32790
+I: Iteration 64 duration 2050109960 ns (start: 7724794180 end: 7776046929)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 9726
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 16462
+I: Iteration 65 duration 2065165720 ns (start: 7776213455 end: 7827842598)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 16462
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 18980
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 26228
+I: PUBCOMP packet id: 26228
+I: Iteration 66 duration 2051389160 ns (start: 7828011944 end: 7879296673)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 54052
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 18150
+I: Iteration 67 duration 2062349760 ns (start: 7879464835 end: 7931023579)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 18150
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 61902
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 29142
+I: PUBCOMP packet id: 29142
+I: Iteration 68 duration 2050153200 ns (start: 7931192941 end: 7982446771)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 44638
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 60352
+I: Iteration 69 duration 2064486160 ns (start: 7982613328 end: 8034225482)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 60352
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 6148
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 39742
+I: PUBCOMP packet id: 39742
+I: Iteration 70 duration 2052067080 ns (start: 8034394779 end: 8085696456)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 8828
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 61998
+I: Iteration 71 duration 2062112040 ns (start: 8085864247 end: 8137417048)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 61998
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 29304
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 31266
+I: PUBCOMP packet id: 31266
+I: Iteration 72 duration 2052199200 ns (start: 8137586630 end: 8188891610)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 6946
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 61916
+I: Iteration 73 duration 2063255840 ns (start: 8189059517 end: 8240640913)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 61916
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 24812
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 35642
+I: PUBCOMP packet id: 35642
+I: Iteration 74 duration 2052247160 ns (start: 8240810206 end: 8292116385)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 13818
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 31400
+I: Iteration 75 duration 2061258840 ns (start: 8292284393 end: 8343815864)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 31400
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 49170
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 2286
+I: PUBCOMP packet id: 2286
+I: Iteration 76 duration 2052051080 ns (start: 8343985157 end: 8395286434)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 35214
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 43744
+I: Iteration 77 duration 2062381120 ns (start: 8395454426 end: 8447013954)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 43744
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 8902
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 40374
+I: PUBCOMP packet id: 40374
+I: Iteration 78 duration 2052118640 ns (start: 8447183551 end: 8498486517)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 8058
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 47004
+I: Iteration 79 duration 2062266520 ns (start: 8498654515 end: 8550211178)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 47004
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 22988
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 64794
+I: PUBCOMP packet id: 64794
+I: Iteration 80 duration 2052243440 ns (start: 8550380303 end: 8601686389)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 21172
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 19676
+I: Iteration 81 duration 2062039000 ns (start: 8601854336 end: 8653405311)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 19676
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 41970
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 33552
+I: PUBCOMP packet id: 33552
+I: Iteration 82 duration 2051688520 ns (start: 8653594436 end: 8704886649)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 63614
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 25570
+I: Iteration 83 duration 2062271800 ns (start: 8705054394 end: 8756611189)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 25570
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 4456
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 36368
+I: PUBCOMP packet id: 36368
+I: Iteration 84 duration 2053236320 ns (start: 8756780601 end: 8808111509)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 10134
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 27800
+I: Iteration 85 duration 2060983480 ns (start: 8808279452 end: 8859804039)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 27800
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 49016
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 38218
+I: PUBCOMP packet id: 38218
+I: Iteration 86 duration 2050514240 ns (start: 8859973307 end: 8911236163)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 18194
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 11296
+I: Iteration 87 duration 2064275040 ns (start: 8911402266 end: 8963009142)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 11296
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 51400
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 53418
+I: PUBCOMP packet id: 53418
+I: Iteration 88 duration 2052219400 ns (start: 8963178562 end: 9014484047)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 58862
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 35268
+I: Iteration 89 duration 2061948200 ns (start: 9014651927 end: 9066200632)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 35268
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 62362
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 7426
+I: PUBCOMP packet id: 7426
+I: Iteration 90 duration 2052764600 ns (start: 9066369964 end: 9117689079)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 20298
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 49318
+I: Iteration 91 duration 2061854800 ns (start: 9117857133 end: 9169403503)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 49318
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 21606
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 38272
+I: PUBCOMP packet id: 38272
+I: Iteration 92 duration 2050183320 ns (start: 9169572779 end: 9220827362)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 26108
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 22314
+I: Iteration 93 duration 2064222360 ns (start: 9220993881 end: 9272599440)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 22314
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 5008
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 48074
+I: PUBCOMP packet id: 48074
+I: Iteration 94 duration 2050176960 ns (start: 9272768737 end: 9324023161)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 20012
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 41494
+I: Iteration 95 duration 2064656160 ns (start: 9324189489 end: 9375805893)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 41494
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 46534
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 40588
+I: PUBCOMP packet id: 40588
+I: Iteration 96 duration 2049993880 ns (start: 9375975037 end: 9427224884)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 28898
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 40016
+I: Iteration 97 duration 2064121560 ns (start: 9427391245 end: 9478994284)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 40016
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 16760
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 34604
+I: PUBCOMP packet id: 34604
+I: Iteration 98 duration 2051334760 ns (start: 9479163688 end: 9530447057)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 12710
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 20760
+I: Iteration 99 duration 2063435360 ns (start: 9530613551 end: 9582199435)!
+I: mqtt_ping: 0 <OK>
+I: PUBCOMP packet id: 20760
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 53338
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 640
+I: PUBCOMP packet id: 640
+I: Iteration 100 duration 2051806520 ns (start: 9582368622 end: 9633663785)!
+I: Closing socket 3
+E: Could not find allocated list entry for indirect capability 0
+I: MQTT client disconnected 0
+I: mqtt_disconnect: 0 <OK>
+======================
+Raw MQTT iteration times:
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+2065835280/9597/12006/1122/67/193/0/0/1927
+2050318240/10301/13016/1191/82/195/0/0/2188
+2064098280/9297/12003/1099/79/199/0/0/1895
+2050476160/9792/12962/1149/72/195/0/0/2159
+2064412120/9367/12003/1115/119/199/0/0/1895
+2050544080/9904/13007/1151/69/211/0/0/2170
+2064904480/9689/12114/1125/70/213/0/0/1928
+2052593840/10578/13203/1196/75/221/0/0/2232
+2061330480/9098/12035/1105/72/221/0/0/1927
+2052233880/10122/13220/1155/71/230/0/0/2232
+2062292600/9611/12028/1097/73/206/0/0/1908
+2052011280/10207/13208/1144/75/209/0/0/2196
+2062356920/9315/11988/1103/78/195/0/0/1895
+2052182120/10186/13199/1142/69/215/0/0/2200
+2062128280/9267/11993/1099/66/207/0/0/1904
+2052365080/10318/13298/1188/72/241/0/0/2247
+2062178600/9110/12023/1103/79/217/0/0/1925
+2053126960/9988/13201/1170/75/227/0/0/2230
+2061185480/9535/12008/1116/84/200/0/0/1905
+2050435600/10072/12973/1159/75/200/0/0/2161
+2064116680/9086/11987/1111/76/197/0/0/1895
+2050463960/10130/13010/1169/87/209/0/0/2170
+2064151520/8911/12013/1103/69/205/0/0/1902
+2053085880/10218/13363/1179/87/239/0/0/2244
+2061413480/9530/12039/1098/84/213/0/0/1927
+2052211680/10088/13217/1136/106/228/0/0/2232
+2062255360/9480/12010/1101/76/185/0/0/1918
+2050131840/9400/12981/1127/109/211/0/0/2163
+2064226080/9340/11988/1112/120/203/0/0/1891
+2051773200/9774/13185/1128/103/198/0/0/2192
+2062674600/9268/11989/1112/124/199/0/0/1893
+2051058080/10061/13124/1154/74/205/0/0/2199
+2063435080/9417/12020/1097/73/213/0/0/1927
+2050400400/9977/12996/1129/80/207/0/0/2197
+2064326520/9565/12034/1115/81/217/0/0/1923
+2050122640/9945/13002/1117/83/200/0/0/2165
+2064243080/9358/11999/1108/76/205/0/0/1893
+2050331800/10078/13004/1132/78/191/0/0/2170
+2064046920/9766/11996/1114/77/200/0/0/1893
+2051258560/10664/13133/1129/78/225/0/0/2201
+2063420360/9232/12040/1124/75/222/0/0/1932
+2052040160/10050/13234/1117/77/221/0/0/2232
+2062207280/9477/12018/1112/90/211/0/0/1927
+2052289560/10451/13214/1135/74/217/0/0/2209
+2062138520/9218/12029/1122/71/197/0/0/1897
+2052280120/9921/13192/1137/74/214/0/0/2200
+2062162360/9469/11990/1141/79/199/0/0/1893
+2052243480/10192/13217/1128/77/211/0/0/2214
+2062275120/9048/12086/1111/84/218/0/0/1935
+2053131680/10160/13211/1126/72/216/0/0/2232
+2061563880/9231/12058/1110/81/223/0/0/1932
+2051945560/10492/13222/1128/76/209/0/0/2210
+2062196520/8938/12013/1106/77/202/0/0/1893
+2050276080/9281/12999/1137/72/191/0/0/2163
+2064380600/9230/12010/1127/78/199/0/0/1900
+2052928440/9684/13199/1134/75/212/0/0/2209
+2061374680/9146/12158/1126/70/230/0/0/1940
+2050220720/9635/12997/1137/72/210/0/0/2197
+2064397480/9305/12033/1112/77/209/0/0/1927
+2052890120/10346/13199/1130/81/204/0/0/2210
+2061547760/9348/11997/1126/82/197/0/0/1893
+2050210120/9549/12988/1155/103/201/0/0/2165
+2064231240/9097/11973/1140/99/200/0/0/1892
+2050109960/9521/13026/1200/77/201/0/0/2170
+2065165720/9903/12152/1201/131/214/0/0/1934
+2051389160/9999/13207/1200/75/220/0/0/2232
+2062349760/9503/12055/1168/73/209/0/0/1927
+2050153200/10026/13009/1180/104/214/0/0/2188
+2064486160/9055/12039/1162/75/205/0/0/1904
+2052067080/10155/13209/1188/101/228/0/0/2203
+2062112040/9060/12008/1171/114/192/0/0/1893
+2052199200/10448/13196/1217/104/208/0/0/2200
+2063255840/9765/12121/1194/127/217/0/0/1933
+2052247160/10616/13224/1191/109/234/0/0/2232
+2061258840/9463/12034/1156/82/213/0/0/1927
+2052051080/10386/13210/1197/108/219/0/0/2219
+2062381120/9148/12022/1150/81/204/0/0/1901
+2052118640/9849/13214/1196/106/211/0/0/2198
+2062266520/9174/11996/1174/79/207/0/0/1893
+2052243440/10406/13174/1206/71/208/0/0/2200
+2062039000/9996/12047/1157/76/218/0/0/1911
+2051688520/10376/13219/1196/89/231/0/0/2237
+2062271800/8871/12042/1161/80/223/0/0/1932
+2053236320/10350/13231/1198/86/244/0/0/2235
+2060983480/9189/12018/1166/80/208/0/0/1903
+2050514240/9737/13040/1192/77/214/0/0/2177
+2064275040/9119/12006/1154/75/200/0/0/1900
+2052219400/10136/13197/1204/74/219/0/0/2205
+2061948200/9162/12011/1156/80/190/0/0/1904
+2052764600/10626/13332/1210/85/228/0/0/2242
+2061854800/9393/12052/1154/71/216/0/0/1927
+2050183320/10018/13019/1188/81/212/0/0/2197
+2064222360/9321/12013/1154/81/206/0/0/1918
+2050176960/9958/12994/1168/73/195/0/0/2156
+2064656160/9480/12020/1164/80/195/0/0/1900
+2049993880/9946/12971/1201/76/202/0/0/2165
+2064121560/9189/12007/1147/70/191/0/0/1895
+2051334760/10386/13170/1240/91/229/0/0/2215
+2063435360/9398/12052/1155/82/211/0/0/1932
+2051806520/10240/13228/1190/75/220/0/0/2224
+MQTT iteration times (Samples) discarded/min/max/avg/stddev ns: 0/2049993880/2065165720/2057174000.842105/5772516.868643
+MQTT iteration times (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/8871/10664/9714.989474/478.799958
+MQTT iteration times (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/11973/13363/12591.894737/562.900561
+MQTT iteration times (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/1097/1240/1148.957895/34.196311
+MQTT iteration times (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/66/131/82.726316/13.929478
+MQTT iteration times (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/185/244/210.863158/11.965398
+MQTT iteration times (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+MQTT iteration times (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+MQTT iteration times (Number of subsystem calls) discarded/min/max/avg/stddev ns: 0/1891/2247/2058.800000/147.169834
+======================
+Finishing test with status 0-TEST SUCCESS!
+System poweroff!

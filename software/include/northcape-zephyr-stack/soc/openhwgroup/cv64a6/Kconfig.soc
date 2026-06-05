@@ -1,0 +1,7 @@
+config SOC_FAMILY_ARIANE_CV64A6
+	bool
+
+config SOC_FAMILY
+	default "ariane_cv64a6" if SOC_FAMILY_ARIANE_CV64A6
+
+rsource "*/Kconfig.soc"

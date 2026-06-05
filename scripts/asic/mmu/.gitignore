@@ -1,0 +1,9 @@
+.magicrc*
+dbg*
+*txt
+northcape_mmu_wrapper_verilog*
+qflow*
+log
+reports
+northcape_mmu_flattened.v
+runs

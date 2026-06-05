@@ -1,0 +1,10 @@
+# hardware TRNG in vhdl
+ghdl --std=08 ../../../hardware/include/northcape/include/trng_fpga/src/trng.vhd -e trng
+# systemverilog design
+read_slang -C ops.flist --top northcape_cap_ops_wrapper_verilog -I ../../../hardware/include/northcape/mmu -I ../../../hardware/include/northcape/common -I ../../../hardware/include/northcape/capability_ops -I ../../../hardware/include/northcape/capability_ops -I ../../../hardware/include/northcape/ariane -I ../../../hardware/include/northcape/xilinx -I ../../../hardware/include/northcape/tests/coverage -I ../../../hardware/include/northcape/tests/uvm_wrapper -I ../../../hardware/hdl/block_design_wrappers/ -D ASIC -D VERILATOR -D USE_POWER_PINS --ignore-assertions --extern-modules --ignore-unknown-modules --keep-hierarchy
+# do not attempt to synthesize registers!
+blackbox \sram_northcape_32x128
+# synthesis needed here - otherwise, can generate unknown primitives
+synth -top northcape_cap_ops_wrapper_verilog
+# write as "simple" verilog
+write_verilog northcape_cap_ops_flattened.v

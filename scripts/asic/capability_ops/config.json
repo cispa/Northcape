@@ -1,0 +1,67 @@
+{
+  "DESIGN_NAME": "northcape_cap_ops_wrapper_verilog",
+  "VERILOG_FILES": ["dir::../../../hardware/hdl/asic_wrappers/sram_northcape_wrapper.v","dir::northcape_cap_ops_flattened.v"],
+  "CLOCK_PERIOD": 100,
+  "DIE_AREA": "0 0 4096 4096",
+  "FP_SIZING": "absolute",
+  "ERROR_ON_SYNTH_CHECKS": false,
+  "CLOCK_PORT": "aclk",
+  "RUN_LINTER": false,
+  "MACROS": {
+    "sram_northcape_32x128": {
+      "instances": {
+        "i_northcape_cap_ops_wrapper.i_northcape_capability_ops.i_northcape_capability_ops_create_caps.genBitmap.gen_real_bram.i_bram.gen_row[0].gen_col[0].i_sram_cell.gen_small_sram.sram0": {
+          "location": [
+            500,
+            500
+          ],
+          "orientation": "N"
+        },
+        "i_northcape_cap_ops_wrapper.i_northcape_capability_ops.i_northcape_capability_ops_create_caps.genBitmap.gen_real_bram.i_bram.gen_row[0].gen_col[1].i_sram_cell.gen_small_sram.sram0": {
+          "location": [
+            1200,
+            500
+          ],
+          "orientation": "N"
+        }
+      },
+      "gds": [
+          "dir::../macros/sram_northcape_32x128/sram_northcape_32x128.gds"
+      ],
+      "lef": [
+          "dir::../macros/sram_northcape_32x128/sram_northcape_32x128.lef"
+      ],
+      "nl": [
+      ],
+      "spef": {
+      },
+      "lib": {
+        "*ff_025C_1v80": [
+          "dir::../macros/sram_northcape_32x128/sram_northcape_32x128_FF_1p8V_25C.lib"
+        ],
+        "*ff_n40C_1v95": [
+          "dir::../macros/sram_northcape_32x128/sram_northcape_32x128_FF_1p95V_40C.lib"
+        ],
+        "*ss_025C_1v80": [
+          "dir::../macros/sram_northcape_32x128/sram_northcape_32x128_SS_1p8V_25C.lib"
+        ],
+        "*ss_100C_1v60": [
+          "dir::../macros/sram_northcape_32x128/sram_northcape_32x128_SS_1p6V_100C.lib"
+        ],
+        "*tt_000C_1v80": [
+          "dir::../macros/sram_northcape_32x128/sram_northcape_32x128_TT_1p8V_0C.lib"
+        ],
+        "*tt_025C_1v80": [
+          "dir::../macros/sram_northcape_32x128/sram_northcape_32x128_TT_1p8V_25C.lib"
+        ],
+        "*tt_100C_1v80": [
+          "dir::../macros/sram_northcape_32x128/sram_northcape_32x128_TT_1p8V_100C.lib"
+        ]
+      },
+      "spice": [],
+      "sdf": {}
+    }
+  },
+  "PDN_MACRO_CONNECTIONS": [".*sram0 vccd1 vssd1 vccd1 vssd1"],
+  "MAGIC_CAPTURE_ERRORS": false
+}

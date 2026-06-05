@@ -1,0 +1,180 @@
+/dts-v1/;
+
+/ {
+  #address-cells = <2>;
+  #size-cells = <2>;
+  compatible = "eth,ariane-bare-dev";
+  model = "eth,ariane-bare";
+  chosen {
+    bootargs = "console=ttyS0,115200 earlycon=sbi";
+    stdout-path = "/soc/uart@10000000:115200";
+    //tick-timer =  "/cpus/cpu@0";
+  };
+  cpus {
+    #address-cells = <1>;
+    #size-cells = <0>;
+    timebase-frequency = <12500000>; // 12.5 MHz
+    CPU0: cpu@0 {
+      clock-frequency = <25000000>; // 25 MHz
+      device_type = "cpu";
+      reg = <0>;
+      status = "okay";
+      compatible = "eth, ariane", "riscv";
+      riscv,isa = "rv64imac";
+      mmu-type = "riscv,sv39";
+      tlb-split;
+      // HLIC - hart local interrupt controller
+      CPU0_intc: interrupt-controller {
+        #interrupt-cells = <1>;
+        interrupt-controller;
+        compatible = "riscv,cpu-intc";
+      };
+    };
+  };
+
+  clocks {
+		#address-cells = <0x01>;
+		#size-cells = <0x00>;
+
+		clk_cpu {
+			#clock-cells = <0x00>;
+			clock-frequency = <25000000>;
+			compatible = "fixed-clock";
+		};
+
+		axi_clk: clk_bus_0 {
+			#clock-cells = <0x00>;
+			clock-frequency = <25000000>;
+			compatible = "fixed-clock";
+			phandle = <0x01>;
+		};
+	};
+  
+  memory@80000000 {
+    device_type = "memory";
+    reg = <0x0 0x80000000 0x0 0x0FF80000>;
+  };
+ 
+  L26: soc {
+    #address-cells = <2>;
+    #size-cells = <2>;
+    compatible = "eth,ariane-bare-soc", "simple-bus";
+    ranges;
+  
+    clint@2000000 {
+      compatible = "riscv,clint0";
+      interrupts-extended = <&CPU0_intc 3 &CPU0_intc 7>;
+      reg = <0x0 0x2000000 0x0 0xc0000>;
+      reg-names = "control";
+    };
+    
+    PLIC0: interrupt-controller@c000000 {
+      #interrupt-cells = <1>;
+      compatible = "riscv,plic0";
+      interrupt-controller;
+      interrupts-extended = <&CPU0_intc 11 &CPU0_intc 9>;
+      reg = <0x0 0xc000000 0x0 0x4000000>;
+      riscv,max-priority = <7>;
+      riscv,ndev = <30>;
+    };
+
+    
+
+    
+    uart@10000000 {
+      compatible = "ns16750", "ns16550";
+      reg = <0x0 0x10000000 0x0 0x10000>;
+      device_type = "serial";
+      clock-frequency = <25000000>;
+      current-speed = <115200>;
+      interrupt-parent = <&PLIC0>;
+      interrupts = <9 4>;
+      reg-shift = <2>; // regs are spaced on 32 bit boundary
+      reg-io-width = <4>; // only 32-bit access are supported
+      fifo-size = <16>;
+    };
+    timer@18000000 {
+      compatible = "pulp,apb_timer";
+      interrupts = <0x00000004 0x00000005 0x00000006 0x00000007>;
+      reg = <0x0 0x18000000 0x0 0x00001000>;
+      interrupt-parent = <&PLIC0>;
+      pulp,clock-period-ns = <40>;
+      reg-names = "control";
+    };
+    xps-spi@20000000 {
+      compatible = "xlnx,axi-quad-spi-3.2", "xlnx,xps-spi-2.00.a";
+      interrupt-parent = <&PLIC0>;
+      interrupts = <8 4>;
+      reg = <0x0 0x20000000 0x0 0x10000>;
+      fifo-size = <256>;
+      xlnx,family = "kintex7";
+      xlnx,fifo-exist = <0x1>;
+      xlnx,num-ss-bits = <0x1>;
+      xlnx,num-transfer-bits = <0x8>;
+      xlnx,sck-ratio = <0x4>;
+
+      mmc@0 {
+        #address-cells = <1>;
+				#size-cells = <0>;
+        compatible = "mmc-spi-slot";
+        reg = <0>;
+        spi-max-frequency = <12500000>;
+        voltage-ranges = <3300 3300>;
+        disable-wp;
+      };
+    };
+
+    axi_ethernet_eth: ethernet@40E00000 {
+      compatible = "xlnx,xps-ethernetlite-3.00.a", "xlnx,xps-ethernetlite-1.00.a";
+      device_type = "network";
+      interrupt-parent = <&PLIC0>;
+      interrupts = <12 0x4>;
+      clocks = <&axi_clk>;
+      reg = <0x0 0x40E00000 0x0 0x10000>;
+      local-mac-address = [00 0a 35 00 00 01];
+      xlnx,duplex = <0x1>;
+      xlnx,include-global-buffers = <0x1>;
+      xlnx,include-internal-loopback = <0x0>;
+      xlnx,include-mdio = <0x1>;
+      xlnx,instance = "axi_ethernetlite_inst";
+      xlnx,rx-ping-pong = <0x1>;
+      xlnx,s-axi-id-width = <0x1>;
+      xlnx,tx-ping-pong = <0x1>;
+      xlnx,use-internal = <0x0>;
+ 
+      phy-handle = <&phy0>;
+      phy-mode = "mii";
+      phy-connection-type = "mii";
+
+      axi_ethernetlite_0_mdio: mdio {
+        #address-cells = <1>;
+        #size-cells = <0>;
+        phy0: phy@0 {
+          device_type = "ethernet-phy";
+          reg = <1>;
+        };
+      };
+    };
+
+
+    rom: axi_bram_ctrl@00010000 {
+            compatible = "xlnx,axi-bram-ctrl-4.1";
+            reg = <0x0 0x00010000 0x0 0x10000>;
+            xlnx,bram-addr-width = <0x0a>;
+            xlnx,bram-inst-mode = "EXTERNAL";
+            xlnx,ecc = <0x00>;
+            xlnx,ecc-onoff-reset-value = <0x00>;
+            xlnx,ecc-type = <0x00>;
+            xlnx,fault-inject = <0x00>;
+            xlnx,memory-depth = <0x400>;
+            xlnx,rd-cmd-optimization = <0x00>;
+            xlnx,read-latency = <0x01>;
+            xlnx,s-axi-ctrl-addr-width = <0x20>;
+            xlnx,s-axi-ctrl-data-width = <0x20>;
+            xlnx,s-axi-id-width = <0x0e>;
+            xlnx,s-axi-supports-narrow-burst = <0x01>;
+            xlnx,single-port-bram = <0x01>;
+            status="disabled";
+        };
+  };
+};

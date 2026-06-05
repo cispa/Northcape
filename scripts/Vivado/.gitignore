@@ -1,0 +1,9 @@
+project*
+vivado*
+vivado-library
+*log
+device-tree-xlnx
+bsp
+RVSoC.tcl
+*tas
+*bit

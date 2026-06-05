@@ -1,0 +1,72 @@
+/*
+ * Copyright (c) 2023 by Rivos Inc.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+/dts-v1/;
+
+#include <openhwgroup/cv64a6.dtsi>
+
+/ {
+	model = "Openhardwaregroup CV64A6 on Genesys II";
+	compatible = "ariane,cv64a6_genesysII";
+
+	chosen {
+		zephyr,console = &uart0;
+		zephyr,shell-uart = &uart0;
+		zephyr,sram = &memory0;
+		zephyr,entropy = &ops;
+		skadi,test-arena = &skadi_test_arena;
+		skadi,mem-arena = &skadi_mem_arena;
+	};
+};
+
+&uart0 {
+	status = "okay";
+};
+
+&spi0 {
+	status = "okay";
+};
+
+&clint{
+  status = "okay";
+};
+
+&dma0 {
+	status = "okay";
+};
+
+&pulp_timer {
+	status = "okay";
+};
+
+&ha1588 {
+	status = "okay";
+};
+
+
+&mdio0{
+	status = "okay";
+
+	phy0: phy@1 {
+		#address-cells = <1>;
+		#size-cells = <0>;
+		compatible = "ethernet-phy";
+		reg = <1 1>;
+		status="okay";
+    };
+};
+
+&eth0 {
+	status = "okay";
+	phy-handle=<&phy0>;
+};
+
+&ops {
+	status = "okay";
+};
+
+&ops_irq {
+	status = "okay";
+};

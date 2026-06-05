@@ -1,0 +1,5 @@
+config SKADI_LIBC_SUPPORTS_FPU
+    bool "Skadi library has support for floating-point operation"
+    depends on SKADI_LOADER
+    help
+        Select y if you need the FPU to be activated in the libc, e.g., when calling printf() and friends with floating-point arguments.

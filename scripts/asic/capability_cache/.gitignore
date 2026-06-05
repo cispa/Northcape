@@ -1,0 +1,10 @@
+.magicrc*
+dbg*
+*txt
+northcape_cap_cache_wrapper_verilog*
+qflow*
+log
+reports
+northcape_cap_cache_flattened.v
+runs
+config.json

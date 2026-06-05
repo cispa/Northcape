@@ -1,0 +1,20 @@
+--- a/drivers/net/ethernet/xilinx/xilinx_axienet.h	2024-05-23 12:38:20.861119272 +0200
++++ b/drivers/net/ethernet/xilinx/xilinx_axienet.h	2024-05-23 12:38:30.765194509 +0200
+@@ -14,6 +14,7 @@
+ #include <linux/interrupt.h>
+ #include <linux/if_vlan.h>
+ #include <linux/phylink.h>
++#include <linux/net_tstamp.h>
+ 
+ /* Packet size info */
+ #define XAE_HDR_SIZE			14 /* Size of Ethernet header */
+@@ -419,6 +420,9 @@
+ 	struct phylink *phylink;
+ 	struct phylink_config phylink_config;
+ 
++	/* Timestamp config */
++	struct hwtstamp_config tstamp_config;
++
+ 	/* Clock for AXI bus */
+ 	struct clk *clk;
+

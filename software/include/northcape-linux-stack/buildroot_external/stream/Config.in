@@ -1,0 +1,15 @@
+config BR2_PACKAGE_STREAM
+    bool "stream benchmark"
+    help
+        Stream memory benchmark.
+
+        https://github.com/jeffhammond/STREAM        
+
+if BR2_PACKAGE_STREAM
+
+config BR2_PACKAGE_STREAM_ARRAY_SIZE
+    int "stream array size"
+    default 10000000
+    help
+        Stream array size.
+endif

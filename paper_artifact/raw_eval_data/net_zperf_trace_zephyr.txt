@@ -1,0 +1,34 @@
+I: Configuring IRQs 651 and 779!
+I: Enabling IRQ!
+I: No IRQs defined!
+I: Enable MDIO Bus assuming ethernet clock frequency 50000000 divider 40!
+I: MDIO ready!
+I: PHY (1) ID 1CC915
+
+I: RX Checksum offloading requested
+I: TX Checksum offloading requested
+I: Link state changed to: down (speed 0)
+I: Interface initialized!
+*** Booting Zephyr OS build v3.7.0-rc1-4624-g35283b085a9c ***
+I: Initializing network
+I: IPv4 address: 192.0.2.1
+[m
+[1;32muart:~$ [mI: IPv6 address: 2001:db8::1
+I: IPv6 address: 2001:db8::1
+I: PHY (1) Link speed 1000 Mb, full duplex
+
+I: Link state changed to: up (speed 20)
+zperf tcp upload 192.0.2.2 5001 60 12k[1D[J[1D[Jk
+Remote port is 5001
+Connecting to 192.0.2.2
+Duration:	1.00 m
+Packet size:	1000 bytes
+Rate:		10 kbps
+Starting...
+-
+Upload completed!
+Duration:	1.00 m
+Num packets:	32935
+Num errors:	0 (retry or fail)
+Rate:		4.39 Mbps
+[1;32muart:~$ [m

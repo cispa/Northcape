@@ -1,0 +1,429 @@
+I: Configuring IRQs 651 and 779!
+I: Enabling IRQ!
+I: No IRQs defined!
+I: Enable MDIO Bus assuming ethernet clock frequency 50000000 divider 40!
+I: MDIO ready!
+I: PHY (1) ID 1CC915
+
+I: RX Checksum offloading requested
+I: TX Checksum offloading requested
+I: Link state changed to: down (speed 0)
+I: Interface initialized!
+*** Booting Zephyr OS build v3.7.0-rc1-4624-g35283b085a9c ***
+I: Initializing network
+I: IPv4 address: 192.0.2.1
+Send 100 UDP messages to measurement server at UDP port 8080...
+I: PHY (1) Link speed 1000 Mb, full duplex
+
+I: Link state changed to: up (speed 20)
+I: ha1588 FIFOs reset!
+Received message #0 from 192.0.2.2 at 12.745480608s content Hello zephyr 1 processing delay: 762441ns
+Received message #1 from 192.0.2.2 at 13.744377768s content Hello zephyr 2 processing delay: 583337ns
+Received message #2 from 192.0.2.2 at 14.748242352s content Hello zephyr 3 processing delay: 550721ns
+Received message #3 from 192.0.2.2 at 15.752672112s content Hello zephyr 4 processing delay: 537337ns
+Received message #4 from 192.0.2.2 at 16.756498688s content Hello zephyr 5 processing delay: 534649ns
+Received message #5 from 192.0.2.2 at 17.760454912s content Hello zephyr 6 processing delay: 529961ns
+Received message #6 from 192.0.2.2 at 18.764326000s content Hello zephyr 7 processing delay: 535145ns
+Received message #7 from 192.0.2.2 at 19.767634464s content Hello zephyr 8 processing delay: 538457ns
+Received message #8 from 192.0.2.2 at 20.771234640s content Hello zephyr 9 processing delay: 534753ns
+Received message #9 from 192.0.2.2 at 21.775079560s content Hello zephyr 10 processing delay: 541217ns
+Received message #10 from 192.0.2.2 at 22.778927312s content Hello zephyr 11 processing delay: 532097ns
+Received message #11 from 192.0.2.2 at 23.783478112s content Hello zephyr 12 processing delay: 529905ns
+Received message #12 from 192.0.2.2 at 24.787295696s content Hello zephyr 13 processing delay: 542009ns
+Received message #13 from 192.0.2.2 at 25.791171856s content Hello zephyr 14 processing delay: 527049ns
+Received message #14 from 192.0.2.2 at 26.795088264s content Hello zephyr 15 processing delay: 540577ns
+Received message #15 from 192.0.2.2 at 27.798864112s content Hello zephyr 16 processing delay: 533385ns
+Received message #16 from 192.0.2.2 at 28.802744296s content Hello zephyr 17 processing delay: 528641ns
+Received message #17 from 192.0.2.2 at 29.806571792s content Hello zephyr 18 processing delay: 530641ns
+Received message #18 from 192.0.2.2 at 30.810387944s content Hello zephyr 19 processing delay: 516193ns
+Received message #19 from 192.0.2.2 at 31.814190480s content Hello zephyr 20 processing delay: 528577ns
+Received message #20 from 192.0.2.2 at 32.818013392s content Hello zephyr 21 processing delay: 531393ns
+Received message #21 from 192.0.2.2 at 33.821858312s content Hello zephyr 22 processing delay: 538337ns
+Received message #22 from 192.0.2.2 at 34.825675552s content Hello zephyr 23 processing delay: 534369ns
+Received message #23 from 192.0.2.2 at 35.829476848s content Hello zephyr 24 processing delay: 532449ns
+Received message #24 from 192.0.2.2 at 36.833280928s content Hello zephyr 25 processing delay: 531457ns
+Received message #25 from 192.0.2.2 at 37.837083296s content Hello zephyr 26 processing delay: 522985ns
+Received message #26 from 192.0.2.2 at 38.840990048s content Hello zephyr 27 processing delay: 525961ns
+Received message #27 from 192.0.2.2 at 39.844837456s content Hello zephyr 28 processing delay: 530377ns
+Received message #28 from 192.0.2.2 at 40.848653600s content Hello zephyr 29 processing delay: 525001ns
+Received message #29 from 192.0.2.2 at 41.852402888s content Hello zephyr 30 processing delay: 539281ns
+Received message #30 from 192.0.2.2 at 42.856125408s content Hello zephyr 31 processing delay: 542537ns
+Received message #31 from 192.0.2.2 at 43.859892096s content Hello zephyr 32 processing delay: 537617ns
+Received message #32 from 192.0.2.2 at 44.863219168s content Hello zephyr 33 processing delay: 536545ns
+Received message #33 from 192.0.2.2 at 45.866781832s content Hello zephyr 34 processing delay: 553081ns
+Received message #34 from 192.0.2.2 at 46.870602952s content Hello zephyr 35 processing delay: 534049ns
+Received message #35 from 192.0.2.2 at 47.874384456s content Hello zephyr 36 processing delay: 536489ns
+Received message #36 from 192.0.2.2 at 48.878866208s content Hello zephyr 37 processing delay: 533817ns
+Received message #37 from 192.0.2.2 at 49.882714320s content Hello zephyr 38 processing delay: 533913ns
+Received message #38 from 192.0.2.2 at 50.886476336s content Hello zephyr 39 processing delay: 533321ns
+Received message #39 from 192.0.2.2 at 51.890266912s content Hello zephyr 40 processing delay: 525857ns
+Received message #40 from 192.0.2.2 at 52.894063808s content Hello zephyr 41 processing delay: 539289ns
+Received message #41 from 192.0.2.2 at 53.897892648s content Hello zephyr 42 processing delay: 534889ns
+Received message #42 from 192.0.2.2 at 54.901694344s content Hello zephyr 43 processing delay: 542857ns
+Received message #43 from 192.0.2.2 at 55.905401608s content Hello zephyr 44 processing delay: 529985ns
+Received message #44 from 192.0.2.2 at 56.908990160s content Hello zephyr 45 processing delay: 526585ns
+Received message #45 from 192.0.2.2 at 57.912774224s content Hello zephyr 46 processing delay: 540689ns
+Received message #46 from 192.0.2.2 at 58.916554464s content Hello zephyr 47 processing delay: 527257ns
+Received message #47 from 192.0.2.2 at 59.920307896s content Hello zephyr 48 processing delay: 527297ns
+Received message #48 from 192.0.2.2 at 60.924111032s content Hello zephyr 49 processing delay: 564497ns
+Received message #49 from 192.0.2.2 at 61.927852832s content Hello zephyr 50 processing delay: 554033ns
+Received message #50 from 192.0.2.2 at 62.931626064s content Hello zephyr 51 processing delay: 545449ns
+Received message #51 from 192.0.2.2 at 63.934916960s content Hello zephyr 52 processing delay: 547321ns
+Received message #52 from 192.0.2.2 at 64.938463664s content Hello zephyr 53 processing delay: 536585ns
+Received message #53 from 192.0.2.2 at 65.942302760s content Hello zephyr 54 processing delay: 542889ns
+Received message #54 from 192.0.2.2 at 66.946061680s content Hello zephyr 55 processing delay: 545337ns
+Received message #55 from 192.0.2.2 at 67.949900384s content Hello zephyr 56 processing delay: 523569ns
+Received message #56 from 192.0.2.2 at 68.954460992s content Hello zephyr 57 processing delay: 531585ns
+Received message #57 from 192.0.2.2 at 69.958265224s content Hello zephyr 58 processing delay: 538993ns
+Received message #58 from 192.0.2.2 at 70.962081080s content Hello zephyr 59 processing delay: 536609ns
+Received message #59 from 192.0.2.2 at 71.965903528s content Hello zephyr 60 processing delay: 524601ns
+Received message #60 from 192.0.2.2 at 72.969721408s content Hello zephyr 61 processing delay: 542241ns
+Received message #61 from 192.0.2.2 at 73.973560528s content Hello zephyr 62 processing delay: 533465ns
+Received message #62 from 192.0.2.2 at 74.977359472s content Hello zephyr 63 processing delay: 525513ns
+Received message #63 from 192.0.2.2 at 75.981120312s content Hello zephyr 64 processing delay: 523833ns
+Received message #64 from 192.0.2.2 at 76.984912984s content Hello zephyr 65 processing delay: 533969ns
+Received message #65 from 192.0.2.2 at 77.988686664s content Hello zephyr 66 processing delay: 521865ns
+Received message #66 from 192.0.2.2 at 78.992500640s content Hello zephyr 67 processing delay: 540873ns
+Received message #67 from 192.0.2.2 at 79.996305312s content Hello zephyr 68 processing delay: 534201ns
+Received message #68 from 192.0.2.2 at 81.26712s content Hello zephyr 69 processing delay: 526865ns
+Received message #69 from 192.0.2.2 at 82.3802992s content Hello zephyr 70 processing delay: 525273ns
+Received message #70 from 192.0.2.2 at 83.7525704s content Hello zephyr 71 processing delay: 528017ns
+Received message #71 from 192.0.2.2 at 84.10653976s content Hello zephyr 72 processing delay: 533185ns
+Received message #72 from 192.0.2.2 at 85.14530384s content Hello zephyr 73 processing delay: 526561ns
+Received message #73 from 192.0.2.2 at 86.18614536s content Hello zephyr 74 processing delay: 532905ns
+Received message #74 from 192.0.2.2 at 87.22051696s content Hello zephyr 75 processing delay: 526393ns
+Received message #75 from 192.0.2.2 at 88.26585440s content Hello zephyr 76 processing delay: 536657ns
+Received message #76 from 192.0.2.2 at 89.29691016s content Hello zephyr 77 processing delay: 534169ns
+Received message #77 from 192.0.2.2 at 90.34177160s content Hello zephyr 78 processing delay: 516513ns
+Received message #78 from 192.0.2.2 at 91.37969936s content Hello zephyr 79 processing delay: 544697ns
+Received message #79 from 192.0.2.2 at 92.41765888s content Hello zephyr 80 processing delay: 529569ns
+Received message #80 from 192.0.2.2 at 93.45567120s content Hello zephyr 81 processing delay: 521561ns
+Received message #81 from 192.0.2.2 at 94.49356360s content Hello zephyr 82 processing delay: 539337ns
+Received message #82 from 192.0.2.2 at 95.53101752s content Hello zephyr 83 processing delay: 537761ns
+Received message #83 from 192.0.2.2 at 96.56906136s content Hello zephyr 84 processing delay: 530625ns
+Received message #84 from 192.0.2.2 at 97.60675104s content Hello zephyr 85 processing delay: 534417ns
+Received message #85 from 192.0.2.2 at 98.64524368s content Hello zephyr 86 processing delay: 540321ns
+Received message #86 from 192.0.2.2 at 99.68347624s content Hello zephyr 87 processing delay: 527273ns
+Received message #87 from 192.0.2.2 at 100.72192520s content Hello zephyr 88 processing delay: 544345ns
+Received message #88 from 192.0.2.2 at 101.75998856s content Hello zephyr 89 processing delay: 540409ns
+Received message #89 from 192.0.2.2 at 102.79777960s content Hello zephyr 90 processing delay: 525081ns
+Received message #90 from 192.0.2.2 at 103.83562568s content Hello zephyr 91 processing delay: 529841ns
+Received message #91 from 192.0.2.2 at 104.87359352s content Hello zephyr 92 processing delay: 528305ns
+Received message #92 from 192.0.2.2 at 105.91152504s content Hello zephyr 93 processing delay: 538529ns
+Received message #93 from 192.0.2.2 at 106.94305184s content Hello zephyr 94 processing delay: 531673ns
+Received message #94 from 192.0.2.2 at 107.98025856s content Hello zephyr 95 processing delay: 541865ns
+Received message #95 from 192.0.2.2 at 108.101798736s content Hello zephyr 96 processing delay: 553025ns
+Received message #96 from 192.0.2.2 at 109.105547320s content Hello zephyr 97 processing delay: 542321ns
+Received message #97 from 192.0.2.2 at 110.109349744s content Hello zephyr 98 processing delay: 536665ns
+Received message #98 from 192.0.2.2 at 111.113847160s content Hello zephyr 99 processing delay: 526881ns
+Received message #99 from 192.0.2.2 at 112.117633504s content Hello zephyr 100 processing delay: 528809ns
+Sent message #0 to 192.0.2.2 at 112.127935152 s valid: 0 processing delay: 644431ns
+Sent message #1 to 192.0.2.2 at 113.195198200 s valid: 0 processing delay: 564191ns
+Sent message #2 to 192.0.2.2 at 114.295166232 s valid: 0 processing delay: 537087ns
+Sent message #3 to 192.0.2.2 at 115.395153184 s valid: 0 processing delay: 529207ns
+Sent message #4 to 192.0.2.2 at 116.495327792 s valid: 0 processing delay: 537055ns
+Sent message #5 to 192.0.2.2 at 117.595164752 s valid: 0 processing delay: 534647ns
+Sent message #6 to 192.0.2.2 at 118.695159680 s valid: 0 processing delay: 535775ns
+Sent message #7 to 192.0.2.2 at 119.795147624 s valid: 0 processing delay: 521151ns
+Sent message #8 to 192.0.2.2 at 120.895155416 s valid: 0 processing delay: 524655ns
+Sent message #9 to 192.0.2.2 at 121.995159288 s valid: 0 processing delay: 526335ns
+Sent message #10 to 192.0.2.2 at 123.95327768 s valid: 0 processing delay: 527615ns
+Sent message #11 to 192.0.2.2 at 124.195171792 s valid: 0 processing delay: 531471ns
+Sent message #12 to 192.0.2.2 at 125.295242392 s valid: 0 processing delay: 521303ns
+Sent message #13 to 192.0.2.2 at 126.395247632 s valid: 0 processing delay: 523535ns
+Sent message #14 to 192.0.2.2 at 127.495249744 s valid: 0 processing delay: 524159ns
+Sent message #15 to 192.0.2.2 at 128.595264336 s valid: 0 processing delay: 535271ns
+Sent message #16 to 192.0.2.2 at 129.695432584 s valid: 0 processing delay: 536575ns
+Sent message #17 to 192.0.2.2 at 130.795247584 s valid: 0 processing delay: 521127ns
+Sent message #18 to 192.0.2.2 at 131.895258224 s valid: 0 processing delay: 528391ns
+Sent message #19 to 192.0.2.2 at 132.995262000 s valid: 0 processing delay: 522255ns
+Sent message #20 to 192.0.2.2 at 134.95255176 s valid: 0 processing delay: 529207ns
+Sent message #21 to 192.0.2.2 at 135.195175992 s valid: 0 processing delay: 524871ns
+Sent message #22 to 192.0.2.2 at 136.295429968 s valid: 0 processing delay: 533751ns
+Sent message #23 to 192.0.2.2 at 137.395260640 s valid: 0 processing delay: 525447ns
+Sent message #24 to 192.0.2.2 at 138.495263976 s valid: 0 processing delay: 526895ns
+Sent message #25 to 192.0.2.2 at 139.595270720 s valid: 0 processing delay: 530751ns
+Sent message #26 to 192.0.2.2 at 140.695260960 s valid: 0 processing delay: 527495ns
+Sent message #27 to 192.0.2.2 at 141.795262504 s valid: 0 processing delay: 515055ns
+Sent message #28 to 192.0.2.2 at 142.895441032 s valid: 0 processing delay: 527911ns
+Sent message #29 to 192.0.2.2 at 143.995276760 s valid: 0 processing delay: 522895ns
+Sent message #30 to 192.0.2.2 at 145.95272536 s valid: 0 processing delay: 526391ns
+Sent message #31 to 192.0.2.2 at 146.195188256 s valid: 0 processing delay: 524855ns
+Sent message #32 to 192.0.2.2 at 147.295274856 s valid: 0 processing delay: 530775ns
+Sent message #33 to 192.0.2.2 at 148.395286720 s valid: 0 processing delay: 531007ns
+Sent message #34 to 192.0.2.2 at 149.495454680 s valid: 0 processing delay: 532135ns
+Sent message #35 to 192.0.2.2 at 150.595289672 s valid: 0 processing delay: 535455ns
+Sent message #36 to 192.0.2.2 at 151.695294880 s valid: 0 processing delay: 538655ns
+Sent message #37 to 192.0.2.2 at 152.795281248 s valid: 0 processing delay: 529559ns
+Sent message #38 to 192.0.2.2 at 153.895296488 s valid: 0 processing delay: 534135ns
+Sent message #39 to 192.0.2.2 at 154.995284104 s valid: 0 processing delay: 526751ns
+Sent message #40 to 192.0.2.2 at 156.95463640 s valid: 0 processing delay: 528735ns
+Sent message #41 to 192.0.2.2 at 157.195208560 s valid: 0 processing delay: 530871ns
+Sent message #42 to 192.0.2.2 at 158.295298736 s valid: 0 processing delay: 531031ns
+Sent message #43 to 192.0.2.2 at 159.395303336 s valid: 0 processing delay: 532527ns
+Sent message #44 to 192.0.2.2 at 160.495285400 s valid: 0 processing delay: 520575ns
+Sent message #45 to 192.0.2.2 at 161.595304152 s valid: 0 processing delay: 528839ns
+Sent message #46 to 192.0.2.2 at 162.695469544 s valid: 0 processing delay: 534711ns
+Sent message #47 to 192.0.2.2 at 163.795293088 s valid: 0 processing delay: 519031ns
+Sent message #48 to 192.0.2.2 at 164.895313920 s valid: 0 processing delay: 538095ns
+Sent message #49 to 192.0.2.2 at 165.995310640 s valid: 0 processing delay: 530631ns
+Sent message #50 to 192.0.2.2 at 167.95299528 s valid: 0 processing delay: 525175ns
+Sent message #51 to 192.0.2.2 at 168.195231696 s valid: 0 processing delay: 540871ns
+Sent message #52 to 192.0.2.2 at 169.295478840 s valid: 0 processing delay: 534191ns
+Sent message #53 to 192.0.2.2 at 170.395316440 s valid: 0 processing delay: 533111ns
+Sent message #54 to 192.0.2.2 at 171.495299584 s valid: 0 processing delay: 520551ns
+Sent message #55 to 192.0.2.2 at 172.595317704 s valid: 0 processing delay: 535895ns
+Sent message #56 to 192.0.2.2 at 173.695305000 s valid: 0 processing delay: 521599ns
+Sent message #57 to 192.0.2.2 at 174.795311248 s valid: 0 processing delay: 523855ns
+Sent message #58 to 192.0.2.2 at 175.895501832 s valid: 0 processing delay: 538815ns
+Sent message #59 to 192.0.2.2 at 176.995317680 s valid: 0 processing delay: 523495ns
+Sent message #60 to 192.0.2.2 at 178.95319744 s valid: 0 processing delay: 532351ns
+Sent message #61 to 192.0.2.2 at 179.195240704 s valid: 0 processing delay: 536255ns
+Sent message #62 to 192.0.2.2 at 180.295319480 s valid: 0 processing delay: 526055ns
+Sent message #63 to 192.0.2.2 at 181.395314776 s valid: 0 processing delay: 516927ns
+Sent message #64 to 192.0.2.2 at 182.495479200 s valid: 0 processing delay: 523687ns
+Sent message #65 to 192.0.2.2 at 183.595333240 s valid: 0 processing delay: 528951ns
+Sent message #66 to 192.0.2.2 at 184.695337600 s valid: 0 processing delay: 532047ns
+Sent message #67 to 192.0.2.2 at 185.795330376 s valid: 0 processing delay: 530415ns
+Sent message #68 to 192.0.2.2 at 186.895336416 s valid: 0 processing delay: 532663ns
+Sent message #69 to 192.0.2.2 at 187.995337768 s valid: 0 processing delay: 532015ns
+Sent message #70 to 192.0.2.2 at 189.95499880 s valid: 0 processing delay: 526735ns
+Sent message #71 to 192.0.2.2 at 190.195261072 s valid: 0 processing delay: 534879ns
+Sent message #72 to 192.0.2.2 at 191.295334016 s valid: 0 processing delay: 526887ns
+Sent message #73 to 192.0.2.2 at 192.395341664 s valid: 0 processing delay: 531959ns
+Sent message #74 to 192.0.2.2 at 193.495338736 s valid: 0 processing delay: 526375ns
+Sent message #75 to 192.0.2.2 at 194.595340280 s valid: 0 processing delay: 523391ns
+Sent message #76 to 192.0.2.2 at 195.695510216 s valid: 0 processing delay: 526711ns
+Sent message #77 to 192.0.2.2 at 196.795346664 s valid: 0 processing delay: 532551ns
+Sent message #78 to 192.0.2.2 at 197.895341952 s valid: 0 processing delay: 524151ns
+Sent message #79 to 192.0.2.2 at 198.995349264 s valid: 0 processing delay: 528351ns
+Sent message #80 to 192.0.2.2 at 200.95337136 s valid: 0 processing delay: 514855ns
+Sent message #81 to 192.0.2.2 at 201.195270104 s valid: 0 processing delay: 529719ns
+Sent message #82 to 192.0.2.2 at 202.295525848 s valid: 0 processing delay: 531239ns
+Sent message #83 to 192.0.2.2 at 203.395355448 s valid: 0 processing delay: 530431ns
+Sent message #84 to 192.0.2.2 at 204.495359040 s valid: 0 processing delay: 531207ns
+Sent message #85 to 192.0.2.2 at 205.595368496 s valid: 0 processing delay: 536727ns
+Sent message #86 to 192.0.2.2 at 206.695360304 s valid: 0 processing delay: 527159ns
+Sent message #87 to 192.0.2.2 at 207.795365528 s valid: 0 processing delay: 528935ns
+Sent message #88 to 192.0.2.2 at 208.895539344 s valid: 0 processing delay: 535871ns
+Sent message #89 to 192.0.2.2 at 209.995363936 s valid: 0 processing delay: 530431ns
+Sent message #90 to 192.0.2.2 at 211.95364584 s valid: 0 processing delay: 527047ns
+Sent message #91 to 192.0.2.2 at 212.195295264 s valid: 0 processing delay: 542095ns
+Sent message #92 to 192.0.2.2 at 213.295378160 s valid: 0 processing delay: 535631ns
+Sent message #93 to 192.0.2.2 at 214.395367192 s valid: 0 processing delay: 528767ns
+Sent message #94 to 192.0.2.2 at 215.495541392 s valid: 0 processing delay: 529015ns
+Sent message #95 to 192.0.2.2 at 216.595383208 s valid: 0 processing delay: 531687ns
+Sent message #96 to 192.0.2.2 at 217.695369808 s valid: 0 processing delay: 524095ns
+Sent message #97 to 192.0.2.2 at 218.795382648 s valid: 0 processing delay: 534151ns
+Sent message #98 to 192.0.2.2 at 219.895369968 s valid: 0 processing delay: 526447ns
+Sent message #99 to 192.0.2.2 at 220.995374008 s valid: 0 processing delay: 528095ns
+======================
+Raw rx network stack processing durations samples:
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+762441/-1/-1/-1/-1/-1/-1/-1/-1
+583337/-1/-1/-1/-1/-1/-1/-1/-1
+550721/-1/-1/-1/-1/-1/-1/-1/-1
+537337/-1/-1/-1/-1/-1/-1/-1/-1
+534649/-1/-1/-1/-1/-1/-1/-1/-1
+529961/-1/-1/-1/-1/-1/-1/-1/-1
+535145/-1/-1/-1/-1/-1/-1/-1/-1
+538457/-1/-1/-1/-1/-1/-1/-1/-1
+534753/-1/-1/-1/-1/-1/-1/-1/-1
+541217/-1/-1/-1/-1/-1/-1/-1/-1
+532097/-1/-1/-1/-1/-1/-1/-1/-1
+529905/-1/-1/-1/-1/-1/-1/-1/-1
+542009/-1/-1/-1/-1/-1/-1/-1/-1
+527049/-1/-1/-1/-1/-1/-1/-1/-1
+540577/-1/-1/-1/-1/-1/-1/-1/-1
+533385/-1/-1/-1/-1/-1/-1/-1/-1
+528641/-1/-1/-1/-1/-1/-1/-1/-1
+530641/-1/-1/-1/-1/-1/-1/-1/-1
+516193/-1/-1/-1/-1/-1/-1/-1/-1
+528577/-1/-1/-1/-1/-1/-1/-1/-1
+531393/-1/-1/-1/-1/-1/-1/-1/-1
+538337/-1/-1/-1/-1/-1/-1/-1/-1
+534369/-1/-1/-1/-1/-1/-1/-1/-1
+532449/-1/-1/-1/-1/-1/-1/-1/-1
+531457/-1/-1/-1/-1/-1/-1/-1/-1
+522985/-1/-1/-1/-1/-1/-1/-1/-1
+525961/-1/-1/-1/-1/-1/-1/-1/-1
+530377/-1/-1/-1/-1/-1/-1/-1/-1
+525001/-1/-1/-1/-1/-1/-1/-1/-1
+539281/-1/-1/-1/-1/-1/-1/-1/-1
+542537/-1/-1/-1/-1/-1/-1/-1/-1
+537617/-1/-1/-1/-1/-1/-1/-1/-1
+536545/-1/-1/-1/-1/-1/-1/-1/-1
+553081/-1/-1/-1/-1/-1/-1/-1/-1
+534049/-1/-1/-1/-1/-1/-1/-1/-1
+536489/-1/-1/-1/-1/-1/-1/-1/-1
+533817/-1/-1/-1/-1/-1/-1/-1/-1
+533913/-1/-1/-1/-1/-1/-1/-1/-1
+533321/-1/-1/-1/-1/-1/-1/-1/-1
+525857/-1/-1/-1/-1/-1/-1/-1/-1
+539289/-1/-1/-1/-1/-1/-1/-1/-1
+534889/-1/-1/-1/-1/-1/-1/-1/-1
+542857/-1/-1/-1/-1/-1/-1/-1/-1
+529985/-1/-1/-1/-1/-1/-1/-1/-1
+526585/-1/-1/-1/-1/-1/-1/-1/-1
+540689/-1/-1/-1/-1/-1/-1/-1/-1
+527257/-1/-1/-1/-1/-1/-1/-1/-1
+527297/-1/-1/-1/-1/-1/-1/-1/-1
+564497/-1/-1/-1/-1/-1/-1/-1/-1
+554033/-1/-1/-1/-1/-1/-1/-1/-1
+545449/-1/-1/-1/-1/-1/-1/-1/-1
+547321/-1/-1/-1/-1/-1/-1/-1/-1
+536585/-1/-1/-1/-1/-1/-1/-1/-1
+542889/-1/-1/-1/-1/-1/-1/-1/-1
+545337/-1/-1/-1/-1/-1/-1/-1/-1
+523569/-1/-1/-1/-1/-1/-1/-1/-1
+531585/-1/-1/-1/-1/-1/-1/-1/-1
+538993/-1/-1/-1/-1/-1/-1/-1/-1
+536609/-1/-1/-1/-1/-1/-1/-1/-1
+524601/-1/-1/-1/-1/-1/-1/-1/-1
+542241/-1/-1/-1/-1/-1/-1/-1/-1
+533465/-1/-1/-1/-1/-1/-1/-1/-1
+525513/-1/-1/-1/-1/-1/-1/-1/-1
+523833/-1/-1/-1/-1/-1/-1/-1/-1
+533969/-1/-1/-1/-1/-1/-1/-1/-1
+521865/-1/-1/-1/-1/-1/-1/-1/-1
+540873/-1/-1/-1/-1/-1/-1/-1/-1
+534201/-1/-1/-1/-1/-1/-1/-1/-1
+526865/-1/-1/-1/-1/-1/-1/-1/-1
+525273/-1/-1/-1/-1/-1/-1/-1/-1
+528017/-1/-1/-1/-1/-1/-1/-1/-1
+533185/-1/-1/-1/-1/-1/-1/-1/-1
+526561/-1/-1/-1/-1/-1/-1/-1/-1
+532905/-1/-1/-1/-1/-1/-1/-1/-1
+526393/-1/-1/-1/-1/-1/-1/-1/-1
+536657/-1/-1/-1/-1/-1/-1/-1/-1
+534169/-1/-1/-1/-1/-1/-1/-1/-1
+516513/-1/-1/-1/-1/-1/-1/-1/-1
+544697/-1/-1/-1/-1/-1/-1/-1/-1
+529569/-1/-1/-1/-1/-1/-1/-1/-1
+521561/-1/-1/-1/-1/-1/-1/-1/-1
+539337/-1/-1/-1/-1/-1/-1/-1/-1
+537761/-1/-1/-1/-1/-1/-1/-1/-1
+530625/-1/-1/-1/-1/-1/-1/-1/-1
+534417/-1/-1/-1/-1/-1/-1/-1/-1
+540321/-1/-1/-1/-1/-1/-1/-1/-1
+527273/-1/-1/-1/-1/-1/-1/-1/-1
+544345/-1/-1/-1/-1/-1/-1/-1/-1
+540409/-1/-1/-1/-1/-1/-1/-1/-1
+525081/-1/-1/-1/-1/-1/-1/-1/-1
+529841/-1/-1/-1/-1/-1/-1/-1/-1
+528305/-1/-1/-1/-1/-1/-1/-1/-1
+538529/-1/-1/-1/-1/-1/-1/-1/-1
+531673/-1/-1/-1/-1/-1/-1/-1/-1
+541865/-1/-1/-1/-1/-1/-1/-1/-1
+553025/-1/-1/-1/-1/-1/-1/-1/-1
+542321/-1/-1/-1/-1/-1/-1/-1/-1
+536665/-1/-1/-1/-1/-1/-1/-1/-1
+526881/-1/-1/-1/-1/-1/-1/-1/-1
+528809/-1/-1/-1/-1/-1/-1/-1/-1
+rx network stack processing durations samples (Samples) discarded/min/max/avg/stddev ns: 0/516193/564497/534142.810526/8120.032767
+======================
+======================
+Raw tx network stack processing durations samples:
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+644431/-1/-1/-1/-1/-1/-1/-1/-1
+564191/-1/-1/-1/-1/-1/-1/-1/-1
+537087/-1/-1/-1/-1/-1/-1/-1/-1
+529207/-1/-1/-1/-1/-1/-1/-1/-1
+537055/-1/-1/-1/-1/-1/-1/-1/-1
+534647/-1/-1/-1/-1/-1/-1/-1/-1
+535775/-1/-1/-1/-1/-1/-1/-1/-1
+521151/-1/-1/-1/-1/-1/-1/-1/-1
+524655/-1/-1/-1/-1/-1/-1/-1/-1
+526335/-1/-1/-1/-1/-1/-1/-1/-1
+527615/-1/-1/-1/-1/-1/-1/-1/-1
+531471/-1/-1/-1/-1/-1/-1/-1/-1
+521303/-1/-1/-1/-1/-1/-1/-1/-1
+523535/-1/-1/-1/-1/-1/-1/-1/-1
+524159/-1/-1/-1/-1/-1/-1/-1/-1
+535271/-1/-1/-1/-1/-1/-1/-1/-1
+536575/-1/-1/-1/-1/-1/-1/-1/-1
+521127/-1/-1/-1/-1/-1/-1/-1/-1
+528391/-1/-1/-1/-1/-1/-1/-1/-1
+522255/-1/-1/-1/-1/-1/-1/-1/-1
+529207/-1/-1/-1/-1/-1/-1/-1/-1
+524871/-1/-1/-1/-1/-1/-1/-1/-1
+533751/-1/-1/-1/-1/-1/-1/-1/-1
+525447/-1/-1/-1/-1/-1/-1/-1/-1
+526895/-1/-1/-1/-1/-1/-1/-1/-1
+530751/-1/-1/-1/-1/-1/-1/-1/-1
+527495/-1/-1/-1/-1/-1/-1/-1/-1
+515055/-1/-1/-1/-1/-1/-1/-1/-1
+527911/-1/-1/-1/-1/-1/-1/-1/-1
+522895/-1/-1/-1/-1/-1/-1/-1/-1
+526391/-1/-1/-1/-1/-1/-1/-1/-1
+524855/-1/-1/-1/-1/-1/-1/-1/-1
+530775/-1/-1/-1/-1/-1/-1/-1/-1
+531007/-1/-1/-1/-1/-1/-1/-1/-1
+532135/-1/-1/-1/-1/-1/-1/-1/-1
+535455/-1/-1/-1/-1/-1/-1/-1/-1
+538655/-1/-1/-1/-1/-1/-1/-1/-1
+529559/-1/-1/-1/-1/-1/-1/-1/-1
+534135/-1/-1/-1/-1/-1/-1/-1/-1
+526751/-1/-1/-1/-1/-1/-1/-1/-1
+528735/-1/-1/-1/-1/-1/-1/-1/-1
+530871/-1/-1/-1/-1/-1/-1/-1/-1
+531031/-1/-1/-1/-1/-1/-1/-1/-1
+532527/-1/-1/-1/-1/-1/-1/-1/-1
+520575/-1/-1/-1/-1/-1/-1/-1/-1
+528839/-1/-1/-1/-1/-1/-1/-1/-1
+534711/-1/-1/-1/-1/-1/-1/-1/-1
+519031/-1/-1/-1/-1/-1/-1/-1/-1
+538095/-1/-1/-1/-1/-1/-1/-1/-1
+530631/-1/-1/-1/-1/-1/-1/-1/-1
+525175/-1/-1/-1/-1/-1/-1/-1/-1
+540871/-1/-1/-1/-1/-1/-1/-1/-1
+534191/-1/-1/-1/-1/-1/-1/-1/-1
+533111/-1/-1/-1/-1/-1/-1/-1/-1
+520551/-1/-1/-1/-1/-1/-1/-1/-1
+535895/-1/-1/-1/-1/-1/-1/-1/-1
+521599/-1/-1/-1/-1/-1/-1/-1/-1
+523855/-1/-1/-1/-1/-1/-1/-1/-1
+538815/-1/-1/-1/-1/-1/-1/-1/-1
+523495/-1/-1/-1/-1/-1/-1/-1/-1
+532351/-1/-1/-1/-1/-1/-1/-1/-1
+536255/-1/-1/-1/-1/-1/-1/-1/-1
+526055/-1/-1/-1/-1/-1/-1/-1/-1
+516927/-1/-1/-1/-1/-1/-1/-1/-1
+523687/-1/-1/-1/-1/-1/-1/-1/-1
+528951/-1/-1/-1/-1/-1/-1/-1/-1
+532047/-1/-1/-1/-1/-1/-1/-1/-1
+530415/-1/-1/-1/-1/-1/-1/-1/-1
+532663/-1/-1/-1/-1/-1/-1/-1/-1
+532015/-1/-1/-1/-1/-1/-1/-1/-1
+526735/-1/-1/-1/-1/-1/-1/-1/-1
+534879/-1/-1/-1/-1/-1/-1/-1/-1
+526887/-1/-1/-1/-1/-1/-1/-1/-1
+531959/-1/-1/-1/-1/-1/-1/-1/-1
+526375/-1/-1/-1/-1/-1/-1/-1/-1
+523391/-1/-1/-1/-1/-1/-1/-1/-1
+526711/-1/-1/-1/-1/-1/-1/-1/-1
+532551/-1/-1/-1/-1/-1/-1/-1/-1
+524151/-1/-1/-1/-1/-1/-1/-1/-1
+528351/-1/-1/-1/-1/-1/-1/-1/-1
+514855/-1/-1/-1/-1/-1/-1/-1/-1
+529719/-1/-1/-1/-1/-1/-1/-1/-1
+531239/-1/-1/-1/-1/-1/-1/-1/-1
+530431/-1/-1/-1/-1/-1/-1/-1/-1
+531207/-1/-1/-1/-1/-1/-1/-1/-1
+536727/-1/-1/-1/-1/-1/-1/-1/-1
+527159/-1/-1/-1/-1/-1/-1/-1/-1
+528935/-1/-1/-1/-1/-1/-1/-1/-1
+535871/-1/-1/-1/-1/-1/-1/-1/-1
+530431/-1/-1/-1/-1/-1/-1/-1/-1
+527047/-1/-1/-1/-1/-1/-1/-1/-1
+542095/-1/-1/-1/-1/-1/-1/-1/-1
+535631/-1/-1/-1/-1/-1/-1/-1/-1
+528767/-1/-1/-1/-1/-1/-1/-1/-1
+529015/-1/-1/-1/-1/-1/-1/-1/-1
+531687/-1/-1/-1/-1/-1/-1/-1/-1
+524095/-1/-1/-1/-1/-1/-1/-1/-1
+534151/-1/-1/-1/-1/-1/-1/-1/-1
+526447/-1/-1/-1/-1/-1/-1/-1/-1
+528095/-1/-1/-1/-1/-1/-1/-1/-1
+tx network stack processing durations samples (Samples) discarded/min/max/avg/stddev ns: 0/514855/644431/530697.96/13202.113
+======================

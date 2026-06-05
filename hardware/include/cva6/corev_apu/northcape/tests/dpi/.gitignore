@@ -1,0 +1,10 @@
+*o
+*so
+.certs_setup
+*der
+*.bin
+libtpms
+openssl
+swtpm
+wolfTPM
+dpi.h

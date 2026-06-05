@@ -1,0 +1,8 @@
+# 
+# SPDX-License-Identifier: Apache-2.0
+
+description: Xilinx AXI 1G/2.5G Ethernet Subsystem base bindings.
+
+include: ["xlnx,axi-ethernet-base.yaml"]
+
+compatible: "xlnx,axi-ethernet-7.2"

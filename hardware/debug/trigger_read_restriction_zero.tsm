@@ -1,0 +1,24 @@
+state idle:
+    # an inspect write with some inputs
+    if(axi0_awaddr == 64'h0000000042000018  && axi0_awvalid == 1'b1 && axi0_wdata == 64'h0000000700000007) then
+        goto wait_read_control;
+    else
+        goto idle;
+    endif
+
+# read of the control register
+state wait_read_control:
+    if(axi_araddr ==  64'h0000000042000018 && axi_arvalid == 1'b1) then
+        goto wait_rdata;
+    else
+        goto wait_read_control;
+    endif
+
+state wait_rdata:
+    if(axi_rvalid == 1'b1 && axi_rdata==64'b1xxxxxxxxxxxxxxx0000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx) then
+        trigger;
+    elseif(axi_rvalid == 1'b1) then
+        goto idle;
+    else
+        goto wait_rdata;
+    endif

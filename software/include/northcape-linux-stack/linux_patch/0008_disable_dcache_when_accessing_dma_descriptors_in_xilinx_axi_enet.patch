@@ -1,0 +1,353 @@
+--- a/drivers/net/ethernet/xilinx/xilinx_axienet_main.c	2024-05-23 12:38:20.861119272 +0200
++++ b/drivers/net/ethernet/xilinx/xilinx_axienet_main.c	2024-05-23 12:38:30.765194509 +0200
+@@ -53,6 +53,59 @@
+ 
+ #define AXIENET_REGS_N		40
+ 
++#define Z_STRINGIFY(x) #x
++#define STRINGIFY(s) Z_STRINGIFY(s)
++
++
++#define RISCV_MISC_MEM_OPCOPE 0b0001111
++#define RISCV_FUNC3_CBO 0b010
++
++#define RISCV_IMM_CBO_FLUSH 0b000000000010
++#define RISCV_IMM_CBO_CLEAN 0b000000000001
++#define RISCV_IMM_CBO_INVAL 0b000000000000
++
++#define CBO_CLEAN_STR(REG) ".insn i " STRINGIFY(RISCV_MISC_MEM_OPCOPE) "," STRINGIFY(RISCV_FUNC3_CBO) ", zero," STRINGIFY(REG) "," STRINGIFY(RISCV_IMM_CBO_CLEAN)
++#define CBO_INVAL_STR(REG) ".insn i " STRINGIFY(RISCV_MISC_MEM_OPCOPE) "," STRINGIFY(RISCV_FUNC3_CBO) ", zero," STRINGIFY(REG) "," STRINGIFY(RISCV_IMM_CBO_INVAL)
++
++#define CONFIG_DCACHE_LINE_SIZE 16
++
++int arch_dcache_flush_range(void *addr, size_t size){
++
++    const size_t num_cachelines_affected = (size + CONFIG_DCACHE_LINE_SIZE-1) / CONFIG_DCACHE_LINE_SIZE;
++    uint8_t *flush_addr = addr;
++	size_t cacheline;
++
++    /* wait for any previous stores to commit */
++     __asm__ volatile("fence rw,rw");
++
++    for(cacheline = 0; cacheline < num_cachelines_affected; cacheline++){
++        __asm__ volatile("mv t0, %0\n\t" CBO_CLEAN_STR (t0) "\n\t"::"r"(flush_addr):"t0");
++        flush_addr += CONFIG_DCACHE_LINE_SIZE;
++    }
++
++	/* need to wait for the CMO to commit */
++    __asm__ volatile("fence rw,rw");
++
++    return 0;
++}
++
++int arch_dcache_invd_range(void *addr, size_t size){
++
++    const size_t num_cachelines_affected = (size + CONFIG_DCACHE_LINE_SIZE-1) / CONFIG_DCACHE_LINE_SIZE;
++    uint8_t *inval_addr = addr;
++	size_t cacheline;
++
++    for(cacheline = 0; cacheline < num_cachelines_affected; cacheline++){
++        __asm__ volatile("mv t0, %0\n\t" CBO_INVAL_STR (t0) "\n\t"::"r"(inval_addr):"t0");
++        inval_addr += CONFIG_DCACHE_LINE_SIZE;
++    }
++
++    /* need to wait for the CMO to commit */
++    __asm__ volatile("fence rw,rw");
++
++    return 0;
++}
++
+ /* Match table for of_platform binding */
+ static const struct of_device_id axienet_of_match[] = {
+ 	{ .compatible = "xlnx,axi-ethernet-1.00.a", },
+@@ -194,12 +247,15 @@
+ 			  lp->tx_bd_v,
+ 			  lp->tx_bd_p);
+ 
+-	if (!lp->rx_bd_v)
++	if (!lp->rx_bd_v){
+ 		return;
++	}
+ 
+ 	for (i = 0; i < lp->rx_bd_num; i++) {
+ 		dma_addr_t phys;
+ 
++		(void)arch_dcache_invd_range(&lp->rx_bd_v[i], sizeof(lp->rx_bd_v[i]));
++
+ 		/* A NULL skb means this descriptor has not been initialised
+ 		 * at all.
+ 		 */
+@@ -260,6 +316,7 @@
+ 	if (!lp->rx_bd_v)
+ 		goto out;
+ 
++
+ 	for (i = 0; i < lp->tx_bd_num; i++) {
+ 		dma_addr_t addr = lp->tx_bd_p +
+ 				  sizeof(*lp->tx_bd_v) *
+@@ -268,6 +325,7 @@
+ 		lp->tx_bd_v[i].next = lower_32_bits(addr);
+ 		if (lp->features & XAE_FEATURE_DMA_64BIT)
+ 			lp->tx_bd_v[i].next_msb = upper_32_bits(addr);
++		arch_dcache_flush_range(&lp->tx_bd_v[i].cntrl, sizeof(lp->tx_bd_v[i]));
+ 	}
+ 
+ 	for (i = 0; i < lp->rx_bd_num; i++) {
+@@ -293,6 +351,8 @@
+ 		desc_set_phys_addr(lp, addr, &lp->rx_bd_v[i]);
+ 
+ 		lp->rx_bd_v[i].cntrl = lp->max_frm_size;
++
++		arch_dcache_flush_range(&lp->rx_bd_v[i].cntrl, sizeof(lp->rx_bd_v[i]));
+ 	}
+ 
+ 	/* Start updating the Rx channel control register */
+@@ -615,6 +675,7 @@
+ 
+ 	for (i = 0; i < max_bds; i++) {
+ 		cur_p = &lp->tx_bd_v[(first_bd + i) % lp->tx_bd_num];
++		arch_dcache_invd_range(cur_p, sizeof(*cur_p));
+ 		status = cur_p->status;
+ 
+ 		/* If no number is given, clean up *all* descriptors that have
+@@ -628,8 +689,9 @@
+ 				 (cur_p->cntrl & XAXIDMA_BD_CTRL_LENGTH_MASK),
+ 				 DMA_TO_DEVICE);
+ 
+-		if (cur_p->skb && (status & XAXIDMA_BD_STS_COMPLETE_MASK))
++		if (cur_p->skb && (status & XAXIDMA_BD_STS_COMPLETE_MASK)){
+ 			dev_consume_skb_irq(cur_p->skb);
++		}
+ 
+ 		cur_p->cntrl = 0;
+ 		cur_p->app0 = 0;
+@@ -639,6 +701,8 @@
+ 		cur_p->status = 0;
+ 		cur_p->skb = NULL;
+ 
++		arch_dcache_flush_range(cur_p, sizeof(*cur_p));
++
+ 		if (sizep)
+ 			*sizep += status & XAXIDMA_BD_STS_ACTUAL_LEN_MASK;
+ 	}
+@@ -696,6 +760,7 @@
+ {
+ 	struct axidma_bd *cur_p;
+ 	cur_p = &lp->tx_bd_v[(lp->tx_bd_tail + num_frag) % lp->tx_bd_num];
++	arch_dcache_invd_range(cur_p, sizeof(*cur_p));
+ 	if (cur_p->status & XAXIDMA_BD_STS_ALL_MASK)
+ 		return NETDEV_TX_BUSY;
+ 	return 0;
+@@ -772,6 +837,9 @@
+ 	desc_set_phys_addr(lp, phys, cur_p);
+ 	cur_p->cntrl = skb_headlen(skb) | XAXIDMA_BD_CTRL_TXSOF_MASK;
+ 
++	arch_dcache_flush_range(cur_p, sizeof(*cur_p));
++	arch_dcache_flush_range(skb->data, skb_headlen(skb));
++
+ 	for (ii = 0; ii < num_frag; ii++) {
+ 		if (++lp->tx_bd_tail >= lp->tx_bd_num)
+ 			lp->tx_bd_tail = 0;
+@@ -793,11 +861,17 @@
+ 		}
+ 		desc_set_phys_addr(lp, phys, cur_p);
+ 		cur_p->cntrl = skb_frag_size(frag);
++		arch_dcache_flush_range(cur_p, sizeof(*cur_p));
++		arch_dcache_flush_range(skb_frag_address(frag), skb_frag_size(frag));
+ 	}
+ 
+ 	cur_p->cntrl |= XAXIDMA_BD_CTRL_TXEOF_MASK;
+ 	cur_p->skb = skb;
+ 
++	arch_dcache_flush_range(cur_p, sizeof(*cur_p));
++
++	skb_tx_timestamp(skb);
++
+ 	tail_p = lp->tx_bd_p + sizeof(*lp->tx_bd_v) * lp->tx_bd_tail;
+ 	/* Start the transfer */
+ 	axienet_dma_out_addr(lp, XAXIDMA_TX_TDESC_OFFSET, tail_p);
+@@ -829,6 +903,8 @@
+ 
+ 	cur_p = &lp->rx_bd_v[lp->rx_bd_ci];
+ 
++	arch_dcache_invd_range(cur_p, sizeof(*cur_p));
++
+ 	while ((cur_p->status & XAXIDMA_BD_STS_COMPLETE_MASK)) {
+ 		dma_addr_t phys;
+ 
+@@ -839,9 +915,20 @@
+ 				 DMA_FROM_DEVICE);
+ 
+ 		skb = cur_p->skb;
++		
++		if(lp->tstamp_config.rx_filter == HWTSTAMP_FILTER_ALL){
++			struct skb_shared_hwtstamps *shhwtstamps = skb_hwtstamps(skb);
++			struct timespec64 ts;
++			memset(shhwtstamps, 0, sizeof(*shhwtstamps));
++			ktime_get_raw_ts64(&ts);
++			shhwtstamps->hwtstamp = ktime_set(ts.tv_sec, ts.tv_nsec);
++		}
++
+ 		cur_p->skb = NULL;
+ 		length = cur_p->app4 & 0x0000FFFF;
+ 
++		arch_dcache_invd_range(skb->data, length);
++
+ 		skb_put(skb, length);
+ 		skb->protocol = eth_type_trans(skb, ndev);
+ 		/*skb_checksum_none_assert(skb);*/
+@@ -868,8 +955,9 @@
+ 		packets++;
+ 
+ 		new_skb = netdev_alloc_skb_ip_align(ndev, lp->max_frm_size);
+-		if (!new_skb)
++		if (!new_skb){
+ 			return;
++		}
+ 
+ 		phys = dma_map_single(ndev->dev.parent, new_skb->data,
+ 				      lp->max_frm_size,
+@@ -885,10 +973,12 @@
+ 		cur_p->cntrl = lp->max_frm_size;
+ 		cur_p->status = 0;
+ 		cur_p->skb = new_skb;
++		arch_dcache_flush_range(cur_p, sizeof(*cur_p));
+ 
+ 		if (++lp->rx_bd_ci >= lp->rx_bd_num)
+ 			lp->rx_bd_ci = 0;
+ 		cur_p = &lp->rx_bd_v[lp->rx_bd_ci];
++		arch_dcache_invd_range(cur_p, sizeof(*cur_p));
+ 	}
+ 
+ 	ndev->stats.rx_packets += packets;
+@@ -971,8 +1061,10 @@
+ 		axienet_recv(lp->ndev);
+ 		goto out;
+ 	}
+-	if (!(status & XAXIDMA_IRQ_ALL_MASK))
++	if (!(status & XAXIDMA_IRQ_ALL_MASK)){
+ 		return IRQ_NONE;
++	}
++	arch_dcache_invd_range(&lp->rx_bd_v[lp->rx_bd_ci], sizeof(lp->rx_bd_v[lp->rx_bd_ci]));
+ 	if (status & XAXIDMA_IRQ_ERROR_MASK) {
+ 		dev_err(&ndev->dev, "DMA Rx error 0x%x\n", status);
+ 		dev_err(&ndev->dev, "Current BD is at: 0x%x%08x\n",
+@@ -995,6 +1087,8 @@
+ 		axienet_dma_out32(lp, XAXIDMA_RX_SR_OFFSET, status);
+ 	}
+ out:
++
++
+ 	return IRQ_HANDLED;
+ }
+ 
+@@ -1225,8 +1319,59 @@
+ 
+ 	if (!netif_running(dev))
+ 		return -EINVAL;
+-
+-	return phylink_mii_ioctl(lp->phylink, rq, cmd);
++	switch (cmd) {
++		case SIOCSHWTSTAMP:
++			if(copy_from_user(&lp->tstamp_config, rq->ifr_data, sizeof(lp->tstamp_config))){
++				return -EFAULT;
++			}
++			if(lp->tstamp_config.flags){
++				/* reserved for future extensions */
++				return -EINVAL;
++			}
++			switch(lp->tstamp_config.tx_type) {
++				case HWTSTAMP_TX_OFF:
++				case HWTSTAMP_TX_ON:
++					break;
++				case HWTSTAMP_TX_ONESTEP_SYNC:
++					lp->tstamp_config.tx_type = HWTSTAMP_TX_ON;
++					break;
++				default:
++					return -ERANGE;
++			}
++			switch(lp->tstamp_config.rx_filter){
++				case HWTSTAMP_FILTER_NONE:
++					break;
++				case HWTSTAMP_FILTER_PTP_V1_L4_SYNC:
++				case HWTSTAMP_FILTER_PTP_V1_L4_DELAY_REQ:
++				case HWTSTAMP_FILTER_PTP_V2_EVENT:
++				case HWTSTAMP_FILTER_PTP_V2_L2_EVENT:
++				case HWTSTAMP_FILTER_PTP_V2_L4_EVENT:
++				case HWTSTAMP_FILTER_PTP_V2_SYNC:
++				case HWTSTAMP_FILTER_PTP_V2_L2_SYNC:
++				case HWTSTAMP_FILTER_PTP_V2_L4_SYNC:
++				case HWTSTAMP_FILTER_PTP_V2_DELAY_REQ:
++				case HWTSTAMP_FILTER_PTP_V2_L2_DELAY_REQ:
++				case HWTSTAMP_FILTER_PTP_V2_L4_DELAY_REQ:
++				case HWTSTAMP_FILTER_PTP_V1_L4_EVENT:
++				case HWTSTAMP_FILTER_ALL:
++					lp->tstamp_config.rx_filter = HWTSTAMP_FILTER_ALL;
++					break;
++				default:
++					lp->tstamp_config.rx_filter = HWTSTAMP_FILTER_NONE;
++					return -ERANGE;
++			}
++			if(copy_to_user(rq->ifr_data, &lp->tstamp_config, sizeof(lp->tstamp_config))){
++				return -EFAULT;
++			}
++			return 0;
++		case SIOCGHWTSTAMP:
++			if(copy_to_user(rq->ifr_data, &lp->tstamp_config, sizeof(lp->tstamp_config))){
++				return -EFAULT;
++			}
++			return 0;
++		default:
++			return phylink_mii_ioctl(lp->phylink, rq, cmd);
++	}
+ }
+ 
+ static const struct net_device_ops axienet_netdev_ops = {
+@@ -1478,12 +1623,20 @@
+ 	return phylink_ethtool_ksettings_set(lp->phylink, cmd);
+ }
+ 
++static int
++axienet_ethtools_get_ts_info(struct net_device *ndev, struct ethtool_ts_info *info){
++	info->so_timestamping = SOF_TIMESTAMPING_TX_SOFTWARE | SOF_TIMESTAMPING_RX_SOFTWARE | SOF_TIMESTAMPING_SOFTWARE;
++	info->phc_index = -1;
++	return 0;
++}
++
+ static const struct ethtool_ops axienet_ethtool_ops = {
+ 	.supported_coalesce_params = ETHTOOL_COALESCE_MAX_FRAMES,
+ 	.get_drvinfo    = axienet_ethtools_get_drvinfo,
+ 	.get_regs_len   = axienet_ethtools_get_regs_len,
+ 	.get_regs       = axienet_ethtools_get_regs,
+ 	.get_link       = ethtool_op_get_link,
++	.get_ts_info    = axienet_ethtools_get_ts_info,
+ 	.get_ringparam	= axienet_ethtools_get_ringparam,
+ 	.set_ringparam	= axienet_ethtools_set_ringparam,
+ 	.get_pauseparam = axienet_ethtools_get_pauseparam,
+@@ -1656,8 +1809,10 @@
+ 	axienet_mdio_enable(lp);
+ 	mutex_unlock(&lp->mii_bus->mdio_lock);
+ 
++
+ 	for (i = 0; i < lp->tx_bd_num; i++) {
+ 		cur_p = &lp->tx_bd_v[i];
++		arch_dcache_invd_range(cur_p, sizeof(*cur_p));
+ 		if (cur_p->cntrl) {
+ 			dma_addr_t addr = desc_get_phys_addr(lp, cur_p);
+ 
+@@ -1678,6 +1833,7 @@
+ 		cur_p->app3 = 0;
+ 		cur_p->app4 = 0;
+ 		cur_p->skb = NULL;
++		arch_dcache_flush_range(cur_p, sizeof(*cur_p));
+ 	}
+ 
+ 	for (i = 0; i < lp->rx_bd_num; i++) {
+@@ -1688,6 +1844,7 @@
+ 		cur_p->app2 = 0;
+ 		cur_p->app3 = 0;
+ 		cur_p->app4 = 0;
++		arch_dcache_flush_range(cur_p, sizeof(*cur_p));
+ 	}
+ 
+ 	lp->tx_bd_ci = 0;

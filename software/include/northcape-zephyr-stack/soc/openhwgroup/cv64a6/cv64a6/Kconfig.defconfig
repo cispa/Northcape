@@ -1,0 +1,2 @@
+config DCACHE_LINE_SIZE
+	default 16

@@ -1,0 +1,11 @@
+--- a/kernel/irq/irqdomain.c	2024-05-17 14:44:56.078811551 +0200
++++ b/kernel/irq/irqdomain.c	2024-05-17 14:46:09.179488029 +0200
+@@ -834,6 +834,8 @@
+ 	/* Store trigger type */
+ 	irqd_set_trigger_type(irq_data, type);
+ 
++	pr_info("Mapped HW irq %lu to virtual IRQ %lu", hwirq, virq);
++
+ 	return virq;
+ }
+ EXPORT_SYMBOL_GPL(irq_create_fwspec_mapping);

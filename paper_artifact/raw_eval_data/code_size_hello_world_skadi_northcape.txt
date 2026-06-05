@@ -1,0 +1,424 @@
+I: Memory information:
+DRAM base: 80000000
+DRAM size: 40000000
+Reserved base: 90000000
+Reserved size: 2ffc0000
+I: Starting initialization of subsystems!
+I: Loading subsystem libc
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem libc 0x9d2ec040001d0000 0x8969c040001a0000 0xb81b804000170000 0x86cf404000140000
+I: Generating set-task-id capabilities for exported functions for subsystem libc with task id 1!
+I: Calling initialization functions for extension libc!
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+W: Task-id protection disabled for subsystem libc
+I: Subsystem libc loaded
+I: Subsystem libc section TEXT size 33664
+I: Subsystem libc section DATA size 1432
+I: Subsystem libc section RODATA size 12712
+I: Subsystem libc section BSS size 6984
+I: Subsystem libc section EXPORT size 3072
+I: Subsystem libc section SYMTAB size 72864
+I: Subsystem libc section STRTAB size 34247
+I: Subsystem libc section SHSTRTAB size 650
+I: Subsystem libc section PREINIT size 8
+I: Subsystem libc section INIT size 272
+I: Subsystem libc section FINI size 0
+I: Loading subsystem allocator
+I: Resolved special symbol __skadi_allocator_arena for subsystem allocator to 0x4873004000012900!
+I: Resolved special symbol __skadi_allocator_arena_start for subsystem allocator to 0x5471804000012800!
+I: Resolved special symbol __skadi_allocator_arena_size_bytes for subsystem allocator to 0x5111c04000012700!
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem allocator 0xb0eb804000c00000 0xbbcc4040013d0000 0x96360040013a0000 0x9c46804001370000
+I: Generating set-task-id capabilities for exported functions for subsystem allocator with task id 2!
+I: Calling initialization functions for extension allocator!
+I: Subsystem allocator loaded
+I: Subsystem allocator section TEXT size 27246
+I: Subsystem allocator section DATA size 416
+I: Subsystem allocator section RODATA size 3420
+I: Subsystem allocator section BSS size 6952
+I: Subsystem allocator section EXPORT size 504
+I: Subsystem allocator section SYMTAB size 42600
+I: Subsystem allocator section STRTAB size 21655
+I: Subsystem allocator section SHSTRTAB size 453
+I: Subsystem allocator section PREINIT size 24
+I: Subsystem allocator section INIT size 64
+I: Subsystem allocator section FINI size 0
+I: Loading subsystem nuuk
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem nuuk 0x8fabc04001660000 0x6538004000016300 0xbbf3404001600000 0x9df44040015d0000
+I: Generating set-task-id capabilities for exported functions for subsystem nuuk with task id 0!
+I: Calling initialization functions for extension nuuk!
+I: Subsystem nuuk loaded
+I: Subsystem nuuk section TEXT size 23064
+I: Subsystem nuuk section DATA size 184
+I: Subsystem nuuk section RODATA size 2124
+I: Subsystem nuuk section BSS size 6944
+I: Subsystem nuuk section EXPORT size 216
+I: Subsystem nuuk section SYMTAB size 33792
+I: Subsystem nuuk section STRTAB size 18017
+I: Subsystem nuuk section SHSTRTAB size 453
+I: Subsystem nuuk section PREINIT size 16
+I: Subsystem nuuk section INIT size 32
+I: Subsystem nuuk section FINI size 0
+I: Loading subsystem loader_proxy
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem loader_proxy 0x94e5c04001a20000 0x42b5404000019f00 0x86364040019c0000 0x96c0c04001990000
+I: Generating set-task-id capabilities for exported functions for subsystem loader_proxy with task id 4!
+I: Calling initialization functions for extension loader_proxy!
+I: Subsystem loader_proxy loaded
+I: Subsystem loader_proxy section TEXT size 22952
+I: Subsystem loader_proxy section DATA size 232
+I: Subsystem loader_proxy section RODATA size 2020
+I: Subsystem loader_proxy section BSS size 6944
+I: Subsystem loader_proxy section EXPORT size 288
+I: Subsystem loader_proxy section SYMTAB size 33744
+I: Subsystem loader_proxy section STRTAB size 19666
+I: Subsystem loader_proxy section SHSTRTAB size 458
+I: Subsystem loader_proxy section PREINIT size 16
+I: Subsystem loader_proxy section INIT size 40
+I: Subsystem loader_proxy section FINI size 0
+I: Loading subsystem sys_clock
+I: Found special MMIO symbol __skadi_mmio_0_33554432_262144 - resolved register index 0 MMIO base 2000000 MMIO size 40000 to capability 0xfdaec041c0000000
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem sys_clock 0x88dec04001d80000 0x9993804001d50000 0xa78ec04001d20000 0x97de004001cf0000
+I: Generating set-task-id capabilities for exported functions for subsystem sys_clock with task id 5!
+I: Calling initialization functions for extension sys_clock!
+I: Subsystem sys_clock loaded
+I: Subsystem sys_clock section TEXT size 25048
+I: Subsystem sys_clock section DATA size 384
+I: Subsystem sys_clock section RODATA size 2940
+I: Subsystem sys_clock section BSS size 6976
+I: Subsystem sys_clock section EXPORT size 576
+I: Subsystem sys_clock section SYMTAB size 38424
+I: Subsystem sys_clock section STRTAB size 23767
+I: Subsystem sys_clock section SHSTRTAB size 458
+I: Subsystem sys_clock section PREINIT size 16
+I: Subsystem sys_clock section INIT size 72
+I: Subsystem sys_clock section FINI size 0
+I: Loading subsystem scheduler
+W: Region 1 ELF file range (0x23fa8 +6296) overlaps with 9 (0x25448 +960)
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem scheduler 0xf17cc0427b000000 0x8743c04002780000 0x8fe4c04002750000 0xb0b9804002720000
+I: Generating set-task-id capabilities for exported functions for subsystem scheduler with task id 6!
+I: Calling initialization functions for extension scheduler!
+I: Subsystem scheduler loaded
+I: Subsystem scheduler section TEXT size 115968
+I: Subsystem scheduler section DATA size 6296
+I: Subsystem scheduler section RODATA size 31336
+I: Subsystem scheduler section BSS size 26360
+I: Subsystem scheduler section EXPORT size 8520
+I: Subsystem scheduler section SYMTAB size 239232
+I: Subsystem scheduler section STRTAB size 133026
+I: Subsystem scheduler section SHSTRTAB size 496
+I: Subsystem scheduler section PREINIT size 16
+I: Subsystem scheduler section INIT size 960
+I: Subsystem scheduler section FINI size 0
+I: Loading subsystem isr
+W: Region 1 ELF file range (0x6748 +3248) overlaps with 9 (0x6828 +48)
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem isr 0xb5a9c04004650000 0x8c61004004620000 0xa2ce0040045f0000 0xbfc00040045c0000
+I: Generating set-task-id capabilities for exported functions for subsystem isr with task id 7!
+W: Could not find function pointer _skadi_isr_wrapper_callee_trampoline_function_pointer for symbol _skadi_isr_wrapper_callee_trampoline
+I: Calling initialization functions for extension isr!
+I: Subsystem isr loaded
+I: Subsystem isr section TEXT size 23980
+I: Subsystem isr section DATA size 3248
+I: Subsystem isr section RODATA size 2388
+I: Subsystem isr section BSS size 6968
+I: Subsystem isr section EXPORT size 336
+I: Subsystem isr section SYMTAB size 36192
+I: Subsystem isr section STRTAB size 19844
+I: Subsystem isr section SHSTRTAB size 514
+I: Subsystem isr section PREINIT size 16
+I: Subsystem isr section INIT size 48
+I: Subsystem isr section FINI size 0
+W: ISR token is 0x52b400400004b700
+I: Loading subsystem main
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem main 0x9e0cc04004930000 0x7c7fc04000049000 0xbd708040048d0000 0x95518040048a0000
+I: Generating set-task-id capabilities for exported functions for subsystem main with task id 8!
+I: Calling initialization functions for extension main!
+I: Subsystem main loaded
+I: Subsystem main section TEXT size 21696
+I: Subsystem main section DATA size 184
+I: Subsystem main section RODATA size 1684
+I: Subsystem main section BSS size 6944
+I: Subsystem main section EXPORT size 216
+I: Subsystem main section SYMTAB size 31848
+I: Subsystem main section STRTAB size 17219
+I: Subsystem main section SHSTRTAB size 453
+I: Subsystem main section PREINIT size 16
+I: Subsystem main section INIT size 32
+I: Subsystem main section FINI size 0
+I: Loading subsystem exception
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem exception 0xa3c9c04004ce0000 0x575bc0400004cb00 0x864dc04004c80000 0x9a0bc04004c50000
+I: Generating set-task-id capabilities for exported functions for subsystem exception with task id 9!
+W: Could not find function pointer _skadi_exception_wrapper_callee_trampoline_function_pointer for symbol _skadi_exception_wrapper_callee_trampoline
+I: Calling initialization functions for extension exception!
+I: Subsystem exception loaded
+I: Subsystem exception section TEXT size 23124
+I: Subsystem exception section DATA size 144
+I: Subsystem exception section RODATA size 2612
+I: Subsystem exception section BSS size 7216
+I: Subsystem exception section EXPORT size 192
+I: Subsystem exception section SYMTAB size 35208
+I: Subsystem exception section STRTAB size 17092
+I: Subsystem exception section SHSTRTAB size 601
+I: Subsystem exception section PREINIT size 16
+I: Subsystem exception section INIT size 32
+I: Subsystem exception section FINI size 0
+W: Exception token is 0x6905004000052800
+I: External interrupts for ISR table registered - make ISR table read only!
+I: Loading subsystem plic
+W: Region 1 ELF file range (0x7000 +938) overlaps with 9 (0x7180 +72)
+I: Found special MMIO symbol __skadi_mmio_0_201326592_67108864 - resolved register index 0 MMIO base c000000 MMIO size 4000000 to capability 0x2c90403d00000000
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem plic 0x93ef004005050000 0xa153404005020000 0xb9274040057f0000 0xa4848040057c0000
+I: Generating set-task-id capabilities for exported functions for subsystem plic with task id 10!
+I: Calling initialization functions for extension plic!
+I: Subsystem plic loaded
+I: Subsystem plic section TEXT size 25296
+I: Subsystem plic section DATA size 938
+I: Subsystem plic section RODATA size 2708
+I: Subsystem plic section BSS size 6960
+I: Subsystem plic section EXPORT size 600
+I: Subsystem plic section SYMTAB size 39096
+I: Subsystem plic section STRTAB size 22980
+I: Subsystem plic section SHSTRTAB size 502
+I: Subsystem plic section PREINIT size 16
+I: Subsystem plic section INIT size 72
+I: Subsystem plic section FINI size 0
+I: Loading subsystem uart
+W: Region 1 ELF file range (0xa3b8 +1114) overlaps with 9 (0xa760 +176)
+I: Found special MMIO symbol __skadi_mmio_0_268435456_65536 - resolved register index 0 MMIO base 10000000 MMIO size 10000 to capability 0xce7ec04588000000
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem uart 0xa51cc04005a50000 0xaf5fc04005a20000 0xa9778040059f0000 0x8c228040059c0000
+I: Generating set-task-id capabilities for exported functions for subsystem uart with task id 11!
+I: Calling initialization functions for extension uart!
+I: Subsystem uart loaded
+I: Subsystem uart section TEXT size 34824
+I: Subsystem uart section DATA size 1114
+I: Subsystem uart section RODATA size 5484
+I: Subsystem uart section BSS size 6944
+I: Subsystem uart section EXPORT size 1536
+I: Subsystem uart section SYMTAB size 58896
+I: Subsystem uart section STRTAB size 37991
+I: Subsystem uart section SHSTRTAB size 475
+I: Subsystem uart section PREINIT size 16
+I: Subsystem uart section INIT size 176
+I: Subsystem uart section FINI size 0
+I: Loading subsystem uart_console
+I: Add subsystem symbols as follows in GDB (assuming "scripts/skadi/.gdbinit" was loaded):
+I: skadi_debug_subsystem uart_console 0x88c8404006110000 0x75d4004000060e00 0x84a44040060b0000 0x993d404006080000
+I: Generating set-task-id capabilities for exported functions for subsystem uart_console with task id 12!
+I: Calling initialization functions for extension uart_console!
+I: Subsystem uart_console loaded
+I: Subsystem uart_console section TEXT size 28688
+I: Subsystem uart_console section DATA size 224
+I: Subsystem uart_console section RODATA size 1948
+I: Subsystem uart_console section BSS size 7000
+I: Subsystem uart_console section EXPORT size 288
+I: Subsystem uart_console section SYMTAB size 40800
+I: Subsystem uart_console section STRTAB size 24908
+I: Subsystem uart_console section SHSTRTAB size 458
+I: Subsystem uart_console section PREINIT size 16
+I: Subsystem uart_console section INIT size 40
+I: Subsystem uart_console section FINI size 0
+I: Finished initialization of subsystems!
+I: Total subsystem sizes:
+Text size: 405550
+Data size: 14796
+ROData size: 71376
+BSS size: 103192
+I: Calling skadi subsystem initialization function for level 1 subsystem plic
+I: Calling skadi subsystem initialization function for level 1 subsystem uart_console
+I: Calling skadi subsystem initialization function for level 1 subsystem uartI: Registering UART interrupt handler 0x7b5c00400005c300!
+I: Registered UART interrupt handler!
+I: Calling skadi subsystem initialization function for level 1 subsystem scheduler
+I: Calling skadi subsystem initialization function for level 1 subsystem scheduler
+I: Calling skadi subsystem initialization function for level 1 subsystem scheduler
+I: Runlevel 1 complete!
+I: Calling skadi subsystem initialization function for level 2 subsystem sys_clock
+I: Runlevel 2 complete!
+I: Calling __skadi_switch_to_main_thread at 0x5b9480400003ee00!
+I: Calling skadi subsystem initialization function for level 3 subsystem scheduler
+I: Calling skadi subsystem initialization function for level 3 subsystem scheduler
+I: Runlevel 3 complete!
+*** Booting Skadi OS build v3.7.0-rc1-4624-g35283b085a9c ***
+I: Calling skadi subsystem initialization function for level 4 subsystem loader_proxy
+I: Init complete - loader is inaccessible!
+I: Runlevel 4 complete!
+I: Releasing remaining initial allocator heap!
+I: Allocator added chunk from 902d5e48 with length 41400
+I: Allocator added chunk from 90316348 with length 40120
+I: Allocator added chunk from 902e02d8 with length 64808
+I: Allocator added chunk from 90320ce8 with length 62232
+I: Allocator added chunk from 903303b0 with length 64592
+I: Allocator added chunk from 90300180 with length 8088
+I: Allocator added chunk from 902f1cc0 with length 58176
+I: Allocator added chunk from 903497b8 with length 26696
+I: Allocator added chunk from 90156c98 with length 37736
+I: Allocator added chunk from 90030448 with length 48520
+I: Allocator added chunk from 9058a7a8 with length 22616
+I: Allocator added chunk from 900203b0 with length 64592
+I: Allocator added chunk from 901c6e50 with length 26992
+I: Allocator added chunk from 900c2130 with length 57040
+I: Allocator added chunk from 90120f60 with length 61600
+I: Allocator added chunk from 90161e98 with length 57704
+I: Allocator added chunk from 906b01e0 with length 9952
+I: Allocator added chunk from 906a0020 with length 65504
+I: Allocator added chunk from 90650020 with length 65504
+I: Allocator added chunk from 90754418 with length 48104
+I: Allocator added chunk from 90671570 with length 60048
+I: Allocator added chunk from 90669468 with length 27544
+I: Allocator added chunk from 90728808 with length 30712
+I: Allocator added chunk from 90760460 with length 64416
+I: Allocator added chunk from 90731b20 with length 58592
+I: Allocator added chunk from 90770600 with length 64000
+I: Allocator added chunk from 907500b0 with length 17256
+I: Allocator added chunk from 9074e610 with length 6640
+I: Allocator added chunk from 9008aa38 with length 21960
+I: Allocator added chunk from 90071160 with length 45864
+I: Allocator added chunk from 9013a968 with length 22168
+I: Allocator added chunk from 90470168 with length 65176
+I: Allocator added chunk from 90380050 with length 65456
+I: Allocator added chunk from 90490c98 with length 62312
+I: Allocator added chunk from 904801e8 with length 65048
+I: Allocator added chunk from 905f4388 with length 48248
+I: Allocator added chunk from 903954f8 with length 43784
+I: Allocator added chunk from 904e00e8 with length 65304
+I: Allocator added chunk from 90601b70 with length 58512
+I: Allocator added chunk from 903a0118 with length 65256
+I: Allocator added chunk from 900407f0 with length 63504
+I: Allocator added chunk from 90180390 with length 64624
+I: Allocator added chunk from 901701f8 with length 65032
+I: Allocator added chunk from 9025de68 with length 8600
+I: Allocator added chunk from 90224e78 with length 45448
+I: Allocator added chunk from 90265bf0 with length 42000
+I: Allocator added chunk from 90230278 with length 64904
+I: Allocator added chunk from 90270998 with length 63080
+I: Allocator added chunk from 90258560 with length 22384
+I: Allocator added chunk from 90241cf0 with length 58128
+I: Allocator added chunk from 902802f0 with length 64784
+I: Allocator added chunk from 902901f0 with length 65040
+I: Allocator added chunk from 9003ea60 with length 72
+I: Allocator added chunk from 9007c880 with length 3320
+I: Allocator added chunk from 90091588 with length 60024
+I: Allocator added chunk from 900a1f00 with length 57600
+I: Allocator added chunk from 90063708 with length 51448
+I: Allocator added chunk from 9007d748 with length 10424
+I: Allocator added chunk from 900e0468 with length 64408
+I: Allocator added chunk from 901cdbb0 with length 9296
+I: Allocator added chunk from 905c8d98 with length 29288
+I: Allocator added chunk from 90610050 with length 65456
+I: Allocator added chunk from 903b0060 with length 65440
+I: Allocator added chunk from 905e00c8 with length 65336
+I: Allocator added chunk from 905d0290 with length 64880
+I: Allocator added chunk from 90624308 with length 48376
+I: Allocator added chunk from 903c5a90 with length 42352
+I: Allocator added chunk from 90630a68 with length 62872
+I: Allocator added chunk from 903d1c70 with length 58256
+I: Allocator added chunk from 906400f8 with length 65288
+I: Allocator added chunk from 903e89b8 with length 30280
+I: Allocator added chunk from 90144ca0 with length 45920
+I: Allocator added chunk from 90194808 with length 47096
+I: Allocator added chunk from 90010388 with length 64632
+I: Allocator added chunk from 90115658 with length 43432
+I: Allocator added chunk from 901d5bf8 with length 41992
+I: Allocator added chunk from 901a0bd0 with length 62512
+I: Allocator added chunk from 901e1f08 with length 57592
+I: Allocator added chunk from 902a01b8 with length 65096
+I: Allocator added chunk from 90417c70 with length 33680
+I: Allocator added chunk from 90517c48 with length 33720
+I: Allocator added chunk from 902c1a38 with length 58824
+I: Allocator added chunk from 902b0378 with length 64648
+I: Allocator added chunk from 90440908 with length 63224
+I: Allocator added chunk from 9053c680 with length 14720
+I: Allocator added chunk from 90100288 with length 18504
+I: Allocator added chunk from 90457ba0 with length 33888
+I: Allocator added chunk from 900f0380 with length 64640
+I: Allocator added chunk from 90546800 with length 38912
+I: Allocator added chunk from 904623d0 with length 56368
+I: Allocator added chunk from 903f0058 with length 65448
+I: Allocator added chunk from 904f7c98 with length 33640
+I: Allocator added chunk from 906b2900 with length 55040
+I: Allocator added chunk from 90410ad0 with length 28688
+I: Allocator added chunk from 90400228 with length 64984
+I: Allocator added chunk from 90511b80 with length 24424
+I: Allocator added chunk from 90505a08 with length 42488
+I: Allocator added chunk from 90686310 with length 40176
+I: Allocator added chunk from 900d04f0 with length 64272
+I: Allocator added chunk from 906c03b0 with length 64592
+I: Allocator added chunk from 90140400 with length 18136
+I: Allocator added chunk from 904d0030 with length 65488
+I: Allocator added chunk from 90690258 with length 64936
+I: Allocator added chunk from 906d9a00 with length 26112
+I: Allocator added chunk from 906e0048 with length 65464
+I: Allocator added chunk from 907e4a38 with length 46536
+I: Allocator added chunk from 906f01d0 with length 65072
+I: Allocator added chunk from 907b6150 with length 40624
+I: Allocator added chunk from 907f7010 with length 36848
+I: Allocator added chunk from 90710120 with length 65248
+I: Allocator added chunk from 907000e0 with length 65312
+I: Allocator added chunk from 907c07a0 with length 63584
+I: Allocator added chunk from 90810020 with length 33488864
+I: Allocator added chunk from 90801b58 with length 58536
+I: Allocator added chunk from 907e0028 with length 18960
+I: Allocator added chunk from 907d9f60 with length 24736
+I: Allocator added chunk from 901e1ba0 with length 528
+I: Allocator added chunk from 901c00d0 with length 27768
+I: Allocator added chunk from 9003c520 with length 8576
+I: Allocator added chunk from 90590720 with length 63712
+I: Allocator added chunk from 903500b8 with length 65352
+I: Allocator added chunk from 904a0360 with length 64672
+I: Allocator added chunk from 905a4df0 with length 45584
+I: Allocator added chunk from 90365e00 with length 41472
+I: Allocator added chunk from 904b0d18 with length 62184
+I: Allocator added chunk from 905b09c8 with length 63032
+I: Allocator added chunk from 90371b90 with length 58480
+I: Allocator added chunk from 904c01b8 with length 65096
+I: Allocator added chunk from 9003eca8 with length 4952
+I: Allocator added chunk from 90058760 with length 30880
+I: Allocator added chunk from 90000510 with length 64240
+I: Allocator added chunk from 90104ee8 with length 45336
+I: Allocator added chunk from 90210380 with length 64640
+I: Allocator added chunk from 902002d8 with length 64808
+I: Allocator added chunk from 901b0240 with length 64960
+I: Allocator added chunk from 90302278 with length 56712
+I: Allocator added chunk from 901f8578 with length 31368
+I: Allocator added chunk from 90780020 with length 196576
+I: Final runlevel complete - launching Nuuk!
+I: Nuuk destroying root capability!
+I: Revoking loader's memory!
+I: Allocator added chunk from 80000000 with length 268435456
+I: Dropping ALL permissions from root capability!
+I: Final jump from nuuk!
+I: Runlevels complete!
+I: Static threads init complete!
+I: Calling main()
+I: Allocator has 1071705248 of 1073479680 free bytes (accordingly: 1774432 used bytes) in 140 blocks!
+I: Calling main 0x718480400004ec00
+Hello World! (inaccessible)
+738890	build/zephyr/zephyr.bin
+build/zephyr/subsys/skadi/libc/libc.stripped: 55045 / 245456 
+build/zephyr/subsys/skadi/allocator/allocator.stripped: 38116 / 149552 
+build/zephyr/subsys/skadi/nuuk/nuuk.stripped: 32360 / 120680 
+build/zephyr/subsys/skadi/loader_proxy/loader_proxy.stripped: 32200 / 122024 
+build/zephyr/subsys/skadi/exception/exception.stripped: 33332 / 124592 
+build/zephyr/subsys/skadi/scheduler/scheduler.stripped: 179973 / 817816 
+build/zephyr/subsys/skadi/isr/isr.stripped: 36596 / 131952 
+build/zephyr/drivers/interrupt_controller/plic.stripped: 36514 / 141464 
+build/zephyr/drivers/timer/sys_clock.stripped: 35432 / 139496 
+build/zephyr/drivers/console/uart_console.stripped: 37912 / 150032 
+build/zephyr/drivers/serial/uart.stripped: 49913 / 213960 
+build/main.stripped: 30552 / 113608 
+Total image size: 2470632 Total loaded size: 597945 overhead: 1872687

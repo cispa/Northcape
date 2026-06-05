@@ -1,0 +1,1471 @@
+.. done!
+Loaded boot image successfully!
+First instructions in the image:
+33040500
+B3840500
+33090600
+EF00C054
+33080500
+33050400
+B3850400
+33060900
+FD586304
+1801631D
+050B1728
+01001308
+E8FD8548
+2F281801
+6314080A
+97220100
+
+OpenSBI v0.9
+   ____                    _____ ____ _____
+  / __ \                  / ____|  _ \_   _|
+ | |  | |_ __   ___ _ __ | (___ | |_) || |
+ | |  | | '_ \ / _ \ '_ \ \___ \|  _ < | |
+ | |__| | |_) |  __/ | | |____) | |_) || |_
+  \____/| .__/ \___|_| |_|_____/|____/_____|
+        | |
+        |_|
+
+Platform Name             : ARIANE RISC-V
+Platform Features         : medeleg
+Platform HART Count       : 1
+Platform IPI Device       : aclint-mswi
+Platform Timer Device     : aclint-mtimer @ 25000000Hz
+Platform Console Device   : uart8250
+Platform HSM Device       : ---
+Platform Reboot Device    : ---
+Platform Shutdown Device  : ---
+Firmware Base             : 0x80000000
+Firmware Size             : 220 KB
+Runtime SBI Version       : 0.3
+
+Domain0 Name              : root
+Domain0 Boot HART         : 0
+Domain0 HARTs             : 0*
+Domain0 Region00          : 0x0000000002008000-0x000000000200bfff (I)
+Domain0 Region01          : 0x0000000002000000-0x0000000002007fff (I)
+Domain0 Region02          : 0x0000000080000000-0x000000008003ffff ()
+Domain0 Region03          : 0x0000000000000000-0xffffffffffffffff (R,W,X)
+Domain0 Next Address      : 0x0000000080200000
+Domain0 Next Arg1         : 0x0000000082200000
+Domain0 Next Mode         : S-mode
+Domain0 SysReset          : yes
+
+Boot HART ID              : 0
+Boot HART Domain          : root
+Boot HART ISA             : rv64imafdcbsu
+Boot HART Features        : scounteren,mcounteren,mcountinhibit
+Boot HART PMP Count       : 16
+Boot HART PMP Granularity : 8
+Boot HART PMP Address Bits: 54
+Boot HART MHPM Count      : 8
+Boot HART MIDELEG         : 0x0000000000000222
+Boot HART MEDELEG         : 0x000000000000b109
+
+
+U-Boot 2021.07-rc4-gfed158beed-dirty (Dec 04 2025 - 09:41:19 +0100)
+
+CPU:   rv64imafdc
+DRAM:  1023.5 MiB
+MMC:   xps-spi@20000000:mmc@0: 0
+Loading Environment from nowhere... OK
+In:    uart@10000000
+Out:   uart@10000000
+Err:   uart@10000000
+Net:   AXI EMAC: 40c00000, phyaddr 1, interface rgmii
+eth0: ethernet@40c00000
+Hit any key to stop autoboot:  5  4  3  2  1  0 
+Using ethernet@40c00000 device
+TFTP from server 10.10.10.1; our IP address is 10.10.10.10
+Filename 'uImage'.
+Load address: 0x90000000
+Loading: *#################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #####################
+	 1.4 MiB/s
+done
+Bytes transferred = 10791226 (a4a93a hex)
+## Booting kernel from Legacy Image at 90000000 ...
+   Image Name:   CV64A6Linux
+   Image Type:   RISC-V Linux Kernel Image (gzip compressed)
+   Data Size:    10791162 Bytes = 10.3 MiB
+   Load Address: 80200000
+   Entry Point:  80200000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at bff5bb10
+   Booting using the fdt blob at 0xbff5bb10
+   Uncompressing Kernel Image
+   Using Device Tree in place at 00000000bff5bb10, end 00000000bff61007
+
+Starting kernel ...
+
+[    0.000000] Linux version 5.10.7 (worldofjarcraft@xilinx-vm) (riscv64-buildroot-linux-gnu-gcc.br_real (Buildroot 2021.08-dirty) 10.3.0, GNU ld (GNU Binutils) 2.36.1) #7 SMP Mon Dec 8 10:11:23 CET 2025
+[    0.000000] OF: fdt: Ignoring memory range 0x80000000 - 0x80200000
+[    0.000000] earlycon: sbi0 at I/O port 0x0 (options '')
+[    0.000000] printk: bootconsole [sbi0] enabled
+[    0.000000] efi: UEFI not found.
+[    0.000000] Zone ranges:
+[    0.000000]   DMA32    [mem 0x0000000080200000-0x00000000bff7ffff]
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000080200000-0x00000000bff7ffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000080200000-0x00000000bff7ffff]
+[    0.000000] software IO TLB: mapped [mem 0x00000000baf77000-0x00000000bef77000] (64MB)
+[    0.000000] SBI specification v0.3 detected
+[    0.000000] SBI implementation ID=0x1 Version=0x9
+[    0.000000] SBI v0.2 TIME extension detected
+[    0.000000] SBI v0.2 IPI extension detected
+[    0.000000] SBI v0.2 RFENCE extension detected
+[    0.000000] SBI v0.2 HSM extension detected
+[    0.000000] riscv: ISA extensions acdfim
+[    0.000000] riscv: ELF capabilities acdfim
+[    0.000000] percpu: Embedded 16 pages/cpu s25112 r8192 d32232 u65536
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 257928
+[    0.000000] Kernel command line: console=ttyS0,115200 earlycon=sbi
+[    0.000000] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.000000] Sorting __ex_table...
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 942312K/1046016K available (4607K kernel code, 3427K rwdata, 2048K rodata, 184K init, 625K bss, 103704K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=1.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] riscv-intc: 64 local interrupts mapped
+[    0.000000] irq: Mapped HW irq 9 to virtual IRQ 9
+[    0.000000] plic: interrupt-controller@c000000: mapped 30 interrupts with 1 handlers for 2 contexts.
+[    0.000000] random: get_random_bytes called from start_kernel+0x2a2/0x414 with crng_init=0
+[    0.000000] riscv_timer_init_dt: Registering clocksource cpuid [0] hartid [0]
+[    0.000000] clocksource: riscv_clocksource: mask: 0xffffffffffffffff max_cycles: 0x5c40939b5, max_idle_ns: 440795202646 ns
+[    0.000224] sched_clock: 64 bits at 25MHz, resolution 40ns, wraps every 4398046511100ns
+[    0.010088] Calibrating delay loop (skipped), value calculated using timer frequency.. 50.00 BogoMIPS (lpj=250000)
+[    0.021529] pid_max: default: 32768 minimum: 301
+[    0.034022] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.043143] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.099791] rcu: Hierarchical SRCU implementation.
+[    0.112621] EFI services will not be available.
+[    0.121829] smp: Bringing up secondary CPUs ...
+[    0.126821] smp: Brought up 1 node, 1 CPU
+[    0.143087] devtmpfs: initialized
+[    0.187913] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.198994] futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+[    0.217099] NET: Registered protocol family 16
+[    0.238910] irq: Mapped HW irq 3 to virtual IRQ 3
+[    0.240688] irq: Mapped HW irq 7 to virtual IRQ 7
+[    0.251423] irq: Mapped HW irq 11 to virtual IRQ 1
+[    0.258917] irq: Mapped HW irq 4 to virtual IRQ 2
+[    0.270224] irq: Mapped HW irq 5 to virtual IRQ 4
+[    0.277043] irq: Mapped HW irq 6 to virtual IRQ 6
+[    0.284454] irq: Mapped HW irq 7 to virtual IRQ 8
+[    0.295301] irq: Mapped HW irq 10 to virtual IRQ 10
+[    0.306302] irq: Mapped HW irq 8 to virtual IRQ 11
+[    0.313400] irq: Mapped HW irq 9 to virtual IRQ 12
+[    0.324848] irq: Mapped HW irq 13 to virtual IRQ 13
+[    0.605195] usbcore: registered new interface driver usbfs
+[    0.618222] usbcore: registered new interface driver hub
+[    0.625610] usbcore: registered new device driver usb
+[    0.652948] clocksource: Switched to clocksource riscv_clocksource
+[    0.698639] NET: Registered protocol family 2
+[    0.720640] tcp_listen_portaddr_hash hash table entries: 512 (order: 1, 8192 bytes, linear)
+[    0.731032] TCP established hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.743548] TCP bind hash table entries: 8192 (order: 5, 131072 bytes, linear)
+[    0.757228] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.771844] UDP hash table entries: 512 (order: 2, 16384 bytes, linear)
+[    0.780568] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes, linear)
+[    0.793615] NET: Registered protocol family 1
+[    0.823377] RPC: Registered named UNIX socket transport module.
+[    0.829717] RPC: Registered udp transport module.
+[    0.835327] RPC: Registered tcp transport module.
+[    0.840348] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[   13.536144] workingset: timestamp_bits=62 max_order=18 bucket_order=0
+[   13.775106] NFS: Registering the id_resolver key type
+[   13.780967] Key type id_resolver registered
+[   13.786035] Key type id_legacy registered
+[   13.794093] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[   15.574792] io scheduler mq-deadline registered
+[   15.579787] io scheduler kyber registered
+[   17.103322] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+[   17.144757] printk: console [ttyS0] disabled
+[   17.151355] 10000000.uart: ttyS0 at MMIO 0x10000000 (irq = 1, base_baud = 3125000) is a TI16750
+[   17.162143] printk: console [ttyS0] enabled
+[   17.162143] printk: console [ttyS0] enabled
+[   17.170921] printk: bootconsole [sbi0] disabled
+[   17.170921] printk: bootconsole [sbi0] disabled
+[   17.211634] xilinx_spi 20000000.xps-spi: at [mem 0x20000000-0x2000ffff], irq=10
+[   17.237343] libphy: Fixed MDIO Bus: probed
+[   17.263409] xilinx_axienet 40c00000.ethernet: autodetected 64-bit DMA range
+[   17.271273] xilinx_axienet 40c00000.ethernet: Failed to get clock: -2
+[   17.278889] xilinx_axienet 40c00000.ethernet (unnamed net_device) (uninitialized): Setting assumed host clock to 50000000
+[   17.313115] libphy: Xilinx Axi Ethernet MDIO: probed
+[   17.588306] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[   17.643657] mmc_spi spi0.0: SD/MMC host mmc0, no WP, no poweroff, cd polling
+[   17.657755] usbcore: registered new interface driver usbhid
+[   17.664399] usbhid: USB HID core driver
+[   17.691592] NET: Registered protocol family 10
+[   17.734334] Segment Routing with IPv6
+[   17.740368] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[   17.764665] NET: Registered protocol family 17
+[   17.787618] Key type dns_resolver registered
+[   17.814685] mmc0: host does not support reading read-only switch, assuming write-enable
+[   17.824179] mmc0: new SDHC card on SPI
+[   17.875698] Freeing unused kernel memory: 184K
+[   18.142413] Run /init as init process
+[   18.150861] mmcblk0: mmc0:0000 SA32G 29.1 GiB 
+[   18.580006]  mmcblk0: p1 p2
+Starting syslogd: OK
+Starting klogd: OK
+Running sysctl: OK
+Saving random seed: [   23.107010] random: dd: uninitialized urandom read (512 bytes read)
+OK
+Starting rpcbind: OK
+Starting eth0 interface
+[   25.393843] xilinx_axienet 40c00000.ethernet eth0: Setting assumed host clock to 50000000
+[   25.492599] xilinx_axienet 40c00000.ethernet eth0: PHY [axienet-40c00000:01] driver [RTL8211E Gigabit Ethernet] (irq=POLL)
+[   25.504846] xilinx_axienet 40c00000.ethernet eth0: configuring for phy/rgmii link mode
+[   30.142916] xilinx_axienet 40c00000.ethernet eth0: Link is Up - 1Gbps/Full - flow control rx/tx
+[   30.160891] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   32.493534] random: crng init done
+Starting sshd: OK
+NFS preparation skipped, OK
+# for i in `seq 1 10`; do coremark; done
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 11960
+Total time (secs): 11.960000
+Iterations/Sec   : 91.973244
+Iterations       : 1100
+Compiler version : GCC10.3.0
+Compiler flags   : -O2   -lrt
+Memory location  : Please put data memory location here
+			(e.g. code in flash, data on heap etc)
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x33ff
+Correct operation validated. See readme.txt for run and reporting rules.
+CoreMark 1.0 : 91.973244 / GCC10.3.0 -O2   -lrt / Heap
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 11938
+Total time (secs): 11.938000
+Iterations/Sec   : 92.142737
+Iterations       : 1100
+Compiler version : GCC10.3.0
+Compiler flags   : -O2   -lrt
+Memory location  : Please put data memory location here
+			(e.g. code in flash, data on heap etc)
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x33ff
+Correct operation validated. See readme.txt for run and reporting rules.
+CoreMark 1.0 : 92.142737 / GCC10.3.0 -O2   -lrt / Heap
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 11949
+Total time (secs): 11.949000
+Iterations/Sec   : 92.057913
+Iterations       : 1100
+Compiler version : GCC10.3.0
+Compiler flags   : -O2   -lrt
+Memory location  : Please put data memory location here
+			(e.g. code in flash, data on heap etc)
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x33ff
+Correct operation validated. See readme.txt for run and reporting rules.
+CoreMark 1.0 : 92.057913 / GCC10.3.0 -O2   -lrt / Heap
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 11956
+Total time (secs): 11.956000
+Iterations/Sec   : 92.004015
+Iterations       : 1100
+Compiler version : GCC10.3.0
+Compiler flags   : -O2   -lrt
+Memory location  : Please put data memory location here
+			(e.g. code in flash, data on heap etc)
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x33ff
+Correct operation validated. See readme.txt for run and reporting rules.
+CoreMark 1.0 : 92.004015 / GCC10.3.0 -O2   -lrt / Heap
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 11943
+Total time (secs): 11.943000
+Iterations/Sec   : 92.104161
+Iterations       : 1100
+Compiler version : GCC10.3.0
+Compiler flags   : -O2   -lrt
+Memory location  : Please put data memory location here
+			(e.g. code in flash, data on heap etc)
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x33ff
+Correct operation validated. See readme.txt for run and reporting rules.
+CoreMark 1.0 : 92.104161 / GCC10.3.0 -O2   -lrt / Heap
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 11928
+Total time (secs): 11.928000
+Iterations/Sec   : 92.219987
+Iterations       : 1100
+Compiler version : GCC10.3.0
+Compiler flags   : -O2   -lrt
+Memory location  : Please put data memory location here
+			(e.g. code in flash, data on heap etc)
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x33ff
+Correct operation validated. See readme.txt for run and reporting rules.
+CoreMark 1.0 : 92.219987 / GCC10.3.0 -O2   -lrt / Heap
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 11941
+Total time (secs): 11.941000
+Iterations/Sec   : 92.119588
+Iterations       : 1100
+Compiler version : GCC10.3.0
+Compiler flags   : -O2   -lrt
+Memory location  : Please put data memory location here
+			(e.g. code in flash, data on heap etc)
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x33ff
+Correct operation validated. See readme.txt for run and reporting rules.
+CoreMark 1.0 : 92.119588 / GCC10.3.0 -O2   -lrt / Heap
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 11958
+Total time (secs): 11.958000
+Iterations/Sec   : 91.988627
+Iterations       : 1100
+Compiler version : GCC10.3.0
+Compiler flags   : -O2   -lrt
+Memory location  : Please put data memory location here
+			(e.g. code in flash, data on heap etc)
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x33ff
+Correct operation validated. See readme.txt for run and reporting rules.
+CoreMark 1.0 : 91.988627 / GCC10.3.0 -O2   -lrt / Heap
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 11943
+Total time (secs): 11.943000
+Iterations/Sec   : 92.104161
+Iterations       : 1100
+Compiler version : GCC10.3.0
+Compiler flags   : -O2   -lrt
+Memory location  : Please put data memory location here
+			(e.g. code in flash, data on heap etc)
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x33ff
+Correct operation validated. See readme.txt for run and reporting rules.
+CoreMark 1.0 : 92.104161 / GCC10.3.0 -O2   -lrt / Heap
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 11944
+Total time (secs): 11.944000
+Iterations/Sec   : 92.096450
+Iterations       : 1100
+Compiler version : GCC10.3.0
+Compiler flags   : -O2   -lrt
+Memory location  : Please put data memory location here
+			(e.g. code in flash, data on heap etc)
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x33ff
+Correct operation validated. See readme.txt for run and reporting rules.
+CoreMark 1.0 : 92.096450 / GCC10.3.0 -O2   -lrt / Heap
+# stream
+-------------------------------------------------------------
+STREAM version $Revision: 5.10 $
+-------------------------------------------------------------
+This system uses 8 bytes per array element.
+-------------------------------------------------------------
+Array size = 10000000 (elements), Offset = 0 (elements)
+Memory per array = 76.3 MiB (= 0.1 GiB).
+Total memory required = 228.9 MiB (= 0.2 GiB).
+Each kernel will be executed 10 times.
+ The *best* time for each kernel (excluding the first iteration)
+ will be used to compute the reported bandwidth.
+-------------------------------------------------------------
+Your clock granularity/precision appears to be 38 microseconds.
+Each test below will take on the order of 12020772 microseconds.
+   (= 316336 clock ticks)
+Increase the size of the arrays if this shows that
+you are not getting at least 20 clock ticks per test.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+[  242.353040] xilinx_axienet 40c00000.ethernet eth0: Link is Down
+[  277.103225] xilinx_axienet 40c00000.ethernet eth0: Link is Up - 1Gbps/Full - flow control off
+s [  382.193043] xilinx_axienet 40c00000.ethernet eth0: Link is Down
+[  385.583216] xilinx_axienet 40c00000.ethernet eth0: Link is Up - 1Gbps/Full - flow control rx/tx
+Function    Best Rate MB/s  Avg time     Min time     Max time
+Copy:              14.3    11.226838    11.223349    11.234028
+Scale:             12.6    12.753133    12.748885    12.759804
+Add:               13.7    17.534844    17.522104    17.595224
+Triad:             12.9    18.619079    18.615399    18.630212
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-13 on all three arrays
+-------------------------------------------------------------
+# iperf -c 192.0.2.2 -i 1 -t 60
+------------------------------------------------------------
+Client connecting to 192.0.2.2, TCP port 5001
+TCP window size: 45.0 KByte (default)
+------------------------------------------------------------
+[  3] local 192.0.2.1 port 59600 connected with 192.0.2.2 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0- 1.0 sec  1.62 MBytes  13.6 Mbits/sec
+[  3]  1.0- 2.0 sec  1.62 MBytes  13.6 Mbits/sec
+[  3]  2.0- 3.0 sec  1.75 MBytes  14.7 Mbits/sec
+[  3]  3.0- 4.0 sec  1.75 MBytes  14.7 Mbits/sec
+[  3]  4.0- 5.0 sec  1.12 MBytes  9.44 Mbits/sec
+[  3]  5.0- 6.0 sec  1.12 MBytes  9.44 Mbits/sec
+[  3]  6.0- 7.0 sec  1.12 MBytes  9.44 Mbits/sec
+[  3]  7.0- 8.0 sec  1.12 MBytes  9.44 Mbits/sec
+[  3]  8.0- 9.0 sec  1.88 MBytes  15.7 Mbits/sec
+[  3]  9.0-10.0 sec  1.38 MBytes  11.5 Mbits/sec
+[  3] 10.0-11.0 sec   640 KBytes  5.24 Mbits/sec
+[  3] 11.0-12.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 12.0-13.0 sec   896 KBytes  7.34 Mbits/sec
+[  3] 13.0-14.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 14.0-15.0 sec   896 KBytes  7.34 Mbits/sec
+[  3] 15.0-16.0 sec   896 KBytes  7.34 Mbits/sec
+[  3] 16.0-17.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 17.0-18.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 18.0-19.0 sec   896 KBytes  7.34 Mbits/sec
+[  3] 19.0-20.0 sec  1.12 MBytes  9.44 Mbits/sec
+[  3] 20.0-21.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 21.0-22.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 22.0-23.0 sec  1.12 MBytes  9.44 Mbits/sec
+[  3] 23.0-24.0 sec   896 KBytes  7.34 Mbits/sec
+[  3] 24.0-25.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 25.0-26.0 sec   896 KBytes  7.34 Mbits/sec
+[  3] 26.0-27.0 sec   896 KBytes  7.34 Mbits/sec
+[  3] 27.0-28.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 28.0-29.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 29.0-30.0 sec   896 KBytes  7.34 Mbits/sec
+[  3] 30.0-31.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 31.0-32.0 sec   896 KBytes  7.34 Mbits/sec
+[  3] 32.0-33.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 33.0-34.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 34.0-35.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 35.0-36.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 36.0-37.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 37.0-38.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 38.0-39.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 39.0-40.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 40.0-41.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 41.0-42.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 42.0-43.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 43.0-44.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 44.0-45.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 45.0-46.0 sec  1.12 MBytes  9.44 Mbits/sec
+[  3] 46.0-47.0 sec   896 KBytes  7.34 Mbits/sec
+[  3] 47.0-48.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 48.0-49.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 49.0-50.0 sec  1.12 MBytes  9.44 Mbits/sec
+[  3] 50.0-51.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 51.0-52.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 52.0-53.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 53.0-54.0 sec  1.62 MBytes  13.6 Mbits/sec
+[  3] 54.0-55.0 sec  1.75 MBytes  14.7 Mbits/sec
+[  3] 55.0-56.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 56.0-57.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 57.0-58.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3] 58.0-59.0 sec   896 KBytes  7.34 Mbits/sec
+[  3] 59.0-60.0 sec  1.00 MBytes  8.39 Mbits/sec
+[  3]  0.0-60.0 sec  64.6 MBytes  9.03 Mbits/sec
+# net_overhead
+Doing setups...
+Doing RX tests...
+Message: Hello zephyr 1 from: 192.0.2.2
+ RX Duration: 1989320 ns
+Message: Hello zephyr 2 from: 192.0.2.2
+ RX Duration: 1407720 ns
+Message: Hello zephyr 3 from: 192.0.2.2
+ RX Duration: 1348720 ns
+Message: Hello zephyr 4 from: 192.0.2.2
+ RX Duration: 1544920 ns
+Message: Hello zephyr 5 from: 192.0.2.2
+ RX Duration: 1230360 ns
+Message: Hello zephyr 6 from: 192.0.2.2
+ RX Duration: 1244360 ns
+Message: Hello zephyr 7 from: 192.0.2.2
+ RX Duration: 1212720 ns
+Message: Hello zephyr 8 from: 192.0.2.2
+ RX Duration: 1297800 ns
+Message: Hello zephyr 9 from: 192.0.2.2
+ RX Duration: 1680520 ns
+Message: Hello zephyr 10 from: 192.0.2.2
+ RX Duration: 1238360 ns
+Message: Hello zephyr 11 from: 192.0.2.2
+ RX Duration: 1240680 ns
+Message: Hello zephyr 12 from: 192.0.2.2
+ RX Duration: 1635840 ns
+Message: Hello zephyr 13 from: 192.0.2.2
+ RX Duration: 1322640 ns
+Message: Hello zephyr 14 from: 192.0.2.2
+ RX Duration: 1237360 ns
+Message: Hello zephyr 15 from: 192.0.2.2
+ RX Duration: 1376200 ns
+Message: Hello zephyr 16 from: 192.0.2.2
+ RX Duration: 1309160 ns
+Message: Hello zephyr 17 from: 192.0.2.2
+ RX Duration: 1697760 ns
+Message: Hello zephyr 18 from: 192.0.2.2
+ RX Duration: 1328320 ns
+Message: Hello zephyr 19 from: 192.0.2.2
+ RX Duration: 1270040 ns
+Message: Hello zephyr 20 from: 192.0.2.2
+ RX Duration: 1342960 ns
+Message: Hello zephyr 21 from: 192.0.2.2
+ RX Duration: 1292120 ns
+Message: Hello zephyr 22 from: 192.0.2.2
+ RX Duration: 1267120 ns
+Message: Hello zephyr 23 from: 192.0.2.2
+ RX Duration: 1352200 ns
+Message: Hello zephyr 24 from: 192.0.2.2
+ RX Duration: 1251640 ns
+Message: Hello zephyr 25 from: 192.0.2.2
+ RX Duration: 1679880 ns
+Message: Hello zephyr 26 from: 192.0.2.2
+ RX Duration: 1342640 ns
+Message: Hello zephyr 27 from: 192.0.2.2
+ RX Duration: 1275000 ns
+Message: Hello zephyr 28 from: 192.0.2.2
+ RX Duration: 1326120 ns
+Message: Hello zephyr 29 from: 192.0.2.2
+ RX Duration: 1357760 ns
+Message: Hello zephyr 30 from: 192.0.2.2
+ RX Duration: 1278520 ns
+Message: Hello zephyr 31 from: 192.0.2.2
+ RX Duration: 1391080 ns
+Message: Hello zephyr 32 from: 192.0.2.2
+ RX Duration: 1345960 ns
+Message: Hello zephyr 33 from: 192.0.2.2
+ RX Duration: 1241480 ns
+Message: Hello zephyr 34 from: 192.0.2.2
+ RX Duration: 1339040 ns
+Message: Hello zephyr 35 from: 192.0.2.2
+ RX Duration: 1254120 ns
+Message: Hello zephyr 36 from: 192.0.2.2
+ RX Duration: 1329480 ns
+Message: Hello zephyr 37 from: 192.0.2.2
+ RX Duration: 1273440 ns
+Message: Hello zephyr 38 from: 192.0.2.2
+ RX Duration: 1253520 ns
+Message: Hello zephyr 39 from: 192.0.2.2
+ RX Duration: 1307280 ns
+Message: Hello zephyr 40 from: 192.0.2.2
+ RX Duration: 1266120 ns
+Message: Hello zephyr 41 from: 192.0.2.2
+ RX Duration: 1662160 ns
+Message: Hello zephyr 42 from: 192.0.2.2
+ RX Duration: 1317880 ns
+Message: Hello zephyr 43 from: 192.0.2.2
+ RX Duration: 1246360 ns
+Message: Hello zephyr 44 from: 192.0.2.2
+ RX Duration: 1252200 ns
+Message: Hello zephyr 45 from: 192.0.2.2
+ RX Duration: 1353920 ns
+Message: Hello zephyr 46 from: 192.0.2.2
+ RX Duration: 1283720 ns
+Message: Hello zephyr 47 from: 192.0.2.2
+ RX Duration: 1276800 ns
+Message: Hello zephyr 48 from: 192.0.2.2
+ RX Duration: 1474200 ns
+Message: Hello zephyr 49 from: 192.0.2.2
+ RX Duration: 1709280 ns
+Message: Hello zephyr 50 from: 192.0.2.2
+ RX Duration: 1250320 ns
+Message: Hello zephyr 51 from: 192.0.2.2
+ RX Duration: 1417480 ns
+Message: Hello zephyr 52 from: 192.0.2.2
+ RX Duration: 1339000 ns
+Message: Hello zephyr 53 from: 192.0.2.2
+ RX Duration: 1274880 ns
+Message: Hello zephyr 54 from: 192.0.2.2
+ RX Duration: 1281480 ns
+Message: Hello zephyr 55 from: 192.0.2.2
+ RX Duration: 1266880 ns
+Message: Hello zephyr 56 from: 192.0.2.2
+ RX Duration: 1337680 ns
+Message: Hello zephyr 57 from: 192.0.2.2
+ RX Duration: 1678200 ns
+Message: Hello zephyr 58 from: 192.0.2.2
+ RX Duration: 1299240 ns
+Message: Hello zephyr 59 from: 192.0.2.2
+ RX Duration: 1275240 ns
+Message: Hello zephyr 60 from: 192.0.2.2
+ RX Duration: 1347920 ns
+Message: Hello zephyr 61 from: 192.0.2.2
+ RX Duration: 1221800 ns
+Message: Hello zephyr 62 from: 192.0.2.2
+ RX Duration: 1255720 ns
+Message: Hello zephyr 63 from: 192.0.2.2
+ RX Duration: 1296280 ns
+Message: Hello zephyr 64 from: 192.0.2.2
+ RX Duration: 1394400 ns
+Message: Hello zephyr 65 from: 192.0.2.2
+ RX Duration: 1233920 ns
+Message: Hello zephyr 66 from: 192.0.2.2
+ RX Duration: 1320400 ns
+Message: Hello zephyr 67 from: 192.0.2.2
+ RX Duration: 1319040 ns
+Message: Hello zephyr 68 from: 192.0.2.2
+ RX Duration: 1273760 ns
+Message: Hello zephyr 69 from: 192.0.2.2
+ RX Duration: 1339080 ns
+Message: Hello zephyr 70 from: 192.0.2.2
+ RX Duration: 1289000 ns
+Message: Hello zephyr 71 from: 192.0.2.2
+ RX Duration: 1267200 ns
+Message: Hello zephyr 72 from: 192.0.2.2
+ RX Duration: 1359760 ns
+Message: Hello zephyr 73 from: 192.0.2.2
+ RX Duration: 1689840 ns
+Message: Hello zephyr 74 from: 192.0.2.2
+ RX Duration: 1271600 ns
+Message: Hello zephyr 75 from: 192.0.2.2
+ RX Duration: 1253960 ns
+Message: Hello zephyr 76 from: 192.0.2.2
+ RX Duration: 1312600 ns
+Message: Hello zephyr 77 from: 192.0.2.2
+ RX Duration: 1264040 ns
+Message: Hello zephyr 78 from: 192.0.2.2
+ RX Duration: 1287880 ns
+Message: Hello zephyr 79 from: 192.0.2.2
+ RX Duration: 1256360 ns
+Message: Hello zephyr 80 from: 192.0.2.2
+ RX Duration: 1428840 ns
+Message: Hello zephyr 81 from: 192.0.2.2
+ RX Duration: 1258000 ns
+Message: Hello zephyr 82 from: 192.0.2.2
+ RX Duration: 1231040 ns
+Message: Hello zephyr 83 from: 192.0.2.2
+ RX Duration: 1394400 ns
+Message: Hello zephyr 84 from: 192.0.2.2
+ RX Duration: 1614200 ns
+Message: Hello zephyr 85 from: 192.0.2.2
+ RX Duration: 1257320 ns
+Message: Hello zephyr 86 from: 192.0.2.2
+ RX Duration: 1288640 ns
+Message: Hello zephyr 87 from: 192.0.2.2
+ RX Duration: 1339480 ns
+Message: Hello zephyr 88 from: 192.0.2.2
+ RX Duration: 1322680 ns
+Message: Hello zephyr 89 from: 192.0.2.2
+ RX Duration: 1716240 ns
+Message: Hello zephyr 90 from: 192.0.2.2
+ RX Duration: 1310600 ns
+Message: Hello zephyr 91 from: 192.0.2.2
+ RX Duration: 1262320 ns
+Message: Hello zephyr 92 from: 192.0.2.2
+ RX Duration: 1263800 ns
+Message: Hello zephyr 93 from: 192.0.2.2
+ RX Duration: 1286480 ns
+Message: Hello zephyr 94 from: 192.0.2.2
+ RX Duration: 1252000 ns
+Message: Hello zephyr 95 from: 192.0.2.2
+ RX Duration: 1277960 ns
+Message: Hello zephyr 96 from: 192.0.2.2
+ RX Duration: 1330040 ns
+Message: Hello zephyr 97 from: 192.0.2.2
+ RX Duration: 1721960 ns
+Message: Hello zephyr 98 from: 192.0.2.2
+ RX Duration: 1257120 ns
+Message: Hello zephyr 99 from: 192.0.2.2
+ RX Duration: 1293440 ns
+Message: Hello zephyr 100 from: 192.0.2.2
+ RX Duration: 1702520 ns
+Doing TX tests...
+Message: Hello back!
+ TX Duration: 1294440 ns
+Message: Hello back!
+ TX Duration: 1034000 ns
+Message: Hello back!
+ TX Duration: 1831000 ns
+Message: Hello back!
+ TX Duration: 1106440 ns
+Message: Hello back!
+ TX Duration: 1048000 ns
+Message: Hello back!
+ TX Duration: 1055280 ns
+Message: Hello back!
+ TX Duration: 1084920 ns
+Message: Hello back!
+ TX Duration: 1040480 ns
+Message: Hello back!
+ TX Duration: 1048160 ns
+Message: Hello back!
+ TX Duration: 821560 ns
+Message: Hello back!
+ TX Duration: 780720 ns
+Message: Hello back!
+ TX Duration: 775360 ns
+Message: Hello back!
+ TX Duration: 1540520 ns
+Message: Hello back!
+ TX Duration: 1086960 ns
+Message: Hello back!
+ TX Duration: 1069600 ns
+Message: Hello back!
+ TX Duration: 1012880 ns
+Message: Hello back!
+ TX Duration: 1056520 ns
+Message: Hello back!
+ TX Duration: 1014120 ns
+Message: Hello back!
+ TX Duration: 999600 ns
+Message: Hello back!
+ TX Duration: 1531120 ns
+Message: Hello back!
+ TX Duration: 1079400 ns
+Message: Hello back!
+ TX Duration: 1011560 ns
+Message: Hello back!
+ TX Duration: 1020880 ns
+Message: Hello back!
+ TX Duration: 1051600 ns
+Message: Hello back!
+ TX Duration: 1005120 ns
+Message: Hello back!
+ TX Duration: 1013960 ns
+Message: Hello back!
+ TX Duration: 1516480 ns
+Message: Hello back!
+ TX Duration: 1008760 ns
+Message: Hello back!
+ TX Duration: 1015400 ns
+Message: Hello back!
+ TX Duration: 1010800 ns
+Message: Hello back!
+ TX Duration: 1036600 ns
+Message: Hello back!
+ TX Duration: 1006600 ns
+Message: Hello back!
+ TX Duration: 1010840 ns
+Message: Hello back!
+ TX Duration: 1502960 ns
+Message: Hello back!
+ TX Duration: 1026760 ns
+Message: Hello back!
+ TX Duration: 1024400 ns
+Message: Hello back!
+ TX Duration: 1012320 ns
+Message: Hello back!
+ TX Duration: 1047000 ns
+Message: Hello back!
+ TX Duration: 1014360 ns
+Message: Hello back!
+ TX Duration: 1016840 ns
+Message: Hello back!
+ TX Duration: 1514480 ns
+Message: Hello back!
+ TX Duration: 1013280 ns
+Message: Hello back!
+ TX Duration: 1013080 ns
+Message: Hello back!
+ TX Duration: 1007640 ns
+Message: Hello back!
+ TX Duration: 1042640 ns
+Message: Hello back!
+ TX Duration: 1012240 ns
+Message: Hello back!
+ TX Duration: 1011280 ns
+Message: Hello back!
+ TX Duration: 1827240 ns
+Message: Hello back!
+ TX Duration: 1053520 ns
+Message: Hello back!
+ TX Duration: 1023200 ns
+Message: Hello back!
+ TX Duration: 1558040 ns
+Message: Hello back!
+ TX Duration: 1028200 ns
+Message: Hello back!
+ TX Duration: 1018520 ns
+Message: Hello back!
+ TX Duration: 1013440 ns
+Message: Hello back!
+ TX Duration: 1052520 ns
+Message: Hello back!
+ TX Duration: 1014880 ns
+Message: Hello back!
+ TX Duration: 1006760 ns
+Message: Hello back!
+ TX Duration: 1525080 ns
+Message: Hello back!
+ TX Duration: 1008960 ns
+Message: Hello back!
+ TX Duration: 1013040 ns
+Message: Hello back!
+ TX Duration: 1017920 ns
+Message: Hello back!
+ TX Duration: 1044840 ns
+Message: Hello back!
+ TX Duration: 1024920 ns
+Message: Hello back!
+ TX Duration: 1014040 ns
+Message: Hello back!
+ TX Duration: 1517680 ns
+Message: Hello back!
+ TX Duration: 1007600 ns
+Message: Hello back!
+ TX Duration: 1012400 ns
+Message: Hello back!
+ TX Duration: 1017040 ns
+Message: Hello back!
+ TX Duration: 1049800 ns
+Message: Hello back!
+ TX Duration: 1013280 ns
+Message: Hello back!
+ TX Duration: 1013160 ns
+Message: Hello back!
+ TX Duration: 1528200 ns
+Message: Hello back!
+ TX Duration: 1005800 ns
+Message: Hello back!
+ TX Duration: 1007280 ns
+Message: Hello back!
+ TX Duration: 1011720 ns
+Message: Hello back!
+ TX Duration: 1090240 ns
+Message: Hello back!
+ TX Duration: 1018360 ns
+Message: Hello back!
+ TX Duration: 1009560 ns
+Message: Hello back!
+ TX Duration: 855800 ns
+Message: Hello back!
+ TX Duration: 784120 ns
+Message: Hello back!
+ TX Duration: 765200 ns
+Message: Hello back!
+ TX Duration: 1075600 ns
+Message: Hello back!
+ TX Duration: 990400 ns
+Message: Hello back!
+ TX Duration: 1065920 ns
+Message: Hello back!
+ TX Duration: 820560 ns
+Message: Hello back!
+ TX Duration: 785400 ns
+Message: Hello back!
+ TX Duration: 770240 ns
+Message: Hello back!
+ TX Duration: 989240 ns
+Message: Hello back!
+ TX Duration: 815200 ns
+Message: Hello back!
+ TX Duration: 786160 ns
+Message: Hello back!
+ TX Duration: 767920 ns
+Message: Hello back!
+ TX Duration: 1064440 ns
+Message: Hello back!
+ TX Duration: 786880 ns
+Message: Hello back!
+ TX Duration: 773200 ns
+Message: Hello back!
+ TX Duration: 1476520 ns
+Message: Hello back!
+ TX Duration: 1051840 ns
+Message: Hello back!
+ TX Duration: 1013720 ns
+Message: Hello back!
+ TX Duration: 770800 ns
+Message: Hello back!
+ TX Duration: 1050120 ns
+Message: Hello back!
+ TX Duration: 1029000 ns
+Doing teardown...
+======================
+Raw RX durations:
+1244360
+1212720
+1297800
+1680520
+1238360
+1240680
+1635840
+1322640
+1237360
+1376200
+1309160
+1697760
+1328320
+1270040
+1342960
+1292120
+1267120
+1352200
+1251640
+1679880
+1342640
+1275000
+1326120
+1357760
+1278520
+1391080
+1345960
+1241480
+1339040
+1254120
+1329480
+1273440
+1253520
+1307280
+1266120
+1662160
+1317880
+1246360
+1252200
+1353920
+1283720
+1276800
+1474200
+1709280
+1250320
+1417480
+1339000
+1274880
+1281480
+1266880
+1337680
+1678200
+1299240
+1275240
+1347920
+1221800
+1255720
+1296280
+1394400
+1233920
+1320400
+1319040
+1273760
+1339080
+1289000
+1267200
+1359760
+1689840
+1271600
+1253960
+1312600
+1264040
+1287880
+1256360
+1428840
+1258000
+1231040
+1394400
+1614200
+1257320
+1288640
+1339480
+1322680
+1716240
+1310600
+1262320
+1263800
+1286480
+1252000
+1277960
+1330040
+1721960
+1257120
+1293440
+1702520
+======================
+RX durations discarded/min/max/avg/stddev ns: 0/1212720/1721960/1346524.210526/136558.719135
+======================
+Raw TX durations:
+1055280
+1084920
+1040480
+1048160
+821560
+780720
+775360
+1540520
+1086960
+1069600
+1012880
+1056520
+1014120
+999600
+1531120
+1079400
+1011560
+1020880
+1051600
+1005120
+1013960
+1516480
+1008760
+1015400
+1010800
+1036600
+1006600
+1010840
+1502960
+1026760
+1024400
+1012320
+1047000
+1014360
+1016840
+1514480
+1013280
+1013080
+1007640
+1042640
+1012240
+1011280
+1827240
+1053520
+1023200
+1558040
+1028200
+1018520
+1013440
+1052520
+1014880
+1006760
+1525080
+1008960
+1013040
+1017920
+1044840
+1024920
+1014040
+1517680
+1007600
+1012400
+1017040
+1049800
+1013280
+1013160
+1528200
+1005800
+1007280
+1011720
+1090240
+1018360
+1009560
+855800
+784120
+765200
+1075600
+990400
+1065920
+820560
+785400
+770240
+989240
+815200
+786160
+767920
+1064440
+786880
+773200
+1476520
+1051840
+1013720
+770800
+1050120
+1029000
+======================
+TX durations discarded/min/max/avg/stddev ns: 0/765200/1827240/1050532.631579/203162.692163
+Done
+# cat >[J<<EOF > cat[J.crf[Jt
+> -----BEGIN CERTIFICATE-----
+> MIIC+zCCAeOgAwIBAgIUb2bMUxgVV35ZIjq8BUapQGuDIYQwDQYJKoZIhvcNAQEL
+> BQAwDTELMAkGA1UEBhMCQVUwHhcNMjUwNjE3MTEwODQxWhcNMzUwNDI2MTEwODQx
+> WjANMQswCQYDVQQGEwJBVTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+> AI24RabIYn03opBhLRyb2KHKTbWH55DMDXg7svu+Ehv4+XOXlhtflx4TjiNVxumb
+> n+NMJSd16/yBPi+uXcVlAIZbV3rJcX63ns9dWt54y+d08fH6qrdezQ6Np9+zJE26
+> fsq+p5NreR/8WL1eQZKOEu3xnp3evWuf1E2iqOxJLDVih/PIZFLGMZ68qZmCSadB
+> zXwfgEz7HMWR3flxT0Od4sRZKJ51NNiPrl4N+zfVSGZ19I0LN4kPH2si7BYqFxAo
+> DhWc9lkr41Ra+RbFQv5O87qJd6jbeLZo5Z79j8EXSbQ0sV9UJTnEFb4Qxf1budtF
+> +AY9iVtjFzcyuUNN6MHl3l0CAwEAAaNTMFEwHQYDVR0OBBYEFGtwrTFMamqpyq9i
+> 8dDXwrK20CoBMB8GA1UdIwQYMBaAFGtwrTFMamqpyq9i8dDXwrK20CoBMA8GA1Ud
+> EwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAG1r+//gIqEfMizaHbIADSdB
+> JvYsidobN/Ed2JBgJB8D0GrMaD4m2bkH7YsP6RaqAEovQb7iYwrLvNWWZDo8ocpe
+> xOxXEpFEMlpHvPq93J5sxkGO0czwnKSi+QE6apoA3hvXB6wjwxjwh0EKnHdhkHdO
+> 4blIXYtkzj54WMOdhKivdzOLHPM0RTj1Sd7TJgLHw5mPTCb9rOdTI3tqZhmumOD2
+> lfQsROLC4Hsyd0APM1fMVEzIn3soDVeiFMDFXyJ4p3bECRZykCwCej9EOdH98zXM
+> gdhICzVQrI0Nbk6n7N277CsPZhQE/NS4Ew0EdVMJV1oAqxVv4PpzbiHxz7BkiBg=
+> -----END CERTIFICATE-----
+> EOF
+# mos[J[J[Jmqtt# mqtt_bench [J192.0.2.2 8883 ca# mqtt_bench 192.0.2.2 8883 ca[Jc[J.# mqtt_bench 192.0.2.2 8883 ca.crt [J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[Jdate -s "2025-12-10 09:51"
+Wed Dec 10 09:51:00 UTC 2025
+# mqtt_bench 192.0.2.2 8883 ca.crt
+Setting CA file ca.crt
+If you are using TLS, make sure that the date is correct:
+date -s "YYYY-MM-DD HH:MM:SS"
+======================
+Raw MQTT TLS times:
+50564320
+52706120
+51733960
+51546360
+51351560
+51500400
+52038240
+51957920
+52782920
+51346480
+51957360
+51908800
+51790360
+52850240
+51271400
+52058640
+51927760
+51719000
+52885280
+52325280
+51188200
+52779600
+50850160
+52908360
+51378920
+51975120
+51834720
+51783600
+52813480
+51232200
+51827520
+52032000
+52025200
+52262720
+51120960
+52015880
+51951640
+51897600
+53009760
+51152600
+51849640
+52902120
+50937040
+52944280
+51459120
+51567840
+52111480
+51719760
+52920960
+51292160
+51914440
+51910960
+51880760
+52890440
+51413000
+51924240
+51790920
+51813240
+52774680
+51304560
+52244240
+52712440
+50850280
+52970920
+51384760
+51845920
+52041440
+51777480
+52800880
+51141600
+51988240
+52163280
+51739680
+52642400
+51518200
+51846520
+52993960
+51590320
+52255240
+51209480
+51874280
+52862840
+50889600
+53028800
+51355640
+51869880
+51913160
+51838320
+52798040
+51233120
+51851640
+52012920
+51783440
+52803640
+51474240
+======================
+MQTT TLS times discarded/min/max/avg/stddev ns: 0/50564320/53028800/51946222.315789/601999.526455
+# insmod /lib/modules/5.10.7/extra/pulp_apb_timer.ko 
+[ 1795.114596] pulp_apb_timer: loading out-of-tree module taints kernel.
+# irq_client_independent
+[Inf  ] Scheduling timer interrupts!
+[Inf  ] Waiting for last callback!
+
+[Inf  ] Test success!
+
+======================
+Raw IRQ delays for rate 200000000 (10000000 cycles):
+1335880
+7883400
+1353560
+1356080
+7770480
+1358900
+7847200
+1336820
+1372320
+7710120
+1327540
+1353100
+9234080
+7974580
+1420280
+1355320
+7841980
+1336400
+7875720
+1410740
+1361660
+7765700
+1384000
+1351240
+7985040
+1337120
+7876100
+1375700
+1352120
+8477000
+1361200
+7807540
+1334540
+7937140
+1424620
+1361720
+7869600
+1344320
+8091520
+1397180
+1348540
+7803860
+1353040
+7991500
+1440820
+1324020
+9236700
+7922040
+1332900
+1427900
+7884820
+1337440
+7983660
+1343160
+1444900
+7887560
+1327720
+8044720
+1366100
+1436420
+7867080
+1332860
+7944560
+1358660
+1419000
+7885360
+1335920
+2013860
+1341380
+1419260
+1364980
+1336300
+1370060
+1392560
+7776880
+1419880
+1348860
+7986280
+1343080
+7812900
+1416440
+1353400
+7819980
+1336520
+1344900
+7971920
+1331600
+7820460
+1338340
+1354600
+8012540
+1326120
+7773680
+1326680
+1351120
+======================
+IRQ delays for rate 200000000 (10000000 cycles) discarded/min/max/avg/stddev ns: 0/1324020/9236700/3808793.684211/3194695.585604
+# irq_client_monotonic
+[Inf  ] Scheduling timer interrupts!
+[Warn ] Deadline missed for 100 cycles (called at 1788499819 with deadline 1788199480) - increasing by 37542!
+[Warn ] Deadline missed for 37642 cycles (called at 1788723232 with deadline 1788651022) - increasing by 100!
+[Warn ] Deadline missed for 37742 cycles (called at 1789435335 with deadline 1788796376) - increasing by 79869!
+[Inf  ] Waiting for last callback!
+
+[Warn ] Deadline missed for 117611 cycles (called at 1790628883 with deadline 1789828388) - increasing by 100061!
+[Warn ] Deadline missed for 217672 cycles (called at 1791486358 with deadline 1790907825) - increasing by 72316!
+[Warn ] Deadline missed for 289988 cycles (called at 1792360266 with deadline 1791835291) - increasing by 65621!
+[Warn ] Deadline missed for 355609 cycles (called at 1793933764 with deadline 1792776085) - increasing by 144709!
+[Warn ] Deadline missed for 500318 cycles (called at 1795175156 with deadline 1794495308) - increasing by 84981!
+[Warn ] Deadline missed for 585299 cycles (called at 1797092788 with deadline 1795820253) - increasing by 159066!
+[Warn ] Deadline missed for 744365 cycles (called at 1802125562 with deadline 1800876409) - increasing by 156144!
+[Warn ] Deadline missed for 900509 cycles (called at 1861723468 with deadline 1860721400) - increasing by 125258!
+[Inf  ] Test success!
+
+======================
+Raw IRQ delays for rate 20515340 (1025767 cycles):
+8634360
+3976780
+14135780
+6151360
+9033440
+5180700
+9118840
+1355200
+1337600
+1384420
+1375280
+7941640
+9916400
+13300100
+10632640
+6918480
+16432080
+5634840
+7987120
+12660980
+8788440
+3914800
+14048400
+5929180
+9837040
+4868040
+9548120
+1357160
+1320140
+1403240
+7995000
+7923120
+7908140
+7375620
+1329960
+1312640
+10502040
+7415060
+10098780
+8676480
+3963720
+14150180
+6153280
+8451680
+5132240
+9772460
+1383060
+1381000
+1327140
+1360560
+7930100
+7907380
+1739700
+1338080
+8751920
+5995060
+7682480
+9944600
+8767340
+4078060
+14336280
+9889400
+3379540
+13065740
+4992040
+6877100
+8806240
+1374080
+1385760
+8333680
+7935520
+7886540
+7314600
+1347160
+8533920
+13930320
+9523160
+9429680
+8751240
+10016300
+3892720
+13606520
+5472520
+9718060
+1354320
+1366180
+1399140
+1422060
+7959200
+7886560
+7899520
+7497400
+1327860
+8645120
+13867240
+======================
+IRQ delays for rate 20515340 (1025767 cycles) discarded/min/max/avg/stddev ns: 0/1312640/16432080/6866233.684211/3989003.354999
+# 

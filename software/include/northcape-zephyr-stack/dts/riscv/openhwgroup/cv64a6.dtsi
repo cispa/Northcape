@@ -1,0 +1,290 @@
+// SPDX-License-Identifier: Apache-2.0
+/ {
+	#address-cells = <0x01>;
+	#size-cells = <0x01>;
+
+	clocks {
+
+		clk_cpu: clk_cpu {
+			#clock-cells = <0x00>;
+			clock-frequency = <50000000>;
+			compatible = "fixed-clock";
+		};
+
+		clk_bus_0: clk_bus_0 {
+			#clock-cells = <0x00>;
+			clock-frequency = <50000000>;
+			compatible = "fixed-clock";
+			phandle = <0x01>;
+		};
+	};
+
+
+	cpus: cpus {
+		timebase-frequency = <25000000>;
+
+		cpu_0: cpu {
+			clock-frequency = <50000000>;
+			device_type = "cpu";
+			status = "okay";
+			compatible = "riscv";
+			riscv,isa = "rv64imafdc";
+			mmu-type = "riscv,sv39";
+			tlb-split;
+
+			status="okay";
+
+			hlic: interrupt-controller {
+				#interrupt-cells = <0x01>;
+				interrupt-controller;
+				compatible = "riscv,cpu-intc";
+				status="okay";
+			};
+		};
+	};
+
+	soc {
+	#address-cells = <0x01>;
+	#size-cells = <0x01>;
+	ranges;
+
+	memory0:memory@80000000 {
+	    device_type = "memory";
+	    reg = <0x80000000 0xFFFFFC0>;
+	    status="okay";
+	};
+
+
+	skadi_test_arena: memory@8fffffc0 {
+	    reg = <0x8FFFFFC0 0x40>;
+	    no-map;
+	};
+
+	skadi_mem_arena: memory@90000000 {
+	    reg = <0x90000000 0x30000000>;
+	    no-map;
+	};
+
+	dbg: pulp_riscv_dbg@0 {
+		reg = <0x0 0x1000>;
+		compatible = "pulp,riscv-dbg-0.8.1";
+		status = "okay";
+	};
+
+
+	plic: interrupt-controller@c000000 {
+	    compatible = "sifive,plic-1.0.0";
+	    #address-cells = <0>;
+	    #interrupt-cells = <2>;
+	    interrupt-controller;
+	    interrupts-extended = <&hlic 11 &hlic 9>;
+	    reg = <0x0c000000 0x4000000>;
+	    riscv,max-priority = <7>;
+	    riscv,ndev = <30>;
+	    status = "okay";
+	};
+
+	uart0:serial@10000000 {
+	    clock-frequency = <50000000>;
+	    clocks = <&{/clocks/clk_bus_0}>;
+	    compatible = "ns16550";
+	    current-speed = <115200>;
+	    device_type = "serial";
+	    reg = <0x10000000 0x10000>;
+	    reg-shift = <0x02>;
+	    parity = "none";
+	    stop-bits = "1";
+	    data-bits = <8>;
+
+	    interrupt-parent = <&plic>;
+	    interrupts = <11 0x04>;
+
+	    status="okay";
+	};
+
+	spi0: axi_quad_spi@20000000 {
+	    #address-cells = <1>;
+	    #size-cells = <0>;
+
+	    compatible = "xlnx,xps-spi-2.00.a";
+	    reg = <0x20000000 0x10000>;
+	    xlnx,num-ss-bits = <0x01>;
+	    xlnx,num-transfer-bits = <0x8>;
+	    interrupts=<10 4>;
+	    interrupt-parent=<&plic>;
+	    clocks=<&{/clocks/clk_bus_0}>;
+
+		// Digilent PMOD CAN, an alternative to SD card behind the PMOD interface
+		pmod_can: mcp25625@0 {
+			#address-cells = <1>;
+            #size-cells = <0>;
+
+			compatible = "microchip,mcp25625";
+			reg = <0>;
+        	spi-max-frequency = <12500000>;
+			/* order: INT - RX0BF - RX1BF */
+        	interrupts=<13 4 14 4 15 4>;
+	    	interrupt-parent=<&plic>;
+
+			status="disabled";
+		};
+
+	    status="disabled";
+	};
+
+	clint: clint_wrapper_verilog@2000000 {
+	    compatible = "sifive,clint0";
+	    reg = <0x2000000 0x40000>;
+	    interrupts-extended = <&hlic 3 &hlic 7>;
+
+	    status="okay";
+	};
+
+	pulp_timer: timer@18000000 {
+      compatible = "pulp,apb_timer";
+	  // active-high edge-triggered
+      interrupts = <0x00000004 0x1>, <0x00000005 0x1>,  <0x00000006 0x1>, <0x00000007 0x1>;
+      reg = <0x18000000 0x00001000>;
+      interrupt-parent = <&plic>;
+	  pulp,clock-period-ns = <20>;
+    };
+
+	dma0: dma@41e00000 {
+	    #dma-cells = <0x01>;
+	    clock-frequency = <50000000>;
+	    clock-names = "s_axi_lite_aclk";
+	    clocks = <&{/clocks/clk_bus_0}>;
+	    compatible = "xlnx,eth-dma";
+	    reg = <0x41e00000 0x10000>;
+	    xlnx,addrwidth = <0x40>;
+	    xlnx,include-dre;
+	    xlnx,num-queues = <0x1>;
+
+	    interrupt-parent = <&plic>;
+	    // TX - RX
+	    // active-high level-triggered
+	    interrupts = <8 4>, <9 4>;
+	    // TX and RX
+	    dma-channels = <2>;
+
+	    status="disabled";
+	};
+
+    /*
+     */
+	axi-ethernet-subsystem@40c00000 {
+
+	    reg = <0x40c00000 0x40000>;
+
+	    eth0: ethernet-mac{
+		axistream-connected = <&dma0>;
+		axistream-control-connected = <&dma0>;
+		clock-frequency = <50000000>;
+		compatible = "xlnx,axi-ethernet-1.00.a";
+		clocks = <&ha1588>;
+		clock-names = "rtc_clk";
+		device_type = "network";
+		local-mac-address = [00 0a 35 00 00 00];
+		phy-mode = "rgmii";
+
+		// full checksum offloading
+		xlnx,rxcsum = <0x2>;
+		xlnx,txcsum = <0x2>;
+
+		interrupt-parent = <&plic>;
+		interrupts = <13 4>;
+
+		status="disabled";
+	    };
+
+	    mdio0: mdio {
+		compatible = "xlnx,axi-ethernet-7.2-mdio";
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		clock-frequency = <50000000>;
+	    };
+
+
+	};
+
+	/**
+	  * Only on Arty A7 port.
+	  */
+	arty_ethernetlite_0:axi-ethernet-lite@40E00000{
+
+		/* shared between MAC and MDIO */
+		reg = <0x40E00000 0x10000>;
+
+		compatible = "xlnx,xps-ethernetlite-3.00.a";
+
+		status = "disabled";
+
+		arty_ethernetlite_0_mac:axi-ethernet-lite-mac {
+			/* MAC and MDIO cannot be parent and child, this breaks the preprocessing macros */
+			compatible = "xlnx,xps-ethernetlite-3.00.a-mac";
+			interrupt-parent = <&plic>;
+			interrupts = <12 0x4>;
+			clocks = <&ha1588>;
+      	
+			local-mac-address = [00 0a 35 00 00 01];
+
+			xlnx,rx-ping-pong;
+			xlnx,tx-ping-pong;
+
+			phy-connection-type = "mii";
+
+			status = "disabled";
+		};
+
+
+		axi_ethernetlite_0_mdio: mdio {
+			#address-cells = <1>;
+			#size-cells = <0>;
+
+			compatible = "xlnx,xps-ethernetlite-3.00.a-mdio";
+			status = "disabled";
+	  	};
+	};
+
+
+
+	ha1588: clock-controller@48000000 {
+		#clock-cells = <0>;
+
+		reg = <0x30000 0x10000>;
+		compatible = "ha1588,rtc-1.0";
+		// 125 MHz / 8 ns period; full ns followed by fractional
+		ha1588,period = <0x8 0x0>;
+		// TSU is present
+		ha1588,tsu;
+		ha1588,ts-all-supported;
+		
+		status="disabled";
+	};
+
+    /*
+     * Only on OpenHW Group original project.
+     */
+	eth: lowrisc-eth@30000000 {
+		compatible = "lowrisc-eth";
+		device_type = "network";
+		interrupt-parent = <&plic>;
+		interrupts = <3 0>;
+		local-mac-address = [00 18 3e 02 e3 7f]; // change this in board device tree
+		reg = <0x0 0x30000000 0x0 0x8000>;
+	};
+	
+	};
+
+	ops: northcape-ops@42000000 {
+		compatible="northcape,ops-module-1.0.0";
+		reg = <0x42000000 0x40>;
+	};
+
+	ops_irq: northcape-ops@42000040 {
+		compatible="northcape,ops-module-irq-1.0.0";
+		reg = <0x42000040 0x40>;
+	};
+
+};

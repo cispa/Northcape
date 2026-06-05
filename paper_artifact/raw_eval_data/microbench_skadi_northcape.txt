@@ -1,0 +1,3611 @@
+*** Booting Skadi OS build v3.7.0-rc1-4624-g35283b085a9c ***
+I: Initializing skadi memory management!
+I: Northcape was enabled!
+I: Step 1 - Remove unusable physical address space at the end of the DRAM!
+I: Step 1 success - created capability 0x3ac0003f00000000!
+
+I: Step 2 - Create Skadi Arena with length 805044224 at end of DRAM!
+I: Step 2 success - created skadi arena 0x1a28c03e00000000!
+I: Step 3 - Create loader's private heap with length 20971520 between remaining root capability and Northape Arena!
+I: Step 3 success - created loader's private heap 0x102a803d00000000!
+I: Setting mtvec!
+I: Got machine timer interrupt cap: 0x519c004000003a00
+I: Skadi memory management initialization complete with return status 0!
+I: Hello World! cv64a6_genesysII/cv64a6
+
+I: Testing Dcache flush!
+I: At test start - 80 capabilities exist in the system!
+I: Testing IRQs!
+I: IRQ 1!
+I: IRQ 2!
+I: IRQ 3!
+I: IRQ 4!
+I: IRQ 5!
+I: IRQ 6!
+I: IRQ 7!
+I: IRQ 8!
+I: IRQ 9!
+I: IRQ 10!
+I: IRQ 11!
+I: IRQ 12!
+I: IRQ 13!
+I: IRQ 14!
+I: IRQ 15!
+I: IRQ 16!
+I: IRQ 17!
+I: IRQ 18!
+I: IRQ 19!
+I: IRQ 20!
+I: IRQ 21!
+I: IRQ 22!
+I: IRQ 23!
+I: IRQ 24!
+I: IRQ 25!
+I: IRQ 26!
+I: IRQ 27!
+I: IRQ 28!
+I: IRQ 29!
+I: IRQ 30!
+I: IRQ 31!
+I: IRQ 32!
+I: IRQ 33!
+I: IRQ 34!
+I: IRQ 35!
+I: IRQ 36!
+I: IRQ 37!
+I: IRQ 38!
+I: IRQ 39!
+I: IRQ 40!
+I: IRQ 41!
+I: IRQ 42!
+I: IRQ 43!
+I: IRQ 44!
+I: IRQ 45!
+I: IRQ 46!
+I: IRQ 47!
+I: IRQ 48!
+I: IRQ 49!
+I: IRQ 50!
+I: IRQ 51!
+I: IRQ 52!
+I: IRQ 53!
+I: IRQ 54!
+I: IRQ 55!
+I: IRQ 56!
+I: IRQ 57!
+I: IRQ 58!
+I: IRQ 59!
+I: IRQ 60!
+I: IRQ 61!
+I: IRQ 62!
+I: IRQ 63!
+I: IRQ 64!
+I: IRQ 65!
+I: IRQ 66!
+I: IRQ 67!
+I: IRQ 68!
+I: IRQ 69!
+I: IRQ 70!
+I: IRQ 71!
+I: IRQ 72!
+I: IRQ 73!
+I: IRQ 74!
+I: IRQ 75!
+I: IRQ 76!
+I: IRQ 77!
+I: IRQ 78!
+I: IRQ 79!
+I: IRQ 80!
+I: IRQ 81!
+I: IRQ 82!
+I: IRQ 83!
+I: IRQ 84!
+I: IRQ 85!
+I: IRQ 86!
+I: IRQ 87!
+I: IRQ 88!
+I: IRQ 89!
+I: IRQ 90!
+I: IRQ 91!
+I: IRQ 92!
+I: IRQ 93!
+I: IRQ 94!
+I: IRQ 95!
+I: IRQ 96!
+I: IRQ 97!
+I: IRQ 98!
+I: IRQ 99!
+I: IRQ 100!
+I: Saw 100 interrupts!
+I: Step 1: Fill end-of-DRAM with a test pattern!
+
+I: Step 1 success!
+
+I: Step 2: Create direct capability for test pattern!
+
+I: Step 2 success - created test pattern capability 0x54cf404000006f00!
+
+I: Step 3: Do check reads for test pattern!
+
+I: Step 3 complete!
+
+I: Step 3: Overwrite test pattern!
+
+I: Step 3 complete!
+
+I: Step 4: Do check reads for test pattern after overwrite!
+
+I: Step 4 complete!
+
+I: Step 5: Derive indirect capability for test pattern starting at 32!
+
+I: Step 5 success - derived test pattern capability 0x7b28004000006e00!
+
+I: Step 6: Do check reads for test pattern after overwrite!
+
+I: Step 6 complete!
+
+I: Step 7: Do check reads for test pattern after overwrite!
+
+I: Step 7 complete!
+
+I: Step 8: Overwrite test pattern!
+
+I: Step 8 complete!
+
+I: Step 9: Do check reads for test pattern after overwrite!
+
+I: Step 9 complete!
+
+I: Step 10: Do check reads for test pattern after overwrite!
+
+I: Step 10 complete!
+
+I: Step 11 - allocating capabilities for bytes of on-stack array!
+I: Step 12 - reading and writing via stack capabilities!
+I: Step 13 - dropping dummy capabilities!
+I: Step 15: Allocate capability using skadi allocator!
+
+I: Step 15 complete - allocated capability 0x6987004000006d00!
+I: Step 15: Allocate capability using skadi initial allocator!
+
+I: Step 16 complete - allocated capability 0x5292804000006b00 from init alloc!
+I: Step 17: Allocate capability using skadi allocator!
+
+I: Step 17 complete - allocated capability 0x7671404000006a00!
+I: Step 17: Allocate capability using skadi initial allocator!
+
+I: Step 18 complete - allocated capability 0x4c0d004000006900 from init alloc!
+I: Step 19: Allocate capability using skadi allocator!
+
+I: Step 19 complete - allocated capability 0x47ac004000006800!
+I: Step 19: Allocate capability using skadi initial allocator!
+
+I: Step 20 complete - allocated capability 0x59f2004000006700 from init alloc!
+I: Step 21: Allocate capability using skadi allocator!
+
+I: Step 21 complete - allocated capability 0x6015004000006600!
+I: Step 21: Allocate capability using skadi initial allocator!
+
+I: Step 22 complete - allocated capability 0x7567404000006500 from init alloc!
+I: Step 23: Allocate capability using skadi allocator!
+
+I: Step 23 complete - allocated capability 0x456d004000006400!
+I: Step 23: Allocate capability using skadi initial allocator!
+
+I: Step 24 complete - allocated capability 0x7d55404000006300 from init alloc!
+I: Step 25: Allocate capability using skadi allocator!
+
+I: Step 25 complete - allocated capability 0x7bddc04000006200!
+I: Step 25: Allocate capability using skadi initial allocator!
+
+I: Step 26 complete - allocated capability 0x5d3f404000006100 from init alloc!
+I: Step 27: Allocate capability using skadi allocator!
+
+I: Step 27 complete - allocated capability 0x6587c04000006000!
+I: Step 27: Allocate capability using skadi initial allocator!
+
+I: Step 28 complete - allocated capability 0x719e404000005f00 from init alloc!
+I: Step 29: Allocate capability using skadi allocator!
+
+I: Step 29 complete - allocated capability 0x4921804000005e00!
+I: Step 29: Allocate capability using skadi initial allocator!
+
+I: Step 30 complete - allocated capability 0x4c45804000005d00 from init alloc!
+I: Step 31: Allocate capability using skadi allocator!
+
+I: Step 31 complete - allocated capability 0x6536404000005c00!
+I: Step 31: Allocate capability using skadi initial allocator!
+
+I: Step 32 complete - allocated capability 0x521d004000005b00 from init alloc!
+I: Step 33: Allocate capability using skadi allocator!
+
+I: Step 33 complete - allocated capability 0x6a99004000005a00!
+I: Step 33: Allocate capability using skadi initial allocator!
+
+I: Step 34 complete - allocated capability 0x75d9804000005900 from init alloc!
+I: Step 35: Allocate capability using skadi allocator!
+
+I: Step 35 complete - allocated capability 0x557a004000005800!
+I: Step 35: Allocate capability using skadi initial allocator!
+
+I: Step 36 complete - allocated capability 0x4100004000005700 from init alloc!
+I: Step 37: Allocate capability using skadi allocator!
+
+I: Step 37 complete - allocated capability 0x59bc404000005600!
+I: Step 37: Allocate capability using skadi initial allocator!
+
+I: Step 38 complete - allocated capability 0x53da004000005500 from init alloc!
+I: Step 39: Allocate capability using skadi allocator!
+
+I: Step 39 complete - allocated capability 0x465ec04000005400!
+I: Step 39: Allocate capability using skadi initial allocator!
+
+I: Step 40 complete - allocated capability 0x4341404000005300 from init alloc!
+I: Step 41: Allocate capability using skadi allocator!
+
+I: Step 41 complete - allocated capability 0x42ee804000005200!
+I: Step 41: Allocate capability using skadi initial allocator!
+
+I: Step 42 complete - allocated capability 0x59ea804000005100 from init alloc!
+I: Step 43: Allocate capability using skadi allocator!
+
+I: Step 43 complete - allocated capability 0x75cd804000005000!
+I: Step 43: Allocate capability using skadi initial allocator!
+
+I: Step 44 complete - allocated capability 0x48a3c04000004f00 from init alloc!
+I: Step 45: Allocate capability using skadi allocator!
+
+I: Step 45 complete - allocated capability 0x530fc04000004e00!
+I: Step 45: Allocate capability using skadi initial allocator!
+
+I: Step 46 complete - allocated capability 0x5ae3404000004d00 from init alloc!
+I: Step 47: Overwrite test pattern!
+
+I: Step 47 complete!
+
+I: Step 48: Do check reads for test pattern after overwrite!
+
+I: Step 48 complete!
+
+I: Step 49: Do check reads for test pattern after overwrite!
+
+I: Step 49 complete!
+
+I: Step 50 - locking capability 0x6987004000006d00!
+I: Locking took 269 cycles!
+I: Step 51: Overwrite test pattern!
+
+I: Step 51 complete!
+
+I: Step 52: Do check reads for test pattern after overwrite!
+
+I: Step 52 complete!
+
+I: Step 52 complete - dropped and freed capability 0!
+I: Step 52: Overwrite test pattern!
+
+I: Step 52 complete!
+
+I: Step 53: Do check reads for test pattern after overwrite!
+
+I: Step 53 complete!
+
+I: Step 54: Overwrite test pattern!
+
+I: Step 54 complete!
+
+I: Step 55: Do check reads for test pattern after overwrite!
+
+I: Step 55 complete!
+
+I: Step 56: Do check reads for test pattern after overwrite!
+
+I: Step 56 complete!
+
+I: Step 57 - locking capability 0x7671404000006a00!
+I: Locking took 238 cycles!
+I: Step 58: Overwrite test pattern!
+
+I: Step 58 complete!
+
+I: Step 59: Do check reads for test pattern after overwrite!
+
+I: Step 59 complete!
+
+I: Step 59 complete - dropped and freed capability 1!
+I: Step 59: Overwrite test pattern!
+
+I: Step 59 complete!
+
+I: Step 60: Do check reads for test pattern after overwrite!
+
+I: Step 60 complete!
+
+I: Step 61: Overwrite test pattern!
+
+I: Step 61 complete!
+
+I: Step 62: Do check reads for test pattern after overwrite!
+
+I: Step 62 complete!
+
+I: Step 63: Do check reads for test pattern after overwrite!
+
+I: Step 63 complete!
+
+I: Step 64 - locking capability 0x47ac004000006800!
+I: Locking took 238 cycles!
+I: Step 65: Overwrite test pattern!
+
+I: Step 65 complete!
+
+I: Step 66: Do check reads for test pattern after overwrite!
+
+I: Step 66 complete!
+
+I: Step 66 complete - dropped and freed capability 2!
+I: Step 66: Overwrite test pattern!
+
+I: Step 66 complete!
+
+I: Step 67: Do check reads for test pattern after overwrite!
+
+I: Step 67 complete!
+
+I: Step 68: Overwrite test pattern!
+
+I: Step 68 complete!
+
+I: Step 69: Do check reads for test pattern after overwrite!
+
+I: Step 69 complete!
+
+I: Step 70: Do check reads for test pattern after overwrite!
+
+I: Step 70 complete!
+
+I: Step 71 - locking capability 0x6015004000006600!
+I: Locking took 237 cycles!
+I: Step 72: Overwrite test pattern!
+
+I: Step 72 complete!
+
+I: Step 73: Do check reads for test pattern after overwrite!
+
+I: Step 73 complete!
+
+I: Step 73 complete - dropped and freed capability 3!
+I: Step 73: Overwrite test pattern!
+
+I: Step 73 complete!
+
+I: Step 74: Do check reads for test pattern after overwrite!
+
+I: Step 74 complete!
+
+I: Step 75: Overwrite test pattern!
+
+I: Step 75 complete!
+
+I: Step 76: Do check reads for test pattern after overwrite!
+
+I: Step 76 complete!
+
+I: Step 77: Do check reads for test pattern after overwrite!
+
+I: Step 77 complete!
+
+I: Step 78 - locking capability 0x456d004000006400!
+I: Locking took 238 cycles!
+I: Step 79: Overwrite test pattern!
+
+I: Step 79 complete!
+
+I: Step 80: Do check reads for test pattern after overwrite!
+
+I: Step 80 complete!
+
+I: Step 80 complete - dropped and freed capability 4!
+I: Step 80: Overwrite test pattern!
+
+I: Step 80 complete!
+
+I: Step 81: Do check reads for test pattern after overwrite!
+
+I: Step 81 complete!
+
+I: Step 82: Overwrite test pattern!
+
+I: Step 82 complete!
+
+I: Step 83: Do check reads for test pattern after overwrite!
+
+I: Step 83 complete!
+
+I: Step 84: Do check reads for test pattern after overwrite!
+
+I: Step 84 complete!
+
+I: Step 85 - locking capability 0x7bddc04000006200!
+I: Locking took 238 cycles!
+I: Step 86: Overwrite test pattern!
+
+I: Step 86 complete!
+
+I: Step 87: Do check reads for test pattern after overwrite!
+
+I: Step 87 complete!
+
+I: Step 87 complete - dropped and freed capability 5!
+I: Step 87: Overwrite test pattern!
+
+I: Step 87 complete!
+
+I: Step 88: Do check reads for test pattern after overwrite!
+
+I: Step 88 complete!
+
+I: Step 89: Overwrite test pattern!
+
+I: Step 89 complete!
+
+I: Step 90: Do check reads for test pattern after overwrite!
+
+I: Step 90 complete!
+
+I: Step 91: Do check reads for test pattern after overwrite!
+
+I: Step 91 complete!
+
+I: Step 92 - locking capability 0x6587c04000006000!
+I: Locking took 238 cycles!
+I: Step 93: Overwrite test pattern!
+
+I: Step 93 complete!
+
+I: Step 94: Do check reads for test pattern after overwrite!
+
+I: Step 94 complete!
+
+I: Step 94 complete - dropped and freed capability 6!
+I: Step 94: Overwrite test pattern!
+
+I: Step 94 complete!
+
+I: Step 95: Do check reads for test pattern after overwrite!
+
+I: Step 95 complete!
+
+I: Step 96: Overwrite test pattern!
+
+I: Step 96 complete!
+
+I: Step 97: Do check reads for test pattern after overwrite!
+
+I: Step 97 complete!
+
+I: Step 98: Do check reads for test pattern after overwrite!
+
+I: Step 98 complete!
+
+I: Step 99 - locking capability 0x4921804000005e00!
+I: Locking took 238 cycles!
+I: Step 100: Overwrite test pattern!
+
+I: Step 100 complete!
+
+I: Step 101: Do check reads for test pattern after overwrite!
+
+I: Step 101 complete!
+
+I: Step 101 complete - dropped and freed capability 7!
+I: Step 101: Overwrite test pattern!
+
+I: Step 101 complete!
+
+I: Step 102: Do check reads for test pattern after overwrite!
+
+I: Step 102 complete!
+
+I: Step 103: Overwrite test pattern!
+
+I: Step 103 complete!
+
+I: Step 104: Do check reads for test pattern after overwrite!
+
+I: Step 104 complete!
+
+I: Step 105: Do check reads for test pattern after overwrite!
+
+I: Step 105 complete!
+
+I: Step 106 - locking capability 0x6536404000005c00!
+I: Locking took 93 cycles!
+I: Step 107: Overwrite test pattern!
+
+I: Step 107 complete!
+
+I: Step 108: Do check reads for test pattern after overwrite!
+
+I: Step 108 complete!
+
+I: Step 108 complete - dropped and freed capability 8!
+I: Step 108: Overwrite test pattern!
+
+I: Step 108 complete!
+
+I: Step 109: Do check reads for test pattern after overwrite!
+
+I: Step 109 complete!
+
+I: Step 110: Overwrite test pattern!
+
+I: Step 110 complete!
+
+I: Step 111: Do check reads for test pattern after overwrite!
+
+I: Step 111 complete!
+
+I: Step 112: Do check reads for test pattern after overwrite!
+
+I: Step 112 complete!
+
+I: Step 113 - locking capability 0x6a99004000005a00!
+I: Locking took 93 cycles!
+I: Step 114: Overwrite test pattern!
+
+I: Step 114 complete!
+
+I: Step 115: Do check reads for test pattern after overwrite!
+
+I: Step 115 complete!
+
+I: Step 115 complete - dropped and freed capability 9!
+I: Step 115: Overwrite test pattern!
+
+I: Step 115 complete!
+
+I: Step 116: Do check reads for test pattern after overwrite!
+
+I: Step 116 complete!
+
+I: Step 117: Overwrite test pattern!
+
+I: Step 117 complete!
+
+I: Step 118: Do check reads for test pattern after overwrite!
+
+I: Step 118 complete!
+
+I: Step 119: Do check reads for test pattern after overwrite!
+
+I: Step 119 complete!
+
+I: Step 120 - locking capability 0x557a004000005800!
+I: Locking took 88 cycles!
+I: Step 121: Overwrite test pattern!
+
+I: Step 121 complete!
+
+I: Step 122: Do check reads for test pattern after overwrite!
+
+I: Step 122 complete!
+
+I: Step 122 complete - dropped and freed capability 10!
+I: Step 122: Overwrite test pattern!
+
+I: Step 122 complete!
+
+I: Step 123: Do check reads for test pattern after overwrite!
+
+I: Step 123 complete!
+
+I: Step 124: Overwrite test pattern!
+
+I: Step 124 complete!
+
+I: Step 125: Do check reads for test pattern after overwrite!
+
+I: Step 125 complete!
+
+I: Step 126: Do check reads for test pattern after overwrite!
+
+I: Step 126 complete!
+
+I: Step 127 - locking capability 0x59bc404000005600!
+I: Locking took 88 cycles!
+I: Step 128: Overwrite test pattern!
+
+I: Step 128 complete!
+
+I: Step 129: Do check reads for test pattern after overwrite!
+
+I: Step 129 complete!
+
+I: Step 129 complete - dropped and freed capability 11!
+I: Step 129: Overwrite test pattern!
+
+I: Step 129 complete!
+
+I: Step 130: Do check reads for test pattern after overwrite!
+
+I: Step 130 complete!
+
+I: Step 131: Overwrite test pattern!
+
+I: Step 131 complete!
+
+I: Step 132: Do check reads for test pattern after overwrite!
+
+I: Step 132 complete!
+
+I: Step 133: Do check reads for test pattern after overwrite!
+
+I: Step 133 complete!
+
+I: Step 134 - locking capability 0x465ec04000005400!
+I: Locking took 88 cycles!
+I: Step 135: Overwrite test pattern!
+
+I: Step 135 complete!
+
+I: Step 136: Do check reads for test pattern after overwrite!
+
+I: Step 136 complete!
+
+I: Step 136 complete - dropped and freed capability 12!
+I: Step 136: Overwrite test pattern!
+
+I: Step 136 complete!
+
+I: Step 137: Do check reads for test pattern after overwrite!
+
+I: Step 137 complete!
+
+I: Step 138: Overwrite test pattern!
+
+I: Step 138 complete!
+
+I: Step 139: Do check reads for test pattern after overwrite!
+
+I: Step 139 complete!
+
+I: Step 140: Do check reads for test pattern after overwrite!
+
+I: Step 140 complete!
+
+I: Step 141 - locking capability 0x42ee804000005200!
+I: Locking took 88 cycles!
+I: Step 142: Overwrite test pattern!
+
+I: Step 142 complete!
+
+I: Step 143: Do check reads for test pattern after overwrite!
+
+I: Step 143 complete!
+
+I: Step 143 complete - dropped and freed capability 13!
+I: Step 143: Overwrite test pattern!
+
+I: Step 143 complete!
+
+I: Step 144: Do check reads for test pattern after overwrite!
+
+I: Step 144 complete!
+
+I: Step 145: Overwrite test pattern!
+
+I: Step 145 complete!
+
+I: Step 146: Do check reads for test pattern after overwrite!
+
+I: Step 146 complete!
+
+I: Step 147: Do check reads for test pattern after overwrite!
+
+I: Step 147 complete!
+
+I: Step 148 - locking capability 0x75cd804000005000!
+I: Locking took 90 cycles!
+I: Step 149: Overwrite test pattern!
+
+I: Step 149 complete!
+
+I: Step 150: Do check reads for test pattern after overwrite!
+
+I: Step 150 complete!
+
+I: Step 150 complete - dropped and freed capability 14!
+I: Step 150: Overwrite test pattern!
+
+I: Step 150 complete!
+
+I: Step 151: Do check reads for test pattern after overwrite!
+
+I: Step 151 complete!
+
+I: Step 152: Overwrite test pattern!
+
+I: Step 152 complete!
+
+I: Step 153: Do check reads for test pattern after overwrite!
+
+I: Step 153 complete!
+
+I: Step 154: Do check reads for test pattern after overwrite!
+
+I: Step 154 complete!
+
+I: Step 155 - locking capability 0x530fc04000004e00!
+I: Locking took 88 cycles!
+I: Step 156: Overwrite test pattern!
+
+I: Step 156 complete!
+
+I: Step 157: Do check reads for test pattern after overwrite!
+
+I: Step 157 complete!
+
+I: Step 157 complete - dropped and freed capability 15!
+I: Step 157: Overwrite test pattern!
+
+I: Step 157 complete!
+
+I: Step 158: Do check reads for test pattern after overwrite!
+
+I: Step 158 complete!
+
+I: Step 159: revoke test pattern capability 0x54cf404000006f00!
+I: Step 160: Do check reads for zeros after revoke!
+
+I: Step 160 complete!
+
+I: Step 161: Overwrite test pattern!
+
+I: Step 161 complete!
+
+I: Step 162: Do check reads for test pattern after overwrite!
+
+I: Step 162 complete!
+
+I: Step 163: Check RNG!
+I: Got RNG 5166fd2089b0d362
+I: Got RNG ea3d51b3cedf5f8e
+I: Got RNG 31e9f02dc59aa422
+I: Got RNG e3c798e7bd14004e
+I: Got RNG 39b57cb16c41790c
+I: Got RNG 2a500a63bea0e25c
+I: Got RNG 2da5ce663e7a1a98
+I: Got RNG 69051e1399995508
+I: Got RNG 4c46f9e5577ea6d2
+I: Got RNG 8964dead64ab3cfe
+I: Got RNG a0b09aec74678f50
+I: Got RNG e65de77cfe15fd38
+I: Got RNG 964e074374309742
+I: Got RNG dfc5e79523bcb5ea
+I: Got RNG 2e5a4b4ec3b74fe2
+I: Got RNG 6c3e83ecaa46df38
+I: Preparing execute call!
+I: Doing execute call at 0x44dac04000006f00
+I: Step 163 - L1 instruction misses 1 L1 data misses 1 L2 resolver misses 0 L2 ops misses 0 extra icache cycles 84 missunit stall cycles 0 ops write stall cycles 0
+I: Good execute call!
+I: Doing large execute call at 0x9d358040004e0000
+I: Step 164 - L1 instruction misses 1 L1 data misses 0 L2 resolver misses 0 L2 ops misses 0 extra icache cycles 105 missunit stall cycles 0 ops write stall cycles 0
+I: Good large execute call!
+I: Doing extra large execute call at 0xa5ef0040004d0000
+I: Step 165 - L1 instruction misses 1 L1 data misses 0 L2 resolver misses 0 L2 ops misses 0 extra icache cycles 10003 missunit stall cycles 0 ops write stall cycles 0
+I: Good extra large execute call!
+I: Preparing dummy subsytem call!
+I: Doing subsystem call with callee trampoline 0x4269804000004b00 return trampoline 0x7c63804000004a00!
+I: Step 166 - L1 instruction misses 2 L1 data misses 1 L2 resolver misses 0 L2 ops misses 0 extra icache cycles 6978 missunit stall cycles 0 ops write stall cycles 0
+I: Doing lock calls on test pattern cap 0x59fd804000004900
+I: Step 167 - L1 instruction misses 200 L1 data misses 200 L2 resolver misses 0 L2 ops misses 0 extra icache cycles 0 missunit stall cycles 0 ops write stall cycles 0
+I: Preparing dummy subsytem call with scall!
+I: Doing subsystem call with scall and callee trampoline 0x4510004000004c00 return trampoline 0x76e3804000004900!
+I: Step 168 - L1 instruction misses 2 L1 data misses 0 L2 resolver misses 0 L2 ops misses 0 extra icache cycles 400 missunit stall cycles 0 ops write stall cycles 0
+I: Preparing dummy subsytem call with scalls!
+I: Doing subsystem call with scall and callee trampoline 0x7c8f804000004700 return trampoline 0x5cf0804000004600!
+I: Step 169 - L1 instruction misses 2 L1 data misses 0 L2 resolver misses 0 L2 ops misses 0 extra icache cycles 400 missunit stall cycles 0 ops write stall cycles 0
+I: Testing failing subsystem call!
+I: Preparing subsystem call with offset!
+I: Preparing zero reg instruction test!
+I: Beginning micro benchmarks!
+W: Cycle tracking for ops disabled - all cycles will be reported as zero!
+I: Completed micro benchmark round 1!
+I: Completed micro benchmark round 2!
+I: Completed micro benchmark round 3!
+I: Completed micro benchmark round 4!
+I: Completed micro benchmark round 5!
+I: Completed micro benchmark round 6!
+I: Completed micro benchmark round 7!
+I: Completed micro benchmark round 8!
+I: Completed micro benchmark round 9!
+I: Completed micro benchmark round 10!
+I: Completed micro benchmark round 11!
+I: Completed micro benchmark round 12!
+I: Completed micro benchmark round 13!
+I: Completed micro benchmark round 14!
+I: Completed micro benchmark round 15!
+I: Completed micro benchmark round 16!
+I: Completed micro benchmark round 17!
+I: Completed micro benchmark round 18!
+I: Completed micro benchmark round 19!
+I: Completed micro benchmark round 20!
+I: Completed micro benchmark round 21!
+I: Completed micro benchmark round 22!
+I: Completed micro benchmark round 23!
+I: Completed micro benchmark round 24!
+I: Completed micro benchmark round 25!
+I: Completed micro benchmark round 26!
+I: Completed micro benchmark round 27!
+I: Completed micro benchmark round 28!
+I: Completed micro benchmark round 29!
+I: Completed micro benchmark round 30!
+I: Completed micro benchmark round 31!
+I: Completed micro benchmark round 32!
+I: Completed micro benchmark round 33!
+I: Completed micro benchmark round 34!
+I: Completed micro benchmark round 35!
+I: Completed micro benchmark round 36!
+I: Completed micro benchmark round 37!
+I: Completed micro benchmark round 38!
+I: Completed micro benchmark round 39!
+I: Completed micro benchmark round 40!
+I: Completed micro benchmark round 41!
+I: Completed micro benchmark round 42!
+I: Completed micro benchmark round 43!
+I: Completed micro benchmark round 44!
+I: Completed micro benchmark round 45!
+I: Completed micro benchmark round 46!
+I: Completed micro benchmark round 47!
+I: Completed micro benchmark round 48!
+I: Completed micro benchmark round 49!
+I: Completed micro benchmark round 50!
+I: Completed micro benchmark round 51!
+I: Completed micro benchmark round 52!
+I: Completed micro benchmark round 53!
+I: Completed micro benchmark round 54!
+I: Completed micro benchmark round 55!
+I: Completed micro benchmark round 56!
+I: Completed micro benchmark round 57!
+I: Completed micro benchmark round 58!
+I: Completed micro benchmark round 59!
+I: Completed micro benchmark round 60!
+I: Completed micro benchmark round 61!
+I: Completed micro benchmark round 62!
+I: Completed micro benchmark round 63!
+I: Completed micro benchmark round 64!
+I: Completed micro benchmark round 65!
+I: Completed micro benchmark round 66!
+I: Completed micro benchmark round 67!
+I: Completed micro benchmark round 68!
+I: Completed micro benchmark round 69!
+I: Completed micro benchmark round 70!
+I: Completed micro benchmark round 71!
+I: Completed micro benchmark round 72!
+I: Completed micro benchmark round 73!
+I: Completed micro benchmark round 74!
+I: Completed micro benchmark round 75!
+I: Completed micro benchmark round 76!
+I: Completed micro benchmark round 77!
+I: Completed micro benchmark round 78!
+I: Completed micro benchmark round 79!
+I: Completed micro benchmark round 80!
+I: Completed micro benchmark round 81!
+I: Completed micro benchmark round 82!
+I: Completed micro benchmark round 83!
+I: Completed micro benchmark round 84!
+I: Completed micro benchmark round 85!
+I: Completed micro benchmark round 86!
+I: Completed micro benchmark round 87!
+I: Completed micro benchmark round 88!
+I: Completed micro benchmark round 89!
+I: Completed micro benchmark round 90!
+I: Completed micro benchmark round 91!
+I: Completed micro benchmark round 92!
+I: Completed micro benchmark round 93!
+I: Completed micro benchmark round 94!
+I: Completed micro benchmark round 95!
+I: Completed micro benchmark round 96!
+I: Completed micro benchmark round 97!
+I: Completed micro benchmark round 98!
+I: Completed micro benchmark round 99!
+I: Completed micro benchmark round 100!
+I: Units are lies - these are CYCLES!
+======================
+Raw create microbenchmarks:
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+638/0/0/0/0/0/0/0/-1
+660/0/0/0/0/0/0/0/-1
+625/0/0/0/0/0/0/0/-1
+626/0/0/0/0/0/0/0/-1
+626/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+626/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+632/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+630/0/0/0/0/0/0/0/-1
+632/0/0/0/0/0/0/0/-1
+622/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+630/0/0/0/0/0/0/0/-1
+627/0/0/0/0/0/0/0/-1
+632/0/0/0/0/0/0/0/-1
+626/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+625/0/0/0/0/0/0/0/-1
+632/0/0/0/0/0/0/0/-1
+629/0/0/0/0/0/0/0/-1
+624/0/0/0/0/0/0/0/-1
+622/0/0/0/0/0/0/0/-1
+626/0/0/0/0/0/0/0/-1
+630/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+630/0/0/0/0/0/0/0/-1
+632/0/0/0/0/0/0/0/-1
+622/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+630/0/0/0/0/0/0/0/-1
+627/0/0/0/0/0/0/0/-1
+632/0/0/0/0/0/0/0/-1
+622/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+624/0/0/0/0/0/0/0/-1
+632/0/0/0/0/0/0/0/-1
+629/0/0/0/0/0/0/0/-1
+624/0/0/0/0/0/0/0/-1
+624/0/0/0/0/0/0/0/-1
+624/0/0/0/0/0/0/0/-1
+630/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+630/0/0/0/0/0/0/0/-1
+626/0/0/0/0/0/0/0/-1
+622/0/0/0/0/0/0/0/-1
+627/0/0/0/0/0/0/0/-1
+630/0/0/0/0/0/0/0/-1
+627/0/0/0/0/0/0/0/-1
+632/0/0/0/0/0/0/0/-1
+622/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+632/0/0/0/0/0/0/0/-1
+629/0/0/0/0/0/0/0/-1
+624/0/0/0/0/0/0/0/-1
+622/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+632/0/0/0/0/0/0/0/-1
+622/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+630/0/0/0/0/0/0/0/-1
+635/0/0/0/0/0/0/0/-1
+632/0/0/0/0/0/0/0/-1
+632/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+622/0/0/0/0/0/0/0/-1
+626/0/0/0/0/0/0/0/-1
+630/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+630/0/0/0/0/0/0/0/-1
+622/0/0/0/0/0/0/0/-1
+626/0/0/0/0/0/0/0/-1
+622/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+630/0/0/0/0/0/0/0/-1
+632/0/0/0/0/0/0/0/-1
+622/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+630/0/0/0/0/0/0/0/-1
+635/0/0/0/0/0/0/0/-1
+632/0/0/0/0/0/0/0/-1
+632/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+622/0/0/0/0/0/0/0/-1
+626/0/0/0/0/0/0/0/-1
+630/0/0/0/0/0/0/0/-1
+629/0/0/0/0/0/0/0/-1
+630/0/0/0/0/0/0/0/-1
+622/0/0/0/0/0/0/0/-1
+626/0/0/0/0/0/0/0/-1
+622/0/0/0/0/0/0/0/-1
+634/0/0/0/0/0/0/0/-1
+create microbenchmarks (Samples) discarded/min/max/avg/stddev ns: 0/622/635/629.273684/4.387643
+create microbenchmarks (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+create microbenchmarks (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+create microbenchmarks (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+create microbenchmarks (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+create microbenchmarks (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+create microbenchmarks (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+create microbenchmarks (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw create microbenchmarks (ops only):
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+create microbenchmarks (ops only) (Samples) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+create microbenchmarks (ops only) (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+create microbenchmarks (ops only) (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+create microbenchmarks (ops only) (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+create microbenchmarks (ops only) (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+create microbenchmarks (ops only) (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+create microbenchmarks (ops only) (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+create microbenchmarks (ops only) (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw derive microbenchmarks:
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+252/0/0/0/0/0/0/0/-1
+620/0/0/0/0/0/0/0/-1
+619/0/0/0/0/0/0/0/-1
+620/0/0/0/0/0/0/0/-1
+629/0/0/0/0/0/0/0/-1
+615/0/0/0/0/0/0/0/-1
+619/0/0/0/0/0/0/0/-1
+615/0/0/0/0/0/0/0/-1
+637/0/0/0/0/0/0/0/-1
+625/0/0/0/0/0/0/0/-1
+620/0/0/0/0/0/0/0/-1
+619/0/0/0/0/0/0/0/-1
+623/0/0/0/0/0/0/0/-1
+631/0/0/0/0/0/0/0/-1
+615/0/0/0/0/0/0/0/-1
+625/0/0/0/0/0/0/0/-1
+625/0/0/0/0/0/0/0/-1
+618/0/0/0/0/0/0/0/-1
+617/0/0/0/0/0/0/0/-1
+625/0/0/0/0/0/0/0/-1
+635/0/0/0/0/0/0/0/-1
+619/0/0/0/0/0/0/0/-1
+623/0/0/0/0/0/0/0/-1
+617/0/0/0/0/0/0/0/-1
+617/0/0/0/0/0/0/0/-1
+639/0/0/0/0/0/0/0/-1
+617/0/0/0/0/0/0/0/-1
+615/0/0/0/0/0/0/0/-1
+625/0/0/0/0/0/0/0/-1
+620/0/0/0/0/0/0/0/-1
+619/0/0/0/0/0/0/0/-1
+623/0/0/0/0/0/0/0/-1
+631/0/0/0/0/0/0/0/-1
+615/0/0/0/0/0/0/0/-1
+625/0/0/0/0/0/0/0/-1
+625/0/0/0/0/0/0/0/-1
+618/0/0/0/0/0/0/0/-1
+615/0/0/0/0/0/0/0/-1
+625/0/0/0/0/0/0/0/-1
+635/0/0/0/0/0/0/0/-1
+619/0/0/0/0/0/0/0/-1
+623/0/0/0/0/0/0/0/-1
+615/0/0/0/0/0/0/0/-1
+615/0/0/0/0/0/0/0/-1
+619/0/0/0/0/0/0/0/-1
+617/0/0/0/0/0/0/0/-1
+615/0/0/0/0/0/0/0/-1
+625/0/0/0/0/0/0/0/-1
+620/0/0/0/0/0/0/0/-1
+639/0/0/0/0/0/0/0/-1
+623/0/0/0/0/0/0/0/-1
+620/0/0/0/0/0/0/0/-1
+615/0/0/0/0/0/0/0/-1
+625/0/0/0/0/0/0/0/-1
+625/0/0/0/0/0/0/0/-1
+618/0/0/0/0/0/0/0/-1
+617/0/0/0/0/0/0/0/-1
+625/0/0/0/0/0/0/0/-1
+617/0/0/0/0/0/0/0/-1
+619/0/0/0/0/0/0/0/-1
+623/0/0/0/0/0/0/0/-1
+615/0/0/0/0/0/0/0/-1
+631/0/0/0/0/0/0/0/-1
+615/0/0/0/0/0/0/0/-1
+619/0/0/0/0/0/0/0/-1
+623/0/0/0/0/0/0/0/-1
+631/0/0/0/0/0/0/0/-1
+615/0/0/0/0/0/0/0/-1
+617/0/0/0/0/0/0/0/-1
+633/0/0/0/0/0/0/0/-1
+617/0/0/0/0/0/0/0/-1
+617/0/0/0/0/0/0/0/-1
+619/0/0/0/0/0/0/0/-1
+629/0/0/0/0/0/0/0/-1
+617/0/0/0/0/0/0/0/-1
+617/0/0/0/0/0/0/0/-1
+629/0/0/0/0/0/0/0/-1
+617/0/0/0/0/0/0/0/-1
+639/0/0/0/0/0/0/0/-1
+631/0/0/0/0/0/0/0/-1
+615/0/0/0/0/0/0/0/-1
+617/0/0/0/0/0/0/0/-1
+620/0/0/0/0/0/0/0/-1
+619/0/0/0/0/0/0/0/-1
+623/0/0/0/0/0/0/0/-1
+631/0/0/0/0/0/0/0/-1
+615/0/0/0/0/0/0/0/-1
+617/0/0/0/0/0/0/0/-1
+625/0/0/0/0/0/0/0/-1
+617/0/0/0/0/0/0/0/-1
+617/0/0/0/0/0/0/0/-1
+619/0/0/0/0/0/0/0/-1
+629/0/0/0/0/0/0/0/-1
+617/0/0/0/0/0/0/0/-1
+623/0/0/0/0/0/0/0/-1
+629/0/0/0/0/0/0/0/-1
+617/0/0/0/0/0/0/0/-1
+639/0/0/0/0/0/0/0/-1
+631/0/0/0/0/0/0/0/-1
+615/0/0/0/0/0/0/0/-1
+derive microbenchmarks (Samples) discarded/min/max/avg/stddev ns: 0/615/639/621.968421/6.613308
+derive microbenchmarks (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+derive microbenchmarks (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+derive microbenchmarks (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+derive microbenchmarks (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+derive microbenchmarks (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+derive microbenchmarks (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+derive microbenchmarks (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw derive microbenchmarks (ops only):
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+derive microbenchmarks (ops only) (Samples) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+derive microbenchmarks (ops only) (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+derive microbenchmarks (ops only) (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+derive microbenchmarks (ops only) (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+derive microbenchmarks (ops only) (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+derive microbenchmarks (ops only) (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+derive microbenchmarks (ops only) (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+derive microbenchmarks (ops only) (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw drop microbenchmarks:
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+99/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+261/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+257/0/0/0/0/0/0/0/-1
+257/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+261/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+269/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+267/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+257/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+261/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+269/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+257/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+267/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+269/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+261/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+257/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+269/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+261/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+267/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+261/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+269/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+261/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+267/0/0/0/0/0/0/0/-1
+253/0/0/0/0/0/0/0/-1
+255/0/0/0/0/0/0/0/-1
+drop microbenchmarks (Samples) discarded/min/max/avg/stddev ns: 0/253/269/255.884211/4.502311
+drop microbenchmarks (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+drop microbenchmarks (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+drop microbenchmarks (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+drop microbenchmarks (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+drop microbenchmarks (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+drop microbenchmarks (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+drop microbenchmarks (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw drop microbenchmarks (ops only):
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+drop microbenchmarks (ops only) (Samples) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+drop microbenchmarks (ops only) (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+drop microbenchmarks (ops only) (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+drop microbenchmarks (ops only) (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+drop microbenchmarks (ops only) (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+drop microbenchmarks (ops only) (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+drop microbenchmarks (ops only) (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+drop microbenchmarks (ops only) (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw unlock microbenchmarks:
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+127/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+126/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+127/1/1/0/0/0/0/0/-1
+128/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+126/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+127/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+126/1/1/0/0/0/0/0/-1
+126/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+127/1/1/0/0/0/0/0/-1
+128/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+126/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+126/1/1/0/0/0/0/0/-1
+126/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+127/1/1/0/0/0/0/0/-1
+128/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+126/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+126/1/1/0/0/0/0/0/-1
+127/1/1/0/0/0/0/0/-1
+128/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+126/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+126/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+127/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+126/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+127/1/1/0/0/0/0/0/-1
+128/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+126/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+126/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+127/1/1/0/0/0/0/0/-1
+124/1/1/0/0/0/0/0/-1
+126/1/1/0/0/0/0/0/-1
+unlock microbenchmarks (Samples) discarded/min/max/avg/stddev ns: 0/124/128/124.810526/1.292038
+unlock microbenchmarks (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/1/1/1.000000/0.000000
+unlock microbenchmarks (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/1/1/1.000000/0.000000
+unlock microbenchmarks (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+unlock microbenchmarks (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+unlock microbenchmarks (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+unlock microbenchmarks (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+unlock microbenchmarks (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw unlock microbenchmarks (ops only):
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+unlock microbenchmarks (ops only) (Samples) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+unlock microbenchmarks (ops only) (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/1/1/1.000000/0.000000
+unlock microbenchmarks (ops only) (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/1/1/1.000000/0.000000
+unlock microbenchmarks (ops only) (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+unlock microbenchmarks (ops only) (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+unlock microbenchmarks (ops only) (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+unlock microbenchmarks (ops only) (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+unlock microbenchmarks (ops only) (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw merge microbenchmarks:
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+428/0/0/0/0/0/0/0/-1
+428/0/0/0/0/0/0/0/-1
+406/0/0/0/0/0/0/0/-1
+403/0/0/0/0/0/0/0/-1
+406/0/0/0/0/0/0/0/-1
+406/0/0/0/0/0/0/0/-1
+406/0/0/0/0/0/0/0/-1
+406/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+412/0/0/0/0/0/0/0/-1
+412/0/0/0/0/0/0/0/-1
+405/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+406/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+415/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+410/0/0/0/0/0/0/0/-1
+406/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+403/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+406/0/0/0/0/0/0/0/-1
+405/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+409/0/0/0/0/0/0/0/-1
+412/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+403/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+412/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+407/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+412/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+407/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+403/0/0/0/0/0/0/0/-1
+412/0/0/0/0/0/0/0/-1
+406/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+412/0/0/0/0/0/0/0/-1
+412/0/0/0/0/0/0/0/-1
+406/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+403/0/0/0/0/0/0/0/-1
+406/0/0/0/0/0/0/0/-1
+412/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+406/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+407/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+407/0/0/0/0/0/0/0/-1
+412/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+406/0/0/0/0/0/0/0/-1
+412/0/0/0/0/0/0/0/-1
+415/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+406/0/0/0/0/0/0/0/-1
+412/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+406/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+414/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+412/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+407/0/0/0/0/0/0/0/-1
+403/0/0/0/0/0/0/0/-1
+412/0/0/0/0/0/0/0/-1
+415/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+406/0/0/0/0/0/0/0/-1
+405/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+403/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+410/0/0/0/0/0/0/0/-1
+405/0/0/0/0/0/0/0/-1
+404/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+merge microbenchmarks (Samples) discarded/min/max/avg/stddev ns: 0/403/415/407.126316/3.202769
+merge microbenchmarks (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+merge microbenchmarks (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+merge microbenchmarks (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+merge microbenchmarks (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+merge microbenchmarks (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+merge microbenchmarks (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+merge microbenchmarks (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw merge microbenchmarks (ops only):
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+merge microbenchmarks (ops only) (Samples) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+merge microbenchmarks (ops only) (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+merge microbenchmarks (ops only) (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+merge microbenchmarks (ops only) (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+merge microbenchmarks (ops only) (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+merge microbenchmarks (ops only) (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+merge microbenchmarks (ops only) (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+merge microbenchmarks (ops only) (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw clone microbenchmarks:
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+349/0/0/0/0/0/0/0/-1
+332/0/0/0/0/0/0/0/-1
+330/0/0/0/0/0/0/0/-1
+332/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+324/0/0/0/0/0/0/0/-1
+322/0/0/0/0/0/0/0/-1
+324/0/0/0/0/0/0/0/-1
+331/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+322/0/0/0/0/0/0/0/-1
+320/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+332/0/0/0/0/0/0/0/-1
+331/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+324/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+330/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+324/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+319/0/0/0/0/0/0/0/-1
+331/0/0/0/0/0/0/0/-1
+320/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+322/0/0/0/0/0/0/0/-1
+320/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+332/0/0/0/0/0/0/0/-1
+331/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+324/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+330/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+324/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+330/0/0/0/0/0/0/0/-1
+331/0/0/0/0/0/0/0/-1
+320/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+319/0/0/0/0/0/0/0/-1
+320/0/0/0/0/0/0/0/-1
+332/0/0/0/0/0/0/0/-1
+332/0/0/0/0/0/0/0/-1
+331/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+324/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+320/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+324/0/0/0/0/0/0/0/-1
+326/0/0/0/0/0/0/0/-1
+320/0/0/0/0/0/0/0/-1
+322/0/0/0/0/0/0/0/-1
+320/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+332/0/0/0/0/0/0/0/-1
+320/0/0/0/0/0/0/0/-1
+331/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+324/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+331/0/0/0/0/0/0/0/-1
+326/0/0/0/0/0/0/0/-1
+335/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+319/0/0/0/0/0/0/0/-1
+326/0/0/0/0/0/0/0/-1
+320/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+322/0/0/0/0/0/0/0/-1
+320/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+332/0/0/0/0/0/0/0/-1
+320/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+324/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+331/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+335/0/0/0/0/0/0/0/-1
+318/0/0/0/0/0/0/0/-1
+319/0/0/0/0/0/0/0/-1
+326/0/0/0/0/0/0/0/-1
+320/0/0/0/0/0/0/0/-1
+clone microbenchmarks (Samples) discarded/min/max/avg/stddev ns: 0/318/335/322.347368/5.295019
+clone microbenchmarks (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+clone microbenchmarks (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+clone microbenchmarks (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+clone microbenchmarks (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+clone microbenchmarks (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+clone microbenchmarks (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+clone microbenchmarks (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw clone microbenchmarks (ops only):
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+clone microbenchmarks (ops only) (Samples) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+clone microbenchmarks (ops only) (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+clone microbenchmarks (ops only) (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+clone microbenchmarks (ops only) (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+clone microbenchmarks (ops only) (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+clone microbenchmarks (ops only) (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+clone microbenchmarks (ops only) (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+clone microbenchmarks (ops only) (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw revoke microbenchmarks:
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+40081/1/1/0/0/0/0/0/-1
+39873/1/1/0/0/0/0/0/-1
+39858/1/1/0/0/0/0/0/-1
+39868/1/1/0/0/0/0/0/-1
+39837/1/1/0/0/0/0/0/-1
+39796/1/1/0/0/0/0/0/-1
+39810/1/1/0/0/0/0/0/-1
+39840/1/1/0/0/0/0/0/-1
+39892/1/1/0/0/0/0/0/-1
+39961/1/1/0/0/0/0/0/-1
+39943/1/1/0/0/0/0/0/-1
+39999/1/1/0/0/0/0/0/-1
+39934/1/1/0/0/0/0/0/-1
+39953/1/1/0/0/0/0/0/-1
+39957/1/1/0/0/0/0/0/-1
+39957/1/1/0/0/0/0/0/-1
+39958/1/1/0/0/0/0/0/-1
+39961/1/1/0/0/0/0/0/-1
+39957/1/1/0/0/0/0/0/-1
+39949/1/1/0/0/0/0/0/-1
+39885/1/1/0/0/0/0/0/-1
+39880/1/1/0/0/0/0/0/-1
+39940/1/1/0/0/0/0/0/-1
+39958/1/1/0/0/0/0/0/-1
+39862/1/1/0/0/0/0/0/-1
+39867/1/1/0/0/0/0/0/-1
+39854/1/1/0/0/0/0/0/-1
+39844/1/1/0/0/0/0/0/-1
+39834/1/1/0/0/0/0/0/-1
+39883/1/1/0/0/0/0/0/-1
+39955/1/1/0/0/0/0/0/-1
+39931/1/1/0/0/0/0/0/-1
+39891/1/1/0/0/0/0/0/-1
+39847/1/1/0/0/0/0/0/-1
+39839/1/1/0/0/0/0/0/-1
+39820/1/1/0/0/0/0/0/-1
+39872/1/1/0/0/0/0/0/-1
+39939/1/1/0/0/0/0/0/-1
+39999/1/1/0/0/0/0/0/-1
+39981/1/1/0/0/0/0/0/-1
+39961/1/1/0/0/0/0/0/-1
+39911/1/1/0/0/0/0/0/-1
+39863/1/1/0/0/0/0/0/-1
+39861/1/1/0/0/0/0/0/-1
+39885/1/1/0/0/0/0/0/-1
+39968/1/1/0/0/0/0/0/-1
+39956/1/1/0/0/0/0/0/-1
+39962/1/1/0/0/0/0/0/-1
+39935/1/1/0/0/0/0/0/-1
+39927/1/1/0/0/0/0/0/-1
+39860/1/1/0/0/0/0/0/-1
+39868/1/1/0/0/0/0/0/-1
+39869/1/1/0/0/0/0/0/-1
+39867/1/1/0/0/0/0/0/-1
+39854/1/1/0/0/0/0/0/-1
+39835/1/1/0/0/0/0/0/-1
+39846/1/1/0/0/0/0/0/-1
+39858/1/1/0/0/0/0/0/-1
+39885/1/1/0/0/0/0/0/-1
+39875/1/1/0/0/0/0/0/-1
+39811/1/1/0/0/0/0/0/-1
+39764/1/1/0/0/0/0/0/-1
+39744/1/1/0/0/0/0/0/-1
+39766/1/1/0/0/0/0/0/-1
+39821/1/1/0/0/0/0/0/-1
+39878/1/1/0/0/0/0/0/-1
+39875/1/1/0/0/0/0/0/-1
+39869/1/1/0/0/0/0/0/-1
+39833/1/1/0/0/0/0/0/-1
+39789/1/1/0/0/0/0/0/-1
+39790/1/1/0/0/0/0/0/-1
+39840/1/1/0/0/0/0/0/-1
+39878/1/1/0/0/0/0/0/-1
+39978/1/1/0/0/0/0/0/-1
+39968/1/1/0/0/0/0/0/-1
+39972/1/1/0/0/0/0/0/-1
+39942/1/1/0/0/0/0/0/-1
+39957/1/1/0/0/0/0/0/-1
+39977/1/1/0/0/0/0/0/-1
+39953/1/1/0/0/0/0/0/-1
+39955/1/1/0/0/0/0/0/-1
+39962/1/1/0/0/0/0/0/-1
+39944/1/1/0/0/0/0/0/-1
+39977/1/1/0/0/0/0/0/-1
+39898/1/1/0/0/0/0/0/-1
+39892/1/1/0/0/0/0/0/-1
+39943/1/1/0/0/0/0/0/-1
+39952/1/1/0/0/0/0/0/-1
+39870/1/1/0/0/0/0/0/-1
+39865/1/1/0/0/0/0/0/-1
+39846/1/1/0/0/0/0/0/-1
+39830/1/1/0/0/0/0/0/-1
+39853/1/1/0/0/0/0/0/-1
+39899/1/1/0/0/0/0/0/-1
+39939/1/1/0/0/0/0/0/-1
+39936/1/1/0/0/0/0/0/-1
+39890/1/1/0/0/0/0/0/-1
+39865/1/1/0/0/0/0/0/-1
+39812/1/1/0/0/0/0/0/-1
+39823/1/1/0/0/0/0/0/-1
+revoke microbenchmarks (Samples) discarded/min/max/avg/stddev ns: 0/39744/39999/39894.210526/59.620359
+revoke microbenchmarks (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/1/1/1.000000/0.000000
+revoke microbenchmarks (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/1/1/1.000000/0.000000
+revoke microbenchmarks (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+revoke microbenchmarks (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+revoke microbenchmarks (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+revoke microbenchmarks (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+revoke microbenchmarks (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw revoke microbenchmarks (ops only):
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+revoke microbenchmarks (ops only) (Samples) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+revoke microbenchmarks (ops only) (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/1/1/1.000000/0.000000
+revoke microbenchmarks (ops only) (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/1/1/1.000000/0.000000
+revoke microbenchmarks (ops only) (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+revoke microbenchmarks (ops only) (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+revoke microbenchmarks (ops only) (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+revoke microbenchmarks (ops only) (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+revoke microbenchmarks (ops only) (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw lock microbenchmarks:
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+397/1/1/0/0/0/0/0/-1
+399/1/1/0/0/0/0/0/-1
+397/1/1/0/0/0/0/0/-1
+399/1/1/0/0/0/0/0/-1
+410/1/1/0/0/0/0/0/-1
+397/1/1/0/0/0/0/0/-1
+398/1/1/0/0/0/0/0/-1
+397/1/1/0/0/0/0/0/-1
+406/1/1/0/0/0/0/0/-1
+408/1/1/0/0/0/0/0/-1
+413/1/1/0/0/0/0/0/-1
+398/1/1/0/0/0/0/0/-1
+406/1/1/0/0/0/0/0/-1
+408/1/1/0/0/0/0/0/-1
+396/1/1/0/0/0/0/0/-1
+406/1/1/0/0/0/0/0/-1
+406/1/1/0/0/0/0/0/-1
+396/1/1/0/0/0/0/0/-1
+397/1/1/0/0/0/0/0/-1
+410/1/1/0/0/0/0/0/-1
+397/1/1/0/0/0/0/0/-1
+396/1/1/0/0/0/0/0/-1
+406/1/1/0/0/0/0/0/-1
+397/1/1/0/0/0/0/0/-1
+411/1/1/0/0/0/0/0/-1
+398/1/1/0/0/0/0/0/-1
+396/1/1/0/0/0/0/0/-1
+408/1/1/0/0/0/0/0/-1
+408/1/1/0/0/0/0/0/-1
+413/1/1/0/0/0/0/0/-1
+398/1/1/0/0/0/0/0/-1
+406/1/1/0/0/0/0/0/-1
+408/1/1/0/0/0/0/0/-1
+396/1/1/0/0/0/0/0/-1
+406/1/1/0/0/0/0/0/-1
+406/1/1/0/0/0/0/0/-1
+396/1/1/0/0/0/0/0/-1
+397/1/1/0/0/0/0/0/-1
+410/1/1/0/0/0/0/0/-1
+397/1/1/0/0/0/0/0/-1
+396/1/1/0/0/0/0/0/-1
+406/1/1/0/0/0/0/0/-1
+397/1/1/0/0/0/0/0/-1
+411/1/1/0/0/0/0/0/-1
+397/1/1/0/0/0/0/0/-1
+396/1/1/0/0/0/0/0/-1
+408/1/1/0/0/0/0/0/-1
+408/1/1/0/0/0/0/0/-1
+413/1/1/0/0/0/0/0/-1
+398/1/1/0/0/0/0/0/-1
+406/1/1/0/0/0/0/0/-1
+399/1/1/0/0/0/0/0/-1
+396/1/1/0/0/0/0/0/-1
+406/1/1/0/0/0/0/0/-1
+406/1/1/0/0/0/0/0/-1
+396/1/1/0/0/0/0/0/-1
+397/1/1/0/0/0/0/0/-1
+410/1/1/0/0/0/0/0/-1
+398/1/1/0/0/0/0/0/-1
+396/1/1/0/0/0/0/0/-1
+406/1/1/0/0/0/0/0/-1
+397/1/1/0/0/0/0/0/-1
+400/1/1/0/0/0/0/0/-1
+408/1/1/0/0/0/0/0/-1
+398/1/1/0/0/0/0/0/-1
+406/1/1/0/0/0/0/0/-1
+408/1/1/0/0/0/0/0/-1
+396/1/1/0/0/0/0/0/-1
+398/1/1/0/0/0/0/0/-1
+406/1/1/0/0/0/0/0/-1
+400/1/1/0/0/0/0/0/-1
+397/1/1/0/0/0/0/0/-1
+410/1/1/0/0/0/0/0/-1
+410/1/1/0/0/0/0/0/-1
+396/1/1/0/0/0/0/0/-1
+397/1/1/0/0/0/0/0/-1
+408/1/1/0/0/0/0/0/-1
+411/1/1/0/0/0/0/0/-1
+398/1/1/0/0/0/0/0/-1
+400/1/1/0/0/0/0/0/-1
+408/1/1/0/0/0/0/0/-1
+396/1/1/0/0/0/0/0/-1
+413/1/1/0/0/0/0/0/-1
+398/1/1/0/0/0/0/0/-1
+406/1/1/0/0/0/0/0/-1
+408/1/1/0/0/0/0/0/-1
+396/1/1/0/0/0/0/0/-1
+398/1/1/0/0/0/0/0/-1
+406/1/1/0/0/0/0/0/-1
+400/1/1/0/0/0/0/0/-1
+397/1/1/0/0/0/0/0/-1
+410/1/1/0/0/0/0/0/-1
+410/1/1/0/0/0/0/0/-1
+396/1/1/0/0/0/0/0/-1
+406/1/1/0/0/0/0/0/-1
+408/1/1/0/0/0/0/0/-1
+411/1/1/0/0/0/0/0/-1
+398/1/1/0/0/0/0/0/-1
+400/1/1/0/0/0/0/0/-1
+408/1/1/0/0/0/0/0/-1
+lock microbenchmarks (Samples) discarded/min/max/avg/stddev ns: 0/396/413/402.684211/5.758770
+lock microbenchmarks (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/1/1/1.000000/0.000000
+lock microbenchmarks (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/1/1/1.000000/0.000000
+lock microbenchmarks (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+lock microbenchmarks (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+lock microbenchmarks (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+lock microbenchmarks (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+lock microbenchmarks (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw lock microbenchmarks (ops only):
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+0/1/1/0/0/0/0/0/-1
+lock microbenchmarks (ops only) (Samples) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+lock microbenchmarks (ops only) (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/1/1/1.000000/0.000000
+lock microbenchmarks (ops only) (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/1/1/1.000000/0.000000
+lock microbenchmarks (ops only) (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+lock microbenchmarks (ops only) (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+lock microbenchmarks (ops only) (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+lock microbenchmarks (ops only) (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+lock microbenchmarks (ops only) (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw inspect microbenchmarks:
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+322/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+288/0/0/0/0/0/0/0/-1
+288/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+286/0/0/0/0/0/0/0/-1
+286/0/0/0/0/0/0/0/-1
+288/0/0/0/0/0/0/0/-1
+286/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+286/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+294/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+288/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+286/0/0/0/0/0/0/0/-1
+286/0/0/0/0/0/0/0/-1
+288/0/0/0/0/0/0/0/-1
+290/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+286/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+294/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+288/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+286/0/0/0/0/0/0/0/-1
+286/0/0/0/0/0/0/0/-1
+288/0/0/0/0/0/0/0/-1
+290/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+286/0/0/0/0/0/0/0/-1
+285/0/0/0/0/0/0/0/-1
+294/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+286/0/0/0/0/0/0/0/-1
+285/0/0/0/0/0/0/0/-1
+288/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+286/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+288/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+286/0/0/0/0/0/0/0/-1
+285/0/0/0/0/0/0/0/-1
+288/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+286/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+284/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+288/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+282/0/0/0/0/0/0/0/-1
+inspect microbenchmarks (Samples) discarded/min/max/avg/stddev ns: 0/282/294/284.284211/2.864164
+inspect microbenchmarks (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+inspect microbenchmarks (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+inspect microbenchmarks (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+inspect microbenchmarks (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+inspect microbenchmarks (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+inspect microbenchmarks (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+inspect microbenchmarks (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw inspect microbenchmarks (ops only):
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+inspect microbenchmarks (ops only) (Samples) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+inspect microbenchmarks (ops only) (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+inspect microbenchmarks (ops only) (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+inspect microbenchmarks (ops only) (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+inspect microbenchmarks (ops only) (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+inspect microbenchmarks (ops only) (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+inspect microbenchmarks (ops only) (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+inspect microbenchmarks (ops only) (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw restrict microbenchmarks:
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+382/0/0/0/0/0/0/0/-1
+378/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+378/0/0/0/0/0/0/0/-1
+388/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+381/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+378/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+379/0/0/0/0/0/0/0/-1
+381/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+384/0/0/0/0/0/0/0/-1
+388/0/0/0/0/0/0/0/-1
+386/0/0/0/0/0/0/0/-1
+378/0/0/0/0/0/0/0/-1
+391/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+379/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+382/0/0/0/0/0/0/0/-1
+391/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+381/0/0/0/0/0/0/0/-1
+381/0/0/0/0/0/0/0/-1
+384/0/0/0/0/0/0/0/-1
+388/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+379/0/0/0/0/0/0/0/-1
+381/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+384/0/0/0/0/0/0/0/-1
+388/0/0/0/0/0/0/0/-1
+386/0/0/0/0/0/0/0/-1
+378/0/0/0/0/0/0/0/-1
+391/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+379/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+382/0/0/0/0/0/0/0/-1
+391/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+381/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+384/0/0/0/0/0/0/0/-1
+388/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+379/0/0/0/0/0/0/0/-1
+381/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+378/0/0/0/0/0/0/0/-1
+388/0/0/0/0/0/0/0/-1
+386/0/0/0/0/0/0/0/-1
+378/0/0/0/0/0/0/0/-1
+391/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+379/0/0/0/0/0/0/0/-1
+378/0/0/0/0/0/0/0/-1
+382/0/0/0/0/0/0/0/-1
+391/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+382/0/0/0/0/0/0/0/-1
+388/0/0/0/0/0/0/0/-1
+381/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+384/0/0/0/0/0/0/0/-1
+388/0/0/0/0/0/0/0/-1
+378/0/0/0/0/0/0/0/-1
+378/0/0/0/0/0/0/0/-1
+381/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+379/0/0/0/0/0/0/0/-1
+388/0/0/0/0/0/0/0/-1
+384/0/0/0/0/0/0/0/-1
+391/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+381/0/0/0/0/0/0/0/-1
+381/0/0/0/0/0/0/0/-1
+382/0/0/0/0/0/0/0/-1
+388/0/0/0/0/0/0/0/-1
+381/0/0/0/0/0/0/0/-1
+379/0/0/0/0/0/0/0/-1
+381/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+384/0/0/0/0/0/0/0/-1
+388/0/0/0/0/0/0/0/-1
+378/0/0/0/0/0/0/0/-1
+378/0/0/0/0/0/0/0/-1
+381/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+379/0/0/0/0/0/0/0/-1
+388/0/0/0/0/0/0/0/-1
+384/0/0/0/0/0/0/0/-1
+391/0/0/0/0/0/0/0/-1
+380/0/0/0/0/0/0/0/-1
+381/0/0/0/0/0/0/0/-1
+381/0/0/0/0/0/0/0/-1
+382/0/0/0/0/0/0/0/-1
+388/0/0/0/0/0/0/0/-1
+restrict microbenchmarks (Samples) discarded/min/max/avg/stddev ns: 0/378/391/382.452632/3.959714
+restrict microbenchmarks (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+restrict microbenchmarks (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+restrict microbenchmarks (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+restrict microbenchmarks (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+restrict microbenchmarks (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+restrict microbenchmarks (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+restrict microbenchmarks (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw restrict microbenchmarks (ops only):
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+0/0/0/0/0/0/0/0/-1
+restrict microbenchmarks (ops only) (Samples) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+restrict microbenchmarks (ops only) (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+restrict microbenchmarks (ops only) (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+restrict microbenchmarks (ops only) (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+restrict microbenchmarks (ops only) (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+restrict microbenchmarks (ops only) (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+restrict microbenchmarks (ops only) (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+restrict microbenchmarks (ops only) (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+I: Finished micro benchmarks!
+I: Preparing subsystem call benchmark!
+I: Doing subystem call benchmark!
+======================
+Raw subsystem call instructions retired (half) benchmarks:
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+113/899/1865/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+113/901/1869/0/0/17970/0/0/-1
+subsystem call instructions retired (half) benchmarks (Samples) discarded/min/max/avg/stddev ns: 0/113/113/113.000000/0.000000
+subsystem call instructions retired (half) benchmarks (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/901/901/901.000000/0.000000
+subsystem call instructions retired (half) benchmarks (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/1869/1869/1869.000000/0.000000
+subsystem call instructions retired (half) benchmarks (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+subsystem call instructions retired (half) benchmarks (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+subsystem call instructions retired (half) benchmarks (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/17970/17970/17970.000000/0.000000
+subsystem call instructions retired (half) benchmarks (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+subsystem call instructions retired (half) benchmarks (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw subsystem call instructions retired (full) benchmarks:
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+180/2/4/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+180/0/0/0/0/0/0/0/-1
+subsystem call instructions retired (full) benchmarks (Samples) discarded/min/max/avg/stddev ns: 0/180/180/180.000000/0.000000
+subsystem call instructions retired (full) benchmarks (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+subsystem call instructions retired (full) benchmarks (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+subsystem call instructions retired (full) benchmarks (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+subsystem call instructions retired (full) benchmarks (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+subsystem call instructions retired (full) benchmarks (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+subsystem call instructions retired (full) benchmarks (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+subsystem call instructions retired (full) benchmarks (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw half subsys call benchmarks:
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+1420/899/1865/0/0/17970/0/0/-1
+272/901/1869/0/0/17970/0/0/-1
+246/901/1869/0/0/17970/0/0/-1
+250/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+256/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+242/901/1869/0/0/17970/0/0/-1
+242/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+260/901/1869/0/0/17970/0/0/-1
+260/901/1869/0/0/17970/0/0/-1
+267/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+251/901/1869/0/0/17970/0/0/-1
+261/901/1869/0/0/17970/0/0/-1
+239/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+242/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+251/901/1869/0/0/17970/0/0/-1
+265/901/1869/0/0/17970/0/0/-1
+267/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+238/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+238/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+239/901/1869/0/0/17970/0/0/-1
+249/901/1869/0/0/17970/0/0/-1
+250/901/1869/0/0/17970/0/0/-1
+248/901/1869/0/0/17970/0/0/-1
+250/901/1869/0/0/17970/0/0/-1
+248/901/1869/0/0/17970/0/0/-1
+302/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+257/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+249/901/1869/0/0/17970/0/0/-1
+249/901/1869/0/0/17970/0/0/-1
+249/901/1869/0/0/17970/0/0/-1
+252/901/1869/0/0/17970/0/0/-1
+265/901/1869/0/0/17970/0/0/-1
+251/901/1869/0/0/17970/0/0/-1
+250/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+247/901/1869/0/0/17970/0/0/-1
+251/901/1869/0/0/17970/0/0/-1
+242/901/1869/0/0/17970/0/0/-1
+238/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+251/901/1869/0/0/17970/0/0/-1
+248/901/1869/0/0/17970/0/0/-1
+248/901/1869/0/0/17970/0/0/-1
+261/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+246/901/1869/0/0/17970/0/0/-1
+249/901/1869/0/0/17970/0/0/-1
+254/901/1869/0/0/17970/0/0/-1
+266/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+318/901/1869/0/0/17970/0/0/-1
+250/901/1869/0/0/17970/0/0/-1
+251/901/1869/0/0/17970/0/0/-1
+239/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+272/901/1869/0/0/17970/0/0/-1
+250/901/1869/0/0/17970/0/0/-1
+248/901/1869/0/0/17970/0/0/-1
+260/901/1869/0/0/17970/0/0/-1
+251/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+251/901/1869/0/0/17970/0/0/-1
+257/901/1869/0/0/17970/0/0/-1
+241/901/1869/0/0/17970/0/0/-1
+246/901/1869/0/0/17970/0/0/-1
+245/901/1869/0/0/17970/0/0/-1
+277/901/1869/0/0/17970/0/0/-1
+259/901/1869/0/0/17970/0/0/-1
+248/901/1869/0/0/17970/0/0/-1
+255/901/1869/0/0/17970/0/0/-1
+259/901/1869/0/0/17970/0/0/-1
+250/901/1869/0/0/17970/0/0/-1
+259/901/1869/0/0/17970/0/0/-1
+246/901/1869/0/0/17970/0/0/-1
+258/901/1869/0/0/17970/0/0/-1
+251/901/1869/0/0/17970/0/0/-1
+251/901/1869/0/0/17970/0/0/-1
+260/901/1869/0/0/17970/0/0/-1
+259/901/1869/0/0/17970/0/0/-1
+238/901/1869/0/0/17970/0/0/-1
+258/901/1869/0/0/17970/0/0/-1
+259/901/1869/0/0/17970/0/0/-1
+250/901/1869/0/0/17970/0/0/-1
+258/901/1869/0/0/17970/0/0/-1
+half subsys call benchmarks (Samples) discarded/min/max/avg/stddev ns: 0/238/318/250.768421/12.262440
+half subsys call benchmarks (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/901/901/901.000000/0.000000
+half subsys call benchmarks (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/1869/1869/1869.000000/0.000000
+half subsys call benchmarks (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+half subsys call benchmarks (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+half subsys call benchmarks (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/17970/17970/17970.000000/0.000000
+half subsys call benchmarks (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+half subsys call benchmarks (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+======================
+Raw full subsys call benchmarks:
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+2037/2/4/0/0/0/0/0/-1
+425/0/0/0/0/0/0/0/-1
+397/0/0/0/0/0/0/0/-1
+401/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+407/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+393/0/0/0/0/0/0/0/-1
+393/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+434/0/0/0/0/0/0/0/-1
+411/0/0/0/0/0/0/0/-1
+418/0/0/0/0/0/0/0/-1
+418/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+402/0/0/0/0/0/0/0/-1
+412/0/0/0/0/0/0/0/-1
+390/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+393/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+402/0/0/0/0/0/0/0/-1
+416/0/0/0/0/0/0/0/-1
+418/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+389/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+389/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+390/0/0/0/0/0/0/0/-1
+400/0/0/0/0/0/0/0/-1
+401/0/0/0/0/0/0/0/-1
+399/0/0/0/0/0/0/0/-1
+401/0/0/0/0/0/0/0/-1
+399/0/0/0/0/0/0/0/-1
+453/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+400/0/0/0/0/0/0/0/-1
+400/0/0/0/0/0/0/0/-1
+400/0/0/0/0/0/0/0/-1
+403/0/0/0/0/0/0/0/-1
+416/0/0/0/0/0/0/0/-1
+402/0/0/0/0/0/0/0/-1
+401/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+398/0/0/0/0/0/0/0/-1
+402/0/0/0/0/0/0/0/-1
+393/0/0/0/0/0/0/0/-1
+389/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+402/0/0/0/0/0/0/0/-1
+399/0/0/0/0/0/0/0/-1
+399/0/0/0/0/0/0/0/-1
+412/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+397/0/0/0/0/0/0/0/-1
+400/0/0/0/0/0/0/0/-1
+405/0/0/0/0/0/0/0/-1
+417/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+469/0/0/0/0/0/0/0/-1
+401/0/0/0/0/0/0/0/-1
+402/0/0/0/0/0/0/0/-1
+390/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+449/0/0/0/0/0/0/0/-1
+401/0/0/0/0/0/0/0/-1
+399/0/0/0/0/0/0/0/-1
+411/0/0/0/0/0/0/0/-1
+402/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+402/0/0/0/0/0/0/0/-1
+408/0/0/0/0/0/0/0/-1
+392/0/0/0/0/0/0/0/-1
+397/0/0/0/0/0/0/0/-1
+396/0/0/0/0/0/0/0/-1
+428/0/0/0/0/0/0/0/-1
+410/0/0/0/0/0/0/0/-1
+399/0/0/0/0/0/0/0/-1
+406/0/0/0/0/0/0/0/-1
+410/0/0/0/0/0/0/0/-1
+401/0/0/0/0/0/0/0/-1
+410/0/0/0/0/0/0/0/-1
+397/0/0/0/0/0/0/0/-1
+409/0/0/0/0/0/0/0/-1
+402/0/0/0/0/0/0/0/-1
+402/0/0/0/0/0/0/0/-1
+411/0/0/0/0/0/0/0/-1
+410/0/0/0/0/0/0/0/-1
+389/0/0/0/0/0/0/0/-1
+409/0/0/0/0/0/0/0/-1
+410/0/0/0/0/0/0/0/-1
+401/0/0/0/0/0/0/0/-1
+409/0/0/0/0/0/0/0/-1
+full subsys call benchmarks (Samples) discarded/min/max/avg/stddev ns: 0/389/469/402.557895/13.427165
+full subsys call benchmarks (NTLB L1 instr misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+full subsys call benchmarks (NTLB L1 data misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+full subsys call benchmarks (NTLB L2 resolver misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+full subsys call benchmarks (NTLB L2 ops misses) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+full subsys call benchmarks (CPU extra icache cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+full subsys call benchmarks (NTLB L2 missunit stall cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+full subsys call benchmarks (NTLB L2 ops write cycles) discarded/min/max/avg/stddev ns: 0/0/0/0.000000/0.000000
+======================
+I: At test end - 107 capabilities exist in the system!
+I: Test succcess :-)
+
+Finishing test with status 0-TEST SUCCESS!
+System poweroff!

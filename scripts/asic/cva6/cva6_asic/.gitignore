@@ -1,0 +1,13 @@
+.magicrc*
+dbg*
+*txt
+cva6*
+qflow*
+log
+reports
+!cva6.flist
+.cva6.flist
+cva6_flattened.v
+runs
+# auto generated
+config.json

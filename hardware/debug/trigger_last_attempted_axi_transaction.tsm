@@ -1,0 +1,40 @@
+state idle:
+    if(axi_arvalid == 1'b1) then
+        goto do_read;
+    elseif(axi_awvalid == 1'b1) then
+        goto do_write;
+    else
+        reset_counter $counter1;
+        reset_counter $counter0;
+        goto idle;
+    endif
+    
+# read requested --> wait for valid, ready and last to be high at the same clock (signals end-of-transfer)
+state do_read:
+    if(axi_rlast == 1'b1 && axi_rvalid == 1'b1 && axi_rready == 1'b1) then
+        goto idle;
+    elseif($counter0 == 16'u1024) then
+        goto check_reset_active;
+    else
+        increment_counter $counter0;
+        goto do_read;
+    endif
+    
+    
+# write requested --> wait for state machine to go back to idle
+state do_write:
+    if(axi_bready == 1'b1 && axi_bvalid == 1'b1) then
+        goto idle;
+    elseif($counter1 == 16'u1024) then
+        goto check_reset_active;
+    else
+        increment_counter $counter1;
+        goto do_write;
+    endif
+    
+state check_reset_active:
+    if(ndmreset == 1'b1) then
+        goto idle;
+    else
+        trigger;
+    endif

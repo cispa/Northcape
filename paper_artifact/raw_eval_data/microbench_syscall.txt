@@ -1,0 +1,367 @@
+Hello World!
+init SPI
+status: 0x0000000000000025
+status: 0x0000000000000025
+SPI initialized!
+initializing SD... 
+SD command cmd0 	response : 01
+SD command cmd55 	response : 01
+SD command cmd41 	response : 01
+SD command cmd55 	response : 01
+SD command cmd41 	response : 00
+sd initialized!
+gpt partition table header:
+	signature:	5452415020494645
+	revision:	00010000
+	size:		0000005C
+	crc_header:	914E6601
+	reserved:	00000000
+	current lba:	0000000000000001
+	backup lda:	0000000003A31FFF
+	partition entries lba:   	0000000000000002
+	number partition entries:	00000080
+	size partition entries:  	00000080
+gpt partition entry 00
+	partition type guid:	D5F7127456A1134B81DC867174929325
+	partition guid:     	3F208FCFE4F3C44B87F08A5B13D90C40
+	first lba:	0000000000000800
+	last lba:	0000000000001B68
+	attributes:	0000000000000000
+	name:	000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+gpt partition entry 01
+	partition type guid:	A2A0D0EBE5B9334487C068B6B72699C7
+	partition guid:     	E395F1A60149C94D9EB909E3F16EC853
+	first lba:	0000000000100000
+	last lba:	0000000003A31FDE
+	attributes:	0000000000000000
+	name:	000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+gpt partition entry 02
+	partition type guid:	00000000000000000000000000000000
+	partition guid:     	00000000000000000000000000000000
+	first lba:	0000000000000000
+	last lba:	0000000000000000
+	attributes:	0000000000000000
+	name:	000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+gpt partition entry 03
+	partition type guid:	00000000000000000000000000000000
+	partition guid:     	00000000000000000000000000000000
+	first lba:	0000000000000000
+	last lba:	0000000000000000
+	attributes:	0000000000000000
+	name:	000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+copying boot image I: Configuring IRQs 651 and 779!
+*** Booting Zephyr OS build v3.7.0-rc1-4622-gaf4323dc74f0 ***
+Main Thread started; cv64a6_genesysII_nocape
+User thread started
+User thread(0x80020480):		    1114 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     485 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     486 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     487 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     486 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     496 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     487 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     486 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     486 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     487 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     486 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     496 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     487 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     486 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     486 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     487 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     486 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     496 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     487 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     486 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     486 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     487 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     486 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     496 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     487 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     486 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     486 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     487 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     486 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     496 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     487 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     486 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+User thread(0x80020480):		     484 cycles	     140 instructions (half)	     196 instructions (full)
+======================
+Raw cycles microbenchmarks (half):
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+928/-1/-1/-1/-1/-1/-1/-1/-1
+364/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+366/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+365/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+375/-1/-1/-1/-1/-1/-1/-1/-1
+366/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+365/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+366/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+365/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+375/-1/-1/-1/-1/-1/-1/-1/-1
+366/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+365/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+366/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+365/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+375/-1/-1/-1/-1/-1/-1/-1/-1
+366/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+365/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+366/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+365/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+375/-1/-1/-1/-1/-1/-1/-1/-1
+366/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+365/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+366/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+365/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+375/-1/-1/-1/-1/-1/-1/-1/-1
+366/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+365/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+363/-1/-1/-1/-1/-1/-1/-1/-1
+cycles microbenchmarks (half) (Samples) discarded/min/max/avg/stddev ns: 0/363/375/364.157895/2.758015
+======================
+======================
+Raw cycles microbenchmarks (full):
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+1114/-1/-1/-1/-1/-1/-1/-1/-1
+485/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+486/-1/-1/-1/-1/-1/-1/-1/-1
+487/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+486/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+496/-1/-1/-1/-1/-1/-1/-1/-1
+487/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+486/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+486/-1/-1/-1/-1/-1/-1/-1/-1
+487/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+486/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+496/-1/-1/-1/-1/-1/-1/-1/-1
+487/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+486/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+486/-1/-1/-1/-1/-1/-1/-1/-1
+487/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+486/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+496/-1/-1/-1/-1/-1/-1/-1/-1
+487/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+486/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+486/-1/-1/-1/-1/-1/-1/-1/-1
+487/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+486/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+496/-1/-1/-1/-1/-1/-1/-1/-1
+487/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+486/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+486/-1/-1/-1/-1/-1/-1/-1/-1
+487/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+486/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+496/-1/-1/-1/-1/-1/-1/-1/-1
+487/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+486/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+484/-1/-1/-1/-1/-1/-1/-1/-1
+cycles microbenchmarks (full) (Samples) discarded/min/max/avg/stddev ns: 0/484/496/485.263158/2.749969
+======================
+Finishing test with status 0-TEST SUCCESS!
+System poweroff!

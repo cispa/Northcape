@@ -1,0 +1,76 @@
+Hello World!
+init SPI
+status: 0x0000000000000025
+status: 0x0000000000000025
+SPI initialized!
+initializing SD... 
+SD command cmd0 	response : 01
+SD command cmd55 	response : 01
+SD command cmd41 	response : 01
+SD command cmd55 	response : 01
+SD command cmd41 	response : 00
+sd initialized!
+gpt partition table header:
+	signature:	5452415020494645
+	revision:	00010000
+	size:		0000005C
+	crc_header:	A0BAD9D5
+	reserved:	00000000
+	current lba:	0000000000000001
+	backup lda:	0000000003A31FFF
+	partition entries lba:   	0000000000000002
+	number partition entries:	00000080
+	size partition entries:  	00000080
+gpt partition entry 00
+	partition type guid:	D5F7127456A1134B81DC867174929325
+	partition guid:     	270567BF2A314B4D819D4FFA552547D4
+	first lba:	0000000000000800
+	last lba:	0000000000001B68
+	attributes:	0000000000000000
+	name:	000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+gpt partition entry 01
+	partition type guid:	A2A0D0EBE5B9334487C068B6B72699C7
+	partition guid:     	0157E40CA73FC94D81353155768D8AE2
+	first lba:	0000000000100000
+	last lba:	0000000003A31FDE
+	attributes:	0000000000000000
+	name:	000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+gpt partition entry 02
+	partition type guid:	00000000000000000000000000000000
+	partition guid:     	00000000000000000000000000000000
+	first lba:	0000000000000000
+	last lba:	0000000000000000
+	attributes:	0000000000000000
+	name:	000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+gpt partition entry 03
+	partition type guid:	00000000000000000000000000000000
+	partition guid:     	00000000000000000000000000000000
+	first lba:	0000000000000000
+	last lba:	0000000000000000
+	attributes:	0000000000000000
+	name:	000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+copying boot image *** Booting Zephyr OS build v3.7.0-rc1-4629-ga3bc871e5a9e ***
+======================
+Boot time: 304741 cycles (Genesys: 0.006095 ns, Arty: 0.012190 ns)!
+======================
+Hello World! cv64a6_genesysII_nocape/cv64a6
+*** Booting Zephyr OS build v3.7.0-rc1-4629-ga3bc871e5a9e ***
+======================
+Boot time: 304326 cycles (Genesys: 0.006087 s, Arty: 0.012173 s)!
+======================
+Hello World! cv64a6_genesysII_nocape/cv64a6
+*** Booting Zephyr OS build v3.7.0-rc1-4629-ga3bc871e5a9e ***
+======================
+Boot time: 304416 cycles (Genesys: 0.006088 s, Arty: 0.012177 s)!
+======================
+Hello World! cv64a6_genesysII_nocape/cv64a6
+*** Booting Zephyr OS build v3.7.0-rc1-4629-ga3bc871e5a9e ***
+======================
+Boot time: 304439 cycles (Genesys: 0.006089 s, Arty: 0.012178 s)!
+======================
+Hello World! cv64a6_genesysII_nocape/cv64a6
+*** Booting Zephyr OS build v3.7.0-rc1-4629-ga3bc871e5a9e ***
+======================
+Boot time: 304495 cycles (Genesys: 0.006090 s, Arty: 0.012180 s)!
+======================
+Hello World! cv64a6_genesysII_nocape/cv64a6

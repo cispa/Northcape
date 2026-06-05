@@ -1,0 +1,15 @@
+install*
+build
+*.elf
+rootfs/tetris
+
+riscv-gnu-toolchain/build
+riscv-fesvr/build
+riscv-isa-sim/build
+riscv-pk/build
+riscv-tests/build
+
+vivado*
+configs/.buildroot_defconfig
+configs/.busybox.config
+configs/.linux_defconfig

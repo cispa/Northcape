@@ -1,0 +1,150 @@
+I: Configuring IRQs 651 and 779!
+*** Booting Zephyr OS build v3.7.0-rc1-4622-gaf4323dc74f0 ***
+I: Scheduling timer interrupts!
+W: Deadline missed for 100 cycles (called at 932 with deadline 100) - increasing by 100!
+W: Deadline missed for 200 cycles (called at 389239 with deadline 388732) - increasing by 100!
+W: Deadline missed for 300 cycles (called at 805572 with deadline 803507) - increasing by 100!
+W: Deadline missed for 400 cycles (called at 1219626 with deadline 1219113) - increasing by 100!
+IW: Deadline missed for 500 cycles (called at 1645714 with deadline 1641789) - increasing by 100!
+:W: Deadline missed for 600 cycles (called at 2073382 with deadline 2069567) - increasing by 100!
+ W: Deadline missed for 700 cycles (called at 2501064 with deadline 2497359) - increasing by 100!
+WW: Deadline missed for 800 cycles (called at 2928739 with deadline 2925134) - increasing by 100!
+aW: Deadline missed for 900 cycles (called at 3356418 with deadline 3352912) - increasing by 100!
+iW: Deadline missed for 1000 cycles (called at 3784091 with deadline 3780686) - increasing by 100!
+tW: Deadline missed for 1100 cycles (called at 4216108 with deadline 4212791) - increasing by 100!
+iW: Deadline missed for 1200 cycles (called at 4648091 with deadline 4644886) - increasing by 100!
+nW: Deadline missed for 1300 cycles (called at 5080090 with deadline 5076985) - increasing by 100!
+gW: Deadline missed for 1400 cycles (called at 5512109 with deadline 5509104) - increasing by 100!
+ W: Deadline missed for 1500 cycles (called at 5944098 with deadline 5941193) - increasing by 100!
+fW: Deadline missed for 1600 cycles (called at 6376099 with deadline 6373294) - increasing by 100!
+oW: Deadline missed for 1700 cycles (called at 6808116 with deadline 6805375) - increasing by 100!
+rW: Deadline missed for 1800 cycles (called at 7240104 with deadline 7237499) - increasing by 100!
+ W: Deadline missed for 1900 cycles (called at 7672101 with deadline 7669596) - increasing by 100!
+lW: Deadline missed for 2000 cycles (called at 8104123 with deadline 8101684) - increasing by 100!
+aW: Deadline missed for 2100 cycles (called at 8536120 with deadline 8533781) - increasing by 100!
+sW: Deadline missed for 2200 cycles (called at 8968092 with deadline 8965887) - increasing by 100!
+t cW: Deadline missed for 2300 cycles (called at 9408731 with deadline 9404875) - increasing by 100!
+alW: Deadline missed for 2400 cycles (called at 9845065 with deadline 9841125) - increasing by 100!
+lbW: Deadline missed for 2500 cycles (called at 10281379 with deadline 10277645) - increasing by 100!
+acW: Deadline missed for 2600 cycles (called at 10726327 with deadline 10722787) - increasing by 100!
+k!W: Deadline missed for 2700 cycles (called at 11171299 with deadline 11167959) - increasing by 100!
+
+W: Deadline missed for 2800 cycles (called at 11616268 with deadline 11613136) - increasing by 100!
+
+W: Deadline missed for 2900 cycles (called at 12061217 with deadline 12058285) - increasing by 100!
+I: BuW: Deadline missed for 3000 cycles (called at 12519139 with deadline 12515430) - increasing by 100!
+sy W: Deadline missed for 3100 cycles (called at 12968417 with deadline 12964653) - increasing by 100!
+waiW: Deadline missed for 3200 cycles (called at 13417702 with deadline 13414251) - increasing by 100!
+ting 0!W: Deadline missed for 3300 cycles (called at 13884260 with deadline 13880327) - increasing by 100!
+
+
+W: Deadline missed for 3400 cycles (called at 14337849 with deadline 14334070) - increasing by 100!
+I: Busy waiI: Test success!
+
+======================
+Raw IRQ delays for rate 70000 (3500 cycles):
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+16640/-1/-1/-1/-1/-1/-1/-1/-1
+5080/-1/-1/-1/-1/-1/-1/-1/-1
+4960/-1/-1/-1/-1/-1/-1/-1/-1
+4880/-1/-1/-1/-1/-1/-1/-1/-1
+4920/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4900/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4940/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4900/-1/-1/-1/-1/-1/-1/-1/-1
+4960/-1/-1/-1/-1/-1/-1/-1/-1
+4940/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4900/-1/-1/-1/-1/-1/-1/-1/-1
+4960/-1/-1/-1/-1/-1/-1/-1/-1
+4940/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4900/-1/-1/-1/-1/-1/-1/-1/-1
+4960/-1/-1/-1/-1/-1/-1/-1/-1
+4940/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4900/-1/-1/-1/-1/-1/-1/-1/-1
+4960/-1/-1/-1/-1/-1/-1/-1/-1
+4940/-1/-1/-1/-1/-1/-1/-1/-1
+4960/-1/-1/-1/-1/-1/-1/-1/-1
+4940/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4900/-1/-1/-1/-1/-1/-1/-1/-1
+4960/-1/-1/-1/-1/-1/-1/-1/-1
+4940/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4900/-1/-1/-1/-1/-1/-1/-1/-1
+4960/-1/-1/-1/-1/-1/-1/-1/-1
+4940/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4900/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4900/-1/-1/-1/-1/-1/-1/-1/-1
+4960/-1/-1/-1/-1/-1/-1/-1/-1
+4940/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4900/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4940/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4900/-1/-1/-1/-1/-1/-1/-1/-1
+4960/-1/-1/-1/-1/-1/-1/-1/-1
+4940/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4900/-1/-1/-1/-1/-1/-1/-1/-1
+4960/-1/-1/-1/-1/-1/-1/-1/-1
+4940/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4900/-1/-1/-1/-1/-1/-1/-1/-1
+4900/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4960/-1/-1/-1/-1/-1/-1/-1/-1
+4940/-1/-1/-1/-1/-1/-1/-1/-1
+4960/-1/-1/-1/-1/-1/-1/-1/-1
+4940/-1/-1/-1/-1/-1/-1/-1/-1
+4960/-1/-1/-1/-1/-1/-1/-1/-1
+4940/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4900/-1/-1/-1/-1/-1/-1/-1/-1
+4960/-1/-1/-1/-1/-1/-1/-1/-1
+4940/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4900/-1/-1/-1/-1/-1/-1/-1/-1
+4900/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4960/-1/-1/-1/-1/-1/-1/-1/-1
+4940/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4900/-1/-1/-1/-1/-1/-1/-1/-1
+4960/-1/-1/-1/-1/-1/-1/-1/-1
+4940/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4900/-1/-1/-1/-1/-1/-1/-1/-1
+4960/-1/-1/-1/-1/-1/-1/-1/-1
+4880/-1/-1/-1/-1/-1/-1/-1/-1
+4920/-1/-1/-1/-1/-1/-1/-1/-1
+4860/-1/-1/-1/-1/-1/-1/-1/-1
+4880/-1/-1/-1/-1/-1/-1/-1/-1
+4940/-1/-1/-1/-1/-1/-1/-1/-1
+53140/-1/-1/-1/-1/-1/-1/-1/-1
+69740/-1/-1/-1/-1/-1/-1/-1/-1
+10280/-1/-1/-1/-1/-1/-1/-1/-1
+16000/-1/-1/-1/-1/-1/-1/-1/-1
+32600/-1/-1/-1/-1/-1/-1/-1/-1
+48520/-1/-1/-1/-1/-1/-1/-1/-1
+65120/-1/-1/-1/-1/-1/-1/-1/-1
+5480/-1/-1/-1/-1/-1/-1/-1/-1
+11880/-1/-1/-1/-1/-1/-1/-1/-1
+27800/-1/-1/-1/-1/-1/-1/-1/-1
+44400/-1/-1/-1/-1/-1/-1/-1/-1
+IRQ delays for rate 70000 (3500 cycles) (Samples) discarded/min/max/avg/stddev ns: 0/4860/69740/8392.421053/12120.038276
+======================
+Finishing test with status 0-TEST SUCCESS!
+System poweroff!

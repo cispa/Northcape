@@ -1,0 +1,43 @@
+config SKADI_LIBRARY_LOCAL_ALLOCATOR
+    bool "Provide per-subsystem allocator that bypasses system allocator"
+    default y if SKADI_LOADER
+    help
+        Provide per-subsystem allocator. This is used for all allocations up to 
+        SKADI_LIBRARY_LOCAL_ALLOCATOR_CHUNK_SIZE.
+        The local allocator avoids a costly subsystem call into the system allocator.
+        The allocation strategy is as follows:
+        The allocator holds an array of SKADI_LIBRARY_LOCAL_ALLOCATOR_NUM_CHUNKS
+        chunks (as a backing store) and tracks their allocation using an atomic bitmap.
+        On each allocation request, IF the request size is below the threshold,
+        the local allocator looks for a free chunk in the atomic bitmap.
+        If such a chunk exists, it is utilized for the allocation request.
+        Similarly, on each free, the local allocator checks if the freed memory is
+        within the bounds of its array. If it is, it frees it locally.
+
+if SKADI_LIBRARY_LOCAL_ALLOCATOR
+
+config SKADI_LIBRARY_LOCAL_ALLOCATOR_CHUNK_SIZE
+    int "Size of each local allocator chunk"
+    default 64
+    help
+        This value controls the size of each local allocator chunk.
+
+
+config SKADI_LIBRARY_LOCAL_ALLOCATOR_NUM_CHUNKS
+    int "Number of allocator chunks"
+    default 128
+    help
+        This value controls the number of local allocator chunks.
+endif
+
+config SKADI_LIBRARY_LOCAL_CLOCK
+    bool "Local per-subsystem clock driver"
+    help
+        If enabled, every subsystem provides its own clock driver.
+        To this end, it requests a read-only capability for the MTIME register
+        and accesses it.
+
+config SKADI_LIBRARY_PRINTF_STRING_BYTES_OUT_SUPPORT
+    bool "Support for %s, %n modifiers for printf"
+    help
+        If enabled, allows you to use %s and %n modifiers for printf() in subsystems.

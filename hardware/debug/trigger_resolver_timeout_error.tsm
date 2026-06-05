@@ -1,0 +1,29 @@
+state idle:
+    if(mmu_request_read_tvalid == 1'b1) then
+        goto wait_response_read;
+    elseif(mmu_request_write_tvalid == 1'b1) then
+        goto wait_response_write;
+    else
+        reset_counter $counter1;
+        reset_counter $counter2;
+        goto idle;
+    endif
+state wait_response_read:
+    if(mmu_response_read_tvalid ==1'b1 && mmu_response_read_tready == 1'b1) then
+        goto idle;
+    elseif($counter1 == 16'u400) then
+        trigger;
+    else
+        increment_counter $counter1;
+        goto wait_response_read;
+    endif
+
+state wait_response_write:
+    if(mmu_response_write_tvalid ==1'b1 && mmu_response_write_tready == 1'b1) then
+        goto idle;
+    elseif($counter2 == 16'u400) then
+        trigger;
+    else
+        increment_counter $counter2;
+        goto wait_response_write;
+    endif

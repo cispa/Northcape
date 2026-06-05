@@ -1,0 +1,912 @@
+1759103503: The 'port' option is now deprecated and will be removed in a future version. Please use 'listener' instead.
+1759103503: mosquitto version 2.0.11 starting
+1759103503: Config loaded from scripts/skadi/mosquitto.conf.
+1759103503: Opening ipv4 listen socket on port 8883.
+1759103503: Opening ipv6 listen socket on port 8883.
+1759103503: mosquitto version 2.0.11 running
+1759103677: New connection from 192.0.2.1:51516 on port 8883.
+1759103678: New client connected from 192.0.2.1:51516 as zephyr_publisher (p2, c0, k60, u'foo').
+1759103678: No will message specified.
+1759103678: Sending CONNACK to zephyr_publisher (0, 0)
+1759103678: Received PINGREQ from zephyr_publisher
+1759103678: Sending PINGRESP to zephyr_publisher
+1759103678: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103679: Received PUBLISH from zephyr_publisher (d0, q1, r0, m41728, 'sensors', ... (15 bytes))
+1759103679: Sending PUBACK to zephyr_publisher (m41728, rc0)
+1759103679: Received PUBLISH from zephyr_publisher (d0, q2, r0, m54444, 'sensors', ... (15 bytes))
+1759103679: Sending PUBREC to zephyr_publisher (m54444, rc0)
+1759103680: Received PUBREL from zephyr_publisher (Mid: 54444)
+1759103680: Sending PUBCOMP to zephyr_publisher (m54444)
+1759103680: Received PINGREQ from zephyr_publisher
+1759103680: Sending PINGRESP to zephyr_publisher
+1759103680: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103681: Received PUBLISH from zephyr_publisher (d0, q1, r0, m25610, 'sensors', ... (15 bytes))
+1759103681: Sending PUBACK to zephyr_publisher (m25610, rc0)
+1759103681: Received PUBLISH from zephyr_publisher (d0, q2, r0, m60864, 'sensors', ... (15 bytes))
+1759103681: Sending PUBREC to zephyr_publisher (m60864, rc0)
+1759103682: Received PUBREL from zephyr_publisher (Mid: 60864)
+1759103682: Sending PUBCOMP to zephyr_publisher (m60864)
+1759103682: Received PINGREQ from zephyr_publisher
+1759103682: Sending PINGRESP to zephyr_publisher
+1759103682: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103683: Received PUBLISH from zephyr_publisher (d0, q1, r0, m49496, 'sensors', ... (15 bytes))
+1759103683: Sending PUBACK to zephyr_publisher (m49496, rc0)
+1759103683: Received PUBLISH from zephyr_publisher (d0, q2, r0, m240, 'sensors', ... (15 bytes))
+1759103683: Sending PUBREC to zephyr_publisher (m240, rc0)
+1759103684: Received PUBREL from zephyr_publisher (Mid: 240)
+1759103684: Sending PUBCOMP to zephyr_publisher (m240)
+1759103684: Received PINGREQ from zephyr_publisher
+1759103684: Sending PINGRESP to zephyr_publisher
+1759103685: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103685: Received PUBLISH from zephyr_publisher (d0, q1, r0, m4294, 'sensors', ... (15 bytes))
+1759103685: Sending PUBACK to zephyr_publisher (m4294, rc0)
+1759103686: Received PUBLISH from zephyr_publisher (d0, q2, r0, m16680, 'sensors', ... (15 bytes))
+1759103686: Sending PUBREC to zephyr_publisher (m16680, rc0)
+1759103686: Received PUBREL from zephyr_publisher (Mid: 16680)
+1759103686: Sending PUBCOMP to zephyr_publisher (m16680)
+1759103686: Received PINGREQ from zephyr_publisher
+1759103686: Sending PINGRESP to zephyr_publisher
+1759103687: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103687: Received PUBLISH from zephyr_publisher (d0, q1, r0, m41028, 'sensors', ... (15 bytes))
+1759103687: Sending PUBACK to zephyr_publisher (m41028, rc0)
+1759103688: Received PUBLISH from zephyr_publisher (d0, q2, r0, m21832, 'sensors', ... (15 bytes))
+1759103688: Sending PUBREC to zephyr_publisher (m21832, rc0)
+1759103688: Received PUBREL from zephyr_publisher (Mid: 21832)
+1759103688: Sending PUBCOMP to zephyr_publisher (m21832)
+1759103688: Received PINGREQ from zephyr_publisher
+1759103688: Sending PINGRESP to zephyr_publisher
+1759103689: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103689: Received PUBLISH from zephyr_publisher (d0, q1, r0, m16098, 'sensors', ... (15 bytes))
+1759103689: Sending PUBACK to zephyr_publisher (m16098, rc0)
+1759103690: Received PUBLISH from zephyr_publisher (d0, q2, r0, m25720, 'sensors', ... (15 bytes))
+1759103690: Sending PUBREC to zephyr_publisher (m25720, rc0)
+1759103690: Received PUBREL from zephyr_publisher (Mid: 25720)
+1759103690: Sending PUBCOMP to zephyr_publisher (m25720)
+1759103690: Received PINGREQ from zephyr_publisher
+1759103690: Sending PINGRESP to zephyr_publisher
+1759103691: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103691: Received PUBLISH from zephyr_publisher (d0, q1, r0, m17660, 'sensors', ... (15 bytes))
+1759103691: Sending PUBACK to zephyr_publisher (m17660, rc0)
+1759103692: Received PUBLISH from zephyr_publisher (d0, q2, r0, m45910, 'sensors', ... (15 bytes))
+1759103692: Sending PUBREC to zephyr_publisher (m45910, rc0)
+1759103692: Received PUBREL from zephyr_publisher (Mid: 45910)
+1759103692: Sending PUBCOMP to zephyr_publisher (m45910)
+1759103692: Received PINGREQ from zephyr_publisher
+1759103692: Sending PINGRESP to zephyr_publisher
+1759103693: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103693: Received PUBLISH from zephyr_publisher (d0, q1, r0, m54876, 'sensors', ... (15 bytes))
+1759103693: Sending PUBACK to zephyr_publisher (m54876, rc0)
+1759103694: Received PUBLISH from zephyr_publisher (d0, q2, r0, m62086, 'sensors', ... (15 bytes))
+1759103694: Sending PUBREC to zephyr_publisher (m62086, rc0)
+1759103694: Received PUBREL from zephyr_publisher (Mid: 62086)
+1759103694: Sending PUBCOMP to zephyr_publisher (m62086)
+1759103694: Received PINGREQ from zephyr_publisher
+1759103694: Sending PINGRESP to zephyr_publisher
+1759103695: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103695: Received PUBLISH from zephyr_publisher (d0, q1, r0, m51046, 'sensors', ... (15 bytes))
+1759103695: Sending PUBACK to zephyr_publisher (m51046, rc0)
+1759103696: Received PUBLISH from zephyr_publisher (d0, q2, r0, m65500, 'sensors', ... (15 bytes))
+1759103696: Sending PUBREC to zephyr_publisher (m65500, rc0)
+1759103696: Received PUBREL from zephyr_publisher (Mid: 65500)
+1759103696: Sending PUBCOMP to zephyr_publisher (m65500)
+1759103696: Received PINGREQ from zephyr_publisher
+1759103696: Sending PINGRESP to zephyr_publisher
+1759103697: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103697: Received PUBLISH from zephyr_publisher (d0, q1, r0, m22632, 'sensors', ... (15 bytes))
+1759103697: Sending PUBACK to zephyr_publisher (m22632, rc0)
+1759103698: Received PUBLISH from zephyr_publisher (d0, q2, r0, m51366, 'sensors', ... (15 bytes))
+1759103698: Sending PUBREC to zephyr_publisher (m51366, rc0)
+1759103698: Received PUBREL from zephyr_publisher (Mid: 51366)
+1759103698: Sending PUBCOMP to zephyr_publisher (m51366)
+1759103698: Received PINGREQ from zephyr_publisher
+1759103698: Sending PINGRESP to zephyr_publisher
+1759103699: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103699: Received PUBLISH from zephyr_publisher (d0, q1, r0, m26626, 'sensors', ... (15 bytes))
+1759103699: Sending PUBACK to zephyr_publisher (m26626, rc0)
+1759103700: Received PUBLISH from zephyr_publisher (d0, q2, r0, m17136, 'sensors', ... (15 bytes))
+1759103700: Sending PUBREC to zephyr_publisher (m17136, rc0)
+1759103700: Received PUBREL from zephyr_publisher (Mid: 17136)
+1759103700: Sending PUBCOMP to zephyr_publisher (m17136)
+1759103700: Received PINGREQ from zephyr_publisher
+1759103700: Sending PINGRESP to zephyr_publisher
+1759103701: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103701: Received PUBLISH from zephyr_publisher (d0, q1, r0, m9576, 'sensors', ... (15 bytes))
+1759103701: Sending PUBACK to zephyr_publisher (m9576, rc0)
+1759103702: Received PUBLISH from zephyr_publisher (d0, q2, r0, m1982, 'sensors', ... (15 bytes))
+1759103702: Sending PUBREC to zephyr_publisher (m1982, rc0)
+1759103702: Received PUBREL from zephyr_publisher (Mid: 1982)
+1759103702: Sending PUBCOMP to zephyr_publisher (m1982)
+1759103703: Received PINGREQ from zephyr_publisher
+1759103703: Sending PINGRESP to zephyr_publisher
+1759103703: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103704: Received PUBLISH from zephyr_publisher (d0, q1, r0, m36934, 'sensors', ... (15 bytes))
+1759103704: Sending PUBACK to zephyr_publisher (m36934, rc0)
+1759103704: Received PUBLISH from zephyr_publisher (d0, q2, r0, m45862, 'sensors', ... (15 bytes))
+1759103704: Sending PUBREC to zephyr_publisher (m45862, rc0)
+1759103705: Received PUBREL from zephyr_publisher (Mid: 45862)
+1759103705: Sending PUBCOMP to zephyr_publisher (m45862)
+1759103705: Received PINGREQ from zephyr_publisher
+1759103705: Sending PINGRESP to zephyr_publisher
+1759103705: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103706: Received PUBLISH from zephyr_publisher (d0, q1, r0, m55888, 'sensors', ... (15 bytes))
+1759103706: Sending PUBACK to zephyr_publisher (m55888, rc0)
+1759103706: Received PUBLISH from zephyr_publisher (d0, q2, r0, m56852, 'sensors', ... (15 bytes))
+1759103706: Sending PUBREC to zephyr_publisher (m56852, rc0)
+1759103707: Received PUBREL from zephyr_publisher (Mid: 56852)
+1759103707: Sending PUBCOMP to zephyr_publisher (m56852)
+1759103707: Received PINGREQ from zephyr_publisher
+1759103707: Sending PINGRESP to zephyr_publisher
+1759103707: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103708: Received PUBLISH from zephyr_publisher (d0, q1, r0, m53684, 'sensors', ... (15 bytes))
+1759103708: Sending PUBACK to zephyr_publisher (m53684, rc0)
+1759103708: Received PUBLISH from zephyr_publisher (d0, q2, r0, m19190, 'sensors', ... (15 bytes))
+1759103708: Sending PUBREC to zephyr_publisher (m19190, rc0)
+1759103709: Received PUBREL from zephyr_publisher (Mid: 19190)
+1759103709: Sending PUBCOMP to zephyr_publisher (m19190)
+1759103709: Received PINGREQ from zephyr_publisher
+1759103709: Sending PINGRESP to zephyr_publisher
+1759103709: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103710: Received PUBLISH from zephyr_publisher (d0, q1, r0, m54480, 'sensors', ... (15 bytes))
+1759103710: Sending PUBACK to zephyr_publisher (m54480, rc0)
+1759103710: Received PUBLISH from zephyr_publisher (d0, q2, r0, m17564, 'sensors', ... (15 bytes))
+1759103710: Sending PUBREC to zephyr_publisher (m17564, rc0)
+1759103711: Received PUBREL from zephyr_publisher (Mid: 17564)
+1759103711: Sending PUBCOMP to zephyr_publisher (m17564)
+1759103711: Received PINGREQ from zephyr_publisher
+1759103711: Sending PINGRESP to zephyr_publisher
+1759103711: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103712: Received PUBLISH from zephyr_publisher (d0, q1, r0, m24796, 'sensors', ... (15 bytes))
+1759103712: Sending PUBACK to zephyr_publisher (m24796, rc0)
+1759103712: Received PUBLISH from zephyr_publisher (d0, q2, r0, m6108, 'sensors', ... (15 bytes))
+1759103712: Sending PUBREC to zephyr_publisher (m6108, rc0)
+1759103713: Received PUBREL from zephyr_publisher (Mid: 6108)
+1759103713: Sending PUBCOMP to zephyr_publisher (m6108)
+1759103713: Received PINGREQ from zephyr_publisher
+1759103713: Sending PINGRESP to zephyr_publisher
+1759103713: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103714: Received PUBLISH from zephyr_publisher (d0, q1, r0, m17714, 'sensors', ... (15 bytes))
+1759103714: Sending PUBACK to zephyr_publisher (m17714, rc0)
+1759103714: Received PUBLISH from zephyr_publisher (d0, q2, r0, m24810, 'sensors', ... (15 bytes))
+1759103714: Sending PUBREC to zephyr_publisher (m24810, rc0)
+1759103715: Received PUBREL from zephyr_publisher (Mid: 24810)
+1759103715: Sending PUBCOMP to zephyr_publisher (m24810)
+1759103715: Received PINGREQ from zephyr_publisher
+1759103715: Sending PINGRESP to zephyr_publisher
+1759103715: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103716: Received PUBLISH from zephyr_publisher (d0, q1, r0, m29480, 'sensors', ... (15 bytes))
+1759103716: Sending PUBACK to zephyr_publisher (m29480, rc0)
+1759103716: Received PUBLISH from zephyr_publisher (d0, q2, r0, m6998, 'sensors', ... (15 bytes))
+1759103716: Sending PUBREC to zephyr_publisher (m6998, rc0)
+1759103717: Received PUBREL from zephyr_publisher (Mid: 6998)
+1759103717: Sending PUBCOMP to zephyr_publisher (m6998)
+1759103717: Received PINGREQ from zephyr_publisher
+1759103717: Sending PINGRESP to zephyr_publisher
+1759103718: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103718: Received PUBLISH from zephyr_publisher (d0, q1, r0, m19608, 'sensors', ... (15 bytes))
+1759103718: Sending PUBACK to zephyr_publisher (m19608, rc0)
+1759103719: Received PUBLISH from zephyr_publisher (d0, q2, r0, m40990, 'sensors', ... (15 bytes))
+1759103719: Sending PUBREC to zephyr_publisher (m40990, rc0)
+1759103719: Received PUBREL from zephyr_publisher (Mid: 40990)
+1759103719: Sending PUBCOMP to zephyr_publisher (m40990)
+1759103719: Received PINGREQ from zephyr_publisher
+1759103719: Sending PINGRESP to zephyr_publisher
+1759103720: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103720: Received PUBLISH from zephyr_publisher (d0, q1, r0, m50178, 'sensors', ... (15 bytes))
+1759103720: Sending PUBACK to zephyr_publisher (m50178, rc0)
+1759103721: Received PUBLISH from zephyr_publisher (d0, q2, r0, m21754, 'sensors', ... (15 bytes))
+1759103721: Sending PUBREC to zephyr_publisher (m21754, rc0)
+1759103721: Received PUBREL from zephyr_publisher (Mid: 21754)
+1759103721: Sending PUBCOMP to zephyr_publisher (m21754)
+1759103721: Received PINGREQ from zephyr_publisher
+1759103721: Sending PINGRESP to zephyr_publisher
+1759103722: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103722: Received PUBLISH from zephyr_publisher (d0, q1, r0, m65258, 'sensors', ... (15 bytes))
+1759103722: Sending PUBACK to zephyr_publisher (m65258, rc0)
+1759103723: Received PUBLISH from zephyr_publisher (d0, q2, r0, m59980, 'sensors', ... (15 bytes))
+1759103723: Sending PUBREC to zephyr_publisher (m59980, rc0)
+1759103723: Received PUBREL from zephyr_publisher (Mid: 59980)
+1759103723: Sending PUBCOMP to zephyr_publisher (m59980)
+1759103723: Received PINGREQ from zephyr_publisher
+1759103723: Sending PINGRESP to zephyr_publisher
+1759103724: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103724: Received PUBLISH from zephyr_publisher (d0, q1, r0, m6484, 'sensors', ... (15 bytes))
+1759103724: Sending PUBACK to zephyr_publisher (m6484, rc0)
+1759103725: Received PUBLISH from zephyr_publisher (d0, q2, r0, m16046, 'sensors', ... (15 bytes))
+1759103725: Sending PUBREC to zephyr_publisher (m16046, rc0)
+1759103725: Received PUBREL from zephyr_publisher (Mid: 16046)
+1759103725: Sending PUBCOMP to zephyr_publisher (m16046)
+1759103725: Received PINGREQ from zephyr_publisher
+1759103725: Sending PINGRESP to zephyr_publisher
+1759103726: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103726: Received PUBLISH from zephyr_publisher (d0, q1, r0, m61358, 'sensors', ... (15 bytes))
+1759103726: Sending PUBACK to zephyr_publisher (m61358, rc0)
+1759103727: Received PUBLISH from zephyr_publisher (d0, q2, r0, m28756, 'sensors', ... (15 bytes))
+1759103727: Sending PUBREC to zephyr_publisher (m28756, rc0)
+1759103727: Received PUBREL from zephyr_publisher (Mid: 28756)
+1759103727: Sending PUBCOMP to zephyr_publisher (m28756)
+1759103727: Received PINGREQ from zephyr_publisher
+1759103727: Sending PINGRESP to zephyr_publisher
+1759103728: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103728: Received PUBLISH from zephyr_publisher (d0, q1, r0, m58496, 'sensors', ... (15 bytes))
+1759103728: Sending PUBACK to zephyr_publisher (m58496, rc0)
+1759103729: Received PUBLISH from zephyr_publisher (d0, q2, r0, m24970, 'sensors', ... (15 bytes))
+1759103729: Sending PUBREC to zephyr_publisher (m24970, rc0)
+1759103729: Received PUBREL from zephyr_publisher (Mid: 24970)
+1759103729: Sending PUBCOMP to zephyr_publisher (m24970)
+1759103729: Received PINGREQ from zephyr_publisher
+1759103729: Sending PINGRESP to zephyr_publisher
+1759103730: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103730: Received PUBLISH from zephyr_publisher (d0, q1, r0, m58278, 'sensors', ... (15 bytes))
+1759103730: Sending PUBACK to zephyr_publisher (m58278, rc0)
+1759103731: Received PUBLISH from zephyr_publisher (d0, q2, r0, m55482, 'sensors', ... (15 bytes))
+1759103731: Sending PUBREC to zephyr_publisher (m55482, rc0)
+1759103731: Received PUBREL from zephyr_publisher (Mid: 55482)
+1759103731: Sending PUBCOMP to zephyr_publisher (m55482)
+1759103731: Received PINGREQ from zephyr_publisher
+1759103731: Sending PINGRESP to zephyr_publisher
+1759103732: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103732: Received PUBLISH from zephyr_publisher (d0, q1, r0, m33976, 'sensors', ... (15 bytes))
+1759103732: Sending PUBACK to zephyr_publisher (m33976, rc0)
+1759103733: Received PUBLISH from zephyr_publisher (d0, q2, r0, m24250, 'sensors', ... (15 bytes))
+1759103733: Sending PUBREC to zephyr_publisher (m24250, rc0)
+1759103733: Received PUBREL from zephyr_publisher (Mid: 24250)
+1759103733: Sending PUBCOMP to zephyr_publisher (m24250)
+1759103733: Received PINGREQ from zephyr_publisher
+1759103733: Sending PINGRESP to zephyr_publisher
+1759103734: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103735: Received PUBLISH from zephyr_publisher (d0, q1, r0, m29392, 'sensors', ... (15 bytes))
+1759103735: Sending PUBACK to zephyr_publisher (m29392, rc0)
+1759103735: Received PUBLISH from zephyr_publisher (d0, q2, r0, m49380, 'sensors', ... (15 bytes))
+1759103735: Sending PUBREC to zephyr_publisher (m49380, rc0)
+1759103736: Received PUBREL from zephyr_publisher (Mid: 49380)
+1759103736: Sending PUBCOMP to zephyr_publisher (m49380)
+1759103736: Received PINGREQ from zephyr_publisher
+1759103736: Sending PINGRESP to zephyr_publisher
+1759103736: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103737: Received PUBLISH from zephyr_publisher (d0, q1, r0, m624, 'sensors', ... (15 bytes))
+1759103737: Sending PUBACK to zephyr_publisher (m624, rc0)
+1759103737: Received PUBLISH from zephyr_publisher (d0, q2, r0, m58384, 'sensors', ... (15 bytes))
+1759103737: Sending PUBREC to zephyr_publisher (m58384, rc0)
+1759103738: Received PUBREL from zephyr_publisher (Mid: 58384)
+1759103738: Sending PUBCOMP to zephyr_publisher (m58384)
+1759103738: Received PINGREQ from zephyr_publisher
+1759103738: Sending PINGRESP to zephyr_publisher
+1759103738: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103739: Received PUBLISH from zephyr_publisher (d0, q1, r0, m64532, 'sensors', ... (15 bytes))
+1759103739: Sending PUBACK to zephyr_publisher (m64532, rc0)
+1759103739: Received PUBLISH from zephyr_publisher (d0, q2, r0, m420, 'sensors', ... (15 bytes))
+1759103739: Sending PUBREC to zephyr_publisher (m420, rc0)
+1759103740: Received PUBREL from zephyr_publisher (Mid: 420)
+1759103740: Sending PUBCOMP to zephyr_publisher (m420)
+1759103740: Received PINGREQ from zephyr_publisher
+1759103740: Sending PINGRESP to zephyr_publisher
+1759103740: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103741: Received PUBLISH from zephyr_publisher (d0, q1, r0, m3370, 'sensors', ... (15 bytes))
+1759103741: Sending PUBACK to zephyr_publisher (m3370, rc0)
+1759103741: Received PUBLISH from zephyr_publisher (d0, q2, r0, m54778, 'sensors', ... (15 bytes))
+1759103741: Sending PUBREC to zephyr_publisher (m54778, rc0)
+1759103742: Received PUBREL from zephyr_publisher (Mid: 54778)
+1759103742: Sending PUBCOMP to zephyr_publisher (m54778)
+1759103742: Received PINGREQ from zephyr_publisher
+1759103742: Sending PINGRESP to zephyr_publisher
+1759103742: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103743: Received PUBLISH from zephyr_publisher (d0, q1, r0, m17340, 'sensors', ... (15 bytes))
+1759103743: Sending PUBACK to zephyr_publisher (m17340, rc0)
+1759103743: Received PUBLISH from zephyr_publisher (d0, q2, r0, m17288, 'sensors', ... (15 bytes))
+1759103743: Sending PUBREC to zephyr_publisher (m17288, rc0)
+1759103744: Received PUBREL from zephyr_publisher (Mid: 17288)
+1759103744: Sending PUBCOMP to zephyr_publisher (m17288)
+1759103744: Received PINGREQ from zephyr_publisher
+1759103744: Sending PINGRESP to zephyr_publisher
+1759103744: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103745: Received PUBLISH from zephyr_publisher (d0, q1, r0, m38366, 'sensors', ... (15 bytes))
+1759103745: Sending PUBACK to zephyr_publisher (m38366, rc0)
+1759103745: Received PUBLISH from zephyr_publisher (d0, q2, r0, m48586, 'sensors', ... (15 bytes))
+1759103745: Sending PUBREC to zephyr_publisher (m48586, rc0)
+1759103746: Received PUBREL from zephyr_publisher (Mid: 48586)
+1759103746: Sending PUBCOMP to zephyr_publisher (m48586)
+1759103746: Received PINGREQ from zephyr_publisher
+1759103746: Sending PINGRESP to zephyr_publisher
+1759103746: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103747: Received PUBLISH from zephyr_publisher (d0, q1, r0, m51980, 'sensors', ... (15 bytes))
+1759103747: Sending PUBACK to zephyr_publisher (m51980, rc0)
+1759103747: Received PUBLISH from zephyr_publisher (d0, q2, r0, m13832, 'sensors', ... (15 bytes))
+1759103747: Sending PUBREC to zephyr_publisher (m13832, rc0)
+1759103748: Received PUBREL from zephyr_publisher (Mid: 13832)
+1759103748: Sending PUBCOMP to zephyr_publisher (m13832)
+1759103748: Received PINGREQ from zephyr_publisher
+1759103748: Sending PINGRESP to zephyr_publisher
+1759103748: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103749: Received PUBLISH from zephyr_publisher (d0, q1, r0, m16412, 'sensors', ... (15 bytes))
+1759103749: Sending PUBACK to zephyr_publisher (m16412, rc0)
+1759103750: Received PUBLISH from zephyr_publisher (d0, q2, r0, m60912, 'sensors', ... (15 bytes))
+1759103750: Sending PUBREC to zephyr_publisher (m60912, rc0)
+1759103750: Received PUBREL from zephyr_publisher (Mid: 60912)
+1759103750: Sending PUBCOMP to zephyr_publisher (m60912)
+1759103750: Received PINGREQ from zephyr_publisher
+1759103750: Sending PINGRESP to zephyr_publisher
+1759103751: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103751: Received PUBLISH from zephyr_publisher (d0, q1, r0, m32090, 'sensors', ... (15 bytes))
+1759103751: Sending PUBACK to zephyr_publisher (m32090, rc0)
+1759103752: Received PUBLISH from zephyr_publisher (d0, q2, r0, m10686, 'sensors', ... (15 bytes))
+1759103752: Sending PUBREC to zephyr_publisher (m10686, rc0)
+1759103752: Received PUBREL from zephyr_publisher (Mid: 10686)
+1759103752: Sending PUBCOMP to zephyr_publisher (m10686)
+1759103752: Received PINGREQ from zephyr_publisher
+1759103752: Sending PINGRESP to zephyr_publisher
+1759103753: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103753: Received PUBLISH from zephyr_publisher (d0, q1, r0, m6918, 'sensors', ... (15 bytes))
+1759103753: Sending PUBACK to zephyr_publisher (m6918, rc0)
+1759103754: Received PUBLISH from zephyr_publisher (d0, q2, r0, m35496, 'sensors', ... (15 bytes))
+1759103754: Sending PUBREC to zephyr_publisher (m35496, rc0)
+1759103754: Received PUBREL from zephyr_publisher (Mid: 35496)
+1759103754: Sending PUBCOMP to zephyr_publisher (m35496)
+1759103754: Received PINGREQ from zephyr_publisher
+1759103754: Sending PINGRESP to zephyr_publisher
+1759103755: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103755: Received PUBLISH from zephyr_publisher (d0, q1, r0, m29300, 'sensors', ... (15 bytes))
+1759103755: Sending PUBACK to zephyr_publisher (m29300, rc0)
+1759103756: Received PUBLISH from zephyr_publisher (d0, q2, r0, m13186, 'sensors', ... (15 bytes))
+1759103756: Sending PUBREC to zephyr_publisher (m13186, rc0)
+1759103756: Received PUBREL from zephyr_publisher (Mid: 13186)
+1759103756: Sending PUBCOMP to zephyr_publisher (m13186)
+1759103756: Received PINGREQ from zephyr_publisher
+1759103756: Sending PINGRESP to zephyr_publisher
+1759103757: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103757: Received PUBLISH from zephyr_publisher (d0, q1, r0, m18350, 'sensors', ... (15 bytes))
+1759103757: Sending PUBACK to zephyr_publisher (m18350, rc0)
+1759103758: Received PUBLISH from zephyr_publisher (d0, q2, r0, m5648, 'sensors', ... (15 bytes))
+1759103758: Sending PUBREC to zephyr_publisher (m5648, rc0)
+1759103758: Received PUBREL from zephyr_publisher (Mid: 5648)
+1759103758: Sending PUBCOMP to zephyr_publisher (m5648)
+1759103758: Received PINGREQ from zephyr_publisher
+1759103758: Sending PINGRESP to zephyr_publisher
+1759103759: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103759: Received PUBLISH from zephyr_publisher (d0, q1, r0, m19100, 'sensors', ... (15 bytes))
+1759103759: Sending PUBACK to zephyr_publisher (m19100, rc0)
+1759103760: Received PUBLISH from zephyr_publisher (d0, q2, r0, m51412, 'sensors', ... (15 bytes))
+1759103760: Sending PUBREC to zephyr_publisher (m51412, rc0)
+1759103760: Received PUBREL from zephyr_publisher (Mid: 51412)
+1759103760: Sending PUBCOMP to zephyr_publisher (m51412)
+1759103760: Received PINGREQ from zephyr_publisher
+1759103760: Sending PINGRESP to zephyr_publisher
+1759103761: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103761: Received PUBLISH from zephyr_publisher (d0, q1, r0, m34668, 'sensors', ... (15 bytes))
+1759103761: Sending PUBACK to zephyr_publisher (m34668, rc0)
+1759103762: Received PUBLISH from zephyr_publisher (d0, q2, r0, m25496, 'sensors', ... (15 bytes))
+1759103762: Sending PUBREC to zephyr_publisher (m25496, rc0)
+1759103762: Received PUBREL from zephyr_publisher (Mid: 25496)
+1759103762: Sending PUBCOMP to zephyr_publisher (m25496)
+1759103762: Received PINGREQ from zephyr_publisher
+1759103762: Sending PINGRESP to zephyr_publisher
+1759103763: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103763: Received PUBLISH from zephyr_publisher (d0, q1, r0, m19366, 'sensors', ... (15 bytes))
+1759103763: Sending PUBACK to zephyr_publisher (m19366, rc0)
+1759103764: Received PUBLISH from zephyr_publisher (d0, q2, r0, m54858, 'sensors', ... (15 bytes))
+1759103764: Sending PUBREC to zephyr_publisher (m54858, rc0)
+1759103764: Received PUBREL from zephyr_publisher (Mid: 54858)
+1759103764: Sending PUBCOMP to zephyr_publisher (m54858)
+1759103764: Received PINGREQ from zephyr_publisher
+1759103764: Sending PINGRESP to zephyr_publisher
+1759103765: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103765: Received PUBLISH from zephyr_publisher (d0, q1, r0, m61608, 'sensors', ... (15 bytes))
+1759103765: Sending PUBACK to zephyr_publisher (m61608, rc0)
+1759103766: Received PUBLISH from zephyr_publisher (d0, q2, r0, m36224, 'sensors', ... (15 bytes))
+1759103766: Sending PUBREC to zephyr_publisher (m36224, rc0)
+1759103766: Received PUBREL from zephyr_publisher (Mid: 36224)
+1759103766: Sending PUBCOMP to zephyr_publisher (m36224)
+1759103767: Received PINGREQ from zephyr_publisher
+1759103767: Sending PINGRESP to zephyr_publisher
+1759103767: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103768: Received PUBLISH from zephyr_publisher (d0, q1, r0, m36670, 'sensors', ... (15 bytes))
+1759103768: Sending PUBACK to zephyr_publisher (m36670, rc0)
+1759103768: Received PUBLISH from zephyr_publisher (d0, q2, r0, m27968, 'sensors', ... (15 bytes))
+1759103768: Sending PUBREC to zephyr_publisher (m27968, rc0)
+1759103769: Received PUBREL from zephyr_publisher (Mid: 27968)
+1759103769: Sending PUBCOMP to zephyr_publisher (m27968)
+1759103769: Received PINGREQ from zephyr_publisher
+1759103769: Sending PINGRESP to zephyr_publisher
+1759103769: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103770: Received PUBLISH from zephyr_publisher (d0, q1, r0, m10984, 'sensors', ... (15 bytes))
+1759103770: Sending PUBACK to zephyr_publisher (m10984, rc0)
+1759103770: Received PUBLISH from zephyr_publisher (d0, q2, r0, m20670, 'sensors', ... (15 bytes))
+1759103770: Sending PUBREC to zephyr_publisher (m20670, rc0)
+1759103771: Received PUBREL from zephyr_publisher (Mid: 20670)
+1759103771: Sending PUBCOMP to zephyr_publisher (m20670)
+1759103771: Received PINGREQ from zephyr_publisher
+1759103771: Sending PINGRESP to zephyr_publisher
+1759103771: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103772: Received PUBLISH from zephyr_publisher (d0, q1, r0, m29012, 'sensors', ... (15 bytes))
+1759103772: Sending PUBACK to zephyr_publisher (m29012, rc0)
+1759103772: Received PUBLISH from zephyr_publisher (d0, q2, r0, m42194, 'sensors', ... (15 bytes))
+1759103772: Sending PUBREC to zephyr_publisher (m42194, rc0)
+1759103773: Received PUBREL from zephyr_publisher (Mid: 42194)
+1759103773: Sending PUBCOMP to zephyr_publisher (m42194)
+1759103773: Received PINGREQ from zephyr_publisher
+1759103773: Sending PINGRESP to zephyr_publisher
+1759103773: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103774: Received PUBLISH from zephyr_publisher (d0, q1, r0, m3538, 'sensors', ... (15 bytes))
+1759103774: Sending PUBACK to zephyr_publisher (m3538, rc0)
+1759103774: Received PUBLISH from zephyr_publisher (d0, q2, r0, m36252, 'sensors', ... (15 bytes))
+1759103774: Sending PUBREC to zephyr_publisher (m36252, rc0)
+1759103775: Received PUBREL from zephyr_publisher (Mid: 36252)
+1759103775: Sending PUBCOMP to zephyr_publisher (m36252)
+1759103775: Received PINGREQ from zephyr_publisher
+1759103775: Sending PINGRESP to zephyr_publisher
+1759103775: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103776: Received PUBLISH from zephyr_publisher (d0, q1, r0, m44080, 'sensors', ... (15 bytes))
+1759103776: Sending PUBACK to zephyr_publisher (m44080, rc0)
+1759103776: Received PUBLISH from zephyr_publisher (d0, q2, r0, m20478, 'sensors', ... (15 bytes))
+1759103776: Sending PUBREC to zephyr_publisher (m20478, rc0)
+1759103777: Received PUBREL from zephyr_publisher (Mid: 20478)
+1759103777: Sending PUBCOMP to zephyr_publisher (m20478)
+1759103777: Received PINGREQ from zephyr_publisher
+1759103777: Sending PINGRESP to zephyr_publisher
+1759103777: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103778: Received PUBLISH from zephyr_publisher (d0, q1, r0, m54270, 'sensors', ... (15 bytes))
+1759103778: Sending PUBACK to zephyr_publisher (m54270, rc0)
+1759103778: Received PUBLISH from zephyr_publisher (d0, q2, r0, m24824, 'sensors', ... (15 bytes))
+1759103778: Sending PUBREC to zephyr_publisher (m24824, rc0)
+1759103779: Received PUBREL from zephyr_publisher (Mid: 24824)
+1759103779: Sending PUBCOMP to zephyr_publisher (m24824)
+1759103779: Received PINGREQ from zephyr_publisher
+1759103779: Sending PINGRESP to zephyr_publisher
+1759103779: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103780: Received PUBLISH from zephyr_publisher (d0, q1, r0, m61248, 'sensors', ... (15 bytes))
+1759103780: Sending PUBACK to zephyr_publisher (m61248, rc0)
+1759103780: Received PUBLISH from zephyr_publisher (d0, q2, r0, m39070, 'sensors', ... (15 bytes))
+1759103780: Sending PUBREC to zephyr_publisher (m39070, rc0)
+1759103781: Received PUBREL from zephyr_publisher (Mid: 39070)
+1759103781: Sending PUBCOMP to zephyr_publisher (m39070)
+1759103781: Received PINGREQ from zephyr_publisher
+1759103781: Sending PINGRESP to zephyr_publisher
+1759103782: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103782: Received PUBLISH from zephyr_publisher (d0, q1, r0, m28006, 'sensors', ... (15 bytes))
+1759103782: Sending PUBACK to zephyr_publisher (m28006, rc0)
+1759103783: Received PUBLISH from zephyr_publisher (d0, q2, r0, m33944, 'sensors', ... (15 bytes))
+1759103783: Sending PUBREC to zephyr_publisher (m33944, rc0)
+1759103783: Received PUBREL from zephyr_publisher (Mid: 33944)
+1759103783: Sending PUBCOMP to zephyr_publisher (m33944)
+1759103783: Received PINGREQ from zephyr_publisher
+1759103783: Sending PINGRESP to zephyr_publisher
+1759103784: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103784: Received PUBLISH from zephyr_publisher (d0, q1, r0, m26542, 'sensors', ... (15 bytes))
+1759103784: Sending PUBACK to zephyr_publisher (m26542, rc0)
+1759103785: Received PUBLISH from zephyr_publisher (d0, q2, r0, m12782, 'sensors', ... (15 bytes))
+1759103785: Sending PUBREC to zephyr_publisher (m12782, rc0)
+1759103785: Received PUBREL from zephyr_publisher (Mid: 12782)
+1759103785: Sending PUBCOMP to zephyr_publisher (m12782)
+1759103785: Received PINGREQ from zephyr_publisher
+1759103785: Sending PINGRESP to zephyr_publisher
+1759103786: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103786: Received PUBLISH from zephyr_publisher (d0, q1, r0, m29504, 'sensors', ... (15 bytes))
+1759103786: Sending PUBACK to zephyr_publisher (m29504, rc0)
+1759103787: Received PUBLISH from zephyr_publisher (d0, q2, r0, m12442, 'sensors', ... (15 bytes))
+1759103787: Sending PUBREC to zephyr_publisher (m12442, rc0)
+1759103787: Received PUBREL from zephyr_publisher (Mid: 12442)
+1759103787: Sending PUBCOMP to zephyr_publisher (m12442)
+1759103787: Received PINGREQ from zephyr_publisher
+1759103787: Sending PINGRESP to zephyr_publisher
+1759103788: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103788: Received PUBLISH from zephyr_publisher (d0, q1, r0, m6250, 'sensors', ... (15 bytes))
+1759103788: Sending PUBACK to zephyr_publisher (m6250, rc0)
+1759103789: Received PUBLISH from zephyr_publisher (d0, q2, r0, m60068, 'sensors', ... (15 bytes))
+1759103789: Sending PUBREC to zephyr_publisher (m60068, rc0)
+1759103789: Received PUBREL from zephyr_publisher (Mid: 60068)
+1759103789: Sending PUBCOMP to zephyr_publisher (m60068)
+1759103789: Received PINGREQ from zephyr_publisher
+1759103789: Sending PINGRESP to zephyr_publisher
+1759103790: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103790: Received PUBLISH from zephyr_publisher (d0, q1, r0, m59352, 'sensors', ... (15 bytes))
+1759103790: Sending PUBACK to zephyr_publisher (m59352, rc0)
+1759103791: Received PUBLISH from zephyr_publisher (d0, q2, r0, m22790, 'sensors', ... (15 bytes))
+1759103791: Sending PUBREC to zephyr_publisher (m22790, rc0)
+1759103791: Received PUBREL from zephyr_publisher (Mid: 22790)
+1759103791: Sending PUBCOMP to zephyr_publisher (m22790)
+1759103791: Received PINGREQ from zephyr_publisher
+1759103791: Sending PINGRESP to zephyr_publisher
+1759103792: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103792: Received PUBLISH from zephyr_publisher (d0, q1, r0, m17648, 'sensors', ... (15 bytes))
+1759103792: Sending PUBACK to zephyr_publisher (m17648, rc0)
+1759103793: Received PUBLISH from zephyr_publisher (d0, q2, r0, m47804, 'sensors', ... (15 bytes))
+1759103793: Sending PUBREC to zephyr_publisher (m47804, rc0)
+1759103793: Received PUBREL from zephyr_publisher (Mid: 47804)
+1759103793: Sending PUBCOMP to zephyr_publisher (m47804)
+1759103793: Received PINGREQ from zephyr_publisher
+1759103793: Sending PINGRESP to zephyr_publisher
+1759103794: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103794: Received PUBLISH from zephyr_publisher (d0, q1, r0, m34548, 'sensors', ... (15 bytes))
+1759103794: Sending PUBACK to zephyr_publisher (m34548, rc0)
+1759103795: Received PUBLISH from zephyr_publisher (d0, q2, r0, m34588, 'sensors', ... (15 bytes))
+1759103795: Sending PUBREC to zephyr_publisher (m34588, rc0)
+1759103795: Received PUBREL from zephyr_publisher (Mid: 34588)
+1759103795: Sending PUBCOMP to zephyr_publisher (m34588)
+1759103795: Received PINGREQ from zephyr_publisher
+1759103795: Sending PINGRESP to zephyr_publisher
+1759103796: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103796: Received PUBLISH from zephyr_publisher (d0, q1, r0, m64272, 'sensors', ... (15 bytes))
+1759103796: Sending PUBACK to zephyr_publisher (m64272, rc0)
+1759103797: Received PUBLISH from zephyr_publisher (d0, q2, r0, m26180, 'sensors', ... (15 bytes))
+1759103797: Sending PUBREC to zephyr_publisher (m26180, rc0)
+1759103797: Received PUBREL from zephyr_publisher (Mid: 26180)
+1759103797: Sending PUBCOMP to zephyr_publisher (m26180)
+1759103797: Received PINGREQ from zephyr_publisher
+1759103797: Sending PINGRESP to zephyr_publisher
+1759103798: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103798: Received PUBLISH from zephyr_publisher (d0, q1, r0, m34076, 'sensors', ... (15 bytes))
+1759103798: Sending PUBACK to zephyr_publisher (m34076, rc0)
+1759103799: Received PUBLISH from zephyr_publisher (d0, q2, r0, m57774, 'sensors', ... (15 bytes))
+1759103799: Sending PUBREC to zephyr_publisher (m57774, rc0)
+1759103800: Received PUBREL from zephyr_publisher (Mid: 57774)
+1759103800: Sending PUBCOMP to zephyr_publisher (m57774)
+1759103800: Received PINGREQ from zephyr_publisher
+1759103800: Sending PINGRESP to zephyr_publisher
+1759103800: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103801: Received PUBLISH from zephyr_publisher (d0, q1, r0, m26928, 'sensors', ... (15 bytes))
+1759103801: Sending PUBACK to zephyr_publisher (m26928, rc0)
+1759103801: Received PUBLISH from zephyr_publisher (d0, q2, r0, m7364, 'sensors', ... (15 bytes))
+1759103801: Sending PUBREC to zephyr_publisher (m7364, rc0)
+1759103802: Received PUBREL from zephyr_publisher (Mid: 7364)
+1759103802: Sending PUBCOMP to zephyr_publisher (m7364)
+1759103802: Received PINGREQ from zephyr_publisher
+1759103802: Sending PINGRESP to zephyr_publisher
+1759103802: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103803: Received PUBLISH from zephyr_publisher (d0, q1, r0, m38730, 'sensors', ... (15 bytes))
+1759103803: Sending PUBACK to zephyr_publisher (m38730, rc0)
+1759103803: Received PUBLISH from zephyr_publisher (d0, q2, r0, m31574, 'sensors', ... (15 bytes))
+1759103803: Sending PUBREC to zephyr_publisher (m31574, rc0)
+1759103804: Received PUBREL from zephyr_publisher (Mid: 31574)
+1759103804: Sending PUBCOMP to zephyr_publisher (m31574)
+1759103804: Received PINGREQ from zephyr_publisher
+1759103804: Sending PINGRESP to zephyr_publisher
+1759103804: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103805: Received PUBLISH from zephyr_publisher (d0, q1, r0, m63012, 'sensors', ... (15 bytes))
+1759103805: Sending PUBACK to zephyr_publisher (m63012, rc0)
+1759103805: Received PUBLISH from zephyr_publisher (d0, q2, r0, m57284, 'sensors', ... (15 bytes))
+1759103805: Sending PUBREC to zephyr_publisher (m57284, rc0)
+1759103806: Received PUBREL from zephyr_publisher (Mid: 57284)
+1759103806: Sending PUBCOMP to zephyr_publisher (m57284)
+1759103806: Received PINGREQ from zephyr_publisher
+1759103806: Sending PINGRESP to zephyr_publisher
+1759103806: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103807: Received PUBLISH from zephyr_publisher (d0, q1, r0, m48040, 'sensors', ... (15 bytes))
+1759103807: Sending PUBACK to zephyr_publisher (m48040, rc0)
+1759103807: Received PUBLISH from zephyr_publisher (d0, q2, r0, m17752, 'sensors', ... (15 bytes))
+1759103807: Sending PUBREC to zephyr_publisher (m17752, rc0)
+1759103808: Received PUBREL from zephyr_publisher (Mid: 17752)
+1759103808: Sending PUBCOMP to zephyr_publisher (m17752)
+1759103808: Received PINGREQ from zephyr_publisher
+1759103808: Sending PINGRESP to zephyr_publisher
+1759103808: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103809: Received PUBLISH from zephyr_publisher (d0, q1, r0, m55762, 'sensors', ... (15 bytes))
+1759103809: Sending PUBACK to zephyr_publisher (m55762, rc0)
+1759103809: Received PUBLISH from zephyr_publisher (d0, q2, r0, m32790, 'sensors', ... (15 bytes))
+1759103809: Sending PUBREC to zephyr_publisher (m32790, rc0)
+1759103810: Received PUBREL from zephyr_publisher (Mid: 32790)
+1759103810: Sending PUBCOMP to zephyr_publisher (m32790)
+1759103810: Received PINGREQ from zephyr_publisher
+1759103810: Sending PINGRESP to zephyr_publisher
+1759103810: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103811: Received PUBLISH from zephyr_publisher (d0, q1, r0, m9726, 'sensors', ... (15 bytes))
+1759103811: Sending PUBACK to zephyr_publisher (m9726, rc0)
+1759103811: Received PUBLISH from zephyr_publisher (d0, q2, r0, m16462, 'sensors', ... (15 bytes))
+1759103811: Sending PUBREC to zephyr_publisher (m16462, rc0)
+1759103812: Received PUBREL from zephyr_publisher (Mid: 16462)
+1759103812: Sending PUBCOMP to zephyr_publisher (m16462)
+1759103812: Received PINGREQ from zephyr_publisher
+1759103812: Sending PINGRESP to zephyr_publisher
+1759103812: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103813: Received PUBLISH from zephyr_publisher (d0, q1, r0, m18980, 'sensors', ... (15 bytes))
+1759103813: Sending PUBACK to zephyr_publisher (m18980, rc0)
+1759103814: Received PUBLISH from zephyr_publisher (d0, q2, r0, m26228, 'sensors', ... (15 bytes))
+1759103814: Sending PUBREC to zephyr_publisher (m26228, rc0)
+1759103814: Received PUBREL from zephyr_publisher (Mid: 26228)
+1759103814: Sending PUBCOMP to zephyr_publisher (m26228)
+1759103814: Received PINGREQ from zephyr_publisher
+1759103814: Sending PINGRESP to zephyr_publisher
+1759103815: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103815: Received PUBLISH from zephyr_publisher (d0, q1, r0, m54052, 'sensors', ... (15 bytes))
+1759103815: Sending PUBACK to zephyr_publisher (m54052, rc0)
+1759103816: Received PUBLISH from zephyr_publisher (d0, q2, r0, m18150, 'sensors', ... (15 bytes))
+1759103816: Sending PUBREC to zephyr_publisher (m18150, rc0)
+1759103816: Received PUBREL from zephyr_publisher (Mid: 18150)
+1759103816: Sending PUBCOMP to zephyr_publisher (m18150)
+1759103816: Received PINGREQ from zephyr_publisher
+1759103816: Sending PINGRESP to zephyr_publisher
+1759103817: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103817: Received PUBLISH from zephyr_publisher (d0, q1, r0, m61902, 'sensors', ... (15 bytes))
+1759103817: Sending PUBACK to zephyr_publisher (m61902, rc0)
+1759103818: Received PUBLISH from zephyr_publisher (d0, q2, r0, m29142, 'sensors', ... (15 bytes))
+1759103818: Sending PUBREC to zephyr_publisher (m29142, rc0)
+1759103818: Received PUBREL from zephyr_publisher (Mid: 29142)
+1759103818: Sending PUBCOMP to zephyr_publisher (m29142)
+1759103818: Received PINGREQ from zephyr_publisher
+1759103818: Sending PINGRESP to zephyr_publisher
+1759103819: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103819: Received PUBLISH from zephyr_publisher (d0, q1, r0, m44638, 'sensors', ... (15 bytes))
+1759103819: Sending PUBACK to zephyr_publisher (m44638, rc0)
+1759103820: Received PUBLISH from zephyr_publisher (d0, q2, r0, m60352, 'sensors', ... (15 bytes))
+1759103820: Sending PUBREC to zephyr_publisher (m60352, rc0)
+1759103820: Received PUBREL from zephyr_publisher (Mid: 60352)
+1759103820: Sending PUBCOMP to zephyr_publisher (m60352)
+1759103820: Received PINGREQ from zephyr_publisher
+1759103820: Sending PINGRESP to zephyr_publisher
+1759103821: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103821: Received PUBLISH from zephyr_publisher (d0, q1, r0, m6148, 'sensors', ... (15 bytes))
+1759103821: Sending PUBACK to zephyr_publisher (m6148, rc0)
+1759103822: Received PUBLISH from zephyr_publisher (d0, q2, r0, m39742, 'sensors', ... (15 bytes))
+1759103822: Sending PUBREC to zephyr_publisher (m39742, rc0)
+1759103822: Received PUBREL from zephyr_publisher (Mid: 39742)
+1759103822: Sending PUBCOMP to zephyr_publisher (m39742)
+1759103822: Received PINGREQ from zephyr_publisher
+1759103822: Sending PINGRESP to zephyr_publisher
+1759103823: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103823: Received PUBLISH from zephyr_publisher (d0, q1, r0, m8828, 'sensors', ... (15 bytes))
+1759103823: Sending PUBACK to zephyr_publisher (m8828, rc0)
+1759103824: Received PUBLISH from zephyr_publisher (d0, q2, r0, m61998, 'sensors', ... (15 bytes))
+1759103824: Sending PUBREC to zephyr_publisher (m61998, rc0)
+1759103824: Received PUBREL from zephyr_publisher (Mid: 61998)
+1759103824: Sending PUBCOMP to zephyr_publisher (m61998)
+1759103824: Received PINGREQ from zephyr_publisher
+1759103824: Sending PINGRESP to zephyr_publisher
+1759103825: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103825: Received PUBLISH from zephyr_publisher (d0, q1, r0, m29304, 'sensors', ... (15 bytes))
+1759103825: Sending PUBACK to zephyr_publisher (m29304, rc0)
+1759103826: Received PUBLISH from zephyr_publisher (d0, q2, r0, m31266, 'sensors', ... (15 bytes))
+1759103826: Sending PUBREC to zephyr_publisher (m31266, rc0)
+1759103826: Received PUBREL from zephyr_publisher (Mid: 31266)
+1759103826: Sending PUBCOMP to zephyr_publisher (m31266)
+1759103826: Received PINGREQ from zephyr_publisher
+1759103826: Sending PINGRESP to zephyr_publisher
+1759103827: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103827: Received PUBLISH from zephyr_publisher (d0, q1, r0, m6946, 'sensors', ... (15 bytes))
+1759103827: Sending PUBACK to zephyr_publisher (m6946, rc0)
+1759103828: Received PUBLISH from zephyr_publisher (d0, q2, r0, m61916, 'sensors', ... (15 bytes))
+1759103828: Sending PUBREC to zephyr_publisher (m61916, rc0)
+1759103828: Received PUBREL from zephyr_publisher (Mid: 61916)
+1759103828: Sending PUBCOMP to zephyr_publisher (m61916)
+1759103828: Received PINGREQ from zephyr_publisher
+1759103828: Sending PINGRESP to zephyr_publisher
+1759103829: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103829: Received PUBLISH from zephyr_publisher (d0, q1, r0, m24812, 'sensors', ... (15 bytes))
+1759103829: Sending PUBACK to zephyr_publisher (m24812, rc0)
+1759103830: Received PUBLISH from zephyr_publisher (d0, q2, r0, m35642, 'sensors', ... (15 bytes))
+1759103830: Sending PUBREC to zephyr_publisher (m35642, rc0)
+1759103830: Received PUBREL from zephyr_publisher (Mid: 35642)
+1759103830: Sending PUBCOMP to zephyr_publisher (m35642)
+1759103830: Received PINGREQ from zephyr_publisher
+1759103830: Sending PINGRESP to zephyr_publisher
+1759103831: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103832: Received PUBLISH from zephyr_publisher (d0, q1, r0, m13818, 'sensors', ... (15 bytes))
+1759103832: Sending PUBACK to zephyr_publisher (m13818, rc0)
+1759103832: Received PUBLISH from zephyr_publisher (d0, q2, r0, m31400, 'sensors', ... (15 bytes))
+1759103832: Sending PUBREC to zephyr_publisher (m31400, rc0)
+1759103833: Received PUBREL from zephyr_publisher (Mid: 31400)
+1759103833: Sending PUBCOMP to zephyr_publisher (m31400)
+1759103833: Received PINGREQ from zephyr_publisher
+1759103833: Sending PINGRESP to zephyr_publisher
+1759103833: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103834: Received PUBLISH from zephyr_publisher (d0, q1, r0, m49170, 'sensors', ... (15 bytes))
+1759103834: Sending PUBACK to zephyr_publisher (m49170, rc0)
+1759103834: Received PUBLISH from zephyr_publisher (d0, q2, r0, m2286, 'sensors', ... (15 bytes))
+1759103834: Sending PUBREC to zephyr_publisher (m2286, rc0)
+1759103835: Received PUBREL from zephyr_publisher (Mid: 2286)
+1759103835: Sending PUBCOMP to zephyr_publisher (m2286)
+1759103835: Received PINGREQ from zephyr_publisher
+1759103835: Sending PINGRESP to zephyr_publisher
+1759103835: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103836: Received PUBLISH from zephyr_publisher (d0, q1, r0, m35214, 'sensors', ... (15 bytes))
+1759103836: Sending PUBACK to zephyr_publisher (m35214, rc0)
+1759103836: Received PUBLISH from zephyr_publisher (d0, q2, r0, m43744, 'sensors', ... (15 bytes))
+1759103836: Sending PUBREC to zephyr_publisher (m43744, rc0)
+1759103837: Received PUBREL from zephyr_publisher (Mid: 43744)
+1759103837: Sending PUBCOMP to zephyr_publisher (m43744)
+1759103837: Received PINGREQ from zephyr_publisher
+1759103837: Sending PINGRESP to zephyr_publisher
+1759103837: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103838: Received PUBLISH from zephyr_publisher (d0, q1, r0, m8902, 'sensors', ... (15 bytes))
+1759103838: Sending PUBACK to zephyr_publisher (m8902, rc0)
+1759103838: Received PUBLISH from zephyr_publisher (d0, q2, r0, m40374, 'sensors', ... (15 bytes))
+1759103838: Sending PUBREC to zephyr_publisher (m40374, rc0)
+1759103839: Received PUBREL from zephyr_publisher (Mid: 40374)
+1759103839: Sending PUBCOMP to zephyr_publisher (m40374)
+1759103839: Received PINGREQ from zephyr_publisher
+1759103839: Sending PINGRESP to zephyr_publisher
+1759103839: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103840: Received PUBLISH from zephyr_publisher (d0, q1, r0, m8058, 'sensors', ... (15 bytes))
+1759103840: Sending PUBACK to zephyr_publisher (m8058, rc0)
+1759103840: Received PUBLISH from zephyr_publisher (d0, q2, r0, m47004, 'sensors', ... (15 bytes))
+1759103840: Sending PUBREC to zephyr_publisher (m47004, rc0)
+1759103841: Received PUBREL from zephyr_publisher (Mid: 47004)
+1759103841: Sending PUBCOMP to zephyr_publisher (m47004)
+1759103841: Received PINGREQ from zephyr_publisher
+1759103841: Sending PINGRESP to zephyr_publisher
+1759103841: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103842: Received PUBLISH from zephyr_publisher (d0, q1, r0, m22988, 'sensors', ... (15 bytes))
+1759103842: Sending PUBACK to zephyr_publisher (m22988, rc0)
+1759103842: Received PUBLISH from zephyr_publisher (d0, q2, r0, m64794, 'sensors', ... (15 bytes))
+1759103842: Sending PUBREC to zephyr_publisher (m64794, rc0)
+1759103843: Received PUBREL from zephyr_publisher (Mid: 64794)
+1759103843: Sending PUBCOMP to zephyr_publisher (m64794)
+1759103843: Received PINGREQ from zephyr_publisher
+1759103843: Sending PINGRESP to zephyr_publisher
+1759103843: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103844: Received PUBLISH from zephyr_publisher (d0, q1, r0, m21172, 'sensors', ... (15 bytes))
+1759103844: Sending PUBACK to zephyr_publisher (m21172, rc0)
+1759103844: Received PUBLISH from zephyr_publisher (d0, q2, r0, m19676, 'sensors', ... (15 bytes))
+1759103844: Sending PUBREC to zephyr_publisher (m19676, rc0)
+1759103845: Received PUBREL from zephyr_publisher (Mid: 19676)
+1759103845: Sending PUBCOMP to zephyr_publisher (m19676)
+1759103845: Received PINGREQ from zephyr_publisher
+1759103845: Sending PINGRESP to zephyr_publisher
+1759103846: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103846: Received PUBLISH from zephyr_publisher (d0, q1, r0, m41970, 'sensors', ... (15 bytes))
+1759103846: Sending PUBACK to zephyr_publisher (m41970, rc0)
+1759103847: Received PUBLISH from zephyr_publisher (d0, q2, r0, m33552, 'sensors', ... (15 bytes))
+1759103847: Sending PUBREC to zephyr_publisher (m33552, rc0)
+1759103847: Received PUBREL from zephyr_publisher (Mid: 33552)
+1759103847: Sending PUBCOMP to zephyr_publisher (m33552)
+1759103847: Received PINGREQ from zephyr_publisher
+1759103847: Sending PINGRESP to zephyr_publisher
+1759103848: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103848: Received PUBLISH from zephyr_publisher (d0, q1, r0, m63614, 'sensors', ... (15 bytes))
+1759103848: Sending PUBACK to zephyr_publisher (m63614, rc0)
+1759103849: Received PUBLISH from zephyr_publisher (d0, q2, r0, m25570, 'sensors', ... (15 bytes))
+1759103849: Sending PUBREC to zephyr_publisher (m25570, rc0)
+1759103849: Received PUBREL from zephyr_publisher (Mid: 25570)
+1759103849: Sending PUBCOMP to zephyr_publisher (m25570)
+1759103849: Received PINGREQ from zephyr_publisher
+1759103849: Sending PINGRESP to zephyr_publisher
+1759103850: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103850: Received PUBLISH from zephyr_publisher (d0, q1, r0, m4456, 'sensors', ... (15 bytes))
+1759103850: Sending PUBACK to zephyr_publisher (m4456, rc0)
+1759103851: Received PUBLISH from zephyr_publisher (d0, q2, r0, m36368, 'sensors', ... (15 bytes))
+1759103851: Sending PUBREC to zephyr_publisher (m36368, rc0)
+1759103851: Received PUBREL from zephyr_publisher (Mid: 36368)
+1759103851: Sending PUBCOMP to zephyr_publisher (m36368)
+1759103851: Received PINGREQ from zephyr_publisher
+1759103851: Sending PINGRESP to zephyr_publisher
+1759103852: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103852: Received PUBLISH from zephyr_publisher (d0, q1, r0, m10134, 'sensors', ... (15 bytes))
+1759103852: Sending PUBACK to zephyr_publisher (m10134, rc0)
+1759103853: Received PUBLISH from zephyr_publisher (d0, q2, r0, m27800, 'sensors', ... (15 bytes))
+1759103853: Sending PUBREC to zephyr_publisher (m27800, rc0)
+1759103853: Received PUBREL from zephyr_publisher (Mid: 27800)
+1759103853: Sending PUBCOMP to zephyr_publisher (m27800)
+1759103853: Received PINGREQ from zephyr_publisher
+1759103853: Sending PINGRESP to zephyr_publisher
+1759103854: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103854: Received PUBLISH from zephyr_publisher (d0, q1, r0, m49016, 'sensors', ... (15 bytes))
+1759103854: Sending PUBACK to zephyr_publisher (m49016, rc0)
+1759103855: Received PUBLISH from zephyr_publisher (d0, q2, r0, m38218, 'sensors', ... (15 bytes))
+1759103855: Sending PUBREC to zephyr_publisher (m38218, rc0)
+1759103855: Received PUBREL from zephyr_publisher (Mid: 38218)
+1759103855: Sending PUBCOMP to zephyr_publisher (m38218)
+1759103855: Received PINGREQ from zephyr_publisher
+1759103855: Sending PINGRESP to zephyr_publisher
+1759103856: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103856: Received PUBLISH from zephyr_publisher (d0, q1, r0, m18194, 'sensors', ... (15 bytes))
+1759103856: Sending PUBACK to zephyr_publisher (m18194, rc0)
+1759103857: Received PUBLISH from zephyr_publisher (d0, q2, r0, m11296, 'sensors', ... (15 bytes))
+1759103857: Sending PUBREC to zephyr_publisher (m11296, rc0)
+1759103857: Received PUBREL from zephyr_publisher (Mid: 11296)
+1759103857: Sending PUBCOMP to zephyr_publisher (m11296)
+1759103857: Received PINGREQ from zephyr_publisher
+1759103857: Sending PINGRESP to zephyr_publisher
+1759103858: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103858: Received PUBLISH from zephyr_publisher (d0, q1, r0, m51400, 'sensors', ... (15 bytes))
+1759103858: Sending PUBACK to zephyr_publisher (m51400, rc0)
+1759103859: Received PUBLISH from zephyr_publisher (d0, q2, r0, m53418, 'sensors', ... (15 bytes))
+1759103859: Sending PUBREC to zephyr_publisher (m53418, rc0)
+1759103859: Received PUBREL from zephyr_publisher (Mid: 53418)
+1759103859: Sending PUBCOMP to zephyr_publisher (m53418)
+1759103859: Received PINGREQ from zephyr_publisher
+1759103859: Sending PINGRESP to zephyr_publisher
+1759103860: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103860: Received PUBLISH from zephyr_publisher (d0, q1, r0, m58862, 'sensors', ... (15 bytes))
+1759103860: Sending PUBACK to zephyr_publisher (m58862, rc0)
+1759103861: Received PUBLISH from zephyr_publisher (d0, q2, r0, m35268, 'sensors', ... (15 bytes))
+1759103861: Sending PUBREC to zephyr_publisher (m35268, rc0)
+1759103861: Received PUBREL from zephyr_publisher (Mid: 35268)
+1759103861: Sending PUBCOMP to zephyr_publisher (m35268)
+1759103861: Received PINGREQ from zephyr_publisher
+1759103861: Sending PINGRESP to zephyr_publisher
+1759103862: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103862: Received PUBLISH from zephyr_publisher (d0, q1, r0, m62362, 'sensors', ... (15 bytes))
+1759103862: Sending PUBACK to zephyr_publisher (m62362, rc0)
+1759103863: Received PUBLISH from zephyr_publisher (d0, q2, r0, m7426, 'sensors', ... (15 bytes))
+1759103863: Sending PUBREC to zephyr_publisher (m7426, rc0)
+1759103863: Received PUBREL from zephyr_publisher (Mid: 7426)
+1759103863: Sending PUBCOMP to zephyr_publisher (m7426)
+1759103864: Received PINGREQ from zephyr_publisher
+1759103864: Sending PINGRESP to zephyr_publisher
+1759103864: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103865: Received PUBLISH from zephyr_publisher (d0, q1, r0, m20298, 'sensors', ... (15 bytes))
+1759103865: Sending PUBACK to zephyr_publisher (m20298, rc0)
+1759103865: Received PUBLISH from zephyr_publisher (d0, q2, r0, m49318, 'sensors', ... (15 bytes))
+1759103865: Sending PUBREC to zephyr_publisher (m49318, rc0)
+1759103866: Received PUBREL from zephyr_publisher (Mid: 49318)
+1759103866: Sending PUBCOMP to zephyr_publisher (m49318)
+1759103866: Received PINGREQ from zephyr_publisher
+1759103866: Sending PINGRESP to zephyr_publisher
+1759103866: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103867: Received PUBLISH from zephyr_publisher (d0, q1, r0, m21606, 'sensors', ... (15 bytes))
+1759103867: Sending PUBACK to zephyr_publisher (m21606, rc0)
+1759103867: Received PUBLISH from zephyr_publisher (d0, q2, r0, m38272, 'sensors', ... (15 bytes))
+1759103867: Sending PUBREC to zephyr_publisher (m38272, rc0)
+1759103868: Received PUBREL from zephyr_publisher (Mid: 38272)
+1759103868: Sending PUBCOMP to zephyr_publisher (m38272)
+1759103868: Received PINGREQ from zephyr_publisher
+1759103868: Sending PINGRESP to zephyr_publisher
+1759103868: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103869: Received PUBLISH from zephyr_publisher (d0, q1, r0, m26108, 'sensors', ... (15 bytes))
+1759103869: Sending PUBACK to zephyr_publisher (m26108, rc0)
+1759103869: Received PUBLISH from zephyr_publisher (d0, q2, r0, m22314, 'sensors', ... (15 bytes))
+1759103869: Sending PUBREC to zephyr_publisher (m22314, rc0)
+1759103870: Received PUBREL from zephyr_publisher (Mid: 22314)
+1759103870: Sending PUBCOMP to zephyr_publisher (m22314)
+1759103870: Received PINGREQ from zephyr_publisher
+1759103870: Sending PINGRESP to zephyr_publisher
+1759103870: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103871: Received PUBLISH from zephyr_publisher (d0, q1, r0, m5008, 'sensors', ... (15 bytes))
+1759103871: Sending PUBACK to zephyr_publisher (m5008, rc0)
+1759103871: Received PUBLISH from zephyr_publisher (d0, q2, r0, m48074, 'sensors', ... (15 bytes))
+1759103871: Sending PUBREC to zephyr_publisher (m48074, rc0)
+1759103872: Received PUBREL from zephyr_publisher (Mid: 48074)
+1759103872: Sending PUBCOMP to zephyr_publisher (m48074)
+1759103872: Received PINGREQ from zephyr_publisher
+1759103872: Sending PINGRESP to zephyr_publisher
+1759103872: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103873: Received PUBLISH from zephyr_publisher (d0, q1, r0, m20012, 'sensors', ... (15 bytes))
+1759103873: Sending PUBACK to zephyr_publisher (m20012, rc0)
+1759103873: Received PUBLISH from zephyr_publisher (d0, q2, r0, m41494, 'sensors', ... (15 bytes))
+1759103873: Sending PUBREC to zephyr_publisher (m41494, rc0)
+1759103874: Received PUBREL from zephyr_publisher (Mid: 41494)
+1759103874: Sending PUBCOMP to zephyr_publisher (m41494)
+1759103874: Received PINGREQ from zephyr_publisher
+1759103874: Sending PINGRESP to zephyr_publisher
+1759103874: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103875: Received PUBLISH from zephyr_publisher (d0, q1, r0, m46534, 'sensors', ... (15 bytes))
+1759103875: Sending PUBACK to zephyr_publisher (m46534, rc0)
+1759103875: Received PUBLISH from zephyr_publisher (d0, q2, r0, m40588, 'sensors', ... (15 bytes))
+1759103875: Sending PUBREC to zephyr_publisher (m40588, rc0)
+1759103876: Received PUBREL from zephyr_publisher (Mid: 40588)
+1759103876: Sending PUBCOMP to zephyr_publisher (m40588)
+1759103876: Received PINGREQ from zephyr_publisher
+1759103876: Sending PINGRESP to zephyr_publisher
+1759103876: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103877: Received PUBLISH from zephyr_publisher (d0, q1, r0, m28898, 'sensors', ... (15 bytes))
+1759103877: Sending PUBACK to zephyr_publisher (m28898, rc0)
+1759103877: Received PUBLISH from zephyr_publisher (d0, q2, r0, m40016, 'sensors', ... (15 bytes))
+1759103877: Sending PUBREC to zephyr_publisher (m40016, rc0)
+1759103878: Received PUBREL from zephyr_publisher (Mid: 40016)
+1759103878: Sending PUBCOMP to zephyr_publisher (m40016)
+1759103878: Received PINGREQ from zephyr_publisher
+1759103878: Sending PINGRESP to zephyr_publisher
+1759103879: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103879: Received PUBLISH from zephyr_publisher (d0, q1, r0, m16760, 'sensors', ... (15 bytes))
+1759103879: Sending PUBACK to zephyr_publisher (m16760, rc0)
+1759103880: Received PUBLISH from zephyr_publisher (d0, q2, r0, m34604, 'sensors', ... (15 bytes))
+1759103880: Sending PUBREC to zephyr_publisher (m34604, rc0)
+1759103880: Received PUBREL from zephyr_publisher (Mid: 34604)
+1759103880: Sending PUBCOMP to zephyr_publisher (m34604)
+1759103880: Received PINGREQ from zephyr_publisher
+1759103880: Sending PINGRESP to zephyr_publisher
+1759103881: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103881: Received PUBLISH from zephyr_publisher (d0, q1, r0, m12710, 'sensors', ... (15 bytes))
+1759103881: Sending PUBACK to zephyr_publisher (m12710, rc0)
+1759103882: Received PUBLISH from zephyr_publisher (d0, q2, r0, m20760, 'sensors', ... (15 bytes))
+1759103882: Sending PUBREC to zephyr_publisher (m20760, rc0)
+1759103882: Received PUBREL from zephyr_publisher (Mid: 20760)
+1759103882: Sending PUBCOMP to zephyr_publisher (m20760)
+1759103882: Received PINGREQ from zephyr_publisher
+1759103882: Sending PINGRESP to zephyr_publisher
+1759103883: Received PUBLISH from zephyr_publisher (d0, q0, r0, m0, 'sensors', ... (15 bytes))
+1759103883: Received PUBLISH from zephyr_publisher (d0, q1, r0, m53338, 'sensors', ... (15 bytes))
+1759103883: Sending PUBACK to zephyr_publisher (m53338, rc0)
+1759103884: Received PUBLISH from zephyr_publisher (d0, q2, r0, m640, 'sensors', ... (15 bytes))
+1759103884: Sending PUBREC to zephyr_publisher (m640, rc0)
+1759103884: Received PUBREL from zephyr_publisher (Mid: 640)
+1759103884: Sending PUBCOMP to zephyr_publisher (m640)
+1759103884: Received DISCONNECT from zephyr_publisher
+1759103884: Client zephyr_publisher disconnected.

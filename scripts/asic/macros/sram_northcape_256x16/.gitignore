@@ -1,0 +1,19 @@
+# OpenRAM build artifacts
+datasheet.info
+delay_meas.sp
+delay_stim.sp
+functional_meas.sp
+functional_stim.sp
+sram_northcape*lib
+sram_northcape*.gds
+sram_northcape*.html
+sram_northcape*.lef
+sram_northcape*.log
+sram_northcape*.lvs.sp
+sram_northcape*.py
+sram_northcape*.sp
+sram_northcape*.v
+sram.sp
+trimmed.sp
+# this is the actual config, which we DO WANT to see in the repo!
+!sram_northcape_256x16.py

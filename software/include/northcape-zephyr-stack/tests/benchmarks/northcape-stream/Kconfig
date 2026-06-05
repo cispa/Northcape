@@ -1,0 +1,9 @@
+mainmenu "Stream config"
+
+config STREAM_ARRAY_SIZE
+    int "Stream benchmark array size"
+    default 10000000
+    help
+        Stream array size. See stream documentation.
+
+source "Kconfig.zephyr"

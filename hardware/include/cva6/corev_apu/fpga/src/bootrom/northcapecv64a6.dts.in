@@ -1,0 +1,48 @@
+/dts-v1/;
+
+/include/ "northcape.dtsi"
+
+/delete-node/ &{/interrupt-controller};
+
+&{/amba_pl/ariane_peripherals_wrapper_verilog@0c000000}{
+    interrupts-extended = <&CPU0_intc 11 &CPU0_intc 9>;
+};
+
+&{/amba_pl/clint_wrapper_verilog@02000000}{
+    compatible = "riscv,clint0";
+    interrupts-extended = <&CPU0_intc 3 &CPU0_intc 7>;
+};
+
+
+/ {
+  #address-cells = <1>;
+  #size-cells = <1>;
+  compatible = "eth,ariane-bare-dev";
+  model = "eth,ariane-bare";
+  chosen {
+    stdout-path = "/soc/uart@10000000:UART_BITRATE";
+  };
+  cpus {
+    #address-cells = <1>;
+    #size-cells = <0>;
+    timebase-frequency = <HALF_CLOCK_FREQUENCY>;
+    CPU0: cpu@0 {
+      clock-frequency = <CLOCK_FREQUENCY>;
+      device_type = "cpu";
+      reg = <0>;
+      status = "okay";
+      compatible = "eth, ariane", "riscv";
+      riscv,isa = "rv64imafdc";
+      mmu-type = "riscv,sv39";
+      tlb-split;
+      // HLIC - hart local interrupt controller
+      CPU0_intc: interrupt-controller {
+        #interrupt-cells = <1>;
+        interrupt-controller;
+        compatible = "riscv,cpu-intc";
+      };
+    };
+  };
+};
+// delete ethernet device if disabled
+/delete-node/ &{/amba_pl/ethernet@40c00000}; // DELETE_ETH

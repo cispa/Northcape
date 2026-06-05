@@ -1,0 +1,48 @@
+diff --git a/Makefile b/Makefile
+index 5170906..bf65af4 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,7 +1,7 @@
+ # for out-of-tree build support
+ SOURCE_DIR := $(dir $(firstword $(MAKEFILE_LIST)))
+ 
+-CMAKE_FLAGS = -DCMAKE_BUILD_TYPE=Release
++CMAKE_FLAGS = -DCMAKE_BUILD_TYPE=Debug
+ 
+ build: configure
+ 	+cmake --build build
+diff --git a/src/slang_frontend.cc b/src/slang_frontend.cc
+index bd02943..1d8c1c3 100644
+--- a/src/slang_frontend.cc
++++ b/src/slang_frontend.cc
+@@ -2820,12 +2820,16 @@ std::string hierpath_relative_to(const ast::Scope *relative_to, const ast::Scope
+ 	build_hierpath3(relative_to, path, scope);
+ 	return path.str();
+ }
+-
++static int dummy_symbol_count = 0;
+ RTLIL::IdString NetlistContext::id(const ast::Symbol &symbol)
+ {
+ 	std::ostringstream path;
+ 	build_hierpath2(*this, path, symbol.getParentScope());
+ 	path << symbol.name;
++	if(std::getenv("NORTHCAPE_MMU")){
++		path << "_" << dummy_symbol_count++;
++	}
++	std::cout << "Adding symbol " << path.str() << std::endl;
+ 	return RTLIL::escape_id(path.str());
+ }
+ 
+diff --git a/tests/run.sh b/tests/run.sh
+index e341188..7fac8e7 100755
+--- a/tests/run.sh
++++ b/tests/run.sh
+@@ -9,7 +9,7 @@ do
+ 	base=$(basename "$testcase")
+ 	dir=$(dirname "$testcase")
+ 	echo -n "${TEXT}... ";
+-	if ! (cd "$dir" && exec "$YOSYS" -m "$PLUGIN" "$base" 1>/dev/null 2>&1); then
++	if ! (cd "$dir" && exec "$YOSYS" -m "$PLUGIN" "$base"); then
+ 		echo -e "\e[31mFAIL\e[0m";
+ 		echo -e "Testcase \e[1m${testcase}\e[0m failed";
+ 		(cd "$dir" && exec "$YOSYS" -g -Q -m "$PLUGIN" "$base");

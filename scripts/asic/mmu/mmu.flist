@@ -1,0 +1,14 @@
+../../../hardware/include/northcape/common/northcape_unread.sv
+../../../hardware/include/northcape/common/axis5.sv
+../../../hardware/include/northcape/common/axi5.sv
+../../../hardware/include/northcape/common/northcape_types.sv
+../../../hardware/include/northcape/tests/drivers/northcape_test_trng.sv
+../../../hardware/include/northcape/include/verilog_qarma/qarma_64.v
+../../../hardware/include/northcape/common/qarmaCBCMac.sv
+../../../hardware/include/northcape/common/northcape_rng.sv
+../../../hardware/include/northcape/mmu/northcape_mmu_common.sv
+../../../hardware/include/northcape/mmu/northcape_mmu_read_chan.sv
+../../../hardware/include/northcape/mmu/northcape_mmu_write_chan.sv
+../../../hardware/include/northcape/mmu/northcape_mmu.sv
+../../../hardware/hdl/northcape_wrappers/northcape_mmu_wrapper.sv
+../../../hardware/hdl/block_design_wrappers/northcape_mmu_wrapper_verilog.v

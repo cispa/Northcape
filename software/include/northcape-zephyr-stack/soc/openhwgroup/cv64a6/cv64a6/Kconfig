@@ -1,0 +1,87 @@
+# RISCV64 Ariane cva6 configuration options
+
+config SOC_SERIES_CV64A6
+	select RISCV
+
+config SOC_SERIES_CV64A6_HAS_PLIC
+	bool "Is PLIC available?"
+	depends on SOC_SERIES_CV64A6
+	select RISCV_HAS_PLIC
+	default y
+	help
+		In the Skadi system, the PLIC is separated out into a separate driver task.
+		Thus, it is not available until the driver task has been loaded.
+		The system has to disable the interrupt registers to disable interrupts.
+
+config SOC_SERIES_CV64A6_HAS_CMO
+	bool "Are CMO enabled?"
+	depends on SOC_SERIES_CV64A6
+	help
+		Are cache management operations (CMOs) available?
+		Currently, CMOs are only supported with the HPDCache.
+
+config SOC_CV64A6
+	select RISCV_PRIVILEGED
+	select ATOMIC_OPERATIONS_BUILTIN
+	# for transition period, where subsystems call into main binary, this is a problem:
+	# the GP is destroyed by jump into subsystem.
+	# select RISCV_GP
+	select USE_SWITCH_SUPPORTED
+	select USE_SWITCH
+	select CPU_HAS_FPU
+	select CPU_HAS_FPU_DOUBLE_PRECISION
+	select SCHED_IPI_SUPPORTED
+	select 64BIT
+	select RISCV_ISA_RV64I
+	select RISCV_ISA_EXT_M
+	select RISCV_ISA_EXT_A
+	select RISCV_ISA_EXT_C
+	select RISCV_ISA_EXT_ZICSR
+	select RISCV_ISA_EXT_ZIFENCEI
+	select RISCV_ISA_EXT_ZBA
+	select RISCV_ISA_EXT_ZBB
+	select RISCV_ISA_EXT_ZBC
+	select RISCV_ISA_EXT_ZBS
+	select HAS_POWEROFF
+	select CPU_HAS_DCACHE
+	select CPU_HAS_ICACHE
+
+config SOC_CV64A6_IMAC
+	select RISCV_PRIVILEGED
+	select ATOMIC_OPERATIONS_BUILTIN
+	# for transition period, where subsystems call into main binary, this is a problem:
+	# the GP is destroyed by jump into subsystem.
+	# select RISCV_GP
+	select USE_SWITCH_SUPPORTED
+	select USE_SWITCH
+	select SCHED_IPI_SUPPORTED
+	select 64BIT
+	select RISCV_ISA_RV64I
+	select RISCV_ISA_EXT_M
+	select RISCV_ISA_EXT_A
+	select RISCV_ISA_EXT_C
+	select RISCV_ISA_EXT_ZICSR
+	select RISCV_ISA_EXT_ZIFENCEI
+	select RISCV_ISA_EXT_ZBA
+	select RISCV_ISA_EXT_ZBB
+	select RISCV_ISA_EXT_ZBC
+	select RISCV_ISA_EXT_ZBS
+	select HAS_POWEROFF
+	select CPU_HAS_DCACHE
+	select CPU_HAS_ICACHE
+
+
+config SOC_SERIES_CV64A6_PROVIDE_NONSTANDARD_CACHE_OPTIONS
+	bool "Include non-standard cache management operations"
+	depends on SOC_CV64A6 || SOC_CV64A6_IMAC
+	default n
+
+config SOC_SERIES_CV64A6_PROVIDE_TEST_POWEROFF
+	bool "Include methods for terminating a test in the CV64a6 testbench"
+	depends on SOC_CV64A6 || SOC_CV64a6_IMAC
+	default n
+
+config SOC_SERIES_CV64A6_PROVIDE_FPGA_POWEROFF
+	bool "Include methods for terminating a test on the FPGA"
+	depends on SOC_CV64A6 || SOC_CV64A6_IMAC
+	default n

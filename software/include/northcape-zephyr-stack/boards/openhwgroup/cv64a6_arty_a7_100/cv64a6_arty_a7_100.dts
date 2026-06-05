@@ -1,0 +1,123 @@
+/*
+ * Copyright (c) 2023 by Rivos Inc.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+/dts-v1/;
+
+#include <openhwgroup/cv64a6.dtsi>
+
+/ {
+	model = "Openhardwaregroup CV64A6 on Arty A7 100";
+	compatible = "ariane,cv64a6_arty_a7_100";
+
+	chosen {
+		zephyr,console = &uart0;
+		zephyr,shell-uart = &uart0;
+		zephyr,sram = &memory0;
+		zephyr,entropy = &ops;
+		skadi,test-arena = &skadi_test_arena;
+		skadi,mem-arena = &skadi_mem_arena;
+	};
+};
+
+// appx. 83 / 256 MiB of memory
+&memory0 {
+	reg = <0x80000000 0x4FFFFC0>;
+};
+
+&skadi_test_arena {
+	reg = <0x84FFFFC0 0x40>;
+};
+
+&skadi_mem_arena {
+	reg = <0x85000000 0xB000000>;
+};
+
+&uart0 {
+	status = "okay";
+	interrupt-parent = <&plic>;
+    interrupts = <9 0x4>;
+};
+
+&spi0 {
+	status = "okay";
+	interrupt-parent = <&plic>;
+    interrupts = <8 0x4>;
+};
+
+&clint{
+  status = "okay";
+};
+
+&dma0 {
+	status = "disabled";
+};
+
+&pulp_timer {
+	status = "okay";
+	pulp,clock-period-ns = <40>;
+};
+
+
+&ops {
+	status = "okay";
+};
+
+&ops_irq {
+	status = "okay";
+};
+
+
+&cpu_0 {
+	riscv,isa="rv64imac";
+	clock-frequency = <25000000>;
+};
+
+&cpus {
+	timebase-frequency = <12500000>;
+};
+
+&uart0 {
+	clock-frequency = <25000000>;
+};
+
+&clk_cpu {
+	clock-frequency = <25000000>;
+};
+
+&clk_bus_0 {
+	clock-frequency = <25000000>;
+};
+
+&axi_ethernetlite_0_mdio{
+	status = "okay";
+
+	arty_phy0: phy@1 {
+		#address-cells = <1>;
+		#size-cells = <0>;
+		compatible = "ethernet-phy";
+		reg = <1>;
+		status="okay";
+    };
+};
+
+&arty_ethernetlite_0 {
+	status = "okay";
+};
+
+&arty_ethernetlite_0_mac {
+	phy-handle = <&arty_phy0>;
+	status = "okay";
+};
+
+&ha1588 {
+	// only 100 MHz on this SoC
+	ha1588,period = <0x10 0x0>;
+	status = "okay";
+};
+
+&pmod_can{
+	status = "okay";
+};
+

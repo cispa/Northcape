@@ -1,0 +1,94 @@
+Hello World!
+init SPI
+status: 0x0000000000000025
+status: 0x0000000000000025
+SPI initialized!
+initializing SD... 
+SD command cmd0 	response : 01
+SD command cmd55 	response : 01
+SD command cmd41 	response : 01
+SD command cmd55 	response : 01
+SD command cmd41 	response : 00
+sd initialized!
+gpt partition table header:
+	signature:	5452415020494645
+	revision:	00010000
+	size:		0000005C
+	crc_header:	914E6601
+	reserved:	00000000
+	current lba:	0000000000000001
+	backup lda:	0000000003A31FFF
+	partition entries lba:   	0000000000000002
+	number partition entries:	00000080
+	size partition entries:  	00000080
+gpt partition entry 00
+	partition type guid:	D5F7127456A1134B81DC867174929325
+	partition guid:     	3F208FCFE4F3C44B87F08A5B13D90C40
+	first lba:	0000000000000800
+	last lba:	0000000000001B68
+	attributes:	0000000000000000
+	name:	000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+gpt partition entry 01
+	partition type guid:	A2A0D0EBE5B9334487C068B6B72699C7
+	partition guid:     	E395F1A60149C94D9EB909E3F16EC853
+	first lba:	0000000000100000
+	last lba:	0000000003A31FDE
+	attributes:	0000000000000000
+	name:	000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+gpt partition entry 02
+	partition type guid:	00000000000000000000000000000000
+	partition guid:     	00000000000000000000000000000000
+	first lba:	0000000000000000
+	last lba:	0000000000000000
+	attributes:	0000000000000000
+	name:	000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+gpt partition entry 03
+	partition type guid:	00000000000000000000000000000000
+	partition guid:     	00000000000000000000000000000000
+	first lba:	0000000000000000
+	last lba:	0000000000000000
+	attributes:	0000000000000000
+	name:	000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+copying boot image I: Configuring IRQs 651 and 779!
+*** Booting Zephyr OS build v3.7.0-rc1-4622-gaf4323dc74f0 ***
+-------------------------------------------------------------
+STREAM version $Revision: 5.10 $
+-------------------------------------------------------------
+This system uses 8 bytes per array element.
+-------------------------------------------------------------
+Array size = 10000000 (elements), Offset = 0 (elements)
+Memory per array = 76.3 MiB (= 0.1 GiB).
+Total memory required = 228.9 MiB (= 0.2 GiB).
+Each kernel will be executed 10 times.
+ The *best* time for each kernel (excluding the first iteration)
+ will be used to compute the reported bandwidth.
+-------------------------------------------------------------
+Your clock granularity/precision appears to be 99999 microseconds.
+Each test below will take on the order of 4499999 microseconds.
+   (= 45 clock ticks)
+Increase the size of the arrays if this shows that
+you are not getting at least 20 clock ticks per test.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Raw results:
+Copy:       Scale:      Add:        Triad:     
+6.000000 6.700000 9.000000 9.500000
+6.100000 6.600000 9.000000 9.500000
+6.100000 6.600000 9.100000 9.500000
+6.000000 6.700000 9.000000 9.500000
+6.100000 6.600000 9.100000 9.500000
+6.000000 6.700000 9.000000 9.500000
+6.000000 6.700000 9.000000 9.500000
+6.100000 6.600000 9.100000 9.500000
+6.000000 6.700000 9.000000 9.500000
+Function    Best Rate MB/s  Avg time     Min time     Max time     Stddev time
+Copy:              26.7     6.044444     6.000000     6.100000     0.049690
+Scale:             24.2     6.655556     6.600000     6.700000     0.049690
+Add:               26.7     9.033333     9.000000     9.100000     0.047140
+Triad:             25.3     9.500000     9.500000     9.500000     0.000000
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-13 on all three arrays
+-------------------------------------------------------------

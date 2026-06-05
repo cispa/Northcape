@@ -1,0 +1,7 @@
+# no mmc in Vivado-generated tree
+/soc/xps-spi@20000000/mmc@0
+# CPU false positive due to reg property
+/cpus/cpu@0
+# too large on purpose, due to modifications done by SBI on runtime
+/soc/clint@2000000
+/soc/interrupt-controller@c000000

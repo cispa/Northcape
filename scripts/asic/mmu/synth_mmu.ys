@@ -1,0 +1,6 @@
+# systemverilog design
+read_slang -C mmu.flist --top northcape_mmu_wrapper_verilog -I ../../../hardware/include/northcape/mmu -I ../../../hardware/include/northcape/common -I ../../../hardware/include/northcape/capability_resolver -I ../../../hardware/include/northcape/capability_ops -I ../../../hardware/include/northcape/ariane -I ../../../hardware/include/northcape/xilinx -I ../../../hardware/include/northcape/tests/coverage -I ../../../hardware/include/northcape/tests/uvm_wrapper -I ../../../hardware/hdl/block_design_wrappers/ -D ASIC -D VERILATOR --ignore-assertions
+# synthesis needed here
+synth -top northcape_mmu_wrapper_verilog
+# write as "simple" verilog
+write_verilog northcape_mmu_flattened.v

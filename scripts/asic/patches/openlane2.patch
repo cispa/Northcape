@@ -1,0 +1,93 @@
+diff --git a/openlane/scripts/openroad/common/grt.tcl b/openlane/scripts/openroad/common/grt.tcl
+index 12ba85f..7a2e35b 100644
+--- a/openlane/scripts/openroad/common/grt.tcl
++++ b/openlane/scripts/openroad/common/grt.tcl
+@@ -29,4 +29,4 @@ if { $::env(GRT_ALLOW_CONGESTION) == 1 } {
+ puts $arg_list
+ global_route {*}$arg_list
+ 
+-write_guide $::env(STEP_DIR)/after_grt.guide
+\ No newline at end of file
++write_guide $::env(STEP_DIR)/after_grt.guide
+diff --git a/openlane/scripts/openroad/gpl.tcl b/openlane/scripts/openroad/gpl.tcl
+index ad1015e..5add351 100755
+--- a/openlane/scripts/openroad/gpl.tcl
++++ b/openlane/scripts/openroad/gpl.tcl
+@@ -59,22 +59,40 @@ if { $::env(PL_SKIP_INITIAL_PLACEMENT) } {
+ 
+ if { [info exists ::env(__PL_SKIP_IO)] } {
+ 	lappend arg_list -skip_io
++} else {
++	if { [info exists ::env(GPL_OVERFLOW_TARGET)] } {
++		lappend arg_list -overflow $::env(GPL_OVERFLOW_TARGET)
++	}
+ }
+ 
+ if { [info exists ::env(PL_MIN_PHI_COEFFICIENT)] } {
+ 	lappend arg_list -min_phi_coef $::env(PL_MIN_PHI_COEFFICIENT)
+ }
+ 
++
++if { [info exists ::env(PL_ROUTABILITY_MAX_DENSITY)] } {
++	lappend arg_list -routability_max_density $::env(PL_ROUTABILITY_MAX_DENSITY)
++}
++
+ if { [info exists ::env(PL_MAX_PHI_COEFFICIENT)] } {
+ 	lappend arg_list -max_phi_coef $::env(PL_MAX_PHI_COEFFICIENT)
+ }
+ 
++if { [info exists ::env(PL_TARGET_RC_METRIC)] } {
++	lappend arg_list -routability_target_rc_metric $::env(PL_TARGET_RC_METRIC)
++}
++
+ set cell_pad_side [expr $::env(GPL_CELL_PADDING) / 2]
+ 
+ lappend arg_list -pad_right $cell_pad_side
+ lappend arg_list -pad_left $cell_pad_side
+ lappend arg_list -init_wirelength_coef $::env(PL_WIRE_LENGTH_COEF)
+ 
++if { $::env(PL_USE_FASTROUTE_INSTEAD_OF_RUDY) } {
++	# RUDY seems to estimate congestion incorrectly...
++	lappend arg_list -routability_use_grt
++}
++
+ puts "+ global_placement $arg_list"
+ global_placement {*}$arg_list
+ 
+diff --git a/openlane/steps/openroad.py b/openlane/steps/openroad.py
+index 6e687cc..eafa44b 100644
+--- a/openlane/steps/openroad.py
++++ b/openlane/steps/openroad.py
+@@ -1226,6 +1226,32 @@ class _GlobalPlacement(OpenROADStep):
+                 Optional[Decimal],
+                 "Sets a upper bound on the µ_k variable in the GPL algorithm. Useful if global placement diverges.See https://openroad.readthedocs.io/en/latest/main/src/gpl/README.html",
+             ),
++            Variable(
++                "PL_ROUTABILITY_MAX_DENSITY",
++                Optional[Decimal],
++                "Sets density threshold for routability-driven mode. Default 0.99"
++            ),
++            Variable(
++                "GPL_OVERFLOW_TARGET",
++                Optional[Decimal],
++                "Sets overflow target for GPL. Default 0.1."
++            ),
++            Variable(
++                "PL_TARGET_RC_METRIC",
++                Optional[Decimal],
++                "Sets -routability_target_rc_metric. Default 1.01"
++            ),
++            Variable(
++                "PL_ROUTABILITY_CHECK_OVERFLOW",
++                Optional[Decimal],
++                "When to check routing (default 0.3)."
++            ),
++            Variable(
++                "PL_USE_FASTROUTE_INSTEAD_OF_RUDY",
++                bool,
++                "Enforce fastroute instead of RUDY for congestion estimation",
++                default=False
++            ),
+             Variable(
+                 "FP_CORE_UTIL",
+                 Decimal,

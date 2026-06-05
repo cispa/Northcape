@@ -1,0 +1,26 @@
+state idle:
+    if(cpu_arvalid ==1'b1 && cpu_arready ==1'b1) then
+        goto check_read;
+    elseif(cpu_awvalid ==1'b1 && cpu_awready ==1'b1) then
+        goto check_write;
+    else
+        goto idle;
+    endif
+    
+state read:
+    if(cpu_rvalid ==1'b1 && cpu_rready ==1'b1 && cpu_rdata != mmu_rdata) then
+        trigger;
+    else if(mmu_rvalid ==1'b1 && mmu_rready ==1'b1 && mmu_rlast ==1'b1) then
+        goto idle;
+    else
+        goto check_read;
+    endif
+
+state check_write:
+    if(cpu_wvalid ==1'b1 && cpu_wready ==1'b1 && cpu_wstrb != mmu_wstrb) then
+        trigger;
+    elseif (cpu_bvalid ==1'b1 && cpu_bready ==1'b1 ) then
+        goto idle;
+    else
+        goto check_write;
+    endif

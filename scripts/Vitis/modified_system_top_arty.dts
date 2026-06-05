@@ -1,0 +1,81 @@
+/dts-v1/;
+/include/ "vitis_tmp/device_tree/system-top.dts"
+
+/delete-node/ &{/chosen};
+/delete-node/ &{/aliases};
+/delete-node/ &{/cpus};
+
+&amba_pl{
+    compatible = "eth,ariane-bare-soc", "simple-bus";
+};
+
+&ariane_peripherals_clint_wrapper_verilog_0{
+    compatible = "riscv,clint0", "sifive,clint0";
+    interrupts-extended = <&CPU0_intc 3 &CPU0_intc 7>;
+};
+
+&ariane_peripherals_ariane_peripherals_wrapper_verilog_0{
+    compatible = "riscv,plic0", "sifive,plic-1.0.0";
+    #address-cells = <0>;
+    #interrupt-cells = <1>;
+
+    interrupt-controller;
+    interrupts-extended = <&CPU0_intc 11 &CPU0_intc 9>;
+    riscv,max-priority = <7>;
+    riscv,ndev = <30>;
+};
+
+/{
+    timer@18000000 {
+      compatible = "pulp,apb_timer";
+      interrupts = <0x00000004 0x00000005 0x00000006 0x00000007>;
+      reg = <0x18000000 0x00001000>;
+      interrupt-parent = <&ariane_peripherals_ariane_peripherals_wrapper_verilog_0>;
+    };
+
+    CPU0_intc: interrupt-controller {
+        #interrupt-cells = <1>;
+        interrupt-controller;
+        compatible = "riscv,cpu-intc";
+    };
+
+    chosen {
+        stdout-path = "/amba_pl/serial@10000000:115200";
+        //tick-timer =  "/cpus/cpu@0";
+    };
+
+    amba_pl {
+        ethernet@40c00000{
+            reg=<0x40c00000 0x00001000>;
+            status="disabled";
+        };
+    };
+};
+
+
+&xilinx_peripherals_axi_uart16550_0{
+    compatible = "xlnx,xps-uart16550-2.00.a", "ns16550a", "ns16550";
+    fifo-size = <16>;
+    interrupts = <9 0x04>;
+};
+// Vitis does not understand that the CAN SPI should be transparent
+/*
+&xilinx_peripherals_canspi{
+    interrupts = <8 0x04>;
+    bits-per-word = <8>;
+    compatible = "xlnx,axi-quad-spi-3.2", "xlnx,xps-spi-2.00.a";
+    fifo-size = <256>;
+    num-cs = <0x1>;
+    reg = <0x20000000 0x10000>;
+    xlnx,num-ss-bits = <0x1>;
+    xlnx,spi-mode = <0>;
+};
+*/
+&xilinx_peripherals_axi_ethernetlite_0{
+    interrupts = <12 0x04>;
+};
+
+// some of the memory is reserved for CMT
+&{/memory@80000000} {
+    reg = <0x80000000 0x0FF80000>;
+};

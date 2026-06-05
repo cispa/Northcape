@@ -1,0 +1,609 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 648de17fe..8b302b94b 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -70,6 +70,8 @@ if(ZEPHYR_BASE)
+   include(zephyr/zephyr.cmake)
+ endif()
+ 
++set(PICOLIBC_DIR ${CMAKE_CURRENT_SOURCE_DIR} CACHE INTERNAL "")
++
+ include(cmake/picolibc.cmake)
+ 
+ enable_testing()
+@@ -541,6 +543,8 @@ configure_file(picolibc.specs.in "${PROJECT_BINARY_DIR}/picolibc.specs" @ONLY)
+ set(PICOLIBC_COMPILE_OPTIONS
+   "-nostdlib"
+   "-D_LIBC"
++  "-ffunction-sections"
++  "-fdata-sections"
+   ${TLSMODEL}
+   ${TARGET_COMPILE_OPTIONS}
+   ${PICOLIBC_EXTRA_COMPILE_OPTIONS}
+diff --git a/newlib/libc/include/ctype.h b/newlib/libc/include/ctype.h
+index 55dc42f02..244500b87 100644
+--- a/newlib/libc/include/ctype.h
++++ b/newlib/libc/include/ctype.h
+@@ -36,7 +36,7 @@ SUCH DAMAGE.
+ 
+ #include <sys/cdefs.h>
+ 
+-#if __POSIX_VISIBLE >= 200809 || __MISC_VISIBLE
++#if __POSIX_VISIBLE >= 200809 || __MISC_VISIBLE || defined(SKADI_SUBSYSTEM)
+ #include <sys/_locale.h>
+ #endif
+ 
+@@ -93,7 +93,7 @@ int toascii (int c);
+ #define toascii(__c)	((__c)&0177)
+ #endif
+ 
+-#if __POSIX_VISIBLE >= 200809
++#if __POSIX_VISIBLE >= 200809 || defined(SKADI_SUBSYSTEM)
+ int isalnum_l (int c, locale_t l);
+ int isalpha_l (int c, locale_t l);
+ int isblank_l (int c, locale_t l);
+@@ -272,7 +272,7 @@ static __inline char __ctype_lookup(int c) { return (__CTYPE_PTR + 1)[c]; }
+ #endif
+ #endif
+ 
+-#if __POSIX_VISIBLE >= 200809
++#if __POSIX_VISIBLE >= 200809 || defined(SKADI_SUBSYSTEM)
+ #ifdef __HAVE_LOCALE_INFO__
+ const char *__locale_ctype_ptr_l (locale_t);
+ #else
+diff --git a/newlib/libc/include/sys/_locale.h b/newlib/libc/include/sys/_locale.h
+index 228385da8..375032140 100644
+--- a/newlib/libc/include/sys/_locale.h
++++ b/newlib/libc/include/sys/_locale.h
+@@ -3,8 +3,9 @@
+ 
+ #ifndef	_SYS__LOCALE_H
+ #define _SYS__LOCALE_H
+-
++#ifndef __ASSEMBLER__
+ struct __locale_t;
+ typedef struct __locale_t *locale_t;
++#endif
+ 
+ #endif	/* _SYS__LOCALE_H */
+diff --git a/newlib/libc/include/sys/errno.h b/newlib/libc/include/sys/errno.h
+index 826d482ed..f408c617c 100644
+--- a/newlib/libc/include/sys/errno.h
++++ b/newlib/libc/include/sys/errno.h
+@@ -37,7 +37,7 @@ SUCH DAMAGE.
+ 
+ _BEGIN_STD_C
+ 
+-#if __GNU_VISIBLE
++#if __GNU_VISIBLE || defined(SKADI_SUBSYSTEM)
+ char *
+ _user_strerror (int errnum,
+                 int internal,
+diff --git a/newlib/libc/machine/riscv/memmove.S b/newlib/libc/machine/riscv/memmove.S
+index 45d66d79d..10257cf18 100644
+--- a/newlib/libc/machine/riscv/memmove.S
++++ b/newlib/libc/machine/riscv/memmove.S
+@@ -13,9 +13,9 @@
+ 
+ #if defined(PREFER_SIZE_OVER_SPEED) || defined(__OPTIMIZE_SIZE__)
+ .section .text.memmove
+-.global memmove
+-.type	memmove, @function
+-memmove:
++.global __picolibc_memmove
++.type	__picolibc_memmove, @function
++__picolibc_memmove:
+   beqz a2, 2f
+ 
+   mv t1, a0
+@@ -38,5 +38,5 @@ memmove:
+ 2:
+   ret
+ 
+-  .size	memmove, .-memmove
++  .size __picolibc_memmove, .-__picolibc_memmove
+ #endif
+diff --git a/newlib/libc/machine/riscv/memset.S b/newlib/libc/machine/riscv/memset.S
+index 52453840b..8b8053b39 100644
+--- a/newlib/libc/machine/riscv/memset.S
++++ b/newlib/libc/machine/riscv/memset.S
+@@ -11,10 +11,10 @@
+ 
+ #include <picolibc.h>
+ 
+-.section .text.memset
+-.global memset
+-.type	memset, @function
+-memset:
++.section .text.picolibc_memset
++.global __picolibc_memset
++.type	__picolibc_memset, @function
++__picolibc_memset:
+ #if defined(PREFER_SIZE_OVER_SPEED) || defined(__OPTIMIZE_SIZE__)
+   mv t1, a0
+   beqz a2, 2f
+@@ -112,4 +112,4 @@ memset:
+   bleu a2, t1, .Ltiny
+   j .Laligned
+ #endif
+-  .size	memset, .-memset
++  .size __picolibc_memset, .-__picolibc_memset
+diff --git a/newlib/libc/machine/riscv/strcmp.S b/newlib/libc/machine/riscv/strcmp.S
+index e75dfbe3a..52e2f2289 100644
+--- a/newlib/libc/machine/riscv/strcmp.S
++++ b/newlib/libc/machine/riscv/strcmp.S
+@@ -13,6 +13,7 @@
+ 
+ #include "asm.h"
+ 
++#ifndef CONFIG_SKADI_OS
+ .section .text.strcmp
+ .globl strcmp
+ .type  strcmp, @function
+@@ -194,9 +195,10 @@ strcmp:
+ .size	strcmp, .-strcmp
+ 
+ #if SZREG == 8 && !defined(__riscv_zbb)
+-.section .srodata.cst8,"aM",@progbits,8
++
+ .align 3
+ mask:
+ .dword 0x7f7f7f7f7f7f7f7f
+ #endif
+ #endif
++#endif /* !CONFIG_SKADI_OS */
+diff --git a/newlib/libc/machine/riscv/strcpy.c b/newlib/libc/machine/riscv/strcpy.c
+index a8cce1858..5aea48952 100644
+--- a/newlib/libc/machine/riscv/strcpy.c
++++ b/newlib/libc/machine/riscv/strcpy.c
+@@ -17,6 +17,8 @@
+ 
+ #undef strcpy
+ 
++#ifndef CONFIG_SKADI_OS
++
+ char *strcpy(char *dst, const char *src)
+ {
+   char *dst0 = dst;
+@@ -67,3 +69,5 @@ out:
+ 
+   return dst0;
+ }
++
++#endif /* CONFIG_SKADI_OS */
+diff --git a/newlib/libc/machine/riscv/strlen.c b/newlib/libc/machine/riscv/strlen.c
+index 29bbc26c0..c62c2bba5 100644
+--- a/newlib/libc/machine/riscv/strlen.c
++++ b/newlib/libc/machine/riscv/strlen.c
+@@ -14,6 +14,7 @@
+ #include <string.h>
+ #include <stdint.h>
+ #include "local.h"
++#ifndef CONFIG_SKADI_OS
+ 
+ size_t strlen(const char *str)
+ {
+@@ -54,3 +55,5 @@ size_t strlen(const char *str)
+   return ret + 7 - sl;
+ #endif /* not PREFER_SIZE_OVER_SPEED */
+ }
++
++#endif
+diff --git a/newlib/libc/stdio/nano-vfprintf_i.c b/newlib/libc/stdio/nano-vfprintf_i.c
+index 5d6738b4c..8cccb7e11 100644
+--- a/newlib/libc/stdio/nano-vfprintf_i.c
++++ b/newlib/libc/stdio/nano-vfprintf_i.c
+@@ -42,6 +42,10 @@
+ #include "vfieeefp.h"
+ #include "nano-vfprintf_local.h"
+ 
++#ifdef CONFIG_SKADI_OS
++extern const char *skadi_library_subsystem_replace_string_if_inaccessible(const char *string);
++#endif
++
+ /* Decode and print non-floating point data.  */
+ int
+ _printf_common (
+@@ -218,6 +222,9 @@ number:
+ 	 nul-terminated.  */
+       if (cp == NULL)
+           cp = "(null)";
++#ifdef CONFIG_SKADI_OS
++      cp = skadi_library_subsystem_replace_string_if_inaccessible(cp);
++#endif
+       char *p = memchr (cp, 0, pdata->prec);
+ 
+       if (p != NULL)
+diff --git a/newlib/libc/stdio/vfprintf.c b/newlib/libc/stdio/vfprintf.c
+index 5530642b0..4cdad2442 100644
+--- a/newlib/libc/stdio/vfprintf.c
++++ b/newlib/libc/stdio/vfprintf.c
+@@ -171,6 +171,10 @@ static char *rcsid = "$Id$";
+ # undef _NO_LONGLONG
+ #endif
+ 
++#ifdef CONFIG_SKADI_OS
++extern const char *skadi_library_subsystem_replace_string_if_inaccessible(const char *string);
++#endif
++
+ #ifdef STRING_ONLY
+ 
+ # ifdef _FVWRITE_IN_STREAMIO
+@@ -1189,6 +1193,9 @@ reswitch:	switch (ch) {
+ string:
+ #endif
+ 			sign = '\0';
++#ifdef CONFIG_SKADI_OS
++			cp = skadi_library_subsystem_replace_string_if_inaccessible(cp);
++#endif
+ 			/* Behavior is undefined if the user passed a
+ 			   NULL string when precision is not 0.
+ 			   However, we might as well mirror glibc behavior.  */
+diff --git a/newlib/libc/stdio/vfwprintf.c b/newlib/libc/stdio/vfwprintf.c
+index 86543483b..a83e07033 100644
+--- a/newlib/libc/stdio/vfwprintf.c
++++ b/newlib/libc/stdio/vfwprintf.c
+@@ -124,6 +124,10 @@ SEEALSO
+ #include "../locale/setlocale.h"
+ #endif
+ 
++#ifdef CONFIG_SKADI_OS
++extern const char *skadi_library_subsystem_replace_string_if_inaccessible(const char *string);
++#endif
++
+ int VFWPRINTF (FILE *, const wchar_t *, va_list);
+ 
+ /* Currently a test is made to see if long double processing is warranted.
+@@ -1151,6 +1155,10 @@ reswitch:	switch (ch) {
+ 		case L'S':	/* POSIX extension */
+ #endif
+ 			cp = GET_ARG (N, ap, wchar_ptr_t);
++#ifdef CONFIG_SKADI_OS
++#else
++			cp = skadi_library_subsystem_replace_string_if_inaccessible(cp);
++#endif
+ #ifdef _GLIBC_EXTENSION
+ string:
+ #endif
+diff --git a/newlib/libc/stdlib/strtol.c b/newlib/libc/stdlib/strtol.c
+index 65402d5e5..4f06b812f 100644
+--- a/newlib/libc/stdlib/strtol.c
++++ b/newlib/libc/stdlib/strtol.c
+@@ -217,8 +217,9 @@ strtol_l (const char *__restrict s, char **__restrict ptr, int base,
+ 	return _strtol_l (s, ptr, base, loc);
+ }
+ 
++
+ long
+-strtol (const char *__restrict s,
++__picolibc_strtol (const char *__restrict s,
+ 	char **__restrict ptr,
+ 	int base)
+ {
+diff --git a/newlib/libc/stdlib/strtoll.c b/newlib/libc/stdlib/strtoll.c
+index 514819771..c4e0a3b11 100644
+--- a/newlib/libc/stdlib/strtoll.c
++++ b/newlib/libc/stdlib/strtoll.c
+@@ -216,8 +216,9 @@ strtoll_l (const char *__restrict s, char **__restrict ptr, int base,
+ 	return _strtoll_l (s, ptr, base, loc);
+ }
+ 
++
+ long long
+-strtoll (const char *__restrict s,
++__picolibc_strtoll (const char *__restrict s,
+ 	char **__restrict ptr,
+ 	int base)
+ {
+diff --git a/newlib/libc/stdlib/strtoul.c b/newlib/libc/stdlib/strtoul.c
+index 5f6fcfd68..cf383b9eb 100644
+--- a/newlib/libc/stdlib/strtoul.c
++++ b/newlib/libc/stdlib/strtoul.c
+@@ -187,7 +187,7 @@ strtoul_l (const char *__restrict nptr, char **__restrict endptr, int base,
+ }
+ 
+ unsigned long
+-strtoul (const char *__restrict s,
++__picolibc_strtoul (const char *__restrict s,
+ 	char **__restrict ptr,
+ 	int base)
+ {
+diff --git a/newlib/libc/stdlib/strtoull.c b/newlib/libc/stdlib/strtoull.c
+index 744c90f9b..dd26b8097 100644
+--- a/newlib/libc/stdlib/strtoull.c
++++ b/newlib/libc/stdlib/strtoull.c
+@@ -191,8 +191,9 @@ strtoull_l (const char *__restrict s, char **__restrict ptr, int base,
+ 	return _strtoull_l (s, ptr, base, loc);
+ }
+ 
++
+ unsigned long long
+-strtoull (const char *__restrict s,
++__picolibc_strtoull (const char *__restrict s,
+ 	char **__restrict ptr,
+ 	int base)
+ {
+diff --git a/newlib/libc/string/memchr.c b/newlib/libc/string/memchr.c
+index 44e9b25fa..f7fd5646c 100644
+--- a/newlib/libc/string/memchr.c
++++ b/newlib/libc/string/memchr.c
+@@ -77,8 +77,9 @@ QUICKREF
+    to fill (long)MASK. */
+ #define DETECTCHAR(X,MASK) (DETECTNULL(X ^ MASK))
+ 
++
+ void *
+-memchr (const void *src_void,
++__picolibc_memchr (const void *src_void,
+ 	int c,
+ 	size_t length)
+ {
+diff --git a/newlib/libc/string/memcmp.c b/newlib/libc/string/memcmp.c
+index 0cda2cf03..789ea7276 100644
+--- a/newlib/libc/string/memcmp.c
++++ b/newlib/libc/string/memcmp.c
+@@ -58,8 +58,9 @@ QUICKREF
+ /* Threshhold for punting to the byte copier.  */
+ #define TOO_SMALL(LEN)  ((LEN) < LBLOCKSIZE)
+ 
++
+ int
+-memcmp (const void *m1,
++__picolibc_memcmp (const void *m1,
+ 	const void *m2,
+ 	size_t n)
+ {
+diff --git a/newlib/libc/string/memmove.c b/newlib/libc/string/memmove.c
+index 27c272a37..ce5c47e99 100644
+--- a/newlib/libc/string/memmove.c
++++ b/newlib/libc/string/memmove.c
+@@ -68,7 +68,7 @@ QUICKREF
+ /*SUPPRESS 20*/
+ void *
+ __inhibit_loop_to_libcall
+-memmove (void *dst_void,
++__picolibc_memmove (void *dst_void,
+ 	const void *src_void,
+ 	size_t length)
+ {
+diff --git a/newlib/libc/string/strchr.c b/newlib/libc/string/strchr.c
+index 328594856..9f7fdac6e 100644
+--- a/newlib/libc/string/strchr.c
++++ b/newlib/libc/string/strchr.c
+@@ -68,15 +68,16 @@ QUICKREF
+    to fill (long)MASK. */
+ #define DETECTCHAR(X,MASK) (DETECTNULL(X ^ MASK))
+ 
++
+ char *
+-strchr (const char *s1,
++__picolibc_strchr (const char *s1,
+ 	int i)
+ {
+   const unsigned char *s = (const unsigned char *)s1;
+   unsigned char c = i;
+ 
+ #if !defined(PREFER_SIZE_OVER_SPEED) && !defined(__OPTIMIZE_SIZE__) && \
+-    !defined(PICOLIBC_NO_OUT_OF_BOUNDS_READS)
++    !defined(PICOLIBC_NO_OUT_OF_BOUNDS_READS) && !defined(CONFIG_SKADI_OS)
+   unsigned long mask,j;
+   unsigned long *aligned_addr;
+ 
+diff --git a/newlib/libc/string/strerror.c b/newlib/libc/string/strerror.c
+index 9c3e38191..78c39b0c2 100644
+--- a/newlib/libc/string/strerror.c
++++ b/newlib/libc/string/strerror.c
+@@ -911,12 +911,13 @@ _strerror_r (
+   return error;
+ }
+ 
++
+ char *
+-strerror (int errnum)
++__picolibc_strerror (int errnum)
+ {
+   return _strerror_r (errnum, 0, NULL);
+ }
+-
++#if !defined(SKADI_SUBSYSTEM)
+ char *
+ strerror_l (int errnum, locale_t locale)
+ {
+@@ -924,3 +925,4 @@ strerror_l (int errnum, locale_t locale)
+   /* We don't support per-locale error messages. */
+   return _strerror_r (errnum, 0, NULL);
+ }
++#endif
+diff --git a/newlib/libc/string/strncasecmp.c b/newlib/libc/string/strncasecmp.c
+index b0f4c534c..9b499ab1d 100644
+--- a/newlib/libc/string/strncasecmp.c
++++ b/newlib/libc/string/strncasecmp.c
+@@ -52,8 +52,9 @@ QUICKREF
+ #include <strings.h>
+ #include <ctype.h>
+ 
++
+ int 
+-strncasecmp (const char *s1,
++__picolibc_strncasecmp (const char *s1,
+ 	const char *s2,
+ 	size_t n)
+ {
+diff --git a/newlib/libc/string/strncmp.c b/newlib/libc/string/strncmp.c
+index 32056f45b..1c9f234ae 100644
+--- a/newlib/libc/string/strncmp.c
++++ b/newlib/libc/string/strncmp.c
+@@ -68,8 +68,9 @@ QUICKREF
+ #error long int is not a 32bit or 64bit byte
+ #endif
+ 
++
+ int 
+-strncmp (const char *s1,
++__picolibc_strncmp (const char *s1,
+ 	const char *s2,
+ 	size_t n)
+ {
+diff --git a/newlib/libc/string/strncpy.c b/newlib/libc/string/strncpy.c
+index e9b02ad32..447ff080b 100644
+--- a/newlib/libc/string/strncpy.c
++++ b/newlib/libc/string/strncpy.c
+@@ -78,7 +78,7 @@ QUICKREF
+ #undef strncpy
+ 
+ char *
+-strncpy (char *__restrict dst0,
++__picolibc_strncpy (char *__restrict dst0,
+ 	const char *__restrict src0,
+ 	size_t count)
+ {
+diff --git a/newlib/libc/string/strrchr.c b/newlib/libc/string/strrchr.c
+index c4638fede..8bc1f33ce 100644
+--- a/newlib/libc/string/strrchr.c
++++ b/newlib/libc/string/strrchr.c
+@@ -44,9 +44,8 @@ QUICKREF
+ */
+ 
+ #include <string.h>
+-
+ char *
+-strrchr (const char *s,
++__picolibc_strrchr (const char *s,
+ 	int i)
+ {
+   const char *last = NULL;
+diff --git a/newlib/libc/string/strstr.c b/newlib/libc/string/strstr.c
+index 88b4bf708..e1767ebfb 100644
+--- a/newlib/libc/string/strstr.c
++++ b/newlib/libc/string/strstr.c
+@@ -76,12 +76,13 @@ QUICKREF
+ #include <string.h>
+ #include <limits.h>
+ 
+-#if defined(PREFER_SIZE_OVER_SPEED) || defined(__OPTIMIZE_SIZE__) \
++
++#if defined(PREFER_SIZE_OVER_SPEED) || defined(__OPTIMIZE_SIZE__) || CONFIG_SKADI_OS \
+     || CHAR_BIT > 8
+ 
+ /* Small and efficient strstr implementation.  */
+ char *
+-strstr (const char *hs, const char *ne)
++__picolibc_strstr (const char *hs, const char *ne)
+ {
+   size_t i;
+   int c = ne[0];
+@@ -147,6 +148,7 @@ strstr4 (const unsigned char *hs, const unsigned char *ne)
+   return h1 == h2 ? (char *)hs - 4 : NULL;
+ }
+ 
++
+ /* Extremely fast strstr algorithm with guaranteed linear-time performance.
+    Small needles up to size 4 use a dedicated linear search.  Longer needles
+    up to size 254 use Sunday's Quick-Search algorithm.  Due to its simplicity
+@@ -158,7 +160,7 @@ strstr4 (const unsigned char *hs, const unsigned char *ne)
+    Even larger needles are processed by the linear-time Two-Way algorithm.
+ */
+ char *
+-strstr (const char *haystack, const char *needle)
++__picolibc_strstr (const char *haystack, const char *needle)
+ {
+   const unsigned char *hs = (const unsigned char *) haystack;
+   const unsigned char *ne = (const unsigned char *) needle;
+diff --git a/newlib/libc/tinystdio/sprintf_s.c b/newlib/libc/tinystdio/sprintf_s.c
+index 18936037c..d5a568a6e 100644
+--- a/newlib/libc/tinystdio/sprintf_s.c
++++ b/newlib/libc/tinystdio/sprintf_s.c
+@@ -39,6 +39,10 @@
+ #include <stdbool.h>
+ #include "../stdlib/local_s.h"
+ 
++#ifdef CONFIG_SKADI_OS
++extern const char *skadi_library_subsystem_replace_string_if_inaccessible(const char *string);
++#endif
++
+ int
+ sprintf_s(char *restrict s, rsize_t bufsize, const char *restrict fmt, ...)
+ {
+@@ -74,6 +78,9 @@ sprintf_s(char *restrict s, rsize_t bufsize, const char *restrict fmt, ...)
+                 switch (check_ptr[1]) {
+                 case 's': {
+                     char *str_arg = va_arg(args_copy, char *);
++#ifdef CONFIG_SKADI_OS
++                    str_arg = (char*) skadi_library_subsystem_replace_string_if_inaccessible(str_arg);
++#endif
+                     if (str_arg == NULL) {
+                         msg = "sprintf_s: null string argument";
+                         va_end(args_copy);
+diff --git a/newlib/libc/tinystdio/strtol.c b/newlib/libc/tinystdio/strtol.c
+index 98bc290f9..8fe33b37d 100644
+--- a/newlib/libc/tinystdio/strtol.c
++++ b/newlib/libc/tinystdio/strtol.c
+@@ -34,6 +34,6 @@
+ #define strtoi_utype unsigned long
+ #define strtoi_max LONG_MAX
+ #define strtoi_min LONG_MIN
+-#define strtoi strtol
++#define strtoi __picolibc_strtol
+ #define strtoi_signed
+ #include "strtoi.h"
+diff --git a/newlib/libc/tinystdio/strtoll.c b/newlib/libc/tinystdio/strtoll.c
+index f9bfa823d..583748e79 100644
+--- a/newlib/libc/tinystdio/strtoll.c
++++ b/newlib/libc/tinystdio/strtoll.c
+@@ -34,6 +34,6 @@
+ #define strtoi_utype unsigned long long
+ #define strtoi_max LLONG_MAX
+ #define strtoi_min LLONG_MIN
+-#define strtoi strtoll
++#define strtoi __picolibc_strtoll
+ #define strtoi_signed
+ #include "strtoi.h"
+diff --git a/newlib/libc/tinystdio/strtoul.c b/newlib/libc/tinystdio/strtoul.c
+index 6bdce3931..8ad91e89c 100644
+--- a/newlib/libc/tinystdio/strtoul.c
++++ b/newlib/libc/tinystdio/strtoul.c
+@@ -32,6 +32,6 @@
+ 
+ #define strtoi_type unsigned long
+ #define strtoi_max ULONG_MAX
+-#define strtoi strtoul
++#define strtoi __picolibc_strtoul
+ #undef strtoi_signed
+ #include "strtoi.h"
+diff --git a/newlib/libc/tinystdio/strtoull.c b/newlib/libc/tinystdio/strtoull.c
+index 2b31fc0e4..228a94dda 100644
+--- a/newlib/libc/tinystdio/strtoull.c
++++ b/newlib/libc/tinystdio/strtoull.c
+@@ -32,6 +32,6 @@
+ 
+ #define strtoi_type unsigned long long
+ #define strtoi_max ULLONG_MAX
+-#define strtoi strtoull
++#define strtoi __picolibc_strtoull
+ #undef strtoi_signed
+ #include "strtoi.h"
+diff --git a/newlib/libc/tinystdio/vfprintf.c b/newlib/libc/tinystdio/vfprintf.c
+index f28b82bb2..472591989 100644
+--- a/newlib/libc/tinystdio/vfprintf.c
++++ b/newlib/libc/tinystdio/vfprintf.c
+@@ -67,6 +67,10 @@
+ #  endif
+ #endif
+ 
++#ifdef CONFIG_SKADI_OS
++extern const char *skadi_library_subsystem_replace_string_if_inaccessible(const char *string);
++#endif
++
+ /*
+  * Compute which features are required. This should match the _HAS
+  * values computed in stdio.h
+@@ -1080,6 +1084,9 @@ int vfprintf (FILE * stream, const CHAR *fmt, va_list ap_orig)
+                 } else
+ #endif
+                     pnt = va_arg (ap, char *);
++#ifdef CONFIG_SKADI_OS
++                    pnt = skadi_library_subsystem_replace_string_if_inaccessible(pnt);
++#endif
+                 if (!pnt)
+                     pnt = "(null)";
+ #ifdef _NEED_IO_SHRINK

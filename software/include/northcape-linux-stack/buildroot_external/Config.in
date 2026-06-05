@@ -1,0 +1,5 @@
+source "$BR2_EXTERNAL_NORTHCAPE_PATH/stream/Config.in"
+source "$BR2_EXTERNAL_NORTHCAPE_PATH/nc_netperf/Config.in"
+source "$BR2_EXTERNAL_NORTHCAPE_PATH/pulp_timer/Config.in"
+source "$BR2_EXTERNAL_NORTHCAPE_PATH/mqtt_bench/Config.in"
+source "$BR2_EXTERNAL_NORTHCAPE_PATH/irq_client/Config.in"

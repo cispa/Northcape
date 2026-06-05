@@ -1,0 +1,8 @@
+board:
+  name: beaglev_fire
+  vendor: beagle
+  socs:
+  - name: polarfire
+    variants:
+    - name: smp
+      cpucluster: u54

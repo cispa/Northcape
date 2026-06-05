@@ -1,0 +1,8 @@
+scripts/pdks
+scripts/open_pdks
+scripts/magic
+capability_ops
+capability_resolver
+cva6
+mmu
+Dockerfile

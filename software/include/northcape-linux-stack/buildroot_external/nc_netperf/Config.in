@@ -1,0 +1,4 @@
+config BR2_PACKAGE_NC_NETPERF
+    bool "network performance benchmark"
+    help
+        Simple timestamping-based performance benchmark.

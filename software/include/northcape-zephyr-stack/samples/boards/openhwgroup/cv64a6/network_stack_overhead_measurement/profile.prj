@@ -1,0 +1,7 @@
+CONFIG_PROFILING_PERF=y
+# need full debug to access some thread metadata from perf subsystem
+CONFIG_SKADI_DEBUG=y
+CONFIG_FRAME_POINTER=y
+CONFIG_PROFILING=y
+CONFIG_ASSERT=y
+CONFIG_PROFILING_PERF_BUFFER_SIZE=8192

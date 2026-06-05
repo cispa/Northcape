@@ -1,0 +1,32 @@
+# this TSM assumes that the W channel becomes valid strictly after the AW channel becomes active
+# this TSM also needs a custom probe which captues the 4 last bits of wdata 
+state idle:
+    if(axi_awaddr == 64'h0000000042000018 && axi_awvalid == 1'b1) then
+        goto wait_write_data;
+    else
+        goto idle;
+    endif
+state wait_write_data:
+    if(axi_wvalid == 1'b1 && axi_wdata == 4'h3) then
+        goto wait_check_read;
+    elseif (axi_wready == 1'b1) then
+        goto idle;
+    else 
+        goto wait_write_data;
+    endif
+    
+state wait_check_read:
+    if(axi_araddr == 64'h0000000042000008 && axi_arvalid == 1'b1) then
+        goto wait_read_data;
+    else
+        goto wait_check_read;
+    endif
+
+state wait_read_data:
+    if(axi_rvalid == 1'b1 && axi_rdata == 64'h0000000000000000) then
+        trigger;
+    elseif(axi_rvalid_slv == 1'b1) then
+        goto idle;
+    else
+        goto wait_read_data;
+    endif

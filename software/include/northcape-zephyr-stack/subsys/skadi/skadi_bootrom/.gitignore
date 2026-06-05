@@ -1,0 +1,6 @@
+zephyr.bin
+bootrom_64.elf
+bootrom_64.h
+bootrom_64.img
+bootrom_64.o
+bootrom_64.sv

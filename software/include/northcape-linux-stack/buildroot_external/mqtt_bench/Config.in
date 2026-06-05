@@ -1,0 +1,5 @@
+config BR2_PACKAGE_MQTT_BENCH
+    bool "MQTT benchmark tool"
+    depends on BR2_PACKAGE_MOSQUITTO
+    help
+        Driver for userspace IRQ client.

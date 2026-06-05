@@ -1,0 +1,16 @@
+boards:
+  - name: intel_adsp
+    vendor: intel
+    socs:
+      - name: cavs25
+        variants:
+          - name: 'tgph'
+      - name: ace15_mtpm
+        variants:
+          - name: 'sim'
+      - name: ace20_lnl
+        variants:
+          - name: 'sim'
+      - name: ace30_ptl
+        variants:
+          - name: 'sim'

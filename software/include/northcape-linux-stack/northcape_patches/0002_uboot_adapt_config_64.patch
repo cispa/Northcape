@@ -1,0 +1,40 @@
+diff --git a/configs/openhwgroup_cv64a6_genesys2_defconfig b/configs/openhwgroup_cv64a6_genesys2_defconfig
+index 3374a4fece..dad1efd615 100644
+--- a/configs/openhwgroup_cv64a6_genesys2_defconfig
++++ b/configs/openhwgroup_cv64a6_genesys2_defconfig
+@@ -1,12 +1,12 @@
+ CONFIG_RISCV=y
+-CONFIG_DEFAULT_DEVICE_TREE="cv64a6"
++CONFIG_DEFAULT_DEVICE_TREE="cv64a6"
+ CONFIG_TARGET_OPENHWGROUP_CVA6_GENESYSII=y
+ CONFIG_ARCH_RV64I=y
+ CONFIG_RISCV_SMODE=y
+ CONFIG_OF_BOARD_SETUP=y
+ CONFIG_BOOTDELAY=5
+ CONFIG_USE_BOOTCOMMAND=y
+-CONFIG_BOOTCOMMAND="mmc info; mmc read 90000000 100000 5000; setenv fdt_high 0xffffffffffffffff; bootm 90000000 - $(fdtcontroladdr)"
++CONFIG_BOOTCOMMAND="setenv ipaddr 10.10.10.10; tftpboot 90000000 10.10.10.1:uImage; setenv fdt_high 0xffffffffffffffff; bootm 90000000 - $(fdtcontroladdr)"
+ CONFIG_DISPLAY_CPUINFO=y
+ CONFIG_SPL_SPI_FLASH_MTD=y
+ CONFIG_CMD_GPT=y
+@@ -40,3 +40,20 @@ CONFIG_LOWRISC_DIGILENT_100MHZ=y
+ CONFIG_SYS_NS16550=y
+ CONFIG_SPI=y
+ CONFIG_XILINX_SPI=y
++CONFIG_ETH=y
++CONFIG_DM_ETH=y
++CONFIG_DM_MDIO=y
++CONFIG_DM_ETH_PHY=y
++CONFIG_NETDEVICES=y
++CONFIG_PHY_GIGE=y
++CONFIG_XILINX_AXIEMAC=y
++CONFIG_FS_FAT=y
++CONFIG_FS_FAT_WRITE=y
++CONFIG_CMD_FAT=y
++CONFIG_PHY_REALTEK=y
++CONFIG_CMD_NET=y
++CONFIG_CMD_BOOTP=y
++CONFIG_CMD_PING=y
++CONFIG_CMD_MII=y
++CONFIG_CMD_MDIO=y
++CONFIG_CMD_TFTPBOOT=y

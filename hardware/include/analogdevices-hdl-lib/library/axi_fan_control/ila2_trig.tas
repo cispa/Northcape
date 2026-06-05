@@ -1,0 +1,77 @@
+##################################################################
+# ILA Trigger At Startup File
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# Vivado v2023.2 (64-bit)
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+##################################################################
+
+proc get_tas_file {} {
+  set retval [list \
+    FILE_VERSION_MAJOR 1 \
+    FILE_VERSION_MINOR 0 \
+    CORE_COUNT 1 \
+  ]
+  return $retval
+}
+
+proc get_tas_core_info {coreIdx} {
+  set retval [list \
+    CORE_VERSION_MAJOR 6 \
+    CORE_VERSION_MINOR 2 \
+    CORE_INSTANCE {u_ila_0} \
+    CORE_TYPE ILA \
+  ]
+  return $retval
+}
+
+proc get_tas_core_registers {coreIdx} {
+  set retval [list \
+    ADV_TRIG_EN {0} \
+    CAPTURE_CTRL_CONFIG {33333377332233663333337733223366DFDFDF9BDFDFDF9BDFDFDF9BDFCEDF8AFFC00000888888998888889902772277000088888899888888990000FFFF0000FFFF0000FFFF0000505000000505000005050000050500000A0AFFFFFFFF0257227700000000FFFF0000FFFF0000FFFF0000050500000505000005050000050500000A0AFFFFFFFF227700000000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFFFFFFFFFF0000000000000011} \
+    CAPTURE_MODE {0} \
+    CAPTURE_QUALIFICATION {0} \
+    MU0_CONFIG {FFFFFFFFFFFFFFFFFFFFFFFFFFFFA0A000000000} \
+    SAMPLE_CNT {00000400} \
+    TC0_CONFIG {0000FFFF0000FFFF0000FFFF00005555FFFFFFFF} \
+    TRIG_IN_TO_TRIG_OUT {0} \
+    TRIG_POS {00000200} \
+    WINDOW_CNT {00000001} \
+    TAS_ENABLE {1} \
+    ARM {1} \
+  ]
+  return $retval
+}
+
+proc do_ensure_property { name value object } {
+
+    set old_value [get_property $name $object]
+
+    if { [string equal -nocase $old_value $value] } { 
+        # Already has correct value. Don't set since property may be read-only.
+    } else { 
+        set_property $name $value $object
+    }
+}
+
+proc ensure_property { name value object } {
+    if { [catch {do_ensure_property $name $value $object} ] } {
+        error "Failed set_property $name $value $object"
+    }
+}
+proc restore_trigger { ila_name } {
+   set ila [get_hw_ilas $ila_name]
+
+   reset_hw_ila -reset_compare_values 1 $ila
+   ensure_property CONTROL.CAPTURE_CONDITION {AND} $ila
+   ensure_property CONTROL.CAPTURE_MODE {ALWAYS} $ila
+   ensure_property CONTROL.TRIG_OUT_MODE {DISABLED} $ila
+   ensure_property CONTROL.TRIGGER_MODE {BASIC_ONLY} $ila
+   ensure_property CONTROL.WINDOW_COUNT {1} $ila
+   ensure_property CONTROL.DATA_DEPTH {1024} $ila
+   ensure_property CONTROL.TRIGGER_POSITION {512} $ila
+   ensure_property CONTROL.TRIGGER_CONDITION {AND} $ila
+   ensure_property CONTROL.TSM_FILE {} $ila
+   ensure_property TRIGGER_COMPARE_VALUE {neq2'h0} [get_hw_probes {SoC_i/cpu_0/inst/i_cva6_wrapper/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_adapter/wr_state_q} -of_objects $ila ]
+}
+

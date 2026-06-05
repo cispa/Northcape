@@ -1,0 +1,39 @@
+diff --git a/scripts/graywolf.sh b/scripts/graywolf.sh
+index c81bac0..2c55984 100755
+--- a/scripts/graywolf.sh
++++ b/scripts/graywolf.sh
+@@ -777,7 +777,7 @@ if ($makedef == 1) then
+       cat ${rootname}.cfg2 >> ${rootname}.cfg
+    else
+       if (${scripting} == "T") then
+-	 echo "qrouter::standard_route ${rootname}_route.def false ${qrouter_nocleanup}" >> ${rootname}.cfg
++	 echo "qrouter::standard_route ${rootname}_unroute.def false ${qrouter_nocleanup}" >> ${rootname}.cfg
+ 	 # write_delays folded into standard_route in qrouter version 1.4.21.
+ 	 if (${major} == 1 && ${minor} == 4 && ${subv} < 21) then
+ 	    echo "qrouter::write_delays ${rootname}_route.rc" >> ${rootname}.cfg
+diff --git a/scripts/qrouter.sh b/scripts/qrouter.sh
+index 1c3dea0..37047b4 100755
+--- a/scripts/qrouter.sh
++++ b/scripts/qrouter.sh
+@@ -194,6 +194,7 @@ set scripting=`echo $version | cut -d. -f4`
+ 
+ if ( -f ${rootname}_unroute.def ) then
+    cp ${rootname}_unroute.def ${rootname}.def
++   cp ${rootname}_unroute.def ${rootname}_route.def
+ endif
+ 
+ if ( -f antenna.out ) then
+diff --git a/scripts/yosys.sh b/scripts/yosys.sh
+index 7e20453..5b741c0 100755
+--- a/scripts/yosys.sh
++++ b/scripts/yosys.sh
+@@ -803,6 +803,9 @@ else
+          end
+       endif
+ 
++      echo 'Clearing any $signed assignments'
++      sed -E -i 's/(\$signed\((.*)\))/\2/g' ${modulename}_mapped.v
++
+       echo "Running vlogFanout" |& tee -a ${synthlog}
+       echo "vlogFanout ${fanout_options} -I ${modulename}_nofanout ${sepoption} ${libertyoption} ${bufoption} ${modulename}_mapped.v ${modulename}_sized.v" |& tee -a ${synthlog}
+       echo "" >> ${synthlog}

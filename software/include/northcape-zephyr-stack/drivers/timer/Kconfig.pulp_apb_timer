@@ -1,0 +1,16 @@
+# Copyright (c) 2014-2015 Wind River Systems, Inc.
+# Copyright (c) 2016 Cadence Design Systems, Inc.
+# Copyright (c) 2019 Intel Corp.
+# SPDX-License-Identifier: Apache-2.0
+
+config PULP_APB_TIMER
+	bool "Pulp APB timer"
+	depends on DT_HAS_PULP_APB_TIMER_ENABLED
+	help
+	  This module implements a kernel device driver for the APB timer from the Pulp platform.
+
+config PULP_APB_TIMER_INIT_PRIORITY
+	int "Pulp APB timer Initialization Priority"
+	depends on PULP_APB_TIMER
+	range 0 99
+	default 1

@@ -1,0 +1,3 @@
+source "subsys/skadi/allocator/Kconfig.skadi_alloc"
+source "subsys/skadi/library/Kconfig.skadi_library"
+source "subsys/skadi/libc/Kconfig"

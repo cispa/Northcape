@@ -1,0 +1,512 @@
+menu "Skadi support"
+
+config SKADI_OS
+    bool "Skadi Capability-Based Addressing"
+    select RISCV_ISR_DO_NOT_TOUCH_STACK
+    select SYS_MEM_BLOCKS
+    select ENTROPY_HAS_DRIVER
+    select ENTROPY_GENERATOR
+    help
+        If enabled, use Skadi Capability Operations Module for virtual memory management.
+
+
+config SKADI_SECURE
+    bool "Skadi secure / production mode"
+    depends on !SKADI_INSECURE
+
+config SKADI_INSECURE
+    bool "Skadi insecure / test mode"
+
+config SKADI_EXPECTED_EXCEPTION
+    bool "set test status 0 on exception"
+    help
+        If enabled, exceptions terminate the testbench board successfully.
+
+config SKADI_CACHE_INTEGRATION
+    bool "Is Northcape integrated with the CPU cache?"
+    help
+        Set to true when Northcape is integrated with the CPU cache. This will cause Skadi to NOT flush the cache on many occasions.
+
+config SKADI_RESET_BRANCH_TABLE_ON_SUBSYSTEM_CALL
+    bool "Should Northcape reset the branch table on subsystem call?"
+    default y
+    help
+        Set to false when you know for sure flushing the branch table is not required on subsystem call.
+
+choice "SKADI_PLATFORM"
+    prompt "Skadi runtime platform"
+    default SKADI_GENESYSII
+
+    config SKADI_GENESYSII
+        bool "skadi_genesysii"
+endchoice
+
+config SKADI_LOADER
+    bool "Skadi Loader support"
+    depends on SKADI_OS
+    select DEVICE_STORE_DT_ID
+    select SYS_HASH_MAP
+    select SYS_HASH_FUNC32
+    select REQUIRES_STD_C11
+    default y
+    help
+        Support loading tasks using the Skadi loader.
+        Only disable this for specific tests.
+
+config SKADI_LOADER_INLINE
+    bool "Skadi Loader conveys subsystems inline"
+    depends on SKADI_LOADER
+    default y
+    help
+        Link subsystems into Skadi loader and load in-order automatically.
+        Useful for quick development builds.
+        Otherwise, must load subsystems manually!
+
+config SKADI_SCHEDULER_RUNS_WITH_LOADER_TASK_ID
+    bool "Skadi scheduler runs with loader's task ID"
+    depends on SKADI_OS
+    depends on SKADI_LOADER
+    select SKADI_INSECURE
+    default n
+    help
+        Run the Skadi scheduler with Skadi loader's task ID.
+        This is useful while the scheduler is still a part of the zephyr nanokernel and not compartmentalized into a subsystem.
+
+config SKADI_LOADER_PRINT_SECT_SIZES
+    bool "Print section sizes in skadi loader"
+    depends on SKADI_LOADER
+    default y
+    help
+        Print sizes of allocated section from Skadi loader for each subsystem and a summary after loading.
+
+config SKADI_EARLYCON
+    bool "Enable early console, allowing printing messages before UART subsystem is fully initialized"
+    depends on SKADI_LOADER
+    default y
+    help
+        Enable early console. Thereby, before the UART subsystem is initialized, Skadi subsystems can
+        print messages through the loader.
+
+config SKADI_EARLYCON_INIT_PRIO
+    int "Skadi early console initialization priority"
+    default 0
+    help
+        Initialization priority for early console.
+        Always uses POST_KERNEL initialization level.
+
+config SKADI_ALLOCATOR_PRINT_FREE_MEM
+    bool "Print unused memory just before calling main()"
+    depends on SKADI_LOADER
+    default y
+    help
+        Print amount of unused memory as main() is about to be called from dynamic allocator.
+
+config SKADI_SUBSYSTEM_STACK_SIZE
+    int "Stack size for skadi protected subsystems"
+	depends on SKADI_OS
+    range 127 65519
+	default 1023
+	help
+		Statically allocated stack for skadi protected subsystem.
+		Needs to be smaller than 65536-8 for alignment to 16-bit offset token.
+		Needs to have remainder 7 when divided by 8.
+
+config SKADI_SUBSYSTEM_CALLEE_TRAMPOLINE_NUM_STACKS
+    int "Number of stacks for each skadi protected subsystem callee trampoline"
+    depends on SKADI_OS
+    range 1 64
+    default 4
+    help
+        Number of available stack frames for skadi subsystem callee trampolines.
+        When executing within the context of a skadi subsystem call,
+        a stack frame is allocated and returned as soon as the call is completed.
+        This prevents overwriting the stack frame as soon as another subsystem call is received.
+
+config SKADI_SUBSYSTEM_CALLEE_TRAMPOLINE_NUM_STACKS_IRQ
+    int "Number of stacks for each skadi protected subsystem callee trampoline IRQ handler"
+    depends on SKADI_OS
+    range 1 64
+    default 2
+    help
+        Number of available stack frames for skadi subsystem callee trampolines.
+        Used only in IRQs.
+        When executing within the context of a skadi subsystem call,
+        a stack frame is allocated and returned as soon as the call is completed.
+        This prevents overwriting the stack frame as soon as another subsystem call is received.
+
+config SKADI_SUBSYSTEM_CALLER_TRAMPOLINE_NUM_REGISTER_SETS
+    int "Number of register sets for each skadi protected subsystem caller trampoline"
+    depends on SKADI_OS
+    range 1 64
+    default 2
+    help
+        Number of available register sets for skadi subsystem caller trampolines.
+        When executing the same subsystem call concurrently, each call needs to allocate 
+        a register set for restoring the registers after the call.
+        This option controls the number of available register sets.
+
+config SKADI_SUBSYSTEM_CALLER_TRAMPOLINE_NUM_REGISTER_SETS_IRQ
+    int "Number of register sets for each skadi protected subsystem caller trampoline, for use in IRQ only"
+    depends on SKADI_OS
+    range 1 64
+    default 2
+    help
+        Number of available register sets for skadi subsystem caller trampolines.
+        Used only in IRQs.
+        When executing the same subsystem call concurrently, each call needs to allocate 
+        a register set for restoring the registers after the call.
+        This option controls the number of available register sets.
+
+config SKADI_ASSUME_IRQ_REGFILE
+    bool "Assume IRQs run on a separate register file"
+    depends on SKADI_OS
+    help
+        Assume CVA6 was built using separate IRQ register file, making it unnecessary to save/restore
+        registers in skadi ISR subsystem. Also prevents leaking registers to ISR.
+
+config SKADI_INIT_ALLOC_HEAP_SIZE
+    int "Skadi initial allocator heap size"
+    depends on SKADI_OS
+    default 41943040 if SKADI_SUBSYSTEM_COMPRESSION
+    default 20971520 if !SKADI_SUBSYSTEM_COMPRESSION
+    help
+        Heap size that the skadi initial allocator can use for allocations before
+        the skadi allocator subsystem has been relocated. Default 20 MiB.
+        Must be at least 8-byte aligned.
+
+config SKADI_ISR_STACK_SIZE
+    int "Skadi loader heap size"
+    depends on SKADI_OS
+    default 4096
+    help
+        Stack size that is used for the Skadi ISR. Must be at least 8-byte aligned.
+
+config SKADI_MODULES_INIT_PRIO
+    int "Skadi modules init priority"
+    depends on SKADI_LOADER
+    default 2
+    range 2 99
+    help
+        Initialization priority for the Skadi modules. Must be greater than (after) loader.
+
+config SKADI_LIBC_STDOUT_INIT_PRIO
+    int "Skadi stdout initialization priority"
+    depends on SKADI_LOADER
+    default 3
+    range 3 99
+    help
+        Initialization priority for Skadi libc's stdout hook. Must be greater than (after) modules init.
+        Ignored when stdout is no longer part of the loader.
+
+config SKADI_DEBUG_MODULE_INIT_PRIO
+    int "Skadi debug module init priority"
+    depends on SKADI_OS
+    default 1
+    range 1 99
+    help
+        Initialization priority for the Skadi debug module.
+        Creates an MMIO capability for the debug module.
+        Must be greater than initial allocator's init priority.
+
+config SKADI_SWITCH_TO_PLIC_PRIORITY
+    int "Skadi switch IRQs to PLIC subsystem init priority"
+    depends on SKADI_LOADER
+    default 1
+    range 1 99
+    help
+        Indicates at which point during boot we register loader's IRQs via the loader subsystem.
+
+config LOADER_SKADI_TRAMPOLINE_INIT_PRIO
+    int "Skadi trampolines init priority"
+    depends on SKADI_LOADER
+    default 1
+    range 1 99
+    help
+        Initialization priority for trampoline setup in the loader. Must be smaller than 
+        (before) modules but greater than (after) allocator initialization"
+
+config LOADER_SKADI_LOADER_INIT_PRIO
+    int "Skadi loader init priority"
+    depends on SKADI_LOADER
+    default 1
+    range 1 99
+    help
+        Initialization priority for Skadi loader. Must be greater than (after) 
+        allocator initialization.
+
+config LOADER_SKADI_ALLOC_INIT_PRIO
+    int "Skadi initial allocator init priority"
+    depends on SKADI_OS
+    default 0
+    range 0 99
+    help
+        Initialization priority for Skadi allocator. Must be before rest of Skadi infrastructure.
+
+config SKADI_SUBSYSTEM_PROVIDES_MAIN
+    bool "main method is defined in subsystem"
+    depends on SKADI_LOADER
+    help
+        Select when the main() method is defined in a subsystem.
+
+config SKADI_DEBUG
+    bool "Skadi Debug Mode"
+    depends on SKADI_OS
+    select SKADI_INSECURE
+    default n
+    help
+        Debug mode for skadi, improving debuggability at the expense of security.
+
+config SKADI_DEBUG_MODULE_DRIVER
+    bool "Skadi debug module driver"
+    depends on SKADI_OS
+    default y if SKADI_LOADER
+    help
+        Driver for the cva6 debug module. 
+        Creates an MMIO capability for the debug module, allowing debugging outside of the root capability.
+
+config SKADI_OS_DEBUG_CAP_NUM
+    bool "Debug number of capabilities in the system"
+    default y if SKADI_DEBUG
+    help
+        Starts a timer that periodically prints the number of capabilities in the system
+
+config SKADI_OS_DEBUG_CAP_NUM_TIMER_PERIOD
+    int "Period for capability number debug in seconds"
+    depends on SKADI_OS_DEBUG_CAP_NUM
+    default 1
+
+config SKADI_DEBUG_UNRESTRICTED_ROOT_CAP
+    bool "Disable task-id protection for root capability"
+    select SKADI_INSECURE
+    depends on SKADI_OS
+
+config SKADI_DEBUG_UNRESTRICTED_STACK
+    bool "Disable task-id protection for stacks"
+    select SKADI_INSECURE
+    default y if SKADI_DEBUG
+
+config SKADI_DISABLE_TASK_RESTRICTION_FOR_CODE_DATA
+    bool "Disable task restrictions for code and data"
+    depends on SKADI_DEBUG
+    select SKADI_INSECURE
+    default y
+    help
+        Do not restrict code and data segments to the task that they belong to.
+
+config SKADI_DISABLE_WRITE_PREVENTION_FOR_CODE_RO_DATA
+    bool "Enable write permission for code and read-only data"
+    depends on SKADI_DEBUG
+    select SKADI_INSECURE
+    default y
+    help
+        Do not remove write permission from code and read-only data after initialization.
+
+config SKADI_SUBSYSTEM_LOCK_STACK
+    bool "Lock stack for each skadi subsystem"
+    depends on SKADI_LOADER
+    help
+        Lock each subsystem stack and restrict the lock-holder to the subsystem's task ID.
+        This reduces necessary trust in the loader, but makes it impossible to derive capabilities from the stack,
+        so use with caution.
+
+config SKADI_LIBC_HAS_NO_TID_PROTECTION
+    bool "Disable task-id protection for libc subsystem"
+    depends on SKADI_LOADER
+    default y
+    help
+        Do NOT use task-id protection for the libc.
+            this gives non-security-critical subsystems like shell the option to directly jump into library,
+            possibly increasing performance at expense of security. 
+            This is not mutually exclusive with protecting security-critical subsystems FROM the library,
+            and the library has nothing worth modifying or stealing and write-protection is still enforced for text and read-only data,
+            so needs not be protected from other subsystems. 
+
+config SKADI_LOADER_DISABLE_INIT_PRIORITY
+    int "Skadi loader disable priority, must be <= 1 less than nuuk priority."
+    depends on SKADI_LOADER
+    default 99
+    range 0 99
+    help
+        Initialization priority at which the loader proxy disables access to the Skadi loader.
+        Applies to the APPLICATION init level.
+        This must be completed before nuuking the loader, which happens after the init level is complete.
+
+config SKADI_NUUK
+    bool "Destroy loader when subsystems are initialized"
+    depends on SKADI_LOADER
+    help
+        If enabled, the loader's memory is destroyed at the end of the boot.
+        This makes sure the minimally privileged task ID 0 along with all secrets known to the loader cannot
+        under any circumstances be used by the subsystems.
+
+config SKADI_NET_ZEROCOPY
+    bool "Support zero-copy for networking"
+    depends on SKADI_LOADER
+    depends on NETWORKING
+    default y
+    help
+        If enabled, supports the NET_OPT_0COPY option for network sockets.
+        This requires applications to call the skadi_send_0copy and skadi_recv_0copy methods on the sockets,
+        providing buffers and completion / deallocation callbacks.
+        Provided buffers will be transferred via the DMA without requiring any copying of the data.
+
+config SKADI_LIBC_INLINE
+    bool "Inline standard libc functions (with the exception of print functions) into subsystems"
+    depends on SKADI_LOADER
+    depends on PICOLIBC_USE_MODULE
+    help
+        If enabled, standard functions like strncpy() etc. will be inlined into subsystems.
+        Otherwise, these functions will be invoked via a subsystem call.
+
+config SKADI_MARK_THREAD_IN_TRAMPOLINE
+    bool "Mark associated thread in caller and callee trampolines"
+    depends on SKADI_OS
+    help
+        If enabled, mark associated thread in caller and callee trampolines.
+        Causes slight overhead.
+        Only required when thread cancellation is used (skadi_thread_abort).
+
+config SKADI_TEXT_ALIGN_12_BIT
+    bool "Align text segments to a 12-bit boundary"
+    depends on SKADI_OS
+    default y
+    help
+        If enabled, allocates text segments aligned to a 16-bit boundary.
+        On cva6, this avoids a mismatch between the last 12 bits of the capability token and 
+        translated address, which causes a 1-cycle performance penalty in the instruction cache.
+        Also aligns all subsystem calls to a 12-bit boundary to avoid the same problem.
+
+config SKADI_ALLOC_ZERO_MEMORY
+    bool "Zero-out returned memory from allocator"
+    depends on SKADI_OS
+    help
+        If enabled, ALL memory returned from the allocator is zeroed out.
+        If disabled, private data in allocated segments may be leaked.
+        Trades of a significant loss of security for an insignificant gain of performance.
+        If at all unsure, select "y".
+
+config SKADI_SUBSYSTEM_COMPRESSION
+    bool "Compress subsystems in image"
+    default y
+    depends on SKADI_LOADER
+    select LZ4
+    help
+        If enabled, use lz4 compression on subsystem images.
+        Reduces disk space and transfer time via OpenOCD/JTAG
+        at the expense of higher load time.
+
+config SKADI_SUBSYSTEM_CALL_NOCHECKS
+    bool "Disable security checks in subsystem calls"
+    depends on SKADI_OS
+    select SKADI_INSECURE
+    help
+        If enabled, do not check return address and do not zero out registers in
+        Skadi subsystem calls.
+        THIS IS NOT SECURE, use only in testing!
+
+config SKADI_SUBSYSTEM_CALL_INSTRUCTIONS
+    bool "Skadi subsystem call instructions supported"
+    depends on SKADI_OS
+    help
+        If enabled, use Northcape's specialized subsystem call instructions instead of generic
+        jump instructions in subsystem calls.
+        This eliminates a security check that would otherwise be necessary, improving performance.
+
+config SKADI_FAST_REG_ZERO_INSTRUCTION
+    bool "Skadi fast register zero supported"
+    depends on SKADI_OS
+    help
+        If enabled, use Northcape's specialized instruction for (selectively) zeroing out the register set.
+        Alternatively, zero out the registers one-by-one.
+
+choice SKADI_OPS_MODULE_ACCESS_MECHANISM
+    prompt "How should the operations module be accessed?"
+    default SKADI_OPS_MODULE_CSRS
+
+config SKADI_OPS_MODULE_CSRS
+    bool "Access to operations module via CSRs"
+    depends on SKADI_OS
+    help
+        If enabled, attempt to access Skadi's operations module through the (faster) CSR interface
+        instead of the (slower) MMIO interface.
+        Requires architectural support for Northcape CSRs.
+
+config SKADI_OPS_MODULE_MMIO
+    bool "Access to operations module via MMIO"
+    depends on SKADI_OS
+    help
+        If enabled, attempt to access Skadi's operations module through the (slower) MMIO interface
+        instead of the (faster) CSR interface.
+        Requires architectural support for Northcape MMIO.
+endchoice
+
+config SKADI_TRACK_CYCLES_OPS
+    bool "Track cycles spent waiting for the operations module."
+    default y if SKADI_DEBUG
+    depends on SKADI_OPS_MODULE_CSRS # currently not implemented for MMIO
+    help
+        If enabled, track the time needed for accessing the operations module.
+        Can be retrieved, e.g., via the Skadi shell.
+
+config SKADI_COUNT_SUBSYSTEM_CALLS
+    bool "Count subsystem calls"
+    default y if SKADI_DEBUG
+    depends on SKADI_OS
+    help
+        If enabled, track number of subsystem calls in a central place.
+
+config SKADI_COUNT_SUBSYSTEM_CALL_ALLOC_ITERATIONS
+    bool "Count subsystem call allocation iterations"
+    default y if SKADI_DEBUG
+    depends on SKADI_COUNT_SUBSYSTEM_CALLS
+    help
+        If enabled, track number of allocation attempts in subsystem calls.
+
+config SKADI_COUNT_YIELD_CALLS
+    bool "Count yield() calls"
+    default y if SKADI_DEBUG
+    depends on SKADI_OS
+    help
+        If enabled, track number of skadi_sched_yield() calls.
+
+config SKADI_CHECK_SUBSYSTEM_CALL_ID
+    bool "Check ID of callee on (static) subsystem calls"
+    depends on SKADI_LOADER
+    depends on SKADI_SUBSYSTEM_CALL_INSTRUCTIONS
+    help
+        If enabled, check that ID of subsystem callee is the same as during initialization time.
+
+choice SKADI_SUBSYS_SYNC_MECHANISM
+    prompt "How should subsystem calls synchronize access to caller register sets / callee trampolines?"
+    default SKADI_SUBSYS_SYNC_UP
+    default SKADI_SUBSYS_SYNC_ATOMIC if SMP
+
+config SKADI_SUBSYS_SYNC_ATOMIC
+    bool "Atomics for subsystem call synchronization"
+    depends on SKADI_OS
+    help
+        If enabled, subsystem calls synchronize access to register sets and trampolines via atomic transactions.
+        Slightly reduces code/data size at the expense of performance.
+        Necessary for multi-core operation.
+
+config SKADI_SUBSYS_SYNC_UP
+    bool "Uniprocessor synchronization for subsystem calls."
+    depends on SKADI_OS
+    depends on !SMP
+    help
+        If enabled, subsystem calls simply disable interrupts to access register sets.
+        Synchronization between IRQs and non-IRQs is handled via an IRQ copy of the register set.
+        Slightly increases code/data size, but improves performance.
+        Does not operate correctly on SMP systems.
+
+endchoice
+
+module = SKADI
+module-str = skadi
+source "subsys/logging/Kconfig.template.log_config"
+
+module = SKADI_SUBSYSTEM
+module-str = skadi_subsystem
+source "subsys/logging/Kconfig.template.log_config"
+
+endmenu

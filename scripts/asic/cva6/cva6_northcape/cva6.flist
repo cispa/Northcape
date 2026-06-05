@@ -1,0 +1,5 @@
+// wrapper/configs
+../../../../hardware/include/cva6/corev_apu/src/ariane.sv
+../../../../hardware/hdl/ariane_wrappers/cva6_wrapper.sv
+../../../../hardware/hdl/block_design_wrappers/cva6_wrapper_verilog.v
+../../../../hardware/include/cva6/core/include/cv64a6_imafdc_sv39_northcape_wt_config_pkg.sv

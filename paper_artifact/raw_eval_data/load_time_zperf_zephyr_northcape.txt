@@ -1,0 +1,135 @@
+I: Configuring IRQs 651 and 779!
+I: Enabling IRQ!
+I: No IRQs defined!
+I: Enable MDIO Bus assuming ethernet clock frequency 50000000 divider 40!
+I: MDIO ready!
+I: PHY (1) ID 1CC915
+
+I: RX Checksum offloading requested
+I: TX Checksum offloading requested
+I: Link state changed to: down (speed 0)
+I: Interface initialized!
+*** Booting Zephyr OS build v3.7.0-rc1-4629-ga3bc871e5a9e ***
+I: Initializing network
+I: IPv4 address: 192.0.2.1
+[m
+[1;32muart:~$ [mI: IPv6 address: 2001:db8::1
+I: IPv6 address: 2001:db8::1
+I: PHY (1) Link speed 1000 Mb, full duplex
+
+I: Link state changed to: up (speed 20)
+I: Configuring IRQs 651 and 779!
+I: Enabling IRQ!
+I: No IRQs defined!
+I: Enable MDIO Bus assuming ethernet clock frequency 50000000 divider 40!
+I: MDIO ready!
+I: PHY (1) ID 1CC915
+
+I: RX Checksum offloading requested
+I: TX Checksum offloading requested
+I: Link state changed to: down (speed 0)
+I: Interface initialized!
+*** Booting Zephyr OS build v3.7.0-rc1-4629-ga3bc871e5a9e ***
+I: Initializing network
+I: IPv4 address: 192.0.2.1
+======================
+Boot time: 11679960 cycles (Genesys: 0.233599 ns, Arty: 0.467198 ns)!
+======================
+[m
+[1;32muart:~$ [mI: IPv6 address: 2001:db8::1
+I: IPv6 address: 2001:db8::1
+I: PHY (1) Link speed 1000 Mb, full duplex
+
+I: Link state changed to: up (speed 20)
+I: Configuring IRQs 651 and 779!
+I: Enabling IRQ!
+I: No IRQs defined!
+I: Enable MDIO Bus assuming ethernet clock frequency 50000000 divider 40!
+I: MDIO ready!
+I: PHY (1) ID 1CC915
+
+I: RX Checksum offloading requested
+I: TX Checksum offloading requested
+I: Link state changed to: down (speed 0)
+I: Interface initialized!
+*** Booting Zephyr OS build v3.7.0-rc1-4629-ga3bc871e5a9e ***
+I: Initializing network
+I: IPv4 address: 192.0.2.1
+======================
+Boot time: 11842183 cycles (Genesys: 0.236844 ns, Arty: 0.473687 ns)!
+======================
+[m
+[1;32muart:~$ [mI: IPv6 address: 2001:db8::1
+I: IPv6 address: 2001:db8::1
+I: PHY (1) Link speed 1000 Mb, full duplex
+
+I: Link state changed to: up (speed 20)
+I: Configuring IRQs 651 and 779!
+I: Enabling IRQ!
+I: No IRQs defined!
+I: Enable MDIO Bus assuming ethernet clock frequency 50000000 divider 40!
+I: MDIO ready!
+I: PHY (1) ID 1CC915
+
+I: RX Checksum offloading requested
+I: TX Checksum offloading requested
+I: Link state changed to: down (speed 0)
+I: Interface initialized!
+*** Booting Zephyr OS build v3.7.0-rc1-4629-ga3bc871e5a9e ***
+I: Initializing network
+I: IPv4 address: 192.0.2.1
+======================
+Boot time: 10341728 cycles (Genesys: 0.206835 ns, Arty: 0.413669 ns)!
+======================
+[m
+[1;32muart:~$ [mI: IPv6 address: 2001:db8::1
+I: IPv6 address: 2001:db8::1
+1I: PHY (1) Link speed 1000 Mb, full duplex
+
+I: Link state changed to: up (speed 20)
+I: Configuring IRQs 651 and 779!
+I: Enabling IRQ!
+I: No IRQs defined!
+I: Enable MDIO Bus assuming ethernet clock frequency 50000000 divider 40!
+I: MDIO ready!
+I: PHY (1) ID 1CC915
+
+I: RX Checksum offloading requested
+I: TX Checksum offloading requested
+I: Link state changed to: down (speed 0)
+I: Interface initialized!
+*** Booting Zephyr OS build v3.7.0-rc1-4629-ga3bc871e5a9e ***
+I: Initializing network
+I: IPv4 address: 192.0.2.1
+======================
+Boot time: 11042972 cycles (Genesys: 0.220859 ns, Arty: 0.441719 ns)!
+======================
+[m
+[1;32muart:~$ [mI: IPv6 address: 2001:db8::1
+I: IPv6 address: 2001:db8::1
+I: PHY (1) Link speed 1000 Mb, full duplex
+
+I: Link state changed to: up (speed 20)
+I: Configuring IRQs 651 and 779!
+I: Enabling IRQ!
+I: No IRQs defined!
+I: Enable MDIO Bus assuming ethernet clock frequency 50000000 divider 40!
+I: MDIO ready!
+I: PHY (1) ID 1CC915
+
+I: RX Checksum offloading requested
+I: TX Checksum offloading requested
+I: Link state changed to: down (speed 0)
+I: Interface initialized!
+*** Booting Zephyr OS build v3.7.0-rc1-4629-ga3bc871e5a9e ***
+I: Initializing network
+I: IPv4 address: 192.0.2.1
+======================
+Boot time: 11496081 cycles (Genesys: 0.229922 ns, Arty: 0.459843 ns)!
+======================
+[m
+[1;32muart:~$ [mI: IPv6 address: 2001:db8::1
+I: IPv6 address: 2001:db8::1
+I: PHY (1) Link speed 1000 Mb, full duplex
+
+I: Link state changed to: up (speed 20)

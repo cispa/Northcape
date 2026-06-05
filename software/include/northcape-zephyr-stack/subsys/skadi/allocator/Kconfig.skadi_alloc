@@ -1,0 +1,26 @@
+if SKADI_LOADER
+choice SKADI_ALLOCATOR_ALLOCATION_STRATEGY
+    prompt "Skadi allocator allocation strategy"
+    default SKADI_ALLOCATOR_FIRST_FIT
+    help
+        Select allocation strategy for skadi allocator.
+
+config SKADI_ALLOCATOR_FIRST_FIT
+    bool "First fit allocation"
+    help
+        Allocate using first-fit from size-sorted RBtree.
+
+config SKADI_ALLOCATOR_BEST_FIT
+    bool "Best fit allocation"
+    help
+        Allocate using best-fit from size-sorted RBtree.
+
+endchoice
+
+config SKADI_ALLOCATOR_DEBUG
+    bool "Debug the allocator"
+    depends on SKADI_DEBUG
+    help
+        Do not task-id-restrict the allocator chunks.
+
+endif

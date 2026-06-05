@@ -1,0 +1,86 @@
+I: Configuring IRQs 651 and 779!
+*** Booting Zephyr OS build v3.7.0-rc1-4600-g28a3b3d2f7d8 ***
+-------------------------------------------------------------
+STREAM version $Revision: 5.10 $
+-------------------------------------------------------------
+This system uses 8 bytes per array element.
+-------------------------------------------------------------
+Array size = 10000000 (elements), Offset = 0 (elements)
+Memory per array = 76.3 MiB (= 0.1 GiB).
+Total memory required = 228.9 MiB (= 0.2 GiB).
+Each kernel will be executed 10 times.
+ The *best* time for each kernel (excluding the first iteration)
+ will be used to compute the reported bandwidth.
+-------------------------------------------------------------
+Your clock granularity/precision appears to be 99999 microseconds.
+Each test below will take on the order of 4500000 microseconds.
+   (= 45 clock ticks)
+Increase the size of the arrays if this shows that
+you are not getting at least 20 clock ticks per test.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Raw results:
+Copy:       Scale:      Add:        Triad:     
+4.300000 4.500000 7.600000 7.900000
+4.300000 4.600000 7.600000 7.800000
+4.300000 4.600000 7.600000 7.900000
+4.300000 4.500000 7.600000 7.900000
+4.300000 4.600000 7.600000 7.800000
+4.300000 4.600000 7.600000 7.900000
+4.300000 4.500000 7.600000 7.900000
+4.300000 4.600000 7.600000 7.800000
+4.300000 4.600000 7.600000 7.900000
+Function    Best Rate MB/s  Avg time     Min time     Max time     Stddev time
+Copy:              37.2     4.300000     4.300000     4.300000     0.000000
+Scale:             35.6     4.566667     4.500000     4.600000     0.047140
+Add:               31.6     7.600000     7.600000     7.600000     0.000000
+Triad:             30.8     7.866667     7.800000     7.900000     0.047140
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-13 on all three arrays
+-------------------------------------------------------------
+I: Configuring IRQs 651 and 779!
+*** Booting Zephyr OS build v3.7.0-rc1-4623-ge629722f3319 ***
+-------------------------------------------------------------
+STREAM version $Revision: 5.10 $
+-------------------------------------------------------------
+This system uses 8 bytes per array element.
+-------------------------------------------------------------
+Array size = 10000000 (elements), Offset = 0 (elements)
+Memory per array = 76.3 MiB (= 0.1 GiB).
+Total memory required = 228.9 MiB (= 0.2 GiB).
+Each kernel will be executed 10 times.
+ The *best* time for each kernel (excluding the first iteration)
+ will be used to compute the reported bandwidth.
+-------------------------------------------------------------
+Your clock granularity/precision appears to be 99999 microseconds.
+Each test below will take on the order of 5000000 microseconds.
+   (= 50 clock ticks)
+Increase the size of the arrays if this shows that
+you are not getting at least 20 clock ticks per test.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Raw results:
+Copy:       Scale:      Add:        Triad:     
+5.400000 6.400000 8.700000 8.800000
+5.400000 6.300000 8.800000 8.700000
+5.400000 6.400000 8.700000 8.800000
+5.400000 6.300000 8.800000 8.700000
+5.500000 6.300000 8.700000 8.800000
+5.400000 6.400000 8.700000 8.800000
+5.400000 6.300000 8.700000 8.800000
+5.400000 6.400000 8.700000 8.800000
+5.400000 6.300000 8.800000 8.700000
+Function    Best Rate MB/s  Avg time     Min time     Max time     Stddev time
+Copy:              29.6     5.411111     5.400000     5.500000     0.031427
+Scale:             25.4     6.344444     6.300000     6.400000     0.049690
+Add:               27.6     8.733333     8.700000     8.800000     0.047140
+Triad:             27.6     8.766667     8.700000     8.800000     0.047140
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-13 on all three arrays
+-------------------------------------------------------------

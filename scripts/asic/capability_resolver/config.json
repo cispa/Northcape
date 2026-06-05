@@ -1,0 +1,8 @@
+{
+  "DESIGN_NAME": "northcape_cap_resolver_wrapper_verilog",
+  "VERILOG_FILES": ["dir::northcape_cap_resolver_flattened.v"],
+  "DIE_AREA": "0 0 8192 8192",
+  "FP_SIZING": "absolute",
+  "CLOCK_PERIOD": 10,
+  "CLOCK_PORT": "aclk"
+}

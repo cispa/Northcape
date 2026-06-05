@@ -1,0 +1,69 @@
+#include <zephyr/sys/atomic.h>
+#include <zephyr/llext/symbol.h>
+
+/* libc is first to be loaded - it can keep count for all subsystems */
+atomic_t skadi_cycles_create;
+atomic_t skadi_cycles_derive;
+atomic_t skadi_cycles_drop;
+atomic_t skadi_cycles_merge;
+atomic_t skadi_cycles_clone;
+atomic_t skadi_cycles_revoke;
+atomic_t skadi_cycles_lock;
+atomic_t skadi_cycles_inspect;
+atomic_t skadi_cycles_restrict;
+atomic_t skadi_cycles_sweep;
+
+atomic_t skadi_cycles_create_ops;
+atomic_t skadi_cycles_derive_ops;
+atomic_t skadi_cycles_drop_ops;
+atomic_t skadi_cycles_merge_ops;
+atomic_t skadi_cycles_clone_ops;
+atomic_t skadi_cycles_revoke_ops;
+atomic_t skadi_cycles_lock_ops;
+atomic_t skadi_cycles_inspect_ops;
+atomic_t skadi_cycles_restrict_ops;
+atomic_t skadi_cycles_sweep_ops;
+
+atomic_t skadi_failed_occupied_checks_create_ops;
+atomic_t skadi_failed_occupied_checks_derive_ops;
+atomic_t skadi_failed_occupied_checks_drop_ops;
+atomic_t skadi_failed_occupied_checks_merge_ops;
+atomic_t skadi_failed_occupied_checks_clone_ops;
+atomic_t skadi_failed_occupied_checks_revoke_ops;
+atomic_t skadi_failed_occupied_checks_lock_ops;
+atomic_t skadi_failed_occupied_checks_inspect_ops;
+atomic_t skadi_failed_occupied_checks_restrict_ops;
+atomic_t skadi_failed_occupied_checks_sweep_ops;
+
+EXPORT_SYMBOL(skadi_cycles_create);
+EXPORT_SYMBOL(skadi_cycles_derive);
+EXPORT_SYMBOL(skadi_cycles_drop);
+EXPORT_SYMBOL(skadi_cycles_merge);
+EXPORT_SYMBOL(skadi_cycles_clone);
+EXPORT_SYMBOL(skadi_cycles_revoke);
+EXPORT_SYMBOL(skadi_cycles_lock);
+EXPORT_SYMBOL(skadi_cycles_inspect);
+EXPORT_SYMBOL(skadi_cycles_restrict);
+EXPORT_SYMBOL(skadi_cycles_sweep);
+
+EXPORT_SYMBOL(skadi_cycles_create_ops);
+EXPORT_SYMBOL(skadi_cycles_derive_ops);
+EXPORT_SYMBOL(skadi_cycles_drop_ops);
+EXPORT_SYMBOL(skadi_cycles_merge_ops);
+EXPORT_SYMBOL(skadi_cycles_clone_ops);
+EXPORT_SYMBOL(skadi_cycles_revoke_ops);
+EXPORT_SYMBOL(skadi_cycles_lock_ops);
+EXPORT_SYMBOL(skadi_cycles_inspect_ops);
+EXPORT_SYMBOL(skadi_cycles_restrict_ops);
+EXPORT_SYMBOL(skadi_cycles_sweep_ops);
+
+EXPORT_SYMBOL(skadi_failed_occupied_checks_create_ops);
+EXPORT_SYMBOL(skadi_failed_occupied_checks_derive_ops);
+EXPORT_SYMBOL(skadi_failed_occupied_checks_drop_ops);
+EXPORT_SYMBOL(skadi_failed_occupied_checks_merge_ops);
+EXPORT_SYMBOL(skadi_failed_occupied_checks_clone_ops);
+EXPORT_SYMBOL(skadi_failed_occupied_checks_revoke_ops);
+EXPORT_SYMBOL(skadi_failed_occupied_checks_lock_ops);
+EXPORT_SYMBOL(skadi_failed_occupied_checks_inspect_ops);
+EXPORT_SYMBOL(skadi_failed_occupied_checks_restrict_ops);
+EXPORT_SYMBOL(skadi_failed_occupied_checks_sweep_ops);

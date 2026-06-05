@@ -1,0 +1,1035 @@
+I: Configuring IRQs 651 and 779!
+I: Enabling IRQ!
+I: No IRQs defined!
+I: Enable MDIO Bus assuming ethernet clock frequency 50000000 divider 40!
+I: MDIO ready!
+I: PHY (1) ID 1CC915
+
+I: RX Checksum offloading requested
+I: TX Checksum offloading requested
+I: Link state changed to: down (speed 0)
+I: Interface initialized!
+*** Booting Zephyr OS build v3.7.0-rc1-4624-g35283b085a9c ***
+W: No entropy device on the system, TLS communication is insecure!
+I: Initializing network
+I: IPv4 address: 192.0.2.1
+I: tls_init: 0 <OK>
+I: attempting to connect: 
+I: mqtt_connect: -116 <ERROR>
+I: mqtt_connect: -116 <ERROR>
+I: PHY (1) Link speed 1000 Mb, full duplex
+
+I: Link state changed to: up (speed 20)
+I: Connect completed
+I: MQTT client connected!
+I: try_to_connect: 0 <OK>
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 25778
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 34099
+I: PUBCOMP packet id: 34099
+I: Iteration 1 duration 1983870720 ns (start: 2172904704 end: 2222501472)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 13072
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 35375
+I: PUBCOMP packet id: 35375
+I: Iteration 2 duration 1993551640 ns (start: 2222662253 end: 2272501044)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 49384
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 44840
+I: PUBCOMP packet id: 44840
+I: Iteration 3 duration 1993560880 ns (start: 2272661951 end: 2322500973)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 25762
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 12196
+I: PUBCOMP packet id: 12196
+I: Iteration 4 duration 1993540760 ns (start: 2322661856 end: 2372500375)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 65017
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 25240
+I: PUBCOMP packet id: 25240
+I: Iteration 5 duration 1993585280 ns (start: 2372661092 end: 2422500724)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 36698
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 3267
+I: PUBCOMP packet id: 3267
+I: Iteration 6 duration 1993579600 ns (start: 2422661649 end: 2472501139)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 34418
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 47720
+I: PUBCOMP packet id: 47720
+I: Iteration 7 duration 1993567520 ns (start: 2472661969 end: 2522501157)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 17978
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 62342
+I: PUBCOMP packet id: 62342
+I: Iteration 8 duration 1993553360 ns (start: 2522662072 end: 2572500906)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 23176
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 15406
+I: PUBCOMP packet id: 15406
+I: Iteration 9 duration 1993582320 ns (start: 2572661753 end: 2622501311)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 53930
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 43539
+I: PUBCOMP packet id: 43539
+I: Iteration 10 duration 1993540040 ns (start: 2622662084 end: 2672500585)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 41301
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 2760
+I: PUBCOMP packet id: 2760
+I: Iteration 11 duration 1993504120 ns (start: 2672663697 end: 2722501300)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 4231
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 52624
+I: PUBCOMP packet id: 52624
+I: Iteration 12 duration 1993462680 ns (start: 2722664244 end: 2772500811)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 2623
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 36767
+I: PUBCOMP packet id: 36767
+I: Iteration 13 duration 1993483880 ns (start: 2772663722 end: 2822500819)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 29389
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 35112
+I: PUBCOMP packet id: 35112
+I: Iteration 14 duration 1993462440 ns (start: 2822663825 end: 2872500386)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 1507
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 6388
+I: PUBCOMP packet id: 6388
+I: Iteration 15 duration 1993474840 ns (start: 2872663499 end: 2922500370)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 26173
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 28042
+I: PUBCOMP packet id: 28042
+I: Iteration 16 duration 1993507760 ns (start: 2922663402 end: 2972501096)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 51924
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 22843
+I: PUBCOMP packet id: 22843
+I: Iteration 17 duration 1993465640 ns (start: 2972664163 end: 3022500804)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 8280
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 9347
+I: PUBCOMP packet id: 9347
+I: Iteration 18 duration 1993476320 ns (start: 3022663856 end: 3072500764)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 11998
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 20130
+I: PUBCOMP packet id: 20130
+I: Iteration 19 duration 1993490560 ns (start: 3072663727 end: 3122500991)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 59027
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 50079
+I: PUBCOMP packet id: 50079
+I: Iteration 20 duration 1993450680 ns (start: 3122664077 end: 3172500344)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 22339
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 8858
+I: PUBCOMP packet id: 8858
+I: Iteration 21 duration 1993513800 ns (start: 3172663324 end: 3222501169)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 13553
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 58268
+I: PUBCOMP packet id: 58268
+I: Iteration 22 duration 1993491120 ns (start: 3222664073 end: 3272501351)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 26802
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 41617
+I: PUBCOMP packet id: 41617
+I: Iteration 23 duration 1993441320 ns (start: 3272664413 end: 3322500446)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 23677
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 32992
+I: PUBCOMP packet id: 32992
+I: Iteration 24 duration 1993487640 ns (start: 3322663423 end: 3372500614)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 37049
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 11120
+I: PUBCOMP packet id: 11120
+I: Iteration 25 duration 1993482040 ns (start: 3372663549 end: 3422500600)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 26940
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 51205
+I: PUBCOMP packet id: 51205
+I: Iteration 26 duration 1993488640 ns (start: 3422663662 end: 3472500878)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 33112
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 40312
+I: PUBCOMP packet id: 40312
+I: Iteration 27 duration 1993490640 ns (start: 3472663983 end: 3522501249)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 6815
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 41260
+I: PUBCOMP packet id: 41260
+I: Iteration 28 duration 1993497280 ns (start: 3522664089 end: 3572501521)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 19486
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 13965
+I: PUBCOMP packet id: 13965
+I: Iteration 29 duration 1993454080 ns (start: 3572664648 end: 3622501000)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 61487
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 28653
+I: PUBCOMP packet id: 28653
+I: Iteration 30 duration 1993493400 ns (start: 3622664109 end: 3672501444)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 37968
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 12650
+I: PUBCOMP packet id: 12650
+I: Iteration 31 duration 1993445600 ns (start: 3672664222 end: 3722500362)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 33138
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 18497
+I: PUBCOMP packet id: 18497
+I: Iteration 32 duration 1993522160 ns (start: 3722663262 end: 3772501316)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 20590
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 2214
+I: PUBCOMP packet id: 2214
+I: Iteration 33 duration 1993437360 ns (start: 3772664454 end: 3822500388)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 64541
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 32250
+I: PUBCOMP packet id: 32250
+I: Iteration 34 duration 1993522760 ns (start: 3822663260 end: 3872501329)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 37061
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 9992
+I: PUBCOMP packet id: 9992
+I: Iteration 35 duration 1993449440 ns (start: 3872664237 end: 3922500473)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 19168
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 4213
+I: PUBCOMP packet id: 4213
+I: Iteration 36 duration 1993515680 ns (start: 3922663483 end: 3972501375)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 16472
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 65136
+I: PUBCOMP packet id: 65136
+I: Iteration 37 duration 1993461560 ns (start: 3972664266 end: 4022500805)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 38607
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 5924
+I: PUBCOMP packet id: 5924
+I: Iteration 38 duration 1993490200 ns (start: 4022663708 end: 4072500963)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 27397
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 16099
+I: PUBCOMP packet id: 16099
+I: Iteration 39 duration 1993493160 ns (start: 4072664032 end: 4122501361)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 56682
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 21039
+I: PUBCOMP packet id: 21039
+I: Iteration 40 duration 1993435240 ns (start: 4122664355 end: 4172500236)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 18123
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 29782
+I: PUBCOMP packet id: 29782
+I: Iteration 41 duration 1993519400 ns (start: 4172663172 end: 4222501157)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 40775
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 51803
+I: PUBCOMP packet id: 51803
+I: Iteration 42 duration 1993446920 ns (start: 4222664162 end: 4272500335)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 3498
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 23831
+I: PUBCOMP packet id: 23831
+I: Iteration 43 duration 1993488160 ns (start: 4272663405 end: 4322500609)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 31362
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 59192
+I: PUBCOMP packet id: 59192
+I: Iteration 44 duration 1993477880 ns (start: 4322663524 end: 4372500471)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 21729
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 24735
+I: PUBCOMP packet id: 24735
+I: Iteration 45 duration 1993519000 ns (start: 4372663413 end: 4422501388)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 41546
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 51599
+I: PUBCOMP packet id: 51599
+I: Iteration 46 duration 1993483000 ns (start: 4422664164 end: 4472501239)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 21168
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 6799
+I: PUBCOMP packet id: 6799
+I: Iteration 47 duration 1993454400 ns (start: 4472664283 end: 4522500643)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 19055
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 33374
+I: PUBCOMP packet id: 33374
+I: Iteration 48 duration 1993473480 ns (start: 4522663535 end: 4572500372)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 63379
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 62366
+I: PUBCOMP packet id: 62366
+I: Iteration 49 duration 1993483680 ns (start: 4572663214 end: 4622500306)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 25876
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 25618
+I: PUBCOMP packet id: 25618
+I: Iteration 50 duration 1993523320 ns (start: 4622663323 end: 4672501406)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 59367
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 5437
+I: PUBCOMP packet id: 5437
+I: Iteration 51 duration 1993457960 ns (start: 4672664292 end: 4722500741)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 39788
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 2119
+I: PUBCOMP packet id: 2119
+I: Iteration 52 duration 1993485640 ns (start: 4722663765 end: 4772500906)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 281
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 59990
+I: PUBCOMP packet id: 59990
+I: Iteration 53 duration 1993462200 ns (start: 4772663894 end: 4822500449)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 33513
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 51499
+I: PUBCOMP packet id: 51499
+I: Iteration 54 duration 1993488040 ns (start: 4822663545 end: 4872500746)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 5950
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 1949
+I: PUBCOMP packet id: 1949
+I: Iteration 55 duration 1993465160 ns (start: 4872663665 end: 4922500294)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 24898
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 4507
+I: PUBCOMP packet id: 4507
+I: Iteration 56 duration 1993504000 ns (start: 4922663333 end: 4972500933)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 38520
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 6683
+I: PUBCOMP packet id: 6683
+I: Iteration 57 duration 1993499720 ns (start: 4972663902 end: 5022501395)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 120
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 8220
+I: PUBCOMP packet id: 8220
+I: Iteration 58 duration 1993478520 ns (start: 5022664432 end: 5072501395)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 32085
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 37223
+I: PUBCOMP packet id: 37223
+I: Iteration 59 duration 1993452360 ns (start: 5072664342 end: 5122500651)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 21322
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 36639
+I: PUBCOMP packet id: 36639
+I: Iteration 60 duration 1993464440 ns (start: 5122663792 end: 5172500403)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 23938
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 21006
+I: PUBCOMP packet id: 21006
+I: Iteration 61 duration 1993491280 ns (start: 5172663262 end: 5222500544)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 43626
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 23259
+I: PUBCOMP packet id: 23259
+I: Iteration 62 duration 1993484600 ns (start: 5222663597 end: 5272500712)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 64267
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 60629
+I: PUBCOMP packet id: 60629
+I: Iteration 63 duration 1993465600 ns (start: 5272663697 end: 5322500337)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 60993
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 20689
+I: PUBCOMP packet id: 20689
+I: Iteration 64 duration 1993502520 ns (start: 5322663379 end: 5372500942)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 17107
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 14485
+I: PUBCOMP packet id: 14485
+I: Iteration 65 duration 1993483680 ns (start: 5372664145 end: 5422501237)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 13687
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 20514
+I: PUBCOMP packet id: 20514
+I: Iteration 66 duration 1993470640 ns (start: 5422664240 end: 5472501006)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 13520
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 48486
+I: PUBCOMP packet id: 48486
+I: Iteration 67 duration 1993471560 ns (start: 5472663944 end: 5522500733)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 38766
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 53640
+I: PUBCOMP packet id: 53640
+I: Iteration 68 duration 1993469040 ns (start: 5522663829 end: 5572500555)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 10333
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 51332
+I: PUBCOMP packet id: 51332
+I: Iteration 69 duration 1993507560 ns (start: 5572663513 end: 5622501202)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 14252
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 25332
+I: PUBCOMP packet id: 25332
+I: Iteration 70 duration 1993482560 ns (start: 5622664259 end: 5672501323)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 48209
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 53505
+I: PUBCOMP packet id: 53505
+I: Iteration 71 duration 1993449800 ns (start: 5672664382 end: 5722500627)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 32974
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 64204
+I: PUBCOMP packet id: 64204
+I: Iteration 72 duration 1993486040 ns (start: 5722663628 end: 5772500779)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 50452
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 60644
+I: PUBCOMP packet id: 60644
+I: Iteration 73 duration 1993511120 ns (start: 5772663739 end: 5822501517)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 5105
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 42464
+I: PUBCOMP packet id: 42464
+I: Iteration 74 duration 1993429040 ns (start: 5822664504 end: 5872500230)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 3544
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 24298
+I: PUBCOMP packet id: 24298
+I: Iteration 75 duration 1993519760 ns (start: 5872663314 end: 5922501308)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 64230
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 23042
+I: PUBCOMP packet id: 23042
+I: Iteration 76 duration 1993458840 ns (start: 5922664302 end: 5972500773)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 18101
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 48513
+I: PUBCOMP packet id: 48513
+I: Iteration 77 duration 1993467320 ns (start: 5972663757 end: 6022500440)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 57713
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 23738
+I: PUBCOMP packet id: 23738
+I: Iteration 78 duration 1993525840 ns (start: 6022663427 end: 6072501573)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 28796
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 10647
+I: PUBCOMP packet id: 10647
+I: Iteration 79 duration 1993465600 ns (start: 6072664629 end: 6122501269)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 38805
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 23836
+I: PUBCOMP packet id: 23836
+I: Iteration 80 duration 1993476200 ns (start: 6122664307 end: 6172501212)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 41471
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 48920
+I: PUBCOMP packet id: 48920
+I: Iteration 81 duration 1993453800 ns (start: 6172664203 end: 6222500548)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 58998
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 43812
+I: PUBCOMP packet id: 43812
+I: Iteration 82 duration 1993513480 ns (start: 6222663455 end: 6272501292)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 55399
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 13989
+I: PUBCOMP packet id: 13989
+I: Iteration 83 duration 1993445720 ns (start: 6272664202 end: 6322500345)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 63908
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 28113
+I: PUBCOMP packet id: 28113
+I: Iteration 84 duration 1993493720 ns (start: 6322663457 end: 6372500800)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 62910
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 48423
+I: PUBCOMP packet id: 48423
+I: Iteration 85 duration 1993465040 ns (start: 6372663801 end: 6422500427)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 44042
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 12210
+I: PUBCOMP packet id: 12210
+I: Iteration 86 duration 1993500440 ns (start: 6422663473 end: 6472500984)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 57870
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 14044
+I: PUBCOMP packet id: 14044
+I: Iteration 87 duration 1993462560 ns (start: 6472664014 end: 6522500578)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 28828
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 32959
+I: PUBCOMP packet id: 32959
+I: Iteration 88 duration 1993488440 ns (start: 6522663479 end: 6572500690)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 26790
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 44229
+I: PUBCOMP packet id: 44229
+I: Iteration 89 duration 1993501920 ns (start: 6572663587 end: 6622501135)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 50203
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 45096
+I: PUBCOMP packet id: 45096
+I: Iteration 90 duration 1993488040 ns (start: 6622664129 end: 6672501330)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 9035
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 7737
+I: PUBCOMP packet id: 7737
+I: Iteration 91 duration 1993447200 ns (start: 6672664252 end: 6722500432)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 16240
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 50152
+I: PUBCOMP packet id: 50152
+I: Iteration 92 duration 1993517320 ns (start: 6722663494 end: 6772501427)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 28014
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 7943
+I: PUBCOMP packet id: 7943
+I: Iteration 93 duration 1993443800 ns (start: 6772664479 end: 6822500574)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 18484
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 39919
+I: PUBCOMP packet id: 39919
+I: Iteration 94 duration 1993499720 ns (start: 6822663495 end: 6872500988)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 24305
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 63146
+I: PUBCOMP packet id: 63146
+I: Iteration 95 duration 1993489920 ns (start: 6872664057 end: 6922501305)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 38119
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 32748
+I: PUBCOMP packet id: 32748
+I: Iteration 96 duration 1993440200 ns (start: 6922664374 end: 6972500379)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 32106
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 2786
+I: PUBCOMP packet id: 2786
+I: Iteration 97 duration 1993479800 ns (start: 6972663415 end: 7022500410)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 37703
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 48225
+I: PUBCOMP packet id: 48225
+I: Iteration 98 duration 1993528640 ns (start: 7022663299 end: 7072501515)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 21237
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 62081
+I: PUBCOMP packet id: 62081
+I: Iteration 99 duration 1993444640 ns (start: 7072664499 end: 7122500615)!
+I: mqtt_ping: 0 <OK>
+I: PINGRESP packet
+I: mqtt_publish: 0 <OK>
+I: mqtt_publish: 0 <OK>
+I: PUBACK packet id: 34713
+I: mqtt_publish: 0 <OK>
+I: PUBREC packet id: 64566
+I: PUBCOMP packet id: 64566
+I: Iteration 100 duration 1993495160 ns (start: 7122663535 end: 7172500914)!
+I: Closing socket 3
+I: MQTT client disconnected 0
+I: mqtt_disconnect: 0 <OK>
+======================
+Raw MQTT iteration times:
+Sample/L1 instr/L1 data/L2 res/L2 ops/extra icache/missunit stall/ops write stall/subsystem calls
+1983870720/-1/-1/-1/-1/-1/-1/-1/-1
+1993551640/-1/-1/-1/-1/-1/-1/-1/-1
+1993560880/-1/-1/-1/-1/-1/-1/-1/-1
+1993540760/-1/-1/-1/-1/-1/-1/-1/-1
+1993585280/-1/-1/-1/-1/-1/-1/-1/-1
+1993579600/-1/-1/-1/-1/-1/-1/-1/-1
+1993567520/-1/-1/-1/-1/-1/-1/-1/-1
+1993553360/-1/-1/-1/-1/-1/-1/-1/-1
+1993582320/-1/-1/-1/-1/-1/-1/-1/-1
+1993540040/-1/-1/-1/-1/-1/-1/-1/-1
+1993504120/-1/-1/-1/-1/-1/-1/-1/-1
+1993462680/-1/-1/-1/-1/-1/-1/-1/-1
+1993483880/-1/-1/-1/-1/-1/-1/-1/-1
+1993462440/-1/-1/-1/-1/-1/-1/-1/-1
+1993474840/-1/-1/-1/-1/-1/-1/-1/-1
+1993507760/-1/-1/-1/-1/-1/-1/-1/-1
+1993465640/-1/-1/-1/-1/-1/-1/-1/-1
+1993476320/-1/-1/-1/-1/-1/-1/-1/-1
+1993490560/-1/-1/-1/-1/-1/-1/-1/-1
+1993450680/-1/-1/-1/-1/-1/-1/-1/-1
+1993513800/-1/-1/-1/-1/-1/-1/-1/-1
+1993491120/-1/-1/-1/-1/-1/-1/-1/-1
+1993441320/-1/-1/-1/-1/-1/-1/-1/-1
+1993487640/-1/-1/-1/-1/-1/-1/-1/-1
+1993482040/-1/-1/-1/-1/-1/-1/-1/-1
+1993488640/-1/-1/-1/-1/-1/-1/-1/-1
+1993490640/-1/-1/-1/-1/-1/-1/-1/-1
+1993497280/-1/-1/-1/-1/-1/-1/-1/-1
+1993454080/-1/-1/-1/-1/-1/-1/-1/-1
+1993493400/-1/-1/-1/-1/-1/-1/-1/-1
+1993445600/-1/-1/-1/-1/-1/-1/-1/-1
+1993522160/-1/-1/-1/-1/-1/-1/-1/-1
+1993437360/-1/-1/-1/-1/-1/-1/-1/-1
+1993522760/-1/-1/-1/-1/-1/-1/-1/-1
+1993449440/-1/-1/-1/-1/-1/-1/-1/-1
+1993515680/-1/-1/-1/-1/-1/-1/-1/-1
+1993461560/-1/-1/-1/-1/-1/-1/-1/-1
+1993490200/-1/-1/-1/-1/-1/-1/-1/-1
+1993493160/-1/-1/-1/-1/-1/-1/-1/-1
+1993435240/-1/-1/-1/-1/-1/-1/-1/-1
+1993519400/-1/-1/-1/-1/-1/-1/-1/-1
+1993446920/-1/-1/-1/-1/-1/-1/-1/-1
+1993488160/-1/-1/-1/-1/-1/-1/-1/-1
+1993477880/-1/-1/-1/-1/-1/-1/-1/-1
+1993519000/-1/-1/-1/-1/-1/-1/-1/-1
+1993483000/-1/-1/-1/-1/-1/-1/-1/-1
+1993454400/-1/-1/-1/-1/-1/-1/-1/-1
+1993473480/-1/-1/-1/-1/-1/-1/-1/-1
+1993483680/-1/-1/-1/-1/-1/-1/-1/-1
+1993523320/-1/-1/-1/-1/-1/-1/-1/-1
+1993457960/-1/-1/-1/-1/-1/-1/-1/-1
+1993485640/-1/-1/-1/-1/-1/-1/-1/-1
+1993462200/-1/-1/-1/-1/-1/-1/-1/-1
+1993488040/-1/-1/-1/-1/-1/-1/-1/-1
+1993465160/-1/-1/-1/-1/-1/-1/-1/-1
+1993504000/-1/-1/-1/-1/-1/-1/-1/-1
+1993499720/-1/-1/-1/-1/-1/-1/-1/-1
+1993478520/-1/-1/-1/-1/-1/-1/-1/-1
+1993452360/-1/-1/-1/-1/-1/-1/-1/-1
+1993464440/-1/-1/-1/-1/-1/-1/-1/-1
+1993491280/-1/-1/-1/-1/-1/-1/-1/-1
+1993484600/-1/-1/-1/-1/-1/-1/-1/-1
+1993465600/-1/-1/-1/-1/-1/-1/-1/-1
+1993502520/-1/-1/-1/-1/-1/-1/-1/-1
+1993483680/-1/-1/-1/-1/-1/-1/-1/-1
+1993470640/-1/-1/-1/-1/-1/-1/-1/-1
+1993471560/-1/-1/-1/-1/-1/-1/-1/-1
+1993469040/-1/-1/-1/-1/-1/-1/-1/-1
+1993507560/-1/-1/-1/-1/-1/-1/-1/-1
+1993482560/-1/-1/-1/-1/-1/-1/-1/-1
+1993449800/-1/-1/-1/-1/-1/-1/-1/-1
+1993486040/-1/-1/-1/-1/-1/-1/-1/-1
+1993511120/-1/-1/-1/-1/-1/-1/-1/-1
+1993429040/-1/-1/-1/-1/-1/-1/-1/-1
+1993519760/-1/-1/-1/-1/-1/-1/-1/-1
+1993458840/-1/-1/-1/-1/-1/-1/-1/-1
+1993467320/-1/-1/-1/-1/-1/-1/-1/-1
+1993525840/-1/-1/-1/-1/-1/-1/-1/-1
+1993465600/-1/-1/-1/-1/-1/-1/-1/-1
+1993476200/-1/-1/-1/-1/-1/-1/-1/-1
+1993453800/-1/-1/-1/-1/-1/-1/-1/-1
+1993513480/-1/-1/-1/-1/-1/-1/-1/-1
+1993445720/-1/-1/-1/-1/-1/-1/-1/-1
+1993493720/-1/-1/-1/-1/-1/-1/-1/-1
+1993465040/-1/-1/-1/-1/-1/-1/-1/-1
+1993500440/-1/-1/-1/-1/-1/-1/-1/-1
+1993462560/-1/-1/-1/-1/-1/-1/-1/-1
+1993488440/-1/-1/-1/-1/-1/-1/-1/-1
+1993501920/-1/-1/-1/-1/-1/-1/-1/-1
+1993488040/-1/-1/-1/-1/-1/-1/-1/-1
+1993447200/-1/-1/-1/-1/-1/-1/-1/-1
+1993517320/-1/-1/-1/-1/-1/-1/-1/-1
+1993443800/-1/-1/-1/-1/-1/-1/-1/-1
+1993499720/-1/-1/-1/-1/-1/-1/-1/-1
+1993489920/-1/-1/-1/-1/-1/-1/-1/-1
+1993440200/-1/-1/-1/-1/-1/-1/-1/-1
+1993479800/-1/-1/-1/-1/-1/-1/-1/-1
+1993528640/-1/-1/-1/-1/-1/-1/-1/-1
+1993444640/-1/-1/-1/-1/-1/-1/-1/-1
+1993495160/-1/-1/-1/-1/-1/-1/-1/-1
+MQTT iteration times (Samples) discarded/min/max/avg/stddev ns: 0/1993429040/1993582320/1993484845.473684/30590.976095
+======================
+Finishing test with status 0-TEST SUCCESS!
+System poweroff!

@@ -1,0 +1,8 @@
+# systemverilog design
+read_slang -D ASSOCIATIVITY=8 -D NUM_ENTRIES=512 -D CACHE_TYPE=4 -D STORE_BUFFER_SIZE=8 -C cache.flist --top northcape_cap_cache_wrapper_verilog -I ../../../hardware/include/northcape/mmu -I ../../../hardware/include/northcape/common -I ../../../hardware/include/northcape/capability_resolver -I ../../../hardware/include/northcape/capability_ops -I ../../../hardware/include/northcape/ariane -I ../../../hardware/include/northcape/xilinx -I ../../../hardware/include/northcape/tests/coverage -I ../../../hardware/include/northcape/tests/uvm_wrapper -I ../../../hardware/hdl/block_design_wrappers/ -D ASIC -D VERILATOR --ignore-assertions --ignore-unknown-modules
+# do not attempt to synthesize registers!
+blackbox \sram_northcape_256x16
+# synthesis needed here - otherwise, can generate unknown primitives
+synth -top northcape_cap_cache_wrapper_verilog
+# write as "simple" verilog, noattr to prevent an OOM crash during header generation
+write_verilog -noattr northcape_cap_cache_flattened.v

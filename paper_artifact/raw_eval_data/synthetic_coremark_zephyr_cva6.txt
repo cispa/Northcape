@@ -1,0 +1,173 @@
+.I: Configuring IRQs 651 and 779!
+*** Booting Zephyr OS build v3.7.0-rc1-4600-g28a3b3d2f7d8 ***
+Repetition 1 of 10
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 452847681
+Total time (secs): 18.114000
+Iterations/Sec   : 110.411836
+Iterations       : 2000
+Compiler version : GCC14.2.0
+Compiler flags   : 
+Memory location  : MALLOC
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x4983
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 110.411836 / GCC14.2.0  / MALLOC
+Repetition 2 of 10
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 453117514
+Total time (secs): 18.125000
+Iterations/Sec   : 110.344828
+Iterations       : 2000
+Compiler version : GCC14.2.0
+Compiler flags   : 
+Memory location  : MALLOC
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x4983
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 110.344828 / GCC14.2.0  / MALLOC
+Repetition 3 of 10
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 453117514
+Total time (secs): 18.125000
+Iterations/Sec   : 110.344828
+Iterations       : 2000
+Compiler version : GCC14.2.0
+Compiler flags   : 
+Memory location  : MALLOC
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x4983
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 110.344828 / GCC14.2.0  / MALLOC
+Repetition 4 of 10
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 453117384
+Total time (secs): 18.125000
+Iterations/Sec   : 110.344828
+Iterations       : 2000
+Compiler version : GCC14.2.0
+Compiler flags   : 
+Memory location  : MALLOC
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x4983
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 110.344828 / GCC14.2.0  / MALLOC
+Repetition 5 of 10
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 453117514
+Total time (secs): 18.125000
+Iterations/Sec   : 110.344828
+Iterations       : 2000
+Compiler version : GCC14.2.0
+Compiler flags   : 
+Memory location  : MALLOC
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x4983
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 110.344828 / GCC14.2.0  / MALLOC
+Repetition 6 of 10
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 453117514
+Total time (secs): 18.125000
+Iterations/Sec   : 110.344828
+Iterations       : 2000
+Compiler version : GCC14.2.0
+Compiler flags   : 
+Memory location  : MALLOC
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x4983
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 110.344828 / GCC14.2.0  / MALLOC
+Repetition 7 of 10
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 453117459
+Total time (secs): 18.125000
+Iterations/Sec   : 110.344828
+Iterations       : 2000
+Compiler version : GCC14.2.0
+Compiler flags   : 
+Memory location  : MALLOC
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x4983
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 110.344828 / GCC14.2.0  / MALLOC
+Repetition 8 of 10
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 453117459
+Total time (secs): 18.125000
+Iterations/Sec   : 110.344828
+Iterations       : 2000
+Compiler version : GCC14.2.0
+Compiler flags   : 
+Memory location  : MALLOC
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x4983
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 110.344828 / GCC14.2.0  / MALLOC
+Repetition 9 of 10
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 453117384
+Total time (secs): 18.125000
+Iterations/Sec   : 110.344828
+Iterations       : 2000
+Compiler version : GCC14.2.0
+Compiler flags   : 
+Memory location  : MALLOC
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x4983
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 110.344828 / GCC14.2.0  / MALLOC
+Repetition 10 of 10
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 453117584
+Total time (secs): 18.125000
+Iterations/Sec   : 110.344828
+Iterations       : 2000
+Compiler version : GCC14.2.0
+Compiler flags   : 
+Memory location  : MALLOC
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x4983
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 110.344828 / GCC14.2.0  / MALLOC
+Done :-)

@@ -1,0 +1,22 @@
+#  gGmbH
+# SPDX-License-Identifier: Apache-2.0
+
+description: ha1588 PTP (Precision Time Protocol) Clock and TSU
+
+compatible: "ha1588,rtc-1.0"
+
+include: ["base.yaml"]
+
+properties:
+  ha1588,period:
+    required: true
+    type: array
+    description: Nominal period of ha1588 RTC clock.
+  ha1588,tsu:
+    required: true
+    type: boolean
+    description: Does the ha1588 instance have the time stamping unit enabled?
+  ha1588,ts-all-supported:
+    required: true
+    type: boolean
+    description: Does the ha1588 instance have a TSU that can timestamp all incoming packets (including non-TSU packets)?

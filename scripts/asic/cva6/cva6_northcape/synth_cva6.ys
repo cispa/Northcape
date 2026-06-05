@@ -1,0 +1,8 @@
+read_slang -C .cva6.flist --top cva6_wrapper_verilog -I ../../../../hardware/include/cva6/core/cache_subsystem/hpdcache/rtl/include -I ../../../../hardware/include/northcape/mmu -I ../../../../hardware/include/northcape/common -I ../../../../hardware/include/northcape/capability_ops -I ../../../../hardware/include/northcape/capability_ops -I ../../../../hardware/include/northcape/ariane -I ../../../../hardware/include/northcape/xilinx -I ../../../../hardware/include/northcape/tests/coverage -I ../../../../hardware/include/northcape/tests/uvm_wrapper -I ../../../../hardware/hdl/block_design_wrappers/ -D ASIC -D VERILATOR -D HPDCACHE_ASSERT_OFF --ignore-assertions --ignore-unknown-modules
+# do not attempt to synthesize registers!
+blackbox \sram_hpdcache_64x128
+# synthesis
+synth -top cva6_wrapper_verilog
+# write as "simple" verilog, noattr to prevent an OOM crash during header generation
+write_verilog -noattr cva6_flattened.v
+

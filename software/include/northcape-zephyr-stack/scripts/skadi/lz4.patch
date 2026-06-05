@@ -1,0 +1,41 @@
+diff --git a/lib/lz4frame.c b/lib/lz4frame.c
+index f89c055..88e6ee3 100644
+--- a/lib/lz4frame.c
++++ b/lib/lz4frame.c
+@@ -91,13 +91,35 @@
+ #  define MEM_INIT(p,v,s)   memset((p),(v),(s))
+ #endif
+ 
+-#ifndef LZ4_SRC_INCLUDED   /* avoid redefinition when sources are coalesced */
++#if !defined(LZ4_SRC_INCLUDED) && !defined(CONFIG_SKADI_OS)  /* avoid redefinition when sources are coalesced */
+ #  include <stdlib.h>   /* malloc, calloc, free */
+ #  define ALLOC(s)          malloc(s)
+ #  define ALLOC_AND_ZERO(s) calloc(1,(s))
+ #  define FREEMEM(p)        free(p)
+ #endif
+ 
++#ifdef CONFIG_SKADI_OS
++#include <zephyr/skadi/skadi_allocator.h>
++#  define ALLOC(s) skadi_allocator_alloc_rw(s)
++#  define ALLOC_AND_ZERO(s) skadi_allocator_calloc_rw(1, (s))
++#  define FREEMEM(p) skadi_allocator_free(p)
++#ifdef KB
++#undef KB
++#endif
++
++#ifdef MB
++#undef MB
++#endif
++
++#ifdef GB
++#undef GB
++#endif
++
++#ifdef MIN
++#undef MIN
++#endif
++#endif
++
+ static void* LZ4F_calloc(size_t s, LZ4F_CustomMem cmem)
+ {
+     /* custom calloc defined : use it */
