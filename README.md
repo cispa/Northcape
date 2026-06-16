@@ -21,7 +21,7 @@ Also, while the paper refers to *subsystem restrictions*, in the code, we call t
 - A MicroSD card capable of running 1-bit SPI (most cards can, tested with, e.g., KIOXIA 64GB EXCERIA)
 - 2 USB-A-micro cables
 - 1 Ethernet cable
-- 1 [Digilent JTAG-HS2 debugger](https://digilent.com/shop/jtag-hs2-programming-cable/). *Note:* we are in the process of figuring out how to use a [generic FT232H board](https://www.adafruit.com/product/2264) instead.
+- *For the A7 only*, 1 [Digilent JTAG-HS2 debugger](https://digilent.com/shop/jtag-hs2-programming-cable/) OR a [generic FT232H board](https://www.adafruit.com/product/2264).
 - some way to mount the SD card on your build machine
 - a build machine compatible with [Vivado's system requirements](https://docs.amd.com/r/en-US/ug973-vivado-release-notes-install-license/Requirements-and-Setup) and a native boot / VM for Ubuntu 22.04
 
@@ -30,7 +30,7 @@ Also, while the paper refers to *subsystem restrictions*, in the code, we call t
 - The hardware project requires [Vivado 2024.2](https://www.xilinx.com/support/download.html).
 - We have tested the setup on an AMD Ryzen Threadripper PRO 5995WX with Ubuntu 22.04 LTS
 - Running synthesis for the Genesys2 board requires a license for the XC7K325T FPGA. A corresponding license should be bundled with the development board.
-- Additionally, as the Genesys2 SoC includes the AXI Ethernet subsystem, a license of type *EF-DI-TEMAC-PROJ* is required.
+- Additionally, as the Genesys2 SoC includes the AXI Ethernet subsystem, a license of type *EF-DI-TEMAC-PROJ* is required. For repeating the experiments in the paper, a free evaluation license suffices.
 - The Arty A7-100 board requires *built-in licenses only*, i.e., no purchased licenses are required to build the SoC for that board.
 
 ## Hardware setup
@@ -52,14 +52,7 @@ Please use the following Color Coding Scheme for all JTAG setups:
 | SRST  | blue   | -        | not used |
 
 ### Genesys2
-For the Genesys2, we use the built-in FT232R UART for console and the built-in FT2232H for programming *the FPGA itself*.
-While it is possible to program cva6 with the FT2232H's second channel, this has proven unreliable. Hence, we use an external FT232H chip for programming.
-
-Insert two Micro-USB-A cables into the headers for UART and debug. Then connect the external FT232H to *PMOD JD*.
-The pints are connected one-by-one in a straight line, starting with VDD->3V3 and GND->GND.
-**Be sure to use the upper row of PMOD pins**.
-Your setup should resemble this picture:
-![Genesys2 setup](doc/genesys_setup_hs2.jpg)
+For the Genesys2, we use the built-in FT232R UART for console and the built-in FT2232H for programming both *the FPGA itself* and debugging *the cva6 soft-core CPU within the FPGA*.
 
 ### Arty A7-100
 For the ARTY A7, we use the built-in FT2232H for programming *the FPGA itself* and UART.
@@ -70,7 +63,7 @@ Connect one Micro-USB-A cable into the USB header next to the Ethernet jag.
 The FT232H goes into the JB Pmod, in a straight line starting with VDD->VCC and GND->GND just like the Genesys.
 
 Your setup should resemble this picture:
-![Genesys2 setup](doc/setup_arty_a7_hs2.jpg)
+![Arty setup](doc/setup_arty_a7_hs2.jpg)
 **Be sure to use the upper row of PMOD pins**.
 
 ### Arty A7-100 (Generic FT232 breakout board)
@@ -79,7 +72,7 @@ Connect one Micro-USB-A cable into the USB header next to the Ethernet jag.
 We use color coding to identify which cable of the FT232 mates with which cable in the board (see table above).
 As additional help, consider this mapping:
 
-![Genesys2 setup](doc/setup_arty_a7_generic.jpg)
+![Arty setup](doc/setup_arty_a7_generic.jpg)
 **Be sure to use the upper row of PMOD pins**.
 | Signal| FT232H | PMOD LTR |
 |-------|--------|----------|
