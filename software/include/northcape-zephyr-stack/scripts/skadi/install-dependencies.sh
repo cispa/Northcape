@@ -2,44 +2,7 @@
 
 set -e
 
-echo "Installing system packages"
-ln -fs /usr/share/zoneinfo/Europe/Berlin /etc/localtime
-
-export DEBIAN_FRONTEND=noninteractive
-
-sudo apt-get update && sudo apt-get install -y software-properties-common
-
-sudo add-apt-repository ppa:deadsnakes/ppa
-
-# "python3" binary should point to the upstream version, for which distutils etc. exists
-# so we install the older version first
-sudo apt-get update && sudo apt-get install -y python3.8 python3.8-dev python3.8-distutils
-
-sudo apt-get update && sudo apt-get install -y \
-    python3 \
-    python3-venv \
-    python3-dev \
-    git cmake ninja-build gperf \
-    ccache dfu-util device-tree-compiler wget \
-    python3-dev python3-venv python3-pip python3-setuptools python3-tk python3-wheel xz-utils file \
-    make gcc gcc-multilib g++-multilib libsdl2-dev libmagic1 libtool-bin meson chrpath \
-    diffstat flex texinfo unzip help2man autoconf automake bison gettext help2man libboost-dev \
-    libboost-regex-dev libncurses5-dev libtool-bin libtool-doc pkg-config p7zip jq dos2unix gawk \
-    mosquitto mosquitto-clients libssl-dev linuxptp libjim-dev xxd libmpfr-dev libmpc-dev libgmp-dev lz4 \
-    parallel libwolfssl-dev curl
-
-echo "Installing python packages"
-python3 -m venv .venv
-. .venv/bin/activate
-pip install west
-pip install -r scripts/requirements.txt
-
-echo "Preparing build config in West"
-rm -rf ../.west ../bootloader ../modules ../tools || true
-west init -l .
-west config manifest.project-filter -- +lz4
-west update
-west zephyr-export
+./scripts/skadi/install-packages.sh
 
 SDK_VERSION=0.16.8
 if [ -d zephyr-sdk-${SDK_VERSION} ]; then
@@ -80,9 +43,6 @@ cd $ORIGINAL_LOCATION
 # we currently cannot generate host tools due to version incompatibility in m4
 cp -r zephyr-sdk-${SDK_VERSION}/setup.sh zephyr-sdk-${SDK_VERSION}/zephyr-sdk-x86_64-hosttools-standalone-0.9.sh zephyr-sdk-custom/
 
-echo "Setting Zephyr SDK Variables";
-cd zephyr-sdk-custom
-./setup.sh -t all -h -c
 
 OPENOCD_VERSION=eb01c632a4bb1c07d2bddb008d6987c809f1c496
 
@@ -100,32 +60,4 @@ rm -r /tmp/riscv-openocd
 echo "Checking OpenOCD"
 zephyr-sdk-custom/sysroots/x86_64-pokysdk-linux/usr/bin/openocd --version
 
-echo "Applying picolibc patches"
-
-cp ./scripts/skadi/picolibc.patch ../modules/lib/picolibc/
-
-cd ../modules/lib/picolibc
-
-pwd
-
-cat newlib/libc/machine/riscv/strcmp.S
-
-# could be cached
-git apply picolibc.patch || true
-
-git status
-
-cd ../../../northcape-zephyr-stack
-
-cp ./scripts/skadi/lz4.patch ../modules/lib/lz4/
-
-cd ../modules/lib/lz4/
-git checkout 11b8a1e22fa651b524494e55d22b69d3d9cebcfd # tested version
-git apply lz4.patch || true
-git status
-
-cd ../../../northcape-zephyr-stack
-
-
-./scripts/skadi/download_install_iperf_2_0_5.sh
-./scripts/skadi/setup_mosquitto_ca.sh
+./scripts/skadi/setup-docker.sh
