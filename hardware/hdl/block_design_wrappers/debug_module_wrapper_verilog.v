@@ -11,6 +11,8 @@ module debug_module_wrapper_verilog
     (*X_INTERFACE_PARAMETER = "FREQ_HZ 50000000"*)
     input wire aclk,
     input wire aresetn,
+    
+    input wire debug_rstn,
 
     `AXI_INTERFACE_MODULE_INPUT(s_axi_dmi_jtag),
     /* master connected to error slave */
@@ -40,6 +42,7 @@ i_debug_module_wrapper
 (
     .aclk(aclk),
     .aresetn(aresetn),
+    .debug_rstn(debug_rstn),
 
     `AXI_INTERFACE_FORWARD(s_axi_dmi_jtag),
     .tck(jtag_tck),

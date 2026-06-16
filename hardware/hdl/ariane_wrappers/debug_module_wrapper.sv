@@ -13,6 +13,7 @@ module debug_module_wrapper
 (
     input logic aclk,
     input logic aresetn,
+    input logic debug_rstn,
 
 
     `AXI_INTERFACE_MODULE_INPUT(s_axi_dmi_jtag),
@@ -64,8 +65,8 @@ AXI_BUS #(
 // Debug Module
 // ---------------
 dmi_jtag i_dmi_jtag (
-    .clk_i                ( aclk                  ),
-    .rst_ni               ( aresetn                ),
+    .clk_i                ( aclk                 ),
+    .rst_ni               ( debug_rstn           ),
     .dmi_rst_no           (                      ), // keep open
     .testmode_i           ( test_en              ),
     .dmi_req_valid_o      ( debug_req_valid      ),
@@ -104,8 +105,8 @@ dm_top #(
     .BusWidth         ( CVA6Cfg.XLEN      ),
     .SelectableHarts  ( 1'b1              )
 ) i_dm_top (
-    .clk_i            ( aclk               ),
-    .rst_ni           ( aresetn             ), // PoR
+    .clk_i            ( aclk              ),
+    .rst_ni           ( debug_rstn        ), // PoR
     .testmode_i       ( test_en           ),
     .ndmreset_o       ( ndmreset          ),
     .dmactive_o       ( dmactive          ), // active debug session
@@ -126,7 +127,7 @@ dm_top #(
     .master_gnt_i     ( dm_master_gnt     ),
     .master_r_valid_i ( dm_master_r_valid ),
     .master_r_rdata_i ( dm_master_r_rdata ),
-    .dmi_rst_ni       ( aresetn           ),
+    .dmi_rst_ni       ( debug_rstn        ),
     .dmi_req_valid_i  ( debug_req_valid   ),
     .dmi_req_ready_o  ( debug_req_ready   ),
     .dmi_req_i        ( debug_req         ),

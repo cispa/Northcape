@@ -443,21 +443,21 @@ set_property -dict {PACKAGE_PIN R26 IOSTANDARD LVCMOS33} [get_ports spi_miso]
 set_property -dict {PACKAGE_PIN R29 IOSTANDARD LVCMOS33} [get_ports spi_mosi]
 
 ## To use FTDI FT2232 JTAG onboard
-# set_property -dict {PACKAGE_PIN Y29 IOSTANDARD LVCMOS33} [get_ports jtag_trst_n]
-# set_property -dict {PACKAGE_PIN AD27 IOSTANDARD LVCMOS33} [get_ports jtag_tck]
-# set_property -dict {PACKAGE_PIN W27 IOSTANDARD LVCMOS33} [get_ports jtag_tdi]
-# set_property -dict {PACKAGE_PIN W28 IOSTANDARD LVCMOS33} [get_ports jtag_tdo]
-# set_property -dict {PACKAGE_PIN W29 IOSTANDARD LVCMOS33} [get_ports jtag_tms]
+set_property -dict {PACKAGE_PIN Y29 IOSTANDARD LVCMOS33} [get_ports jtag_trst_n]
+set_property -dict {PACKAGE_PIN AD27 IOSTANDARD LVCMOS33} [get_ports jtag_tck]
+set_property -dict {PACKAGE_PIN W27 IOSTANDARD LVCMOS33} [get_ports jtag_tdi]
+set_property -dict {PACKAGE_PIN W28 IOSTANDARD LVCMOS33} [get_ports jtag_tdo]
+set_property -dict {PACKAGE_PIN W29 IOSTANDARD LVCMOS33} [get_ports jtag_tms]
 
 ## to use PMOD JD
 # no tresetn
 # set_property -dict { PACKAGE_PIN U24   IOSTANDARD LVCMOS33 } [get_ports { jtag_trst_n }]; #IO_L23P_T3_A03_D19_14 Sch=jd[7]
-set_property -dict { PACKAGE_PIN W22   IOSTANDARD LVCMOS33 } [get_ports { jtag_tck }]; #IO_L24N_T3_A00_D16_14 Sch=jd[4]
-set_property -dict { PACKAGE_PIN Y30   IOSTANDARD LVCMOS33 } [get_ports { jtag_tdi }]; #IO_L8P_T1_13 Sch=jd[2]
-set_property -dict { PACKAGE_PIN V24   IOSTANDARD LVCMOS33 } [get_ports { jtag_tdo }]; #IO_L23N_T3_A02_D18_14 Sch=jd[3]
-set_property -dict { PACKAGE_PIN V27   IOSTANDARD LVCMOS33 } [get_ports { jtag_tms }]; #IO_L16N_T2_A15_D31_14 Sch=jd[1]
+# set_property -dict { PACKAGE_PIN W22   IOSTANDARD LVCMOS33 } [get_ports { jtag_tck }]; #IO_L24N_T3_A00_D16_14 Sch=jd[4]
+# set_property -dict { PACKAGE_PIN Y30   IOSTANDARD LVCMOS33 } [get_ports { jtag_tdi }]; #IO_L8P_T1_13 Sch=jd[2]
+# set_property -dict { PACKAGE_PIN V24   IOSTANDARD LVCMOS33 } [get_ports { jtag_tdo }]; #IO_L23N_T3_A02_D18_14 Sch=jd[3]
+# set_property -dict { PACKAGE_PIN V27   IOSTANDARD LVCMOS33 } [get_ports { jtag_tms }]; #IO_L16N_T2_A15_D31_14 Sch=jd[1]
 # tck pin is not a clock pin...
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets jtag_tck_IBUF]
+# set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets jtag_tck_IBUF]
 
 # Assumes 10 MHz JTAG clock, which is faster than what needs to be expected (6 MHz for FT232)
 create_clock -period 100.000 -name jtag_clk [get_ports jtag_tck]

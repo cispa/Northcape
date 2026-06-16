@@ -2,7 +2,7 @@
 proc cr_bd_SoC { parentCell } {
 # The design that will be created by this Tcl proc contains the following 
 # module references:
-# ariane_peripherals_wrapper_verilog, cva6_wrapper_verilog, clint_wrapper_verilog, northcape_confused_deputy_dma_wrapper_verilog, debug_module_wrapper_verilog, interrupt_synchronizer, interrupt_synchronizer, bootrom_wrapper_verilog, ha1588_axi, led_pps, northcape_cap_ops_wrapper_verilog, northcape_cap_resolver_wrapper_verilog, northcape_mmu_wrapper_verilog, northcape_mmu_wrapper_verilog, axi_riscv_atomics_wrapper_verilog, northcape_user_parser_wrapper_verilog, northcape_cap_cache_wrapper_verilog
+# ariane_peripherals_wrapper_verilog, cva6_wrapper_verilog, clint_wrapper_verilog, northcape_confused_deputy_dma_wrapper_verilog, debug_module_wrapper_verilog, interrupt_synchronizer, bootrom_wrapper_verilog, ha1588_axi, led_pps, northcape_cap_ops_wrapper_verilog, northcape_cap_resolver_wrapper_verilog, northcape_mmu_wrapper_verilog, northcape_mmu_wrapper_verilog, axi_riscv_atomics_wrapper_verilog, northcape_user_parser_wrapper_verilog, northcape_cap_cache_wrapper_verilog
 
 
 
@@ -62,7 +62,6 @@ proc cr_bd_SoC { parentCell } {
   clint_wrapper_verilog\
   northcape_confused_deputy_dma_wrapper_verilog\
   debug_module_wrapper_verilog\
-  interrupt_synchronizer\
   interrupt_synchronizer\
   bootrom_wrapper_verilog\
   ha1588_axi\
@@ -745,7 +744,6 @@ proc create_hier_cell_northcape_caps { parentCell nameHier } {
   [get_bd_pins northcape_mmu_dma/s_axi_in_awatop] \
   [get_bd_pins northcape_mmu_dma_sg/s_axi_in_awatop]
 
-
   # Restore current instance
   current_bd_instance $oldCurInst
 }
@@ -1277,7 +1275,6 @@ proc create_hier_cell_northcape_northbridge { parentCell nameHier } {
   [get_bd_pins resolver_port_miss_o]
   connect_bd_net -net northcape_caps_resolver_spec_fail_o  [get_bd_pins northcape_caps/resolver_spec_fail_o] \
   [get_bd_pins resolver_spec_fail_o]
-  
   connect_bd_net -net probe18_1  [get_bd_pins probe18] \
   [get_bd_pins northcape_caps/probe18]
   connect_bd_net -net probe3_1  [get_bd_pins probe3] \
@@ -1354,11 +1351,11 @@ proc create_hier_cell_northcape_northbridge { parentCell nameHier } {
   set fan_tach [ create_bd_port -dir I -type data fan_tach ]
   set phy_reset_out [ create_bd_port -dir O -from 0 -to 0 -type rst phy_reset_out ]
   set led [ create_bd_port -dir O -from 7 -to 0 -type data led ]
+  set jtag_trst_n [ create_bd_port -dir I -type rst jtag_trst_n ]
 
-
-  # Create instance: tieoff_1, and set properties
-  set tieoff_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 tieoff_1 ]
-  set_property CONFIG.CONST_VAL {0} $tieoff_1
+  # Create instance: tieoff_0, and set properties
+  set tieoff_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 tieoff_0 ]
+  set_property CONFIG.CONST_VAL {0} $tieoff_0
 
 
   # Create instance: axi_uart16550_0, and set properties
@@ -1593,17 +1590,6 @@ proc create_hier_cell_northcape_northbridge { parentCell nameHier } {
   # Create instance: tready_always_ready, and set properties
   set tready_always_ready [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 tready_always_ready ]
 
-  # Create instance: interrupt_sync_0, and set properties
-  set block_name interrupt_synchronizer
-  set block_cell_name interrupt_sync_0
-  if { [catch {set interrupt_sync_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $interrupt_sync_0 eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
   # Create instance: led_concat, and set properties
   set led_concat [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 led_concat ]
   set_property CONFIG.NUM_PORTS {5} $led_concat
@@ -1615,11 +1601,6 @@ proc create_hier_cell_northcape_northbridge { parentCell nameHier } {
     CONFIG.CONST_VAL {0} \
     CONFIG.CONST_WIDTH {4} \
   ] $led_tieoff
-
-
-  # Create instance: trstn_generator, and set properties
-  set trstn_generator [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 trstn_generator ]
-  set_property CONFIG.C_EXT_RST_WIDTH {1} $trstn_generator
 
 
   # Create instance: init_complete_sync, and set properties
@@ -1660,12 +1641,12 @@ proc create_hier_cell_northcape_northbridge { parentCell nameHier } {
   ] $bootrom_wrapper_veri_0
 
 
-  # Create instance: spi_resetgen, and set properties
-  set spi_resetgen [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 spi_resetgen ]
+  # Create instance: dram_resetgen, and set properties
+  set dram_resetgen [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 dram_resetgen ]
   set_property -dict [list \
     CONFIG.C_AUX_RST_WIDTH {16} \
     CONFIG.C_EXT_RST_WIDTH {16} \
-  ] $spi_resetgen
+  ] $dram_resetgen
 
 
   # Create interface connections
@@ -1731,7 +1712,6 @@ proc create_hier_cell_northcape_northbridge { parentCell nameHier } {
   [get_bd_pins northcape_northbridge/peripheral_aclk] \
   [get_bd_pins eth_0/m_axi_sg_aclk] \
   [get_bd_pins northcape_northbridge/clk_cpu] \
-  [get_bd_pins interrupt_sync_0/target_clock] \
   [get_bd_pins northcape_dma_0/aclk] \
   [get_bd_pins axi_quad_spi_0/ext_spi_clk] \
   [get_bd_pins axi_quad_spi_0/s_axi4_aclk] \
@@ -1739,10 +1719,10 @@ proc create_hier_cell_northcape_northbridge { parentCell nameHier } {
   [get_bd_pins cpu_reset_gen/slowest_sync_clk] \
   [get_bd_pins memory_reset_synch/slowest_sync_clk] \
   [get_bd_pins init_complete_sync/target_clock] \
-  [get_bd_pins cpu_debug/aclk] \
   [get_bd_pins ariane_peripherals_0/aclk] \
   [get_bd_pins cpu_0/aclk] \
-  [get_bd_pins bootrom_wrapper_veri_0/clk_i]
+  [get_bd_pins bootrom_wrapper_veri_0/clk_i] \
+  [get_bd_pins cpu_debug/aclk]
   connect_bd_net -net cpu_0_axis_validate_request_data_twakeup  [get_bd_pins cpu_0/axis_validate_request_data_twakeup] \
   [get_bd_pins northcape_northbridge/axis_validate_request_1_twakeup]
   connect_bd_net -net cpu_0_axis_validate_request_instr_twakeup  [get_bd_pins cpu_0/axis_validate_request_instr_twakeup] \
@@ -1763,7 +1743,7 @@ proc create_hier_cell_northcape_northbridge { parentCell nameHier } {
   connect_bd_net -net cpu_debug_ndmreset  [get_bd_pins cpu_debug/ndmreset] \
   [get_bd_pins northcape_northbridge/ndmreset] \
   [get_bd_pins cpu_reset_gen/ext_reset_in] \
-  [get_bd_pins spi_resetgen/ext_reset_in]
+  [get_bd_pins dram_resetgen/ext_reset_in]
   connect_bd_net -net cpu_interconnect_aresetn_1  [get_bd_pins cpu_reset_gen/interconnect_aresetn] \
   [get_bd_pins northcape_northbridge/cpu_interconnect_aresetn]
   connect_bd_net -net cpu_reset_gen_peripheral_aresetn  [get_bd_pins cpu_reset_gen/peripheral_aresetn] \
@@ -1771,14 +1751,16 @@ proc create_hier_cell_northcape_northbridge { parentCell nameHier } {
   [get_bd_pins eth_0/s_axi_lite_resetn] \
   [get_bd_pins northcape_northbridge/cpu_peripheral_aresetn] \
   [get_bd_pins clint_0/aresetn] \
-  [get_bd_pins interrupt_sync_0/target_resetn] \
   [get_bd_pins northcape_dma_0/aresetn] \
   [get_bd_pins axi_quad_spi_0/s_axi4_aresetn] \
   [get_bd_pins axi_uart16550_0/s_axi_aresetn] \
   [get_bd_pins init_complete_sync/target_resetn] \
   [get_bd_pins ariane_peripherals_0/aresetn] \
   [get_bd_pins cpu_0/aresetn] \
-  [get_bd_pins bootrom_wrapper_veri_0/rst_ni]
+  [get_bd_pins bootrom_wrapper_veri_0/rst_ni] \
+  [get_bd_pins cpu_debug/aresetn]
+  connect_bd_net -net dram_resetgen_peripheral_aresetn  [get_bd_pins dram_resetgen/peripheral_aresetn] \
+  [get_bd_pins mig_7series_0/aresetn]
   connect_bd_net -net eth_0_led_o  [get_bd_pins eth_0/led_o] \
   [get_bd_pins led_concat/In3]
   connect_bd_net -net eth_0_mac_irq  [get_bd_pins eth_0/eth_interrupt] \
@@ -1793,15 +1775,12 @@ proc create_hier_cell_northcape_northbridge { parentCell nameHier } {
   [get_bd_pins eth_0/ref_clk]
   connect_bd_net -net init_complete_sync_irq_out  [get_bd_pins init_complete_sync/irq_out] \
   [get_bd_pins northcape_northbridge/memory_ready_i1]
-  connect_bd_net -net interrupt_synchroniz_0_irq_out  [get_bd_pins interrupt_sync_0/irq_out] \
-  [get_bd_pins irqconcat/In4]
   connect_bd_net -net irq_levels_dout  [get_bd_pins irq_levels/dout] \
   [get_bd_pins ariane_peripherals_0/irq_levels_in]
   connect_bd_net -net irqconcat_dout  [get_bd_pins irqconcat/dout] \
   [get_bd_pins northcape_northbridge/probe6] \
   [get_bd_pins ariane_peripherals_0/irqs_in]
   connect_bd_net -net jtag_tck_1  [get_bd_ports jtag_tck] \
-  [get_bd_pins trstn_generator/slowest_sync_clk] \
   [get_bd_pins cpu_debug/jtag_tck]
   connect_bd_net -net jtag_tdi_1  [get_bd_ports jtag_tdi] \
   [get_bd_pins cpu_debug/jtag_tdi]
@@ -1815,7 +1794,6 @@ proc create_hier_cell_northcape_northbridge { parentCell nameHier } {
   [get_bd_pins led_concat/In1] \
   [get_bd_pins init_complete_sync/irq_in]
   connect_bd_net -net mig_7series_0_mmcm_locked  [get_bd_pins mig_7series_0/mmcm_locked] \
-  [get_bd_pins peripherals_clockgen/resetn] \
   [get_bd_pins led_concat/In0]
   connect_bd_net -net mig_7series_0_ui_addn_clk_0  [get_bd_pins mig_7series_0/ui_addn_clk_0] \
   [get_bd_pins peripherals_clockgen/clk_in1]
@@ -1825,10 +1803,10 @@ proc create_hier_cell_northcape_northbridge { parentCell nameHier } {
   [get_bd_pins reset_polarity_conv/Op1]
   connect_bd_net -net mig_aclk_1  [get_bd_pins mig_7series_0/ui_clk] \
   [get_bd_pins northcape_northbridge/mig_aclk] \
-  [get_bd_pins interrupt_sync_0/source_clock] \
   [get_bd_pins xadc_wiz_0/m_axis_aclk] \
   [get_bd_pins xadc_wiz_0/s_axis_aclk] \
-  [get_bd_pins init_complete_sync/source_clock]
+  [get_bd_pins init_complete_sync/source_clock] \
+  [get_bd_pins dram_resetgen/slowest_sync_clk]
   connect_bd_net -net northcape_northbridge_axis_validate_response_0_twakeup  [get_bd_pins northcape_northbridge/axis_validate_response_0_twakeup] \
   [get_bd_pins cpu_0/axis_validate_response_instr_twakeup]
   connect_bd_net -net northcape_northbridge_axis_validate_response_1_twakeup  [get_bd_pins northcape_northbridge/axis_validate_response_1_twakeup] \
@@ -1860,27 +1838,25 @@ proc create_hier_cell_northcape_northbridge { parentCell nameHier } {
   [get_bd_pins cpu_0/northcape_l2_resolver_miss_i]
   connect_bd_net -net northcape_northbridge_resolver_spec_fail_o  [get_bd_pins northcape_northbridge/resolver_spec_fail_o] \
   [get_bd_pins cpu_0/northcape_l2_resolver_spec_fail_i]
-  connect_bd_net -net peripherals_clockgen_clk_25  [get_bd_pins peripherals_clockgen/clk_12_5] \
-  [get_bd_pins spi_resetgen/slowest_sync_clk]
   connect_bd_net -net peripherals_clockgen_locked  [get_bd_pins peripherals_clockgen/locked] \
-  [get_bd_pins spi_resetgen/dcm_locked]
+  [get_bd_pins dram_resetgen/dcm_locked] \
+  [get_bd_pins cpu_reset_gen/dcm_locked]
   connect_bd_net -net proc_sys_reset_0_peripheral_aresetn  [get_bd_pins memory_reset_synch/peripheral_aresetn] \
-  [get_bd_pins trstn_generator/ext_reset_in] \
-  [get_bd_pins cpu_debug/aresetn]
-  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn1  [get_bd_pins trstn_generator/peripheral_aresetn] \
+  [get_bd_pins cpu_debug/debug_rstn]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn1  [get_bd_ports jtag_trst_n] \
   [get_bd_pins cpu_debug/jtag_trst_n]
   connect_bd_net -net reset_2  [get_bd_ports cpu_resetn] \
-  [get_bd_pins mig_7series_0/sys_rst]
+  [get_bd_pins mig_7series_0/sys_rst] \
+  [get_bd_pins peripherals_clockgen/resetn]
   connect_bd_net -net reset_polarity_conv_Res  [get_bd_pins reset_polarity_conv/Res] \
   [get_bd_pins northcape_northbridge/mig_aresetn] \
-  [get_bd_pins interrupt_sync_0/source_resetn] \
   [get_bd_pins xadc_wiz_0/m_axis_resetn] \
-  [get_bd_pins mig_7series_0/aresetn] \
   [get_bd_pins init_complete_sync/source_resetn]
   connect_bd_net -net spi_miso_1  [get_bd_ports spi_miso] \
   [get_bd_pins axi_quad_spi_0/io1_i]
-  connect_bd_net -net tieoff_0_dout  [get_bd_pins tieoff_1/dout] \
-  [get_bd_pins axi_uart16550_0/freeze]
+  connect_bd_net -net tieoff_0_dout  [get_bd_pins tieoff_0/dout] \
+  [get_bd_pins axi_uart16550_0/freeze] \
+  [get_bd_pins irqconcat/In4]
   connect_bd_net -net xadc_wiz_0_temp_out  [get_bd_pins xadc_wiz_0/temp_out] \
   [get_bd_pins mig_7series_0/device_temp_i]
   connect_bd_net -net xlconstant_0_dout  [get_bd_pins tready_always_ready/dout] \
@@ -1971,6 +1947,155 @@ proc create_hier_cell_northcape_northbridge { parentCell nameHier } {
   exclude_bd_addr_seg -offset 0x00100000 -range 0x00040000 -target_address_space [get_bd_addr_spaces northcape_northbridge/northcape_caps/northcape_mmu_dma/m_axi_out] [get_bd_addr_segs bootrom_wrapper_veri_0/S_AXI/reg0]
   exclude_bd_addr_seg -offset 0x00100000 -range 0x00040000 -target_address_space [get_bd_addr_spaces northcape_northbridge/northcape_caps/northcape_mmu_dma_sg/m_axi_out] [get_bd_addr_segs bootrom_wrapper_veri_0/S_AXI/reg0]
 
+  # Perform GUI Layout
+  regenerate_bd_layout -layout_string {
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.390553",
+   "Default View_TopLeft":"-1426,0",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port sys_diff_clock -pg 1 -lvl 0 -x 0 -y 1540 -defaultsOSRD
+preplace port usb_uart -pg 1 -lvl 7 -x 3410 -y 1310 -defaultsOSRD
+preplace port ddr3_sdram -pg 1 -lvl 7 -x 3410 -y 1510 -defaultsOSRD
+preplace port eth_rgmii -pg 1 -lvl 7 -x 3410 -y 1200 -defaultsOSRD
+preplace port eth_mdio_mdc -pg 1 -lvl 7 -x 3410 -y 1220 -defaultsOSRD
+preplace port port-id_cpu_resetn -pg 1 -lvl 0 -x 0 -y 1270 -defaultsOSRD
+preplace port port-id_spi_clk_o -pg 1 -lvl 7 -x 3410 -y 1810 -defaultsOSRD
+preplace port port-id_spi_mosi -pg 1 -lvl 7 -x 3410 -y 1770 -defaultsOSRD
+preplace port port-id_spi_miso -pg 1 -lvl 0 -x 0 -y 1690 -defaultsOSRD
+preplace port port-id_jtag_tdo -pg 1 -lvl 7 -x 3410 -y 2030 -defaultsOSRD
+preplace port port-id_jtag_tck -pg 1 -lvl 0 -x 0 -y 1810 -defaultsOSRD
+preplace port port-id_jtag_tms -pg 1 -lvl 0 -x 0 -y 1830 -defaultsOSRD
+preplace port port-id_jtag_tdi -pg 1 -lvl 0 -x 0 -y 1850 -defaultsOSRD
+preplace port port-id_fan_tach -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace port port-id_jtag_trst_n -pg 1 -lvl 0 -x 0 -y 1790 -defaultsOSRD
+preplace portBus spi_ss -pg 1 -lvl 7 -x 3410 -y 1830 -defaultsOSRD
+preplace portBus phy_reset_out -pg 1 -lvl 7 -x 3410 -y 1240 -defaultsOSRD
+preplace portBus led -pg 1 -lvl 7 -x 3410 -y 1110 -defaultsOSRD
+preplace inst tieoff_0 -pg 1 -lvl 2 -x 470 -y 1100 -defaultsOSRD
+preplace inst axi_uart16550_0 -pg 1 -lvl 6 -x 3130 -y 1320 -defaultsOSRD
+preplace inst peripherals_clockgen -pg 1 -lvl 1 -x 140 -y 1280 -defaultsOSRD
+preplace inst axi_quad_spi_0 -pg 1 -lvl 6 -x 3130 -y 1800 -defaultsOSRD
+preplace inst reset_polarity_conv -pg 1 -lvl 2 -x 470 -y 1460 -defaultsOSRD
+preplace inst ariane_peripherals_0 -pg 1 -lvl 6 -x 3130 -y 310 -defaultsOSRD
+preplace inst atop_tieoff_0 -pg 1 -lvl 4 -x 1540 -y 1010 -defaultsOSRD
+preplace inst irqconcat -pg 1 -lvl 3 -x 900 -y 1080 -defaultsOSRD
+preplace inst cpu_0 -pg 1 -lvl 4 -x 1540 -y 450 -defaultsOSRD
+preplace inst clint_0 -pg 1 -lvl 6 -x 3130 -y 540 -defaultsOSRD
+preplace inst northcape_northbridge -pg 1 -lvl 5 -x 2310 -y 710 -defaultsOSRD
+preplace inst eth_0 -pg 1 -lvl 4 -x 1540 -y 1240 -defaultsOSRD
+preplace inst northcape_dma_0 -pg 1 -lvl 4 -x 1540 -y 810 -defaultsOSRD
+preplace inst cpu_reset_gen -pg 1 -lvl 2 -x 470 -y 1320 -defaultsOSRD
+preplace inst mig_7series_0 -pg 1 -lvl 6 -x 3130 -y 1560 -defaultsOSRD
+preplace inst cpu_debug -pg 1 -lvl 6 -x 3130 -y 2050 -defaultsOSRD
+preplace inst atop_tieoff -pg 1 -lvl 4 -x 1540 -y 2080 -defaultsOSRD
+preplace inst memory_reset_synch -pg 1 -lvl 4 -x 1540 -y 1940 -defaultsOSRD
+preplace inst xadc_wiz_0 -pg 1 -lvl 4 -x 1540 -y 2670 -defaultsOSRD
+preplace inst tready_always_ready -pg 1 -lvl 4 -x 1540 -y 2460 -defaultsOSRD
+preplace inst led_concat -pg 1 -lvl 6 -x 3130 -y 1110 -defaultsOSRD
+preplace inst led_tieoff -pg 1 -lvl 5 -x 2310 -y 1150 -defaultsOSRD
+preplace inst init_complete_sync -pg 1 -lvl 3 -x 900 -y 1390 -defaultsOSRD
+preplace inst irq_levels -pg 1 -lvl 4 -x 1540 -y 2360 -defaultsOSRD
+preplace inst bootrom_wrapper_veri_0 -pg 1 -lvl 6 -x 3130 -y 720 -defaultsOSRD
+preplace inst dram_resetgen -pg 1 -lvl 4 -x 1540 -y 2220 -defaultsOSRD
+preplace netloc ariane_peripherals_0_irq_out 1 3 4 1220 150 2030 180 NJ 180 3330
+preplace netloc atop_tieoff_0_dout 1 4 2 1890J 1080 2800
+preplace netloc atop_tieoff_dout 1 4 2 2040J 2050 NJ
+preplace netloc axi_dma_0_mm2s_introut 1 2 3 730 1520 NJ 1520 1860
+preplace netloc axi_dma_0_s2mm_introut 1 2 3 760 1490 NJ 1490 1850
+preplace netloc axi_quad_spi_0_io0_o 1 6 1 NJ 1770
+preplace netloc axi_quad_spi_0_ip2intc_irpt 1 2 5 710 1670 NJ 1670 NJ 1670 NJ 1670 3340
+preplace netloc axi_quad_spi_0_sck_o 1 6 1 NJ 1810
+preplace netloc axi_quad_spi_0_ss_o 1 6 1 NJ 1830
+preplace netloc axi_uart16550_0_ip2intc_irpt 1 2 5 770 10 NJ 10 NJ 10 NJ 10 3380
+preplace netloc clint_0_ipi_o 1 3 4 1240 890 1850 1060 2810J 990 3330
+preplace netloc clint_0_timer_irq_o 1 3 4 1230 900 2050 1090 2820J 1000 3370
+preplace netloc clk_wiz_0_clk_out1 1 1 5 250 1190 670 1240 1100 1420 1900 370 2900
+preplace netloc cpu_0_axis_validate_request_data_twakeup 1 4 1 1890 510n
+preplace netloc cpu_0_axis_validate_request_instr_twakeup 1 4 1 1840 490n
+preplace netloc cpu_0_csr_req_o 1 4 1 1860 530n
+preplace netloc cpu_0_m_axi_cpu_aruser 1 4 1 2000 450n
+preplace netloc cpu_0_m_axi_cpu_awatop 1 4 1 2020 470n
+preplace netloc cpu_0_m_axi_cpu_awuser 1 4 1 2010 430n
+preplace netloc cpu_debug_debug_req_irq 1 3 4 1210 140 1980 1210 NJ 1210 3370
+preplace netloc cpu_debug_jtag_tdo 1 6 1 NJ 2030
+preplace netloc cpu_debug_ndmreset 1 1 6 280 1680 NJ 1680 1050 1680 2020 1680 NJ 1680 3350
+preplace netloc cpu_interconnect_aresetn_1 1 2 3 680 730 NJ 730 1910J
+preplace netloc cpu_reset_gen_peripheral_aresetn 1 2 4 690 1290 1040 910 1990 1240 2910
+preplace netloc dram_resetgen_peripheral_aresetn 1 4 2 2030J 1660 2940
+preplace netloc eth_0_led_o 1 4 2 NJ 1330 2840
+preplace netloc eth_0_mac_irq 1 2 3 750 1500 NJ 1500 1830
+preplace netloc eth_0_mac_irq1 1 2 3 770 1210 1090J 1090 1840
+preplace netloc eth_0_phy_reset_out1 1 4 3 NJ 1270 2850J 1410 3390J
+preplace netloc eth_clockgen_clk_125 1 1 3 260 1210 660J 1270 NJ
+preplace netloc eth_clockgen_clk_200 1 1 3 290 1220 650J 1280 1060J
+preplace netloc init_complete_sync_irq_out 1 3 2 1050 920 1960J
+preplace netloc irq_levels_dout 1 4 2 1930J 340 NJ
+preplace netloc irqconcat_dout 1 3 3 1030J 930 1830 320 N
+preplace netloc jtag_tck_1 1 0 6 NJ 1810 NJ 1810 NJ 1810 NJ 1810 NJ 1810 2680J
+preplace netloc jtag_tdi_1 1 0 6 30J 1830 NJ 1830 NJ 1830 NJ 1830 NJ 1830 2670J
+preplace netloc jtag_tms_1 1 0 6 20J 1840 NJ 1840 NJ 1840 NJ 1840 NJ 1840 2660J
+preplace netloc led_concat_dout 1 6 1 NJ 1110
+preplace netloc led_tieoff_dout 1 5 1 NJ 1150
+preplace netloc mig_7series_0_init_calib_complete 1 2 5 740 1510 1240J 1480 NJ 1480 2860 1420 3360
+preplace netloc mig_7series_0_mmcm_locked 1 5 2 2940 1010 3330
+preplace netloc mig_7series_0_ui_addn_clk_0 1 0 7 20 1530 NJ 1530 NJ 1530 NJ 1530 NJ 1530 2880J 1440 3350
+preplace netloc mig_7series_0_ui_clk_sync_rst 1 1 6 290 1560 NJ 1560 1070 1550 NJ 1550 2940J 1450 3340
+preplace netloc mig_aclk_1 1 2 5 720 1550 1060 1430 1970 1430 NJ 1430 3320
+preplace netloc northcape_northbridge_axis_validate_response_0_twakeup 1 3 3 1220 1390 NJ 1390 2670
+preplace netloc northcape_northbridge_axis_validate_response_1_twakeup 1 3 3 1210 1400 NJ 1400 2570
+preplace netloc northcape_northbridge_cmt_base 1 3 3 1160 90 NJ 90 2700
+preplace netloc northcape_northbridge_cmt_need_flush_data_caches 1 3 3 1170 100 NJ 100 2690
+preplace netloc northcape_northbridge_cmt_reset_done 1 3 3 1200 1410 NJ 1410 2750
+preplace netloc northcape_northbridge_cmt_table_size_clog2 1 3 3 1200 130 NJ 130 2680
+preplace netloc northcape_northbridge_cmt_written_capability 1 3 3 1030 20 NJ 20 2640
+preplace netloc northcape_northbridge_cmt_wrote_any_capability 1 3 3 1050 30 NJ 30 2610
+preplace netloc northcape_northbridge_csr_rsp_o 1 3 3 1180 110 NJ 110 2600
+preplace netloc northcape_northbridge_missunit_stall_o 1 3 3 1190 120 NJ 120 2630
+preplace netloc northcape_northbridge_ops_interface_write_request_flush 1 3 3 1110 40 NJ 40 2730
+preplace netloc northcape_northbridge_ops_port_miss_o 1 3 3 1120 50 NJ 50 2720
+preplace netloc northcape_northbridge_ops_write_stall_o 1 3 3 1130 60 NJ 60 2660
+preplace netloc northcape_northbridge_resolver_port_miss_o 1 3 3 1140 70 NJ 70 2710
+preplace netloc northcape_northbridge_resolver_spec_fail_o 1 3 3 1150 80 NJ 80 2650
+preplace netloc peripherals_clockgen_locked 1 1 3 270 1200 690J 1230 1030J
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 4 2 1840 2030 NJ
+preplace netloc proc_sys_reset_0_peripheral_aresetn1 1 0 6 NJ 1790 NJ 1790 NJ 1790 NJ 1790 NJ 1790 2710J
+preplace netloc reset_2 1 0 6 20 1180 NJ 1180 700J 1220 1090J 1570 1840J 1580 NJ
+preplace netloc reset_polarity_conv_Res 1 2 3 700 1570 1080 1560 1950J
+preplace netloc spi_miso_1 1 0 7 NJ 1690 NJ 1690 NJ 1690 NJ 1690 NJ 1690 NJ 1690 3320
+preplace netloc tieoff_0_dout 1 2 4 720 1200 1060J 1080 1870J 1350 NJ
+preplace netloc xadc_wiz_0_temp_out 1 4 2 2050J 1570 2940
+preplace netloc xlconstant_0_dout 1 4 1 1840 2460n
+preplace netloc ETH_DMA_AXI_0_1 1 4 1 1880 490n
+preplace netloc axi_interconnect_0_M01_AXI 1 5 1 2930 450n
+preplace netloc axi_interconnect_0_M02_AXI 1 3 3 1230 940 1940J 1040 2620
+preplace netloc axi_interconnect_0_M03_AXI 1 3 3 1240 950 1840J 1050 2590
+preplace netloc axi_interconnect_0_M05_AXI 1 5 1 N 510
+preplace netloc axi_interconnect_0_M09_AXI 1 5 1 2740 240n
+preplace netloc axi_interconnect_0_M10_AXI 1 5 1 2750 260n
+preplace netloc axi_uart16550_0_UART 1 6 1 NJ 1310
+preplace netloc cpu_0_axis_validate_request_data 1 4 1 1850 370n
+preplace netloc cpu_0_axis_validate_request_instr 1 4 1 2050 390n
+preplace netloc cpu_0_m_axi_cpu 1 4 1 2040 410n
+preplace netloc eth_0_M_AXI 1 4 1 1920 510n
+preplace netloc eth_0_eth_mdio_mdc 1 4 3 1880J 1220 NJ 1220 NJ
+preplace netloc eth_0_eth_rgmii 1 4 3 1890J 1230 NJ 1230 3390J
+preplace netloc mig_7series_0_DDR3 1 6 1 NJ 1510
+preplace netloc northcape_dma_0_m_axi_out 1 4 1 1870 530n
+preplace netloc northcape_northbridge_M00_AXI 1 5 1 2890 430n
+preplace netloc northcape_northbridge_M04_AXI 1 5 1 2920 590n
+preplace netloc northcape_northbridge_M06_AXI 1 5 1 2870 610n
+preplace netloc northcape_northbridge_M11_AXI 1 3 3 1250 1070 NJ 1070 2580
+preplace netloc northcape_northbridge_M12_AXI 1 5 1 2830 630n
+preplace netloc northcape_northbridge_M15_AXI 1 3 3 1250 1380 NJ 1380 2740
+preplace netloc northcape_northbridge_axis_validate_response_0 1 3 3 1230 160 NJ 160 2570
+preplace netloc northcape_northbridge_axis_validate_response_1 1 3 3 1240 170 NJ 170 2670
+preplace netloc sys_diff_clock_1 1 0 6 NJ 1540 NJ 1540 NJ 1540 NJ 1540 NJ 1540 NJ
+levelinfo -pg 1 0 140 470 900 1540 2310 3130 3410
+pagesize -pg 1 -db -bbox -sgen -150 0 3600 2840
+"
+}
 
   # Restore current instance
   current_bd_instance $oldCurInst
@@ -1998,4 +2123,4 @@ save_bd_design
 close_bd_design SoC
 
 set_property REGISTERED_WITH_MANAGER "1" [get_files SoC.bd ] 
-set_property SYNTH_CHECKPOINT_MODE "Hierarchical" [get_files SoC.bd ] 
+set_property SYNTH_CHECKPOINT_MODE "Hierarchical" [get_files SoC.bd ]
