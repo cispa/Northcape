@@ -808,10 +808,10 @@ proc create_hier_cell_northcape_northbridge { parentCell nameHier } {
   [get_bd_pins axi_clock_converter_1/s_axi_aresetn] \
   [get_bd_pins northcape_cap_resolv_0/aresetn] \
   [get_bd_pins northcape_cap_cache_0/aresetn] \
-  [get_bd_pins northcape_cap_ops_wr_0/aresetn] \
   [get_bd_pins axi_dwidth_converter_3/s_axi_aresetn] \
   [get_bd_pins axi_protocol_convert_1/aresetn] \
-  [get_bd_pins axi_protocol_convert_2/aresetn]
+  [get_bd_pins axi_protocol_convert_2/aresetn] \
+  [get_bd_pins northcape_cap_ops_wr_0/aresetn]
   connect_bd_net -net memory_ready_i_1  [get_bd_pins memory_ready_i] \
   [get_bd_pins northcape_cap_ops_wr_0/memory_ready_i]
   connect_bd_net -net northcape_cap_cache_0_missunit_stall_o  [get_bd_pins northcape_cap_cache_0/missunit_stall_o] \
@@ -922,11 +922,11 @@ proc create_hier_cell_northcape_northbridge { parentCell nameHier } {
   [get_bd_pins northcape_cap_resolv_0/aclk] \
   [get_bd_pins northcape_user_parse_0/aclk] \
   [get_bd_pins northcape_cap_cache_0/aclk] \
-  [get_bd_pins northcape_cap_ops_wr_0/aclk] \
   [get_bd_pins axi_dwidth_converter_3/s_axi_aclk] \
   [get_bd_pins axi_protocol_convert_1/aclk] \
   [get_bd_pins axi_protocol_convert_2/aclk] \
-  [get_bd_pins axi_dwidth_converter_0/s_axi_aclk]
+  [get_bd_pins axi_dwidth_converter_0/s_axi_aclk] \
+  [get_bd_pins northcape_cap_ops_wr_0/aclk]
 
   # Restore current instance
   current_bd_instance $oldCurInst
@@ -1163,8 +1163,8 @@ proc create_hier_cell_ariane_peripherals { parentCell nameHier } {
   [get_bd_pins ariane_peripherals_wrapper_verilog_0/s_axi_plic_awatop] \
   [get_bd_pins ariane_peripherals_wrapper_verilog_0/s_axi_timer_awatop] \
   [get_bd_pins clint_wrapper_verilog_0/s_axi_clint_awatop] \
-  [get_bd_pins debug_module_wrapper_verilog_0/s_axi_dmi_jtag_awatop] \
-  [get_bd_pins bootrom/S_AXI_awatop]
+  [get_bd_pins bootrom/S_AXI_awatop] \
+  [get_bd_pins debug_module_wrapper_verilog_0/s_axi_dmi_jtag_awatop]
   connect_bd_net -net can_int_1  [get_bd_pins can_int] \
   [get_bd_pins irq_concat/In5]
   connect_bd_net -net can_rx0bf_1  [get_bd_pins can_rx0bf] \
@@ -1203,21 +1203,22 @@ proc create_hier_cell_ariane_peripherals { parentCell nameHier } {
   [get_bd_pins clint_wrapper_verilog_0/aresetn] \
   [get_bd_pins bootrom/rst_ni] \
   [get_bd_pins axi_register_slice_0/aresetn] \
-  [get_bd_pins axi_riscv_atomics_wr_0/aresetn]
+  [get_bd_pins axi_riscv_atomics_wr_0/aresetn] \
+  [get_bd_pins debug_module_wrapper_verilog_0/aresetn]
   connect_bd_net -net ndmreset_polarity_conv_Res  [get_bd_pins ndmreset_polarity_conv/Res] \
   [get_bd_pins Res]
   connect_bd_net -net proc_sys_reset_0_peripheral_aresetn  [get_bd_pins dm_resetgen/peripheral_aresetn] \
   [get_bd_pins peripheral_aresetn] \
   [get_bd_pins jtag_reset_gen/ext_reset_in] \
-  [get_bd_pins debug_module_wrapper_verilog_0/aresetn]
+  [get_bd_pins debug_module_wrapper_verilog_0/debug_rstn]
   connect_bd_net -net sys_pll_clk_25  [get_bd_pins aclk] \
   [get_bd_pins dm_resetgen/slowest_sync_clk] \
   [get_bd_pins ariane_peripherals_wrapper_verilog_0/aclk] \
   [get_bd_pins clint_wrapper_verilog_0/aclk] \
-  [get_bd_pins debug_module_wrapper_verilog_0/aclk] \
   [get_bd_pins bootrom/clk_i] \
   [get_bd_pins axi_register_slice_0/aclk] \
-  [get_bd_pins axi_riscv_atomics_wr_0/CLK]
+  [get_bd_pins axi_riscv_atomics_wr_0/CLK] \
+  [get_bd_pins debug_module_wrapper_verilog_0/aclk]
   connect_bd_net -net xlconcat_0_dout  [get_bd_pins irq_concat/dout] \
   [get_bd_pins plic_extra_irq] \
   [get_bd_pins ariane_peripherals_wrapper_verilog_0/irqs_in]
@@ -1396,7 +1397,6 @@ proc create_hier_cell_ariane_peripherals { parentCell nameHier } {
   # Create instance: led_concat, and set properties
   set led_concat [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 led_concat ]
   set_property CONFIG.NUM_PORTS {4} $led_concat
-
 
 
   # Create interface connections
@@ -1599,226 +1599,169 @@ proc create_hier_cell_ariane_peripherals { parentCell nameHier } {
   # Perform GUI Layout
   regenerate_bd_layout -layout_string {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.53895",
-   "Default View_TopLeft":"7098,1316",
-   "ExpandedHierarchyInLayout":"/northcape_northbridge",
+   "Default View_ScaleFactor":"0.431032",
+   "Default View_TopLeft":"1499,1132",
+   "ExpandedHierarchyInLayout":"/ariane_peripherals",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port usb_uart -pg 1 -lvl 8 -x 44300 -y 250 -defaultsOSRD
-preplace port ddr3_sdram -pg 1 -lvl 8 -x 44300 -y 1560 -defaultsOSRD
-preplace port eth_mii -pg 1 -lvl 8 -x 44300 -y 270 -defaultsOSRD
-preplace port eth_mdio_mdc -pg 1 -lvl 8 -x 44300 -y 290 -defaultsOSRD
-preplace port port-id_sys_clk_i -pg 1 -lvl 0 -x -90 -y 1700 -defaultsOSRD
-preplace port port-id_cpu_resetn -pg 1 -lvl 0 -x -90 -y 1640 -defaultsOSRD
-preplace port port-id_jtag_tdo -pg 1 -lvl 8 -x 44300 -y 110 -defaultsOSRD
-preplace port port-id_jtag_tck -pg 1 -lvl 0 -x -90 -y 1040 -defaultsOSRD
-preplace port port-id_jtag_tms -pg 1 -lvl 0 -x -90 -y 1140 -defaultsOSRD
-preplace port port-id_jtag_tdi -pg 1 -lvl 0 -x -90 -y 1160 -defaultsOSRD
-preplace port port-id_eth_phy_ref_clk -pg 1 -lvl 8 -x 44300 -y 140 -defaultsOSRD
-preplace port port-id_spi_mosi -pg 1 -lvl 8 -x 44300 -y 1860 -defaultsOSRD
-preplace port port-id_spi_clk_o -pg 1 -lvl 8 -x 44300 -y 1930 -defaultsOSRD
-preplace port port-id_spi_miso -pg 1 -lvl 0 -x -90 -y 2920 -defaultsOSRD
-preplace portBus led -pg 1 -lvl 8 -x 44300 -y -50 -defaultsOSRD
-preplace portBus spi_ss -pg 1 -lvl 8 -x 44300 -y 910 -defaultsOSRD
-preplace inst mig_7series_0 -pg 1 -lvl 7 -x 44036 -y 7170 -defaultsOSRD
-preplace inst sys_pll -pg 1 -lvl 2 -x 400 -y 1730 -defaultsOSRD
-preplace inst reset_polarity_conv -pg 1 -lvl 4 -x 1410 -y 1800 -defaultsOSRD
-preplace inst main_clk_reset_gen -pg 1 -lvl 3 -x 750 -y 1500 -defaultsOSRD
-preplace inst ariane_peripherals -pg 1 -lvl 5 -x 2380 -y 1150 -defaultsOSRD
-preplace inst northcape_northbridge -pg 1 -lvl 6 -x 7123 -y 372 -defaultsOSRD
-preplace inst xilinx_peripherals -pg 1 -lvl 7 -x 44036 -y 210 -defaultsOSRD
-preplace inst cpu_0 -pg 1 -lvl 4 -x 1410 -y 370 -defaultsOSRD
-preplace inst clk_buf -pg 1 -lvl 1 -x 140 -y 1700 -defaultsOSRD
-preplace inst init_complete_sync -pg 1 -lvl 5 -x 2380 -y 5404 -defaultsOSRD
-preplace inst eth_reset -pg 1 -lvl 5 -x 2380 -y 5120 -defaultsOSRD
-preplace inst led_concat -pg 1 -lvl 7 -x 44036 -y 5380 -defaultsOSRD
-preplace inst northcape_northbridge|northcape_cap_resolv_0 -pg 1 -lvl 7 -x 10643 -y 1332 -defaultsOSRD
-preplace inst northcape_northbridge|northcape_cap_ops_wr_0 -pg 1 -lvl 6 -x 9683 -y 1742 -defaultsOSRD
-preplace inst northcape_northbridge|northcape_cap_cache_0 -pg 1 -lvl 1 -x 7423 -y 1652 -defaultsOSRD
-preplace inst northcape_northbridge|northcape_user_parse_0 -pg 1 -lvl 6 -x 9683 -y 702 -defaultsOSRD
-preplace inst northcape_northbridge|atop_tieoff -pg 1 -lvl 5 -x 9053 -y 302 -defaultsOSRD
-preplace inst northcape_northbridge|axi_crossbar_0 -pg 1 -lvl 3 -x 8293 -y 792 -defaultsOSRD
-preplace inst northcape_northbridge|cache_width_converter -pg 1 -lvl 2 -x 7973 -y 932 -defaultsOSRD
-preplace inst northcape_northbridge|axi_clock_converter_0 -pg 1 -lvl 6 -x 9683 -y 252 -defaultsOSRD
-preplace inst northcape_northbridge|axi_protocol_convert_0 -pg 1 -lvl 6 -x 9683 -y 92 -defaultsOSRD
-preplace inst northcape_northbridge|axi_protocol_convert_3 -pg 1 -lvl 6 -x 9683 -y 412 -defaultsOSRD
-preplace inst northcape_northbridge|axi_dwidth_converter_1 -pg 1 -lvl 5 -x 9053 -y 612 -defaultsOSRD
-preplace inst northcape_northbridge|axi_dwidth_converter_2 -pg 1 -lvl 5 -x 9053 -y 752 -defaultsOSRD
-preplace inst northcape_northbridge|axi_dwidth_converter_4 -pg 1 -lvl 4 -x 8683 -y 862 -defaultsOSRD
-preplace inst northcape_northbridge|axi_protocol_convert_5 -pg 1 -lvl 5 -x 9053 -y 892 -defaultsOSRD
-preplace inst northcape_northbridge|axi_clock_converter_1 -pg 1 -lvl 6 -x 9683 -y 872 -defaultsOSRD
-preplace inst northcape_northbridge|axi_dwidth_converter_3 -pg 1 -lvl 2 -x 7973 -y 792 -defaultsOSRD
-preplace inst northcape_northbridge|axi_protocol_convert_1 -pg 1 -lvl 5 -x 9053 -y 1142 -defaultsOSRD
-preplace inst northcape_northbridge|axi_protocol_convert_2 -pg 1 -lvl 5 -x 9053 -y 442 -defaultsOSRD
-preplace inst northcape_northbridge|axi_dwidth_converter_0 -pg 1 -lvl 6 -x 9683 -y 552 -defaultsOSRD
-preplace netloc In2_1 1 4 4 2180 -218 NJ -218 NJ -218 44240
-preplace netloc In4_1 1 4 4 2170 -108 NJ -108 NJ -108 44200
-preplace netloc M00_ACLK_1 1 4 4 2210 2500 6763 2590 43866J 2500 44200
-preplace netloc ariane_peripherals_peripheral_aresetn 1 2 4 570 1610 NJ 1610 2090 1610 2550
-preplace netloc ariane_peripherals_wrapper_verilog_0_irq_out 1 3 3 1100 60 NJ 60 2590
-preplace netloc axi_uart16550_0_ip2intc_irpt 1 4 4 2210 -188 NJ -188 NJ -188 44210
-preplace netloc clint_wrapper_verilog_0_ipi_o 1 3 3 1110 70 NJ 70 2580
-preplace netloc clint_wrapper_verilog_0_timer_irq_o 1 3 3 1120 80 NJ 80 2570
-preplace netloc cpu_0_axis_validate_request_data_twakeup 1 4 2 NJ 410 6703
-preplace netloc cpu_0_axis_validate_request_instr_twakeup 1 4 2 NJ 390 6723
-preplace netloc cpu_0_csr_req_o 1 4 2 NJ 430 6693
-preplace netloc cpu_0_m_axi_cpu_awatop 1 4 1 2110 370n
-preplace netloc cpu_resetn_1 1 0 7 NJ 1640 300 1620 NJ 1620 NJ 1620 2150 2350 2640J 2630 11360J
-preplace netloc debug_module_wrapper_verilog_0_debug_req_irq 1 3 3 1130 90 NJ 90 2550
-preplace netloc debug_module_wrapper_verilog_0_jtag_tdo 1 5 3 2600J -78 NJ -78 44280J
-preplace netloc eth_reset_interconnect_aresetn 1 5 1 6633 1382n
-preplace netloc eth_reset_peripheral_aresetn 1 5 2 6613 -18 43866J
-preplace netloc interrupt_sync_0_irq_out 1 5 1 6653 1322n
-preplace netloc jtag_tck_1 1 0 5 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ
-preplace netloc jtag_tdi_1 1 0 5 NJ 1160 NJ 1160 NJ 1160 NJ 1160 NJ
-preplace netloc jtag_tds_1 1 0 5 NJ 1140 NJ 1140 NJ 1140 NJ 1140 NJ
-preplace netloc led_concat_dout 1 7 1 44270 -50n
-preplace netloc main_clk_reset_gen_interconnect_aresetn 1 3 3 NJ 1520 2070 1520 6573
-preplace netloc main_clk_reset_gen_peripheral_aresetn 1 3 4 1000 860 2130 860 6753 -38 43886J
-preplace netloc mig_7series_0_init_calib_complete 1 4 4 2170 5304 2550J 5394 43876J 5290 44190
-preplace netloc mig_7series_0_mmcm_locked 1 4 4 2170 2510 2580J 2600 43876J 2510 44250
-preplace netloc mig_7series_0_ui_clk_sync_rst 1 3 5 1140 1740 2130 2390 2670J 2550 43856J 2460 44210
-preplace netloc ndmreset_polarity_conv_Res 1 2 4 580 1660 NJ 1660 2050 2360 2560
-preplace netloc northcape_cap_ops_wr_0_cmt_base 1 3 4 1030 -178 NJ -178 NJ -178 11340
-preplace netloc northcape_cap_ops_wr_0_cmt_need_flush_data_caches 1 3 4 1060 2520 NJ 2520 2570J 2610 11320
-preplace netloc northcape_cap_ops_wr_0_cmt_reset_done 1 3 4 1050 2530 NJ 2530 2550J 2620 11410
-preplace netloc northcape_cap_ops_wr_0_cmt_table_size_clog2 1 3 4 1050 -168 NJ -168 NJ -168 11330
-preplace netloc northcape_cap_resolv_0_axis_validate_response_0_twakeup 1 3 4 1060 -158 NJ -158 NJ -158 11320
-preplace netloc northcape_cap_resolv_0_axis_validate_response_1_twakeup 1 3 4 1090 -138 NJ -138 NJ -138 11290
-preplace netloc northcape_northbridge_cmt_written_capability 1 3 4 1110 2440 NJ 2440 2660J 2530 11280
-preplace netloc northcape_northbridge_cmt_wrote_any_capability 1 3 4 1090 2470 NJ 2470 2630J 2560 11310
-preplace netloc northcape_northbridge_csr_rsp_o 1 3 4 1100 2450 NJ 2450 2650J 2540 11210
-preplace netloc northcape_northbridge_missunit_stall_o 1 3 4 1080 2480 NJ 2480 2610J 2570 11270
-preplace netloc northcape_northbridge_ops_interface_write_request_flush 1 3 4 1070 2490 NJ 2490 2590J 2580 11290
-preplace netloc northcape_northbridge_ops_port_miss_o 1 3 4 1120 2430 NJ 2430 6623J 2520 11220
-preplace netloc northcape_northbridge_ops_write_stall_o 1 3 4 1020 -68 NJ -68 NJ -68 11230
-preplace netloc northcape_northbridge_resolver_port_miss_o 1 3 4 1070 -98 NJ -98 NJ -98 11210
-preplace netloc northcape_northbridge_resolver_spec_fail_o 1 3 4 1040 -58 NJ -58 NJ -58 11250
-preplace netloc probe0_1 1 5 1 6683 1230n
-preplace netloc proc_sys_reset_0_interconnect_aresetn 1 3 5 1010J 1510 NJ 1510 6713 -118 N -118 44280
-preplace netloc reset_polarity_conv_Res 1 4 3 2040 5020 6673 5384 11270J
-preplace netloc spi_miso_1 1 0 7 -60J -88 NJ -88 NJ -88 NJ -88 NJ -88 NJ -88 43876
-preplace netloc sys_clk_i_1 1 1 6 310 1630 520J 1670 NJ 1670 2080J 2370 2620J 2640 11330J
-preplace netloc sys_clk_i_2 1 0 1 NJ 1700
-preplace netloc sys_pll_clk_5 1 2 4 540 1400 N 1400 2110 1430 6663
-preplace netloc sys_pll_clk_25 1 2 6 510 850 1010 850 2100 850 6763 -28 43806 350 44250J
-preplace netloc sys_pll_clk_100 1 2 5 550J 1680 NJ 1680 2140 1440 6553 -8 43856J
-preplace netloc sys_pll_clk_200 1 2 5 560J 1690 NJ 1690 2060J 2380 2600J 2650 11310
-preplace netloc sys_pll_locked 1 2 5 530 1280 NJ 1280 2040 -48 N -48 43846
-preplace netloc xilinx_peripherals_led_o 1 6 2 43886 370 44210
-preplace netloc xilinx_peripherals_spi_clk_o 1 7 1 44220 300n
-preplace netloc xilinx_peripherals_spi_mosi 1 7 1 44240 260n
-preplace netloc xilinx_peripherals_spi_ss 1 7 1 44230 280n
-preplace netloc S_AXI_1 1 4 3 2140 -248 NJ -248 11300
-preplace netloc axi_interconnect_0_M00_AXI 1 6 1 11390 922n
-preplace netloc axi_interconnect_0_M02_AXI 1 4 3 2150 -238 NJ -238 11270
-preplace netloc axi_interconnect_0_M03_AXI 1 4 3 2160 -228 NJ -228 11280
-preplace netloc axi_interconnect_0_M04_AXI 1 4 3 2190 -208 NJ -208 11240
-preplace netloc axi_interconnect_0_M05_AXI 1 4 3 2200 -198 NJ -198 11260
-preplace netloc axi_riscv_atomics_wr_0_m_axi_out 1 5 1 2610 1032n
-preplace netloc axi_uart16550_0_UART 1 7 1 44280J 120n
-preplace netloc cpu_0_axis_validate_request_data 1 4 2 NJ 310 6743
-preplace netloc cpu_0_axis_validate_request_instr 1 4 2 NJ 330 6733
-preplace netloc cpu_0_m_axi_cpu 1 4 1 2120 350n
-preplace netloc mig_7series_0_DDR3 1 7 1 44280J 1560n
-preplace netloc northcape_cap_resolv_0_axis_validate_response_0 1 3 4 1080 -148 NJ -148 NJ -148 11310
-preplace netloc northcape_cap_resolv_0_axis_validate_response_1 1 3 4 1140 -128 NJ -128 NJ -128 11220
-preplace netloc northcape_northbridge_M06_AXI 1 6 1 11380 190n
-preplace netloc northcape_northbridge_M07_AXI 1 6 1 11360 150n
-preplace netloc northcape_northbridge_M08_AXI 1 6 1 11350 130n
-preplace netloc northcape_northbridge_M_AXI 1 6 1 11370 170n
-preplace netloc xilinx_peripherals_eth_mdio_mdc 1 7 1 44260J 160n
-preplace netloc xilinx_peripherals_eth_mii 1 7 1 44230J 140n
-preplace netloc northcape_northbridge|M00_ACLK_1 1 0 6 6923J 362 NJ 362 NJ 362 NJ 362 NJ 362 9233
-preplace netloc northcape_northbridge|M00_ARESETN_1 1 0 6 NJ 1172 NJ 1172 NJ 1172 NJ 1172 8893J 1052 9243
-preplace netloc northcape_northbridge|atop_tieoff_dout 1 5 1 9273J 302n
-preplace netloc northcape_northbridge|clk_spi_i_1 1 0 6 NJ 2292 7793J 2282 NJ 2282 NJ 2282 NJ 2282 9273
-preplace netloc northcape_northbridge|cpu_0_axis_validate_request_data_twakeup 1 0 7 6933J 1222 NJ 1222 NJ 1222 NJ 1222 NJ 1222 9213J 1212 10213
-preplace netloc northcape_northbridge|cpu_0_axis_validate_request_instr_twakeup 1 0 7 6943J 1232 NJ 1232 NJ 1232 NJ 1232 NJ 1232 9223J 1222 10143
-preplace netloc northcape_northbridge|csr_req_i_1 1 0 6 NJ 2272 NJ 2272 NJ 2272 NJ 2272 NJ 2272 9263
-preplace netloc northcape_northbridge|m_axi_aclk_1 1 0 6 NJ 1362 NJ 1362 NJ 1362 NJ 1362 NJ 1362 9273
-preplace netloc northcape_northbridge|m_axi_aresetn_1 1 0 6 6933J 1372 NJ 1372 NJ 1372 NJ 1372 NJ 1372 9303
-preplace netloc northcape_northbridge|main_clk_reset_gen_interconnect_aresetn 1 0 6 NJ 1132 7803 1032 NJ 1032 NJ 1032 NJ 1032 9253
-preplace netloc northcape_northbridge|main_clk_reset_gen_peripheral_aresetn 1 0 7 6963 942 7763 702 8133 962 8523 962 8883 1062 9353 1282 10163J
-preplace netloc northcape_northbridge|memory_ready_i_1 1 0 6 6923J 1922 NJ 1922 NJ 1922 NJ 1922 NJ 1922 9253
-preplace netloc northcape_northbridge|northcape_cap_cache_0_missunit_stall_o 1 1 7 7773 2322 NJ 2322 NJ 2322 NJ 2322 NJ 2322 NJ 2322 NJ
-preplace netloc northcape_northbridge|northcape_cap_cache_0_ops_interface_response_cmt_entry 1 1 5 NJ 1682 NJ 1682 NJ 1682 NJ 1682 9213
-preplace netloc northcape_northbridge|northcape_cap_cache_0_ops_interface_response_err 1 1 5 NJ 1662 NJ 1662 NJ 1662 NJ 1662 9223
-preplace netloc northcape_northbridge|northcape_cap_cache_0_ops_interface_response_valid 1 1 5 NJ 1642 NJ 1642 NJ 1642 NJ 1642 9243
-preplace netloc northcape_northbridge|northcape_cap_cache_0_ops_port_miss_o 1 1 7 7803 2302 NJ 2302 NJ 2302 NJ 2302 NJ 2302 10053J 2262 NJ
-preplace netloc northcape_northbridge|northcape_cap_cache_0_ops_write_stall_o 1 1 7 7763 2342 NJ 2342 NJ 2342 NJ 2342 NJ 2342 NJ 2342 NJ
-preplace netloc northcape_northbridge|northcape_cap_cache_0_resolver_interface_response_cache_hit 1 1 6 7813 1322 NJ 1322 NJ 1322 NJ 1322 NJ 1322 NJ
-preplace netloc northcape_northbridge|northcape_cap_cache_0_resolver_interface_response_cmt_entry 1 1 6 7803 1312 NJ 1312 NJ 1312 NJ 1312 NJ 1312 10303J
-preplace netloc northcape_northbridge|northcape_cap_cache_0_resolver_interface_response_err 1 1 6 7793 1302 NJ 1302 NJ 1302 NJ 1302 NJ 1302 10203J
-preplace netloc northcape_northbridge|northcape_cap_cache_0_resolver_interface_response_valid 1 1 6 7783 1292 NJ 1292 NJ 1292 NJ 1292 NJ 1292 10183J
-preplace netloc northcape_northbridge|northcape_cap_cache_0_resolver_port_miss_o 1 1 7 7813 2292 NJ 2292 NJ 2292 NJ 2292 NJ 2292 10303J 2242 NJ
-preplace netloc northcape_northbridge|northcape_cap_cache_0_resolver_spec_fail_o 1 1 7 7783 2422 NJ 2422 NJ 2422 NJ 2422 NJ 2422 NJ 2422 NJ
-preplace netloc northcape_northbridge|northcape_cap_ops_wr_0_cmt_base 1 0 8 6973 2222 NJ 2222 NJ 2222 NJ 2222 NJ 2222 NJ 2222 10273 1582 NJ
-preplace netloc northcape_northbridge|northcape_cap_ops_wr_0_cmt_need_flush_data_caches 1 0 8 6953 2242 NJ 2242 NJ 2242 NJ 2242 NJ 2242 NJ 2242 10283 1622 NJ
-preplace netloc northcape_northbridge|northcape_cap_ops_wr_0_cmt_reset_done 1 0 8 6963 2232 NJ 2232 NJ 2232 NJ 2232 NJ 2232 NJ 2232 10033 1602 NJ
-preplace netloc northcape_northbridge|northcape_cap_ops_wr_0_cmt_table_size_clog2 1 0 8 6983 2212 NJ 2212 NJ 2212 NJ 2212 NJ 2212 NJ 2212 10253 1572 11053J
-preplace netloc northcape_northbridge|northcape_cap_ops_wr_0_cmt_written_capability 1 0 8 6933 2262 NJ 2262 NJ 2262 NJ 2262 NJ 2262 NJ 2262 10043 1652 11053J
-preplace netloc northcape_northbridge|northcape_cap_ops_wr_0_cmt_wrote_any_capability 1 0 8 6943 2252 NJ 2252 NJ 2252 NJ 2252 NJ 2252 NJ 2252 10293 1642 NJ
-preplace netloc northcape_northbridge|northcape_cap_ops_wr_0_csr_rsp_o 1 6 2 10093 2302 NJ
-preplace netloc northcape_northbridge|northcape_cap_ops_wr_0_ops_interface_is_write 1 0 7 7023 2172 NJ 2172 NJ 2172 NJ 2172 NJ 2172 NJ 2172 10013
-preplace netloc northcape_northbridge|northcape_cap_ops_wr_0_ops_interface_request_capability_id 1 0 7 7083 2142 NJ 2142 NJ 2142 NJ 2142 NJ 2142 NJ 2142 9983
-preplace netloc northcape_northbridge|northcape_cap_ops_wr_0_ops_interface_request_capability_tag 1 0 7 7043 2162 NJ 2162 NJ 2162 NJ 2162 NJ 2162 NJ 2162 10023
-preplace netloc northcape_northbridge|northcape_cap_ops_wr_0_ops_interface_request_is_uncacheable 1 0 7 6993 2202 NJ 2202 NJ 2202 NJ 2202 NJ 2202 NJ 2202 9993
-preplace netloc northcape_northbridge|northcape_cap_ops_wr_0_ops_interface_request_valid 1 0 7 7063 2152 NJ 2152 NJ 2152 NJ 2152 NJ 2152 NJ 2152 10053
-preplace netloc northcape_northbridge|northcape_cap_ops_wr_0_ops_interface_write_request_capability 1 0 7 7013 2182 NJ 2182 NJ 2182 NJ 2182 NJ 2182 NJ 2182 10003
-preplace netloc northcape_northbridge|northcape_cap_ops_wr_0_ops_interface_write_request_flush 1 0 8 7003 2192 NJ 2192 NJ 2192 NJ 2192 NJ 2192 NJ 2192 10103 2282 NJ
-preplace netloc northcape_northbridge|northcape_cap_ops_wr_0_spi_cs_no 1 6 2 10073 2442 NJ
-preplace netloc northcape_northbridge|northcape_cap_ops_wr_0_spi_mosi_o 1 6 2 10063 2482 NJ
-preplace netloc northcape_northbridge|northcape_cap_ops_wr_0_spi_sclk_o 1 6 2 10083 2462 NJ
-preplace netloc northcape_northbridge|northcape_cap_resolv_0_axis_validate_response_0_twakeup 1 7 1 N 1412
-preplace netloc northcape_northbridge|northcape_cap_resolv_0_axis_validate_response_1_twakeup 1 7 1 N 1432
-preplace netloc northcape_northbridge|northcape_cap_resolv_0_resolver_interface_request_capability_id 1 0 8 7033 1272 NJ 1272 NJ 1272 NJ 1272 NJ 1272 9343J 1252 10123J 1112 11003
-preplace netloc northcape_northbridge|northcape_cap_resolv_0_resolver_interface_request_capability_tag 1 0 8 7053 1282 NJ 1282 NJ 1282 NJ 1282 NJ 1282 9333J 1262 10133J 1122 11013
-preplace netloc northcape_northbridge|northcape_cap_resolv_0_resolver_interface_request_close_speculation_window 1 0 8 7043 1332 NJ 1332 NJ 1332 NJ 1332 NJ 1332 NJ 1332 10183J 1542 11013
-preplace netloc northcape_northbridge|northcape_cap_resolv_0_resolver_interface_request_flush 1 0 8 7073 1352 NJ 1352 NJ 1352 NJ 1352 NJ 1352 NJ 1352 10123J 1562 10993
-preplace netloc northcape_northbridge|northcape_cap_resolv_0_resolver_interface_request_is_recursion 1 0 8 7083 1382 NJ 1382 NJ 1382 NJ 1382 NJ 1382 9363J 1372 10113J 1662 10983
-preplace netloc northcape_northbridge|northcape_cap_resolv_0_resolver_interface_request_valid 1 0 8 7023 1262 NJ 1262 NJ 1262 NJ 1262 NJ 1262 9313J 1242 10113J 1102 10993
-preplace netloc northcape_northbridge|northcape_cap_resolv_0_resolver_interface_response_ready 1 0 8 7063 1342 NJ 1342 NJ 1342 NJ 1342 NJ 1342 NJ 1342 10133J 1552 11003
-preplace netloc northcape_northbridge|northcape_user_parse_0_active_device 1 5 3 9383 2112 10223 2362 NJ
-preplace netloc northcape_northbridge|northcape_user_parse_0_active_device_specific_restriction 1 5 3 9353 2132 10173 2402 NJ
-preplace netloc northcape_northbridge|northcape_user_parse_0_active_task 1 5 3 9363 2122 10193 2382 NJ
-preplace netloc northcape_northbridge|northcape_user_parse_0_parsing_error 1 5 2 9373 1362 10033
-preplace netloc northcape_northbridge|rst_spi_ni_1 1 0 6 NJ 2312 NJ 2312 NJ 2312 NJ 2312 NJ 2312 9293
-preplace netloc northcape_northbridge|axi_clock_converter_0_M_AXI 1 6 2 10293 922 NJ
-preplace netloc northcape_northbridge|axi_clock_converter_1_M_AXI 1 6 2 10263 1082 NJ
-preplace netloc northcape_northbridge|axi_crossbar_0_M00_AXI 1 3 3 8443J 522 NJ 522 9223
-preplace netloc northcape_northbridge|axi_crossbar_0_M01_AXI 1 3 1 8513 712n
-preplace netloc northcape_northbridge|axi_crossbar_0_M02_AXI 1 3 5 8503 972 NJ 972 NJ 972 10113J 942 NJ
-preplace netloc northcape_northbridge|axi_crossbar_0_M03_AXI 1 3 5 8483 982 NJ 982 NJ 982 10123J 962 NJ
-preplace netloc northcape_northbridge|axi_crossbar_0_M04_AXI 1 3 5 8463 992 NJ 992 NJ 992 10133J 982 NJ
-preplace netloc northcape_northbridge|axi_crossbar_0_M05_AXI 1 3 5 8443 1002 NJ 1002 NJ 1002 NJ 1002 NJ
-preplace netloc northcape_northbridge|axi_crossbar_0_M06_AXI 1 3 2 8433 422 NJ
-preplace netloc northcape_northbridge|axi_crossbar_0_M07_AXI 1 3 2 8473J 772 8873
-preplace netloc northcape_northbridge|axi_crossbar_0_M08_AXI 1 3 2 8493J 782 8863
-preplace netloc northcape_northbridge|axi_crossbar_0_M09_AXI 1 3 5 8433 1042 NJ 1042 NJ 1042 10253J 1052 11053J
-preplace netloc northcape_northbridge|axi_crossbar_0_M10_AXI 1 3 2 8453J 942 8843
-preplace netloc northcape_northbridge|axi_dwidth_converter_0_M_AXI 1 6 2 10273 1092 11033J
-preplace netloc northcape_northbridge|axi_dwidth_converter_1_M_AXI 1 5 1 9233 392n
-preplace netloc northcape_northbridge|axi_dwidth_converter_2_M_AXI 1 5 1 9213 72n
-preplace netloc northcape_northbridge|axi_dwidth_converter_3_M_AXI 1 2 1 N 792
-preplace netloc northcape_northbridge|axi_dwidth_converter_4_M_AXI 1 4 1 8873 862n
-preplace netloc northcape_northbridge|axi_protocol_convert_0_M_AXI 1 6 2 10303 1022 NJ
-preplace netloc northcape_northbridge|axi_protocol_convert_1_M_AXI 1 5 1 9293 1142n
-preplace netloc northcape_northbridge|axi_protocol_convert_2_M_AXI 1 5 1 9373 442n
-preplace netloc northcape_northbridge|axi_protocol_convert_3_M_AXI 1 6 2 10283 1042 NJ
-preplace netloc northcape_northbridge|axi_protocol_convert_5_M_AXI 1 5 1 9263 832n
-preplace netloc northcape_northbridge|axi_riscv_atomics_wr_0_m_axi_out 1 0 6 6933J 712 NJ 712 8153 532 NJ 532 NJ 532 9263
-preplace netloc northcape_northbridge|cpu_0_axis_validate_request_data 1 0 7 NJ 1012 NJ 1012 NJ 1012 NJ 1012 NJ 1012 NJ 1012 10243
-preplace netloc northcape_northbridge|cpu_0_axis_validate_request_instr 1 0 7 6943J 1022 NJ 1022 NJ 1022 NJ 1022 NJ 1022 NJ 1022 10233
-preplace netloc northcape_northbridge|northcape_cap_cache_0_m_cache_out 1 1 1 7773 912n
-preplace netloc northcape_northbridge|northcape_cap_ops_wr_0_m_axi_out 1 1 6 7813 1242 NJ 1242 NJ 1242 NJ 1242 9283J 1232 9983
-preplace netloc northcape_northbridge|northcape_cap_resolv_0_axis_validate_response_0 1 7 1 11023 882n
-preplace netloc northcape_northbridge|northcape_cap_resolv_0_axis_validate_response_1 1 7 1 11043 902n
-preplace netloc northcape_northbridge|ops_width_converter_M_AXI 1 2 1 8153 772n
-levelinfo -pg 1 -90 140 400 750 1410 2380 7123 44036 44300
-levelinfo -hier northcape_northbridge * 7423 7973 8293 8683 9053 9683 10643 *
-pagesize -pg 1 -db -bbox -sgen -420 -360 44640 7450
-pagesize -hier northcape_northbridge -db -bbox -sgen 6893 22 11083 2492
+preplace port usb_uart -pg 1 -lvl 9 -x 5370 -y 510 -defaultsOSRD
+preplace port ddr3_sdram -pg 1 -lvl 9 -x 5370 -y 260 -defaultsOSRD
+preplace port eth_mii -pg 1 -lvl 9 -x 5370 -y 530 -defaultsOSRD
+preplace port eth_mdio_mdc -pg 1 -lvl 9 -x 5370 -y 550 -defaultsOSRD
+preplace port port-id_sys_clk_i -pg 1 -lvl 0 -x 0 -y 1650 -defaultsOSRD
+preplace port port-id_cpu_resetn -pg 1 -lvl 0 -x 0 -y 1590 -defaultsOSRD
+preplace port port-id_jtag_tdo -pg 1 -lvl 9 -x 5370 -y 200 -defaultsOSRD
+preplace port port-id_jtag_tck -pg 1 -lvl 0 -x 0 -y 1110 -defaultsOSRD
+preplace port port-id_jtag_tms -pg 1 -lvl 0 -x 0 -y 1320 -defaultsOSRD
+preplace port port-id_jtag_tdi -pg 1 -lvl 0 -x 0 -y 1350 -defaultsOSRD
+preplace port port-id_eth_phy_ref_clk -pg 1 -lvl 9 -x 5370 -y 740 -defaultsOSRD
+preplace port port-id_spi_mosi -pg 1 -lvl 9 -x 5370 -y 650 -defaultsOSRD
+preplace port port-id_spi_clk_o -pg 1 -lvl 9 -x 5370 -y 690 -defaultsOSRD
+preplace port port-id_spi_miso -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace portBus led -pg 1 -lvl 9 -x 5370 -y 1650 -defaultsOSRD
+preplace portBus spi_ss -pg 1 -lvl 9 -x 5370 -y 670 -defaultsOSRD
+preplace inst mig_7series_0 -pg 1 -lvl 8 -x 5140 -y 300 -defaultsOSRD
+preplace inst sys_pll -pg 1 -lvl 2 -x 390 -y 1690 -defaultsOSRD
+preplace inst reset_polarity_conv -pg 1 -lvl 4 -x 1070 -y 1250 -defaultsOSRD
+preplace inst main_clk_reset_gen -pg 1 -lvl 3 -x 720 -y 1480 -defaultsOSRD
+preplace inst ariane_peripherals -pg 1 -lvl 6 -x 2610 -y 1222 -defaultsOSRD
+preplace inst northcape_northbridge -pg 1 -lvl 7 -x 4430 -y 510 -defaultsOSRD
+preplace inst xilinx_peripherals -pg 1 -lvl 8 -x 5140 -y 600 -defaultsOSRD
+preplace inst cpu_0 -pg 1 -lvl 5 -x 1760 -y 440 -defaultsOSRD
+preplace inst clk_buf -pg 1 -lvl 1 -x 150 -y 1650 -defaultsOSRD
+preplace inst init_complete_sync -pg 1 -lvl 5 -x 1760 -y 1220 -defaultsOSRD
+preplace inst eth_reset -pg 1 -lvl 5 -x 1760 -y 1480 -defaultsOSRD
+preplace inst led_concat -pg 1 -lvl 8 -x 5140 -y 1650 -defaultsOSRD
+preplace inst ariane_peripherals|jtag_reset_gen -pg 1 -lvl 1 -x 2670 -y 2072 -defaultsOSRD
+preplace inst ariane_peripherals|ndmreset_polarity_conv -pg 1 -lvl 3 -x 3550 -y 1722 -defaultsOSRD
+preplace inst ariane_peripherals|axi_riscv_atomics_wr_0 -pg 1 -lvl 2 -x 3110 -y 1262 -defaultsOSRD
+preplace inst ariane_peripherals|clint_wrapper_verilog_0 -pg 1 -lvl 3 -x 3550 -y 1192 -defaultsOSRD
+preplace inst ariane_peripherals|debug_module_wrapper_verilog_0 -pg 1 -lvl 2 -x 3110 -y 1782 -defaultsOSRD
+preplace inst ariane_peripherals|ariane_peripherals_wrapper_verilog_0 -pg 1 -lvl 3 -x 3550 -y 1552 -defaultsOSRD
+preplace inst ariane_peripherals|awatop_tieoff -pg 1 -lvl 1 -x 2670 -y 1912 -defaultsOSRD
+preplace inst ariane_peripherals|dummy_irq_tieoff -pg 1 -lvl 1 -x 2670 -y 1282 -defaultsOSRD
+preplace inst ariane_peripherals|irq_concat -pg 1 -lvl 2 -x 3110 -y 2242 -defaultsOSRD
+preplace inst ariane_peripherals|dm_resetgen -pg 1 -lvl 3 -x 3550 -y 2332 -defaultsOSRD
+preplace inst ariane_peripherals|plic_level_edge -pg 1 -lvl 2 -x 3110 -y 1582 -defaultsOSRD
+preplace inst ariane_peripherals|bootrom -pg 1 -lvl 3 -x 3550 -y 1352 -defaultsOSRD
+preplace inst ariane_peripherals|axi_register_slice_0 -pg 1 -lvl 3 -x 3550 -y 1042 -defaultsOSRD
+preplace netloc In2_1 1 5 4 2220 2540 NJ 2540 NJ 2540 5310
+preplace netloc In4_1 1 5 4 2230 10 NJ 10 NJ 10 5350
+preplace netloc M00_ACLK_1 1 4 5 1270 20 NJ 20 4150 20 NJ 20 5300
+preplace netloc ariane_peripherals_peripheral_aresetn 1 2 5 530 1360 NJ 1360 1450 1370 2080J 2510 3910
+preplace netloc ariane_peripherals_wrapper_verilog_0_irq_out 1 4 3 1280 40 NJ 40 3940
+preplace netloc axi_uart16550_0_ip2intc_irpt 1 5 4 2300 170 3960J 40 NJ 40 5340
+preplace netloc clint_wrapper_verilog_0_ipi_o 1 4 3 1440 150 NJ 150 3930
+preplace netloc clint_wrapper_verilog_0_timer_irq_o 1 4 3 1450 160 NJ 160 3910
+preplace netloc cpu_0_axis_validate_request_data_twakeup 1 5 2 2170 490 NJ
+preplace netloc cpu_0_axis_validate_request_instr_twakeup 1 5 2 2210 470 NJ
+preplace netloc cpu_0_csr_req_o 1 5 2 2140 560 4120J
+preplace netloc cpu_0_m_axi_cpu_awatop 1 5 1 2120 440n
+preplace netloc cpu_resetn_1 1 0 8 NJ 1590 290 1580 NJ 1580 NJ 1580 NJ 1580 2150 130 NJ 130 4960J
+preplace netloc debug_module_wrapper_verilog_0_debug_req_irq 1 4 3 1430 110 2160J 180 3920
+preplace netloc debug_module_wrapper_verilog_0_jtag_tdo 1 6 3 4150J 1050 4940J 200 NJ
+preplace netloc eth_reset_interconnect_aresetn 1 5 2 2180 630 NJ
+preplace netloc eth_reset_peripheral_aresetn 1 5 3 2160 190 4110J 160 4880J
+preplace netloc interrupt_sync_0_irq_out 1 5 2 2170 570 NJ
+preplace netloc jtag_tck_1 1 0 6 NJ 1110 NJ 1110 500J 1120 NJ 1120 NJ 1120 2110J
+preplace netloc jtag_tdi_1 1 0 6 NJ 1350 NJ 1350 NJ 1350 NJ 1350 NJ 1350 2090J
+preplace netloc jtag_tds_1 1 0 6 NJ 1320 NJ 1320 NJ 1320 NJ 1320 NJ 1320 2100J
+preplace netloc led_concat_dout 1 8 1 NJ 1650
+preplace netloc main_clk_reset_gen_interconnect_aresetn 1 3 4 910 1190 1240 100 2170J 230 4140J
+preplace netloc main_clk_reset_gen_peripheral_aresetn 1 3 5 900J 1100 1220 130 2130 240 4160 150 4900J
+preplace netloc mig_7series_0_init_calib_complete 1 4 5 1280 852 NJ 852 3970J 1040 4970 1040 5330
+preplace netloc mig_7series_0_mmcm_locked 1 5 4 2290 90 NJ 90 NJ 90 5310
+preplace netloc mig_7series_0_ui_clk_sync_rst 1 3 6 920 1330 NJ 1330 2210 932 3950J 1000 NJ 1000 5320
+preplace netloc ndmreset_polarity_conv_Res 1 2 5 540 1370 NJ 1370 1400 1380 2070J 2530 3960
+preplace netloc northcape_cap_ops_wr_0_cmt_base 1 4 4 1420 772 NJ 772 4140J 880 4790
+preplace netloc northcape_cap_ops_wr_0_cmt_need_flush_data_caches 1 4 4 1410 782 NJ 782 4130J 890 4720
+preplace netloc northcape_cap_ops_wr_0_cmt_reset_done 1 4 4 1400 792 NJ 792 4040J 1030 4860
+preplace netloc northcape_cap_ops_wr_0_cmt_table_size_clog2 1 4 4 1390 802 NJ 802 4120J 870 4820
+preplace netloc northcape_cap_resolv_0_axis_validate_response_0_twakeup 1 4 4 1380 812 NJ 812 4090J 900 4830
+preplace netloc northcape_cap_resolv_0_axis_validate_response_1_twakeup 1 4 4 1300 842 NJ 842 4080J 910 4760
+preplace netloc northcape_northbridge_cmt_written_capability 1 4 4 1330 892 NJ 892 4050J 920 4730
+preplace netloc northcape_northbridge_cmt_wrote_any_capability 1 4 4 1310 912 NJ 912 4000J 930 4780
+preplace netloc northcape_northbridge_csr_rsp_o 1 4 4 1320 902 NJ 902 4010J 940 4700
+preplace netloc northcape_northbridge_missunit_stall_o 1 4 4 1340 882 NJ 882 4020J 960 4710
+preplace netloc northcape_northbridge_ops_interface_write_request_flush 1 4 4 1290 922 NJ 922 3980J 950 4810
+preplace netloc northcape_northbridge_ops_port_miss_o 1 4 4 1350 862 NJ 862 3990J 990 4840
+preplace netloc northcape_northbridge_ops_write_stall_o 1 4 4 1370 822 NJ 822 4030J 1010 4800
+preplace netloc northcape_northbridge_resolver_port_miss_o 1 4 4 1360 832 NJ 832 4060J 970 4750
+preplace netloc northcape_northbridge_resolver_spec_fail_o 1 4 4 1430 762 NJ 762 4070J 1020 4770
+preplace netloc probe0_1 1 6 1 4100 590n
+preplace netloc reset_polarity_conv_Res 1 4 4 1230 140 NJ 140 4120 140 4950J
+preplace netloc sys_clk_i_1 1 1 7 280 80 NJ 80 NJ 80 NJ 80 2210J 100 NJ 100 4980
+preplace netloc sys_clk_i_2 1 0 1 NJ 1650
+preplace netloc sys_pll_clk_25 1 2 7 510 1110 NJ 1110 1260 872 2200 872 4110 980 4970 740 NJ
+preplace netloc sys_pll_clk_100 1 2 6 520J 1380 NJ 1380 1250 120 NJ 120 4130 120 4930J
+preplace netloc sys_pll_clk_200 1 2 6 490J 90 NJ 90 NJ 90 2190J 110 NJ 110 4970
+preplace netloc sys_pll_locked 1 2 6 540 1730 NJ 1730 NJ 1730 2060 2520 4160J 1680 NJ
+preplace netloc xilinx_peripherals_led_o 1 7 2 4980 450 5300
+preplace netloc xilinx_peripherals_spi_clk_o 1 8 1 NJ 690
+preplace netloc xilinx_peripherals_spi_mosi 1 8 1 NJ 650
+preplace netloc xilinx_peripherals_spi_ss 1 8 1 NJ 670
+preplace netloc S_AXI_1 1 5 3 2240 30 NJ 30 4870
+preplace netloc axi_interconnect_0_M00_AXI 1 7 1 N 260
+preplace netloc axi_interconnect_0_M02_AXI 1 5 3 2250 50 NJ 50 4760
+preplace netloc axi_interconnect_0_M03_AXI 1 5 3 2260 60 NJ 60 4790
+preplace netloc axi_interconnect_0_M04_AXI 1 5 3 2270 70 NJ 70 4820
+preplace netloc axi_interconnect_0_M05_AXI 1 5 3 2280 80 NJ 80 4830
+preplace netloc axi_riscv_atomics_wr_0_m_axi_out 1 6 1 3960 410n
+preplace netloc axi_uart16550_0_UART 1 8 1 NJ 510
+preplace netloc cpu_0_axis_validate_request_data 1 5 2 2190 390 NJ
+preplace netloc cpu_0_axis_validate_request_instr 1 5 2 2110 370 NJ
+preplace netloc cpu_0_m_axi_cpu 1 5 1 2190 420n
+preplace netloc mig_7series_0_DDR3 1 8 1 NJ 260
+preplace netloc northcape_cap_resolv_0_axis_validate_response_0 1 4 4 1470 742 NJ 742 4160J 860 4850
+preplace netloc northcape_cap_resolv_0_axis_validate_response_1 1 4 4 1460 752 NJ 752 4150J 850 4740
+preplace netloc northcape_northbridge_M06_AXI 1 7 1 4870 440n
+preplace netloc northcape_northbridge_M07_AXI 1 7 1 4920 360n
+preplace netloc northcape_northbridge_M08_AXI 1 7 1 4910 380n
+preplace netloc northcape_northbridge_M_AXI 1 7 1 4890 420n
+preplace netloc xilinx_peripherals_eth_mdio_mdc 1 8 1 NJ 550
+preplace netloc xilinx_peripherals_eth_mii 1 8 1 NJ 530
+preplace netloc ariane_peripherals|In0_1 1 0 2 NJ 2172 N
+preplace netloc ariane_peripherals|In1_1 1 0 2 NJ 2192 N
+preplace netloc ariane_peripherals|In2_1 1 0 2 NJ 2212 N
+preplace netloc ariane_peripherals|In3_1 1 0 2 NJ 2232 N
+preplace netloc ariane_peripherals|In4_1 1 0 2 NJ 2252 N
+preplace netloc ariane_peripherals|ariane_peripherals_wrapper_verilog_0_irq_out 1 3 1 3730 1552n
+preplace netloc ariane_peripherals|aux_reset_in_1 1 0 3 NJ 2392 NJ 2392 3360
+preplace netloc ariane_peripherals|awatop_tieoff_dout 1 1 2 2870 1522 3330
+preplace netloc ariane_peripherals|can_int_1 1 0 2 2460J 2272 N
+preplace netloc ariane_peripherals|can_rx0bf_1 1 0 2 2480J 2292 N
+preplace netloc ariane_peripherals|can_rx1bf_1 1 0 2 2490J 2312 N
+preplace netloc ariane_peripherals|clint_wrapper_verilog_0_ipi_o 1 3 1 3740 1202n
+preplace netloc ariane_peripherals|clint_wrapper_verilog_0_timer_irq_o 1 3 1 3750 1182n
+preplace netloc ariane_peripherals|cpu_0_m_axi_cpu_awatop 1 0 2 2470J 1222 2860
+preplace netloc ariane_peripherals|cpu_resetn_1 1 0 3 NJ 1552 2880J 1642 3310
+preplace netloc ariane_peripherals|dcm_locked_1 1 0 3 NJ 2372 NJ 2372 N
+preplace netloc ariane_peripherals|debug_module_wrapper_verilog_0_debug_req_irq 1 2 2 N 1802 NJ
+preplace netloc ariane_peripherals|debug_module_wrapper_verilog_0_jtag_tdo 1 2 2 3330 1782 NJ
+preplace netloc ariane_peripherals|debug_module_wrapper_verilog_0_ndmreset 1 2 1 3320 1722n
+preplace netloc ariane_peripherals|dummy_irq_tieoff_dout 1 1 1 NJ 1282
+preplace netloc ariane_peripherals|jtag_reset_gen_peripheral_aresetn 1 1 1 2910 1802n
+preplace netloc ariane_peripherals|jtag_tck_1 1 0 2 2480 1822 N
+preplace netloc ariane_peripherals|jtag_tdi_1 1 0 2 NJ 1852 2850
+preplace netloc ariane_peripherals|jtag_tds_1 1 0 2 NJ 1832 2850
+preplace netloc ariane_peripherals|main_clk_reset_gen_peripheral_aresetn 1 0 3 NJ 1592 2910 1152 3370
+preplace netloc ariane_peripherals|ndmreset_polarity_conv_Res 1 3 1 NJ 1722
+preplace netloc ariane_peripherals|proc_sys_reset_0_peripheral_aresetn 1 0 4 2490 1972 2890 1972 NJ 1972 3750
+preplace netloc ariane_peripherals|sys_pll_clk_25 1 0 3 NJ 1572 2900 1142 3350
+preplace netloc ariane_peripherals|xlconcat_0_dout 1 2 2 3370 1992 NJ
+preplace netloc ariane_peripherals|xlconstant_0_dout 1 2 1 NJ 1582
+preplace netloc ariane_peripherals|S_AXI_1 1 0 3 2460J 1132 NJ 1132 3360
+preplace netloc ariane_peripherals|axi_interconnect_0_M02_AXI 1 0 3 NJ 1162 NJ 1162 N
+preplace netloc ariane_peripherals|axi_interconnect_0_M03_AXI 1 0 2 NJ 1452 2890
+preplace netloc ariane_peripherals|axi_interconnect_0_M04_AXI 1 0 3 NJ 1472 NJ 1472 3360
+preplace netloc ariane_peripherals|axi_interconnect_0_M05_AXI 1 0 3 NJ 1492 NJ 1492 3310
+preplace netloc ariane_peripherals|axi_register_slice_0_M_AXI 1 3 1 N 1042
+preplace netloc ariane_peripherals|axi_riscv_atomics_wr_0_m_axi_out 1 2 1 3310 1022n
+preplace netloc ariane_peripherals|cpu_0_m_axi_cpu 1 0 2 NJ 1142 2880
+levelinfo -pg 1 0 150 390 720 1070 1760 2610 4430 5140 5370
+levelinfo -hier ariane_peripherals * 2670 3110 3550 *
+pagesize -pg 1 -db -bbox -sgen -130 0 5530 2700
+pagesize -hier ariane_peripherals -db -bbox -sgen 2430 962 3780 2482
 "
 }
 
