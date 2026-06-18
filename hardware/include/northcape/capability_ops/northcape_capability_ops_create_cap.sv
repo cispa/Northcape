@@ -582,7 +582,17 @@ module northcape_capability_ops_create_caps #(
     end : genWriteFFs
     else begin : genWriteDefaults
 
-      assign axi_master.bready  = 1'b1;
+      assign axi_master.awvalid = 1'b0;
+      assign axi_master.awsize  = '0;
+      assign axi_master.awlen   = '0;
+      assign axi_master.wvalid  = 1'b0;
+      assign axi_master.wstrb   = '0;
+      assign axi_master.wlast   = 1'b0;
+
+      assign axi_master.bready  = 1'b0;
+
+      assign axi_master.awaddr  = '0;
+      assign axi_master.wdata   = '0;
 
       assign b_chan_complete_q  = 1'b0;
       assign bresp_q            = SLVERR;

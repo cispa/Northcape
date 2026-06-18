@@ -306,185 +306,7 @@ package northcape_capability_ops_agent;
         .INITIAL_CMT_SIZE_CLOG2(INITIAL_CMT_SIZE_CLOG2)
     ) transaction_revoke_t;
 
-    typedef NorthcapeCapabilityOpsTransactionUnsealReadHeader#(
-        .AXI_DATA_WIDTH(AXI_DATA_WIDTH),
-        .AXI_ADDR_WIDTH(AXI_ADDR_WIDTH),
-        .AXI_ID_WIDTH  (AXI_ID_WIDTH),
-        .AXI_USER_WIDTH(AXI_USER_WIDTH),
-
-        .AXI_LITE_ADDR_WIDTH(AXI_LITE_ADDR_WIDTH),
-        .AXI_LITE_DATA_WIDTH(AXI_LITE_DATA_WIDTH),
-        .HASH_TYPE(HASH_TYPE),
-
-
-        .INITIAL_CMT_BASE(INITIAL_CMT_BASE),
-        .INITIAL_CMT_SIZE_CLOG2(INITIAL_CMT_SIZE_CLOG2)
-    ) transaction_unseal_read_header_t;
-
-    typedef NorthcapeCapabilityOpsTransactionUnsealReadCipherText#(
-        .AXI_DATA_WIDTH(AXI_DATA_WIDTH),
-        .AXI_ADDR_WIDTH(AXI_ADDR_WIDTH),
-        .AXI_ID_WIDTH  (AXI_ID_WIDTH),
-        .AXI_USER_WIDTH(AXI_USER_WIDTH),
-
-        .AXI_LITE_ADDR_WIDTH(AXI_LITE_ADDR_WIDTH),
-        .AXI_LITE_DATA_WIDTH(AXI_LITE_DATA_WIDTH),
-        .HASH_TYPE(HASH_TYPE),
-
-
-        .INITIAL_CMT_BASE(INITIAL_CMT_BASE),
-        .INITIAL_CMT_SIZE_CLOG2(INITIAL_CMT_SIZE_CLOG2)
-    ) transaction_unseal_read_ciphertext_t;
-
-    typedef NorthcapeCapabilityOpsTransactionUnsealReadPlainText#(
-        .AXI_DATA_WIDTH(AXI_DATA_WIDTH),
-        .AXI_ADDR_WIDTH(AXI_ADDR_WIDTH),
-        .AXI_ID_WIDTH  (AXI_ID_WIDTH),
-        .AXI_USER_WIDTH(AXI_USER_WIDTH),
-
-        .AXI_LITE_ADDR_WIDTH(AXI_LITE_ADDR_WIDTH),
-        .AXI_LITE_DATA_WIDTH(AXI_LITE_DATA_WIDTH),
-        .HASH_TYPE(HASH_TYPE),
-
-
-        .INITIAL_CMT_BASE(INITIAL_CMT_BASE),
-        .INITIAL_CMT_SIZE_CLOG2(INITIAL_CMT_SIZE_CLOG2)
-    ) transaction_unseal_read_plaintext_t;
-
-    typedef NorthcapeCapabilityOpsTransactionUnsealWriteInitialHash#(
-        .AXI_DATA_WIDTH(AXI_DATA_WIDTH),
-        .AXI_ADDR_WIDTH(AXI_ADDR_WIDTH),
-        .AXI_ID_WIDTH  (AXI_ID_WIDTH),
-        .AXI_USER_WIDTH(AXI_USER_WIDTH),
-
-        .AXI_LITE_ADDR_WIDTH(AXI_LITE_ADDR_WIDTH),
-        .AXI_LITE_DATA_WIDTH(AXI_LITE_DATA_WIDTH),
-        .HASH_TYPE(HASH_TYPE),
-
-
-        .INITIAL_CMT_BASE(INITIAL_CMT_BASE),
-        .INITIAL_CMT_SIZE_CLOG2(INITIAL_CMT_SIZE_CLOG2)
-    ) transaction_unseal_write_initial_hash_t;
-
-    typedef NorthcapeCapabilityOpsTransactionUnsealReadPCR#(
-        .AXI_DATA_WIDTH(AXI_DATA_WIDTH),
-        .AXI_ADDR_WIDTH(AXI_ADDR_WIDTH),
-        .AXI_ID_WIDTH  (AXI_ID_WIDTH),
-        .AXI_USER_WIDTH(AXI_USER_WIDTH),
-
-        .AXI_LITE_ADDR_WIDTH(AXI_LITE_ADDR_WIDTH),
-        .AXI_LITE_DATA_WIDTH(AXI_LITE_DATA_WIDTH),
-        .HASH_TYPE(HASH_TYPE),
-
-
-        .INITIAL_CMT_BASE(INITIAL_CMT_BASE),
-        .INITIAL_CMT_SIZE_CLOG2(INITIAL_CMT_SIZE_CLOG2)
-    ) transaction_unseal_read_pcr_t;
-
-    typedef NorthcapeCapabilityOpsTransactionUnsealWritePlainText#(
-        .AXI_DATA_WIDTH(AXI_DATA_WIDTH),
-        .AXI_ADDR_WIDTH(AXI_ADDR_WIDTH),
-        .AXI_ID_WIDTH  (AXI_ID_WIDTH),
-        .AXI_USER_WIDTH(AXI_USER_WIDTH),
-
-        .AXI_LITE_ADDR_WIDTH(AXI_LITE_ADDR_WIDTH),
-        .AXI_LITE_DATA_WIDTH(AXI_LITE_DATA_WIDTH),
-        .HASH_TYPE(HASH_TYPE),
-
-
-        .INITIAL_CMT_BASE(INITIAL_CMT_BASE),
-        .INITIAL_CMT_SIZE_CLOG2(INITIAL_CMT_SIZE_CLOG2)
-    ) transaction_unseal_write_plaintext_t;
-
-    typedef NorthcapeCapabilityOpsTransactionUnsealWritePCR#(
-        .AXI_DATA_WIDTH(AXI_DATA_WIDTH),
-        .AXI_ADDR_WIDTH(AXI_ADDR_WIDTH),
-        .AXI_ID_WIDTH  (AXI_ID_WIDTH),
-        .AXI_USER_WIDTH(AXI_USER_WIDTH),
-
-        .AXI_LITE_ADDR_WIDTH(AXI_LITE_ADDR_WIDTH),
-        .AXI_LITE_DATA_WIDTH(AXI_LITE_DATA_WIDTH),
-        .HASH_TYPE(HASH_TYPE),
-
-
-        .INITIAL_CMT_BASE(INITIAL_CMT_BASE),
-        .INITIAL_CMT_SIZE_CLOG2(INITIAL_CMT_SIZE_CLOG2)
-    ) transaction_unseal_write_pcr_t;
-
-    typedef NorthcapeCapabilityOpsTransactionUnsealReadAttestL#(
-        .AXI_DATA_WIDTH(AXI_DATA_WIDTH),
-        .AXI_ADDR_WIDTH(AXI_ADDR_WIDTH),
-        .AXI_ID_WIDTH  (AXI_ID_WIDTH),
-        .AXI_USER_WIDTH(AXI_USER_WIDTH),
-
-        .AXI_LITE_ADDR_WIDTH(AXI_LITE_ADDR_WIDTH),
-        .AXI_LITE_DATA_WIDTH(AXI_LITE_DATA_WIDTH),
-        .HASH_TYPE(HASH_TYPE),
-
-
-        .INITIAL_CMT_BASE(INITIAL_CMT_BASE),
-        .INITIAL_CMT_SIZE_CLOG2(INITIAL_CMT_SIZE_CLOG2)
-    ) transaction_unseal_read_attestl_t;
-
-    typedef NorthcapeCapabilityOpsTransactionUnsealReadVerifLHash#(
-        .AXI_DATA_WIDTH(AXI_DATA_WIDTH),
-        .AXI_ADDR_WIDTH(AXI_ADDR_WIDTH),
-        .AXI_ID_WIDTH  (AXI_ID_WIDTH),
-        .AXI_USER_WIDTH(AXI_USER_WIDTH),
-
-        .AXI_LITE_ADDR_WIDTH(AXI_LITE_ADDR_WIDTH),
-        .AXI_LITE_DATA_WIDTH(AXI_LITE_DATA_WIDTH),
-        .HASH_TYPE(HASH_TYPE),
-
-
-        .INITIAL_CMT_BASE(INITIAL_CMT_BASE),
-        .INITIAL_CMT_SIZE_CLOG2(INITIAL_CMT_SIZE_CLOG2)
-    ) transaction_unseal_read_verifl_hash_t;
-
-    typedef NorthcapeCapabilityOpsTransactionUnsealReadVerifLTag#(
-        .AXI_DATA_WIDTH(AXI_DATA_WIDTH),
-        .AXI_ADDR_WIDTH(AXI_ADDR_WIDTH),
-        .AXI_ID_WIDTH  (AXI_ID_WIDTH),
-        .AXI_USER_WIDTH(AXI_USER_WIDTH),
-
-        .AXI_LITE_ADDR_WIDTH(AXI_LITE_ADDR_WIDTH),
-        .AXI_LITE_DATA_WIDTH(AXI_LITE_DATA_WIDTH),
-        .HASH_TYPE(HASH_TYPE),
-
-
-        .INITIAL_CMT_BASE(INITIAL_CMT_BASE),
-        .INITIAL_CMT_SIZE_CLOG2(INITIAL_CMT_SIZE_CLOG2)
-    ) transaction_unseal_read_verifl_tag_t;
-
-    typedef NorthcapeCapabilityOpsTransactionUnsealWriteAttestL#(
-        .AXI_DATA_WIDTH(AXI_DATA_WIDTH),
-        .AXI_ADDR_WIDTH(AXI_ADDR_WIDTH),
-        .AXI_ID_WIDTH  (AXI_ID_WIDTH),
-        .AXI_USER_WIDTH(AXI_USER_WIDTH),
-
-        .AXI_LITE_ADDR_WIDTH(AXI_LITE_ADDR_WIDTH),
-        .AXI_LITE_DATA_WIDTH(AXI_LITE_DATA_WIDTH),
-        .HASH_TYPE(HASH_TYPE),
-
-
-        .INITIAL_CMT_BASE(INITIAL_CMT_BASE),
-        .INITIAL_CMT_SIZE_CLOG2(INITIAL_CMT_SIZE_CLOG2)
-    ) transaction_unseal_write_attestl_t;
-
-    typedef NorthcapeCapabilityOpsTransactionUnsealReadHMAC#(
-        .AXI_DATA_WIDTH(AXI_DATA_WIDTH),
-        .AXI_ADDR_WIDTH(AXI_ADDR_WIDTH),
-        .AXI_ID_WIDTH  (AXI_ID_WIDTH),
-        .AXI_USER_WIDTH(AXI_USER_WIDTH),
-
-        .AXI_LITE_ADDR_WIDTH(AXI_LITE_ADDR_WIDTH),
-        .AXI_LITE_DATA_WIDTH(AXI_LITE_DATA_WIDTH),
-        .HASH_TYPE(HASH_TYPE),
-
-
-        .INITIAL_CMT_BASE(INITIAL_CMT_BASE),
-        .INITIAL_CMT_SIZE_CLOG2(INITIAL_CMT_SIZE_CLOG2)
-    ) transaction_unseal_read_hmac_t;
+    
 
     typedef uvm_analysis_port#(Axi5MasterDriverResultTransaction#(
         .AXI_ADDR_WIDTH(AXI_ADDR_WIDTH),
@@ -1225,8 +1047,7 @@ BRAM_DATA_WIDTH
               aux1_input,
               current_transaction.use_isr_fsm,
               current_transaction.device_id_current,
-              current_transaction.task_id_current,
-              current_transaction.pcr_index
+              current_transaction.task_id_current
           );
 
           sequence_stop_csr = new(
@@ -1254,8 +1075,7 @@ BRAM_DATA_WIDTH
               current_transaction.operation,
               current_transaction.intended_capability_type,
               aux1_input,
-              current_transaction.use_isr_fsm,
-              current_transaction.pcr_index
+              current_transaction.use_isr_fsm
           );
 
           sequence_stop = new("sequence_stop", current_transaction.use_isr_fsm);

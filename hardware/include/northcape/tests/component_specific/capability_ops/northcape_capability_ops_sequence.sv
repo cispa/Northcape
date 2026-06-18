@@ -156,7 +156,7 @@ package northcape_capability_ops_sequence;
                  bit cacheable_tlb_perm, bit cacheable_access_perm,
                  northcape_capability_operation_t operation,
                  capability_type_t intended_capability_type, bit [AXI_DATA_WIDTH-1:0] aux1_input,
-                 bit use_isr_fsm, int pcr_index);
+                 bit use_isr_fsm);
       super.new(name);
 
       this.input_token = input_token;
@@ -180,13 +180,11 @@ package northcape_capability_ops_sequence;
       this.intended_capability_type = intended_capability_type;
       this.aux1_input = aux1_input;
       this.use_isr_fsm = use_isr_fsm;
-      this.pcr_index = pcr_index;
     endfunction
 
     function logic [AXI_DATA_WIDTH-1:0] encode_control_status_reg();
       return {
-        9'h0,
-        pcr_index,
+        21'h0,
         cacheable_tlb_perm,
         cacheable_access_perm,
         restriction_type,
@@ -239,11 +237,11 @@ package northcape_capability_ops_sequence;
                  bit cacheable_tlb_perm, bit cacheable_access_perm,
                  northcape_capability_operation_t operation,
                  capability_type_t intended_capability_type, bit [AXI_DATA_WIDTH-1:0] aux1_input,
-                 bit use_isr_fsm, int pcr_index);
+                 bit use_isr_fsm);
       super.new(name, input_token, input_restriction, restriction_type, direction,
                 new_segment_length, restriction_enabled, read_perm, write_perm, x_perm,
                 lockable_perm, irq_accessible_perm, cacheable_tlb_perm, cacheable_access_perm,
-                operation, intended_capability_type, aux1_input, use_isr_fsm, pcr_index);
+                operation, intended_capability_type, aux1_input, use_isr_fsm);
     endfunction
 
     localparam COMPONENT_NAME = "Northcape Capability Ops Start Sequence";
@@ -361,11 +359,11 @@ package northcape_capability_ops_sequence;
         bit cacheable_tlb_perm, bit cacheable_access_perm,
         northcape_capability_operation_t operation, capability_type_t intended_capability_type,
         bit [AXI_DATA_WIDTH-1:0] aux1_input, bit use_isr_fsm, device_id_t device_id,
-        task_id_t task_id, int pcr_index);
+        task_id_t task_id);
       super.new(name, input_token, input_restriction, restriction_type, direction,
                 new_segment_length, restriction_enabled, read_perm, write_perm, x_perm,
                 lockable_perm, irq_accessible_perm, cacheable_tlb_perm, cacheable_access_perm,
-                operation, intended_capability_type, aux1_input, use_isr_fsm, pcr_index);
+                operation, intended_capability_type, aux1_input, use_isr_fsm);
       this.device_id = device_id;
       this.task_id   = task_id;
     endfunction

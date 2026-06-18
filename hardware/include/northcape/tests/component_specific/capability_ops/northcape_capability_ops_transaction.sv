@@ -1046,18 +1046,13 @@ package northcape_capability_ops_transaction;
       use_isr_fsm = other_transaction.use_isr_fsm;
       orphans = other_transaction.orphans;
       ref_lock_key = other_transaction.ref_lock_key;
-      tpm_quote = other_transaction.tpm_quote;
-      tpm_quote_size = other_transaction.tpm_quote_size;
-      tpm_quote_sig_r = other_transaction.tpm_quote_sig_r;
-      tpm_quote_sig_s = other_transaction.tpm_quote_sig_s;
-      attest_nonce = other_transaction.attest_nonce;
 
     endfunction
 
     function string convert2string();
 
       return $sformatf(
-          "cmt base %x, cmt size log2 %d, valid test %b, input token %x, device id restr %x task id restr %x restriction_enabled %b device id current %x task id current %x read perm %b write perm %b x perm %b lockable %b IRQ perm %b cacheable TLB %b cacheable access %b operation %s input entry %s read resp %s write resp %s direction %b new length %d nonce %x output cap id %x unsuccessful lookups %d rng seed %x parent offset %d number indirect capabilities %d intended capability type %s capability tokens %x CMT entries %s input token right %x input CMT entry right %s make capability invalid %b flip type %b flip tag %x restriction type %s device interpreted bits %x use inspect in FIFO %b lock key %x use rcsr interface %b orphans %d PCr index %d attest nonce %x AES fast %b SHA256 fast",
+          "cmt base %x, cmt size log2 %d, valid test %b, input token %x, device id restr %x task id restr %x restriction_enabled %b device id current %x task id current %x read perm %b write perm %b x perm %b lockable %b IRQ perm %b cacheable TLB %b cacheable access %b operation %s input entry %s read resp %s write resp %s direction %b new length %d nonce %x output cap id %x unsuccessful lookups %d rng seed %x parent offset %d number indirect capabilities %d intended capability type %s capability tokens %x CMT entries %s input token right %x input CMT entry right %s make capability invalid %b flip type %b flip tag %x restriction type %s device interpreted bits %x use inspect in FIFO %b lock key %x use rcsr interface %b orphans %d",
           cmt_base,
           cmt_size_clog2,
 
@@ -1117,11 +1112,7 @@ package northcape_capability_ops_transaction;
           use_isr_fsm,
           ref_lock_key,
           use_rcsr_interface,
-          orphans,
-          0,
-          attest_nonce,
-          0,
-          0
+          orphans
       );
 
     endfunction

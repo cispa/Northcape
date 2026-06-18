@@ -12,7 +12,7 @@ typedef unsigned long long int text_t;
 typedef unsigned long long int key_t;
 typedef unsigned char          cell_t;
 
-//int sbox_use = 0;
+//int sbox_use = 2;
 //text_t check_box[3] = { 0x3ee99a6c82af0c38, 0x9f5c41ec525603c9, 0xbcaf6c89de930765 };
 
 //int sbox_use = 1;

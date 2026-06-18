@@ -96,7 +96,6 @@ ${NORTHCAPE_ROOT}/tests/drivers/axi5_master_driver.sv
 ${NORTHCAPE_ROOT}/tests/drivers/northcape_axis_validate_driver.sv
 ${NORTHCAPE_ROOT}/tests/drivers/northcape_test_trng.sv
 ${NORTHCAPE_ROOT}/tests/clock/northcape_test_clock_generator.sv
-${NORTHCAPE_ROOT}/tests/drivers/spi_tpm_driver.sv
 ${NORTHCAPE_ROOT}/tests/drivers/northcape_capability_ops_csr_interface_driver.sv
 ${NORTHCAPE_ROOT}/tests/component_specific/capability_resolver/northcape_capability_resolver_transaction.sv
 ${NORTHCAPE_ROOT}/tests/component_specific/capability_resolver/northcape_capability_resolver_scoreboard.sv

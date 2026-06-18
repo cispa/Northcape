@@ -33,8 +33,6 @@ module top;
   northcape_cva6_mmu_top i_cva6_mmu_top ();
   northcape_capability_cache_top i_cache_top ();
 
-  import "DPI-C" function automatic void tpm_shutdown();
-
   initial begin
     automatic uvm_report_server srvr;
 
@@ -48,9 +46,6 @@ module top;
 
     // overwritten with testplusarg UVM_TESTNAME if needed
     run_test("test_northcape_discover_tests");
-
-    // make sure that TPM is restored to clean state
-    tpm_shutdown();
 
     if (srvr.get_severity_count(UVM_ERROR) != 0 || srvr.get_severity_count(UVM_FATAL) != 0) begin
       $display("Test error!");

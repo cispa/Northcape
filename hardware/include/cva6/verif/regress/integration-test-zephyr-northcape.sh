@@ -6,7 +6,8 @@ set -e
 
 echo Launching Sim TPM
 
-make -C corev_apu/northcape/tests/dpi/ swtpm
+[ -f corev_apu/northcape ] || ln -s $(pwd)/../northcape corev_apu/northcape || true
+
 
 ./verif/regress/integration-test-zephyr.sh $@
 
